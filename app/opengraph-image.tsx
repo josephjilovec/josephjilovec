@@ -12,7 +12,7 @@ export default function Image() {
         <div style={{ width: 56, height: 56, display: "flex", alignItems: "center", justifyContent: "center", borderRadius: 14, background: "#f4f1e9", color: "#07090b", fontSize: 18, fontWeight: 900 }}>JJ</div>
         <div style={{ display: "flex", flexDirection: "column" }}><span style={{ fontSize: 22, fontWeight: 700 }}>Joseph Jilovec</span><span style={{ marginTop: 4, color: "#9ca8b2", fontSize: 14, letterSpacing: 4 }}>VENTURE STUDIO</span></div>
       </div>
-      <div style={{ display: "flex", flexDirection: "column", maxWidth: 900 }}><span style={{ color: "#55d9ff", fontSize: 16, letterSpacing: 4 }}>ONE STUDIO · SEVERAL WORLDS</span><div style={{ fontSize: 78, lineHeight: .94, letterSpacing: -5, fontWeight: 650, marginTop: 18 }}>Ventures, systems,<br/>behavior & creative work.</div></div>
+      <div style={{ display: "flex", flexDirection: "column", maxWidth: 900 }}><span style={{ color: "#55d9ff", fontSize: 16, letterSpacing: 4 }}>ONE STUDIO · SEVERAL WORLDS</span><div style={{ display: "flex", flexDirection: "column", fontSize: 78, lineHeight: .94, letterSpacing: -5, fontWeight: 650, marginTop: 18 }}><span>Ventures, systems,</span><span>behavior &amp; creative work.</span></div></div>
       <div style={{ display: "flex", justifyContent: "space-between", color: "#9ca8b2", fontSize: 15 }}><span>PHOENIX, ARIZONA</span><span>JOSEPHJILOVEC.COM</span></div>
     </div>,
     size
