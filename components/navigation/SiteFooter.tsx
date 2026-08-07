@@ -29,7 +29,7 @@ export function SiteFooter() {
         <div className="footer-column">
           <span className="footer-label">Connect</span>
           <Link href="/contact">Contact</Link>
-          <a href={site.booking} target="_blank" rel="noreferrer">Book a founder call ↗</a>
+          <a href="https://calendar.app.google/Wa1YCdLV9LGK1jH98" target="_blank" rel="noreferrer">Book a founder call ↗</a>
           <span>{site.location}</span>
         </div>
       </div>
