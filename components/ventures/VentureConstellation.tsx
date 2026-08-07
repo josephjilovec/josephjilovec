@@ -26,8 +26,16 @@ export function VentureConstellation() {
             onClick={() => setActiveSlug(venture.slug)}
             aria-pressed={activeSlug === venture.slug}
           >
-            <span>{String(index + 1).padStart(2, "0")}</span>
-            {venture.name}
+            <span className="constellation-node-index">{String(index + 1).padStart(2, "0")}</span>
+            <div className="constellation-node-body">
+              <div className="constellation-node-art" aria-hidden="true">
+                <img src={venture.art} alt="" />
+              </div>
+              <div className="constellation-node-copy">
+                <strong>{venture.name}</strong>
+                <small>{venture.category}</small>
+              </div>
+            </div>
           </button>
         ))}
       </div>
