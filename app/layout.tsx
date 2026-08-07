@@ -31,7 +31,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
     url: site.url,
     homeLocation: { "@type": "Place", name: site.location },
     sameAs: [site.github, site.medium],
-    knowsAbout: ["venture development", "behavioral design", "robotics", "AI systems", "music production"]
+    knowsAbout: ["venture development", "behavioral design", "AI systems", "music production"]
   };
 
   return (

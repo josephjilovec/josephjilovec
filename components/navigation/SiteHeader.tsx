@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ReadabilityControls } from "@/components/navigation/ReadabilityControls";
 
 const nav = [
   ["Ventures", "/ventures"],
@@ -37,6 +38,7 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="nav-actions">
+          <ReadabilityControls />
           <Link className="button button-small" href="/contact">Start a conversation</Link>
           <button
             className="menu-button"

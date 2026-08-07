@@ -1,5 +1,5 @@
 export type VentureCategory = "Commerce" | "Behavioral" | "Technology" | "Creative";
-export type VentureStage = "Concept designed" | "Thesis defined" | "Prototype" | "Creative project";
+export type VentureStage = "Concept designed" | "Prototype" | "Creative project" | "Active brand";
 
 export type Venture = {
   slug: string;
@@ -17,6 +17,7 @@ export type Venture = {
   opportunity: string;
   externalUrl?: string;
   externalLabel?: string;
+  repositoryUrl?: string;
   art: string;
   accent: string;
   accentSoft: string;
@@ -25,86 +26,62 @@ export type Venture = {
 
 export const ventures: Venture[] = [
   {
-    slug: "swift-deal-solutions",
-    name: "Swift Deal Solutions",
-    eyebrow: "Private transaction concept",
-    category: "Commerce",
-    stage: "Concept designed",
-    status: "Seeking operating partner",
-    summary:
-      "A structured sourcing and transaction concept for qualified participants in fragmented, high-value asset markets.",
-    problem:
-      "High-value transactions can depend on slow discovery, inconsistent screening, and informal coordination across multiple parties.",
-    thesis:
-      "A disciplined sourcing workflow, qualification layer, and transaction process may reduce friction for owners and serious buyers without pretending to replace licensed specialists where they are required.",
-    currentState:
-      "The founder thesis and initial workflow are defined. Customer discovery, jurisdiction-specific operating design, and an end-to-end live transaction test remain to be completed.",
-    founderRole:
-      "Opportunity framing, customer and workflow design, commercial model development, partner recruitment, and validation planning.",
-    nextMilestone:
-      "Interview the first customer segment and test one narrow transaction workflow with clear compliance boundaries.",
-    opportunity:
-      "Operating partner, market-domain adviser, or pilot participant with real transaction experience.",
-    externalUrl: "https://swiftdealsolutions.com/",
-    externalLabel: "Visit Swift Deal Solutions",
-    art: "/project-art/swift.svg",
-    accent: "#c9a76a",
-    accentSoft: "rgba(201,167,106,.15)",
-    tags: ["commerce", "active", "marketplaces", "operations"]
-  },
-  {
     slug: "my-healthy-aura",
     name: "My Healthy Aura",
-    eyebrow: "Behavioral performance concept",
+    eyebrow: "Behavioral / personal performance",
     category: "Behavioral",
     stage: "Concept designed",
-    status: "Seeking pilot conversations",
+    status: "Public concept",
     summary:
-      "A one-to-one personal-performance concept built around structured conversation, focus conditioning, and personalized routines.",
+      "A one-to-one personal-performance concept built around structured conversation, focus conditioning, personalized routines, and a calmer client experience.",
     problem:
       "Many productivity tools organize tasks while leaving resistance, attention drift, motivation, and follow-through largely untouched.",
     thesis:
-      "A guided format that combines practical behavior design with individualized routines may help some clients create more consistent focus and action.",
+      "A guided format combining practical behavior design with individualized routines may help some clients create more consistent focus and action.",
     currentState:
-      "The service concept and offer structure are defined. Outcomes, repeat demand, and fit for different client profiles still need disciplined pilot measurement.",
+      "The public brand site, service positioning, and initial client journey exist. Outcomes and repeat demand still need disciplined pilot measurement.",
     founderRole:
-      "Service design, behavioral framing, session structure, client experience, and pilot measurement design.",
+      "Brand direction, service design, behavioral framing, session structure, client experience, and pilot-measurement design.",
     nextMilestone:
-      "Run a defined pilot and measure completion, perceived value, repeat interest, and where the format does or does not help.",
+      "Run a clearly defined pilot and measure completion, perceived value, repeat interest, and where the format does or does not help.",
     opportunity:
-      "Pilot participants, referral partners, or collaborators in ethical performance coaching and behavior design.",
+      "Pilot participants, referral partners, and collaborators in ethical performance coaching and behavior design.",
+    externalUrl: "https://myhealthyaura.vercel.app/",
+    externalLabel: "Visit My Healthy Aura",
+    repositoryUrl: "https://github.com/josephjilovec/myhealthyaura",
     art: "/project-art/aura.svg",
     accent: "#8bd5c7",
     accentSoft: "rgba(139,213,199,.14)",
     tags: ["behavioral", "active", "performance", "services"]
   },
   {
-    slug: "multi-robot-orchestration",
-    name: "Multi-Robot Orchestration Platform",
-    eyebrow: "Intelligent systems thesis",
-    category: "Technology",
-    stage: "Thesis defined",
-    status: "Seeking technical co-founder",
+    slug: "swift-deal-solutions",
+    name: "Swift Deal Solutions",
+    eyebrow: "Private transaction venture",
+    category: "Commerce",
+    stage: "Concept designed",
+    status: "Public concept",
     summary:
-      "A coordination-layer concept for delegating work across heterogeneous robots and software agents while tracking capabilities, results, and recovery paths.",
+      "A structured sourcing and transaction concept for qualified participants in fragmented, high-value asset markets.",
     problem:
-      "Multi-robot systems need better ways to assign work, evaluate outputs, share capabilities, and recover when conditions change.",
+      "High-value transactions can depend on slow discovery, inconsistent screening, and informal coordination across multiple parties.",
     thesis:
-      "A capability-aware orchestration layer could make multi-robot fleets easier to coordinate across changing tasks and environments while preserving transparent failure handling.",
+      "A disciplined sourcing workflow, qualification layer, and transaction process may reduce friction for owners and serious buyers without pretending to replace licensed specialists where required.",
     currentState:
-      "Core architecture and repository concepts are documented. A narrow production-quality proof of concept is still required before broader performance claims are justified.",
+      "The public site and initial workflow are defined. Customer discovery, jurisdiction-specific operating design, and a complete live transaction test remain the next proof points.",
     founderRole:
-      "System concept, architecture framing, product requirements, orchestration logic, research synthesis, and technical partner communication.",
+      "Opportunity framing, customer and workflow design, commercial model development, partner recruitment, and validation planning.",
     nextMilestone:
-      "Build and benchmark one orchestration workflow with explicit success, handoff, and recovery criteria.",
+      "Interview the first customer segment and test one narrow transaction workflow with explicit compliance boundaries.",
     opportunity:
-      "Robotics engineer, ROS2 specialist, technical co-founder, or pilot environment with heterogeneous robotic systems.",
-    externalUrl: "https://github.com/josephjilovec",
-    externalLabel: "View Joseph's GitHub",
-    art: "/project-art/robotics.svg",
-    accent: "#55d9ff",
-    accentSoft: "rgba(85,217,255,.15)",
-    tags: ["technology", "experimental", "robotics", "ai"]
+      "Operating partners, market-domain advisers, and pilot participants with real transaction experience.",
+    externalUrl: "https://swiftdealsolutions.vercel.app/",
+    externalLabel: "Visit Swift Deal Solutions",
+    repositoryUrl: "https://github.com/josephjilovec/swiftdealsolutions",
+    art: "/project-art/swift.svg",
+    accent: "#c9a76a",
+    accentSoft: "rgba(201,167,106,.15)",
+    tags: ["commerce", "active", "marketplaces", "operations"]
   },
   {
     slug: "dj-hotwax",
@@ -112,23 +89,24 @@ export const ventures: Venture[] = [
     eyebrow: "Independent music identity",
     category: "Creative",
     stage: "Creative project",
-    status: "Releasing music",
+    status: "Public catalog",
     summary:
-      "A genre-fluid music identity spanning jazz, hip-hop, global rhythms, electronic music, and cinematic late-night atmosphere.",
+      "Joseph's music identity spanning jazz, hip-hop, global rhythms, electronic music, and cinematic atmosphere.",
     problem:
-      "Not every project needs a market problem. DJ Hotwax is the creative counterweight in the portfolio: a place for original music, visual worlds, and collaboration.",
+      "DJ Hotwax is the creative channel in the portfolio: a place for original music, visual worlds, releases, and collaboration rather than a conventional startup problem statement.",
     thesis:
-      "Genre is the palette; atmosphere is the signature. Distinct releases can move between musical traditions while still feeling like they belong to one cinematic universe.",
+      "Different genres can live under one artist identity when the connective tissue is taste, atmosphere, sequencing, and a recognizable point of view.",
     currentState:
-      "The standalone site and catalog are public, including the long-form release Nuits Feutrées and multiple stylistic worlds.",
+      "The standalone website and public music catalog are live, with long-form releases and multiple stylistic directions already represented.",
     founderRole:
       "Music direction, concept development, release identity, visual world-building, catalog curation, and creative collaboration.",
     nextMilestone:
-      "Continue building a recognizable catalog and selectively pursue placements, licensing, production, and creative partnerships.",
+      "Keep expanding the catalog while selectively pursuing placements, licensing, production work, and creative partnerships.",
     opportunity:
-      "Production collaboration, music licensing, visual work, placements, or creative partnerships.",
+      "Production collaboration, music licensing, placements, visual work, and creative partnerships.",
     externalUrl: "https://djhotwax.vercel.app/",
     externalLabel: "Visit DJ Hotwax",
+    repositoryUrl: "https://github.com/josephjilovec/djhotwax",
     art: "/project-art/hotwax.svg",
     accent: "#ff7849",
     accentSoft: "rgba(255,120,73,.15)",
@@ -142,13 +120,13 @@ export const ventures: Venture[] = [
     stage: "Prototype",
     status: "Concept experience",
     summary:
-      "A speculative product concept exploring adaptive, privacy-forward neural-interface experiences and the design language around them.",
+      "A futuristic adaptive-interface concept exploring neural-interface ideas, privacy-forward computing, and ambient personalized experiences.",
     problem:
-      "Wearable and ambient computing systems often collect large amounts of personal data while offering relatively generic feedback and interruptive interfaces.",
+      "Wearable and ambient computing systems can collect large amounts of personal data while still offering generic feedback and interruptive interfaces.",
     thesis:
       "A future adaptive interface could become more useful by learning personal baselines, keeping sensitive processing local, and changing the environment instead of demanding more screen attention.",
     currentState:
-      "The current public site is a designed concept experience. Its product specifications, testimonials, launch language, and future release framing should be read as prototype storytelling rather than independently verified commercial performance.",
+      "The public site is a designed concept experience. Future-facing specifications and launch language are treated here as prototype storytelling rather than independently verified commercial performance.",
     founderRole:
       "Concept direction, product storytelling, privacy principles, interaction thesis, experience design, and prototype framing.",
     nextMilestone:
@@ -157,10 +135,40 @@ export const ventures: Venture[] = [
       "Human-computer interaction, BCI, privacy, signal-processing, and product-design collaborators.",
     externalUrl: "https://vantahelix.vercel.app/",
     externalLabel: "Explore Vanta Helix",
+    repositoryUrl: "https://github.com/josephjilovec/VANTAHELIX",
     art: "/project-art/vanta.svg",
     accent: "#a18cff",
     accentSoft: "rgba(161,140,255,.15)",
     tags: ["technology", "experimental", "bci", "product-concept"]
+  },
+  {
+    slug: "cannacore-seeds",
+    name: "CannaCore Seeds",
+    eyebrow: "Genetics brand + JJ Stash editorial",
+    category: "Commerce",
+    stage: "Active brand",
+    status: "Seed bank + publication",
+    summary:
+      "A cannabis genetics and seed-bank brand paired with JJ Stash, the editorial layer covering genetics, breeding history, cultivation practices, and plant culture.",
+    problem:
+      "Genetics markets are crowded with inconsistent documentation, fragmented cultivar histories, and brands that often separate product discovery from useful educational context.",
+    thesis:
+      "A focused seed brand can become more valuable when the genetics catalog is paired with credible strain history, breeding context, and an editorial voice that treats plant culture seriously.",
+    currentState:
+      "CannaCore Seeds has a public seed-bank presence, while the JJ Stash repository documents the publication/newsletter concept focused on cultivars, auto-flowering genetics, breeding history, and cultivation insights.",
+    founderRole:
+      "Brand direction, genetics curation, breeding perspective, catalog strategy, editorial positioning, and culture-focused content development.",
+    nextMilestone:
+      "Tighten the connection between the seed-bank experience and JJ Stash so product discovery, genetics documentation, and editorial content reinforce one another.",
+    opportunity:
+      "Breeders, genetics collaborators, editorial contributors, collectors, and compliant industry partners.",
+    externalUrl: "https://www.cannacoreseeds.com/",
+    externalLabel: "Visit CannaCore Seeds",
+    repositoryUrl: "https://github.com/josephjilovec/jjstash",
+    art: "/project-art/cannacore.svg",
+    accent: "#75d58a",
+    accentSoft: "rgba(117,213,138,.14)",
+    tags: ["commerce", "active", "genetics", "editorial", "culture"]
   },
   {
     slug: "snarklogic",
@@ -176,7 +184,7 @@ export const ventures: Venture[] = [
     thesis:
       "Creative, behavioral, finance, and risk perspectives can be encoded as explicit decision roles so campaign concepts are challenged before production and measured after deployment.",
     currentState:
-      "The public site demonstrates a deterministic server-route prototype and an illustrative performance model. It does not claim a production autonomous ad platform or guaranteed campaign outcomes.",
+      "The public Next.js prototype includes reusable UI, multi-page product architecture, server routes, interactive client behavior, and illustrative campaign/performance systems; external production integrations remain future work.",
     founderRole:
       "System concept, multi-agent operating model, creative strategy, behavioral framing, risk architecture, and prototype direction.",
     nextMilestone:
@@ -185,10 +193,38 @@ export const ventures: Venture[] = [
       "Creative technologists, performance marketers, agencies, brand teams, and experiment partners.",
     externalUrl: "https://snarklogic.vercel.app/",
     externalLabel: "Explore SnarkLogic",
+    repositoryUrl: "https://github.com/josephjilovec/snarklogic",
     art: "/project-art/snark.svg",
     accent: "#ff4f8b",
     accentSoft: "rgba(255,79,139,.14)",
     tags: ["technology", "experimental", "advertising", "ai", "creative"]
+  },
+  {
+    slug: "alder-and-meridian",
+    name: "Alder & Meridian",
+    eyebrow: "Curated commerce prototype",
+    category: "Commerce",
+    stage: "Prototype",
+    status: "E-commerce prototype",
+    summary:
+      "A premium e-commerce concept built around a tightly curated catalog, restrained presentation, and a fulfillment architecture designed to become more rigorous before live selling is enabled.",
+    problem:
+      "Many online stores become cluttered marketplaces with weak curation, unclear product trust, and fulfillment logic that is bolted on after the visual brand is finished.",
+    thesis:
+      "A smaller, deliberately curated catalog can feel more credible when product data, checkout validation, supplier mapping, legal review, and fulfillment controls are treated as part of the product from the beginning.",
+    currentState:
+      "The repository documents a Next.js App Router prototype with a typed local catalog, integer-cent prices, an ID/quantity cart, and server-side checkout validation. Live Stripe and supplier ordering are intentionally disabled pending verification and testing.",
+    founderRole:
+      "Brand concept, catalog direction, commerce architecture, product experience, supplier-integration planning, and launch-readiness framing.",
+    nextMilestone:
+      "Complete product photography and supplier verification, legal/compliance review, test-mode payments, order storage, fulfillment mapping, and a complete test order before enabling live commerce.",
+    opportunity:
+      "Supplier relationships, product curation, e-commerce operations, brand partnerships, and launch-readiness collaborators.",
+    repositoryUrl: "https://github.com/josephjilovec/alder-and-meridian",
+    art: "/project-art/alder.svg",
+    accent: "#74a9b8",
+    accentSoft: "rgba(116,169,184,.14)",
+    tags: ["commerce", "prototype", "ecommerce", "curation", "operations"]
   }
 ];
 

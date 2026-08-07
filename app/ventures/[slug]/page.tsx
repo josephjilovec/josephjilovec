@@ -33,6 +33,7 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
           <p className="project-summary">{venture.summary}</p>
           <div className="hero-actions">
             {venture.externalUrl && <a className="button" href={venture.externalUrl} target="_blank" rel="noreferrer">{venture.externalLabel ?? "Visit project"} ↗</a>}
+            {venture.repositoryUrl && <a className="text-link" href={venture.repositoryUrl} target="_blank" rel="noreferrer">View GitHub <span>↗</span></a>}
             <Link href={`/contact?venture=${encodeURIComponent(venture.name)}`} className="text-link">Discuss this project <span>↗</span></Link>
           </div>
         </div>
@@ -55,7 +56,7 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
 
       <section className="project-disclaimer" style={{ "--venture-accent": venture.accent } as CSSProperties}>
         <span>Project-stage disclosure</span>
-        <p>{venture.stage === "Creative project" ? "This is a creative identity and public catalog, not a venture-traction claim." : "This page describes a current project thesis or prototype. Future capabilities, economics, product specifications, or market outcomes are not presented as independently verified achievements unless explicitly labeled as evidence."}</p>
+        <p>{venture.stage === "Creative project" ? "This is a creative identity and public catalog, not a venture-traction claim." : venture.stage === "Active brand" ? "This is a public operating brand. Specific product, regulatory, market, financial, or performance claims should still be evaluated on their own evidence and current legal context." : "This page describes a current project thesis or prototype. Future capabilities, economics, product specifications, or market outcomes are not presented as independently verified achievements unless explicitly labeled as evidence."}</p>
       </section>
     </>
   );

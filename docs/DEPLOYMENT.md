@@ -34,7 +34,7 @@ Check:
 
 - `/`
 - `/ventures`
-- all six project files
+- all seven project files
 - `/founder`
 - `/studio`
 - `/technology`

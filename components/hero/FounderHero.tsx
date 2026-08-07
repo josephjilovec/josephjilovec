@@ -9,8 +9,8 @@ export function FounderHero() {
       <div className="hero-copy">
         <p className="hero-kicker">Founder · Venture builder · Creative operator · Phoenix, Arizona</p>
         <h1>
-          One studio.<br />
-          <span>Several worlds.</span>
+          Concepts built to become<br />
+          <span>companies.</span>
         </h1>
         <p className="hero-lede">
           Joseph Jilovec develops venture concepts, technical systems, behavioral formats, and creative projects—then makes the current stage, evidence, and next step visible.
@@ -42,7 +42,6 @@ export function FounderHero() {
           </div>
         </div>
         <div className="signal-card signal-a"><small>Current signal</small><strong>Venture systems</strong><span>Thesis → prototype → proof</span></div>
-        <div className="signal-card signal-b"><small>Creative channel</small><strong>DJ Hotwax</strong><span>Music without a fixed genre</span></div>
       </div>
     </section>
   );

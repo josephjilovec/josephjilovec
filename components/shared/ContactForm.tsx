@@ -53,10 +53,11 @@ export function ContactForm({ mode = "contact" }: { mode?: "contact" | "brief" }
             <option>General / studio</option>
             <option>Swift Deal Solutions</option>
             <option>My Healthy Aura</option>
-            <option>Multi-Robot Orchestration Platform</option>
             <option>DJ Hotwax</option>
             <option>Vanta Helix</option>
+            <option>CannaCore Seeds</option>
             <option>SnarkLogic</option>
+            <option>Alder &amp; Meridian</option>
           </select>
         </label>
       </div>

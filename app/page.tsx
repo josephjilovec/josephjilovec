@@ -41,10 +41,10 @@ export default function Home() {
       <section className="section worlds-section">
         <div className="worlds-header">
           <SectionHeading index="04" eyebrow="Selected worlds" title="The projects are allowed to look different." />
-          <p className="worlds-note">A parent brand should create coherence without forcing a music identity, a robotics system, and a transaction concept into the same costume.</p>
+          <p className="worlds-note">A parent brand should create coherence without forcing a music identity, an adaptive technology concept, a seed brand, and a transaction venture into the same costume.</p>
         </div>
         <div className="world-strip">
-          {ventures.slice(3).map((venture) => (
+          {ventures.slice(2).map((venture) => (
             <Link href={`/ventures/${venture.slug}`} key={venture.slug} className="world-panel" style={{ "--venture-accent": venture.accent } as CSSProperties}>
               <span>{venture.eyebrow}</span>
               <h3>{venture.name}</h3>

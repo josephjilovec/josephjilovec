@@ -18,12 +18,13 @@ The design avoids forcing all projects into a single startup aesthetic. The pare
 
 ## Project accents
 
-- Swift Deal Solutions — muted gold
 - My Healthy Aura — mint / sea-glass
-- Multi-Robot Orchestration — electric cyan
+- Swift Deal Solutions — muted gold
 - DJ Hotwax — ember orange
 - Vanta Helix — ultraviolet
+- CannaCore Seeds / JJ Stash — botanical green
 - SnarkLogic — hot magenta
+- Alder & Meridian — steel blue + warm wood
 
 ## Tone
 

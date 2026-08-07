@@ -25,6 +25,17 @@ A production-oriented rebuild of **josephjilovec.com** as a multi-page personal 
 - `/writing` — selected Medium writing
 - `/contact` — opportunity routing + private venture brief request
 
+## Featured portfolio
+
+- My Healthy Aura
+- Swift Deal Solutions
+- DJ Hotwax
+- Vanta Helix
+- CannaCore Seeds, with JJ Stash as its editorial/publication layer
+- SnarkLogic
+- Alder & Meridian
+
+
 ## Local development
 
 ```bash
@@ -86,7 +97,7 @@ In Vercel:
 The parent site intentionally distinguishes:
 
 - operating history
-- thesis defined
+- active brand
 - concept designed
 - prototype / concept experience
 - creative project
