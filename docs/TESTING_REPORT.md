@@ -32,7 +32,7 @@ A local validation script checked:
 - honeypot field
 
 ### Source/content review — PASS
-The live Joseph Jilovec site, DJ Hotwax, Vanta Helix, SnarkLogic, GitHub profile, and selected Medium writing were reviewed through the available web research environment before copy was finalized.
+The live Joseph Jilovec site, DJ Hotwax, Vanta Helix, Snark Logic, GitHub profile, and selected Medium writing were reviewed through the available web research environment before copy was finalized.
 
 ## Checks attempted but blocked by the local execution environment
 
@@ -94,11 +94,11 @@ Validation performed:
 Changes verified in this revision:
 
 - Removed the previously included systems venture from the featured portfolio, contact form, homepage copy, technology copy, founder timeline, structured-data topics, and project assets.
-- Featured portfolio is now exactly seven projects: My Healthy Aura, Swift Deal Solutions, DJ Hotwax, Vanta Helix, CannaCore Seeds (with JJ Stash as the editorial layer), SnarkLogic, and Alder & Meridian.
-- Added GitHub repository links to venture cards and individual venture pages.
+- Featured portfolio is now exactly seven projects: My Healthy Aura, Swift Deal Solutions, DJ Hotwax, Vanta Helix, CannaCore Seeds (with JJ Stash as the editorial layer), Snark Logic, and Alder & Meridian.
+- Public GitHub links are intentionally not exposed in the website UI; project cards use internal project files and venture websites instead.
 - Added original abstract project art for CannaCore Seeds and Alder & Meridian.
 - Added a seventh position to the interactive venture constellation.
-- Updated the Technology page to reflect the two currently featured technology concepts: Vanta Helix and SnarkLogic.
+- Updated the Technology page to reflect the two currently featured technology concepts: Vanta Helix and Snark Logic.
 - Updated Alder & Meridian language to match its repository architecture: live Stripe and supplier ordering remain intentionally disabled pending verification/testing.
 
 Validation performed:
@@ -109,3 +109,14 @@ Validation performed:
 - Venture → art path validation: **PASS — 7/7 assets present**.
 - Removed-project identifier scan: **PASS — no remaining site-visible references to the removed venture**.
 - `npm install` was attempted again and remains **BLOCKED** by the sandbox's internal npm registry returning 404 for `@types/node`; therefore no successful local `next build` is claimed.
+
+## Portfolio cleanup pass — 2026-08-07
+
+- Removed all public GitHub profile/repository links from runtime website code.
+- Founder CTA now points to LinkedIn: `https://www.linkedin.com/in/jilovecjoseph/`.
+- Confirmed there are zero Multi-Robot / robotics venture references or robotics project-art assets in runtime code.
+- Updated displayed brand name from `SnarkLogic` to `Snark Logic`; route/domain identifiers remain `snarklogic` where technically appropriate.
+- Replaced Vanta Helix and Snark Logic venture artwork with new project-specific SVG cover art.
+- Confirmed Project file routes remain internal and venture Website/Explore links remain external.
+- Parsed the replacement SVGs successfully and syntax/transpile checked all 33 non-declaration TS/TSX files with zero diagnostics.
+- Confirmed all `@/` alias imports resolve to an existing source file.

@@ -30,7 +30,8 @@ Every venture entry contains:
 - next milestone
 - opportunity / collaborator need
 - external link when available
-- GitHub repository link when available
+- external project website when available
+- internal project-file route for context and stage disclosure
 - visual treatment
 
 ## Content rule

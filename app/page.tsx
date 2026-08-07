@@ -34,7 +34,7 @@ export default function Home() {
           <article><span>01 / Commerce</span><strong>≈ $20K</strong><p>Peak monthly gross revenue at Jentlemens, based on founder records. Approximate, unaudited gross revenue—not profit, valuation, or current revenue.</p></article>
           <article><span>02 / Education</span><strong>B.A.</strong><p>Psychology · Northern Illinois University. Used as a behavioral-design lens rather than a substitute for clinical credentials.</p></article>
           <article><span>03 / Practice</span><strong>NGH</strong><p>Certified hypnotist. Applied here to attention, motivation, and behavior-design thinking within appropriate non-clinical boundaries.</p></article>
-          <article><span>04 / Public build log</span><strong>28</strong><p>Public GitHub repositories currently visible on Joseph's profile, spanning systems experiments and software work.</p></article>
+          <article><span>04 / Portfolio</span><strong>7</strong><p>Featured projects across commerce, behavioral services, technology concepts, music, genetics, and creative systems.</p></article>
         </div>
       </section>
 

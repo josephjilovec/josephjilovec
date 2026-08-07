@@ -16,7 +16,7 @@
 
 **Question:** Can future-facing product copy be mistaken for verified achievements?
 
-**Revision applied:** Vanta Helix is explicitly described as a concept experience; its specifications, testimonials, launch language, and release framing are not repeated as verified facts. SnarkLogic's deterministic demo and illustrative model are likewise labeled as prototype material.
+**Revision applied:** Vanta Helix is explicitly described as a concept experience; its specifications, testimonials, launch language, and release framing are not repeated as verified facts. Snark Logic's deterministic demo and illustrative model are likewise labeled as prototype material.
 
 ## Developer
 

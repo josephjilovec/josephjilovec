@@ -5,7 +5,7 @@ export const site = {
   description:
     "Concepts built to become companies — founder-led venture development across commerce, behavioral design, technology, and creative work.",
   location: "Phoenix, Arizona",
-  github: "https://github.com/josephjilovec",
+  linkedin: "https://www.linkedin.com/in/jilovecjoseph/",
   medium: "https://medium.com/@jilovecjoseph",
   booking: "https://calendly.com/jilovecjoseph/50-minute-meeting"
 };

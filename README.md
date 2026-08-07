@@ -32,7 +32,7 @@ A production-oriented rebuild of **josephjilovec.com** as a multi-page personal 
 - DJ Hotwax
 - Vanta Helix
 - CannaCore Seeds, with JJ Stash as its editorial/publication layer
-- SnarkLogic
+- Snark Logic
 - Alder & Meridian
 
 

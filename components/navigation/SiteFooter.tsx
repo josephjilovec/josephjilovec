@@ -23,7 +23,7 @@ export function SiteFooter() {
           <span className="footer-label">Public work</span>
           <Link href="/creative">Creative</Link>
           <Link href="/writing">Writing</Link>
-          <a href={site.github} target="_blank" rel="noreferrer">GitHub ↗</a>
+          <a href={site.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
           <a href={site.medium} target="_blank" rel="noreferrer">Medium ↗</a>
         </div>
         <div className="footer-column">

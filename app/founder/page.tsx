@@ -16,7 +16,7 @@ export default function FounderPage() {
           <p className="hero-kicker">Founder blueprint / Joseph Jilovec</p>
           <h1>Operator, behavioral thinker, systems builder, creative.</h1>
           <p>I build ventures using experience from running businesses, studying human behavior, working with technical systems, and making creative work. The value is in connecting those disciplines without pretending they are interchangeable.</p>
-          <div className="hero-actions"><a className="button" href={site.github} target="_blank" rel="noreferrer">View GitHub ↗</a><Link href="/contact" className="text-link">Work together <span>↗</span></Link></div>
+          <div className="hero-actions"><a className="button" href={site.linkedin} target="_blank" rel="noreferrer">View LinkedIn ↗</a><Link href="/contact" className="text-link">Work together <span>↗</span></Link></div>
         </div>
       </section>
       <section className="section">

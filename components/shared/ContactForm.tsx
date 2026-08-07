@@ -56,7 +56,7 @@ export function ContactForm({ mode = "contact" }: { mode?: "contact" | "brief" }
             <option>DJ Hotwax</option>
             <option>Vanta Helix</option>
             <option>CannaCore Seeds</option>
-            <option>SnarkLogic</option>
+            <option>Snark Logic</option>
             <option>Alder &amp; Meridian</option>
           </select>
         </label>

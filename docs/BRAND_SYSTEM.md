@@ -23,7 +23,7 @@ The design avoids forcing all projects into a single startup aesthetic. The pare
 - DJ Hotwax — ember orange
 - Vanta Helix — ultraviolet
 - CannaCore Seeds / JJ Stash — botanical green
-- SnarkLogic — hot magenta
+- Snark Logic — hot magenta
 - Alder & Meridian — steel blue + warm wood
 
 ## Tone

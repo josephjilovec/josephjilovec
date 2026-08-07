@@ -33,7 +33,6 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
           <p className="project-summary">{venture.summary}</p>
           <div className="hero-actions">
             {venture.externalUrl && <a className="button" href={venture.externalUrl} target="_blank" rel="noreferrer">{venture.externalLabel ?? "Visit project"} ↗</a>}
-            {venture.repositoryUrl && <a className="text-link" href={venture.repositoryUrl} target="_blank" rel="noreferrer">View GitHub <span>↗</span></a>}
             <Link href={`/contact?venture=${encodeURIComponent(venture.name)}`} className="text-link">Discuss this project <span>↗</span></Link>
           </div>
         </div>

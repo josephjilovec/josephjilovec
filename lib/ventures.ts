@@ -17,7 +17,6 @@ export type Venture = {
   opportunity: string;
   externalUrl?: string;
   externalLabel?: string;
-  repositoryUrl?: string;
   art: string;
   accent: string;
   accentSoft: string;
@@ -48,7 +47,6 @@ export const ventures: Venture[] = [
       "Pilot participants, referral partners, and collaborators in ethical performance coaching and behavior design.",
     externalUrl: "https://myhealthyaura.vercel.app/",
     externalLabel: "Visit My Healthy Aura",
-    repositoryUrl: "https://github.com/josephjilovec/myhealthyaura",
     art: "/project-art/aura.svg",
     accent: "#8bd5c7",
     accentSoft: "rgba(139,213,199,.14)",
@@ -77,7 +75,6 @@ export const ventures: Venture[] = [
       "Operating partners, market-domain advisers, and pilot participants with real transaction experience.",
     externalUrl: "https://swiftdealsolutions.vercel.app/",
     externalLabel: "Visit Swift Deal Solutions",
-    repositoryUrl: "https://github.com/josephjilovec/swiftdealsolutions",
     art: "/project-art/swift.svg",
     accent: "#c9a76a",
     accentSoft: "rgba(201,167,106,.15)",
@@ -106,7 +103,6 @@ export const ventures: Venture[] = [
       "Production collaboration, music licensing, placements, visual work, and creative partnerships.",
     externalUrl: "https://djhotwax.vercel.app/",
     externalLabel: "Visit DJ Hotwax",
-    repositoryUrl: "https://github.com/josephjilovec/djhotwax",
     art: "/project-art/hotwax.svg",
     accent: "#ff7849",
     accentSoft: "rgba(255,120,73,.15)",
@@ -135,7 +131,6 @@ export const ventures: Venture[] = [
       "Human-computer interaction, BCI, privacy, signal-processing, and product-design collaborators.",
     externalUrl: "https://vantahelix.vercel.app/",
     externalLabel: "Explore Vanta Helix",
-    repositoryUrl: "https://github.com/josephjilovec/VANTAHELIX",
     art: "/project-art/vanta.svg",
     accent: "#a18cff",
     accentSoft: "rgba(161,140,255,.15)",
@@ -164,7 +159,6 @@ export const ventures: Venture[] = [
       "Breeders, genetics collaborators, editorial contributors, collectors, and compliant industry partners.",
     externalUrl: "https://www.cannacoreseeds.com/",
     externalLabel: "Visit CannaCore Seeds",
-    repositoryUrl: "https://github.com/josephjilovec/jjstash",
     art: "/project-art/cannacore.svg",
     accent: "#75d58a",
     accentSoft: "rgba(117,213,138,.14)",
@@ -192,8 +186,7 @@ export const ventures: Venture[] = [
     opportunity:
       "Creative technologists, performance marketers, agencies, brand teams, and experiment partners.",
     externalUrl: "https://snarklogic.vercel.app/",
-    externalLabel: "Explore SnarkLogic",
-    repositoryUrl: "https://github.com/josephjilovec/snarklogic",
+    externalLabel: "Explore Snark Logic",
     art: "/project-art/snark.svg",
     accent: "#ff4f8b",
     accentSoft: "rgba(255,79,139,.14)",
@@ -220,7 +213,6 @@ export const ventures: Venture[] = [
       "Complete product photography and supplier verification, legal/compliance review, test-mode payments, order storage, fulfillment mapping, and a complete test order before enabling live commerce.",
     opportunity:
       "Supplier relationships, product curation, e-commerce operations, brand partnerships, and launch-readiness collaborators.",
-    repositoryUrl: "https://github.com/josephjilovec/alder-and-meridian",
     art: "/project-art/alder.svg",
     accent: "#74a9b8",
     accentSoft: "rgba(116,169,184,.14)",

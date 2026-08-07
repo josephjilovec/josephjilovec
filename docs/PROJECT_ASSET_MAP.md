@@ -32,7 +32,7 @@
 - Replace with: approved CannaCore genetics/strain imagery, seed-bank interface captures, or JJ Stash editorial art.
 - Keep the distinction clear: CannaCore is the seed/genetics brand; JJ Stash is the editorial/publication layer.
 
-## SnarkLogic
+## Snark Logic
 
 `public/project-art/snark.svg`
 - Replace with: interface screenshot, orchestration graph, creative-output samples, or experiment dashboard.

@@ -30,7 +30,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
     name: "Joseph Jilovec",
     url: site.url,
     homeLocation: { "@type": "Place", name: site.location },
-    sameAs: [site.github, site.medium],
+    sameAs: [site.linkedin, site.medium],
     knowsAbout: ["venture development", "behavioral design", "AI systems", "music production"]
   };
 
