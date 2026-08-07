@@ -120,3 +120,13 @@ Validation performed:
 - Confirmed Project file routes remain internal and venture Website/Explore links remain external.
 - Parsed the replacement SVGs successfully and syntax/transpile checked all 33 non-declaration TS/TSX files with zero diagnostics.
 - Confirmed all `@/` alias imports resolve to an existing source file.
+
+## Project-page hero artwork update
+
+- Added seven dedicated portrait-oriented project-page hero assets under `public/project-hero/`.
+- Venture Universe card artwork remains unchanged under `public/project-art/`.
+- Each venture now has a separate `heroArt` reference, so project pages no longer reuse their card thumbnail.
+- Validated all seven SVG files as well-formed XML and confirmed all seven `heroArt` references resolve to existing files.
+- Parsed 33 TypeScript/TSX source files with TypeScript 5.8.3: zero syntax errors.
+- Confirmed all `@/...` alias imports resolve to existing project files.
+- External link checker could not reach public URLs from this execution environment because outbound fetch failed; this is an environment limitation rather than a confirmed link failure.

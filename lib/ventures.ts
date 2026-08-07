@@ -18,6 +18,7 @@ export type Venture = {
   externalUrl?: string;
   externalLabel?: string;
   art: string;
+  heroArt: string;
   accent: string;
   accentSoft: string;
   tags: string[];
@@ -48,6 +49,7 @@ export const ventures: Venture[] = [
     externalUrl: "https://myhealthyaura.vercel.app/",
     externalLabel: "Visit My Healthy Aura",
     art: "/project-art/aura.svg",
+    heroArt: "/project-hero/aura-hero.svg",
     accent: "#8bd5c7",
     accentSoft: "rgba(139,213,199,.14)",
     tags: ["behavioral", "active", "performance", "services"]
@@ -76,6 +78,7 @@ export const ventures: Venture[] = [
     externalUrl: "https://swiftdealsolutions.vercel.app/",
     externalLabel: "Visit Swift Deal Solutions",
     art: "/project-art/swift.svg",
+    heroArt: "/project-hero/swift-hero.svg",
     accent: "#c9a76a",
     accentSoft: "rgba(201,167,106,.15)",
     tags: ["commerce", "active", "marketplaces", "operations"]
@@ -104,6 +107,7 @@ export const ventures: Venture[] = [
     externalUrl: "https://djhotwax.vercel.app/",
     externalLabel: "Visit DJ Hotwax",
     art: "/project-art/hotwax.svg",
+    heroArt: "/project-hero/hotwax-hero.svg",
     accent: "#ff7849",
     accentSoft: "rgba(255,120,73,.15)",
     tags: ["creative", "active", "music", "licensing"]
@@ -132,6 +136,7 @@ export const ventures: Venture[] = [
     externalUrl: "https://vantahelix.vercel.app/",
     externalLabel: "Explore Vanta Helix",
     art: "/project-art/vanta.svg",
+    heroArt: "/project-hero/vanta-hero.svg",
     accent: "#a18cff",
     accentSoft: "rgba(161,140,255,.15)",
     tags: ["technology", "experimental", "bci", "product-concept"]
@@ -160,6 +165,7 @@ export const ventures: Venture[] = [
     externalUrl: "https://www.cannacoreseeds.com/",
     externalLabel: "Visit CannaCore Seeds",
     art: "/project-art/cannacore.svg",
+    heroArt: "/project-hero/cannacore-hero.svg",
     accent: "#75d58a",
     accentSoft: "rgba(117,213,138,.14)",
     tags: ["commerce", "active", "genetics", "editorial", "culture"]
@@ -188,6 +194,7 @@ export const ventures: Venture[] = [
     externalUrl: "https://snarklogic.vercel.app/",
     externalLabel: "Explore Snark Logic",
     art: "/project-art/snark.svg",
+    heroArt: "/project-hero/snark-hero.svg",
     accent: "#ff4f8b",
     accentSoft: "rgba(255,79,139,.14)",
     tags: ["technology", "experimental", "advertising", "ai", "creative"]
@@ -214,6 +221,7 @@ export const ventures: Venture[] = [
     opportunity:
       "Supplier relationships, product curation, e-commerce operations, brand partnerships, and launch-readiness collaborators.",
     art: "/project-art/alder.svg",
+    heroArt: "/project-hero/alder-hero.svg",
     accent: "#74a9b8",
     accentSoft: "rgba(116,169,184,.14)",
     tags: ["commerce", "prototype", "ecommerce", "curation", "operations"]

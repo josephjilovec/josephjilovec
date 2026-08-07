@@ -37,7 +37,7 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
         <div className="project-hero-art">
-          <Image src={venture.art} alt={`${venture.name} project artwork`} fill priority sizes="(max-width: 900px) 100vw, 50vw" />
+          <Image src={venture.heroArt} alt={`${venture.name} project hero artwork`} fill priority sizes="(max-width: 900px) 100vw, 50vw" />
           <div className="project-art-caption"><span>PROJECT FILE / {venture.slug.toUpperCase()}</span><span>STATUS / {venture.stage.toUpperCase()}</span></div>
         </div>
       </section>
