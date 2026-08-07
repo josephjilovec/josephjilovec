@@ -15,6 +15,16 @@ const constellationArt: Record<string, string> = {
   "alder-and-meridian": "/constellation-art/alder-map.svg"
 };
 
+const constellationPreview: Record<string, string> = {
+  "my-healthy-aura": "/constellation-preview/aura-preview.svg",
+  "swift-deal-solutions": "/constellation-preview/swift-preview.svg",
+  "dj-hotwax": "/constellation-preview/hotwax-preview.svg",
+  "vanta-helix": "/constellation-preview/vanta-preview.svg",
+  "cannacore-seeds": "/constellation-preview/cannacore-preview.svg",
+  "snarklogic": "/constellation-preview/snark-preview.svg",
+  "alder-and-meridian": "/constellation-preview/alder-preview.svg"
+};
+
 export function VentureConstellation() {
   const [activeSlug, setActiveSlug] = useState(ventures[0].slug);
   const active = ventures.find((venture) => venture.slug === activeSlug) ?? ventures[0];
@@ -50,6 +60,10 @@ export function VentureConstellation() {
         ))}
       </div>
       <div className="constellation-detail">
+        <div className="constellation-detail-preview" aria-hidden="true">
+          <img src={constellationPreview[active.slug] ?? active.art} alt="" />
+          <div className="constellation-detail-preview-glow" />
+        </div>
         <div className="detail-meta">
           <span>{active.category}</span>
           <span>{active.stage}</span>
