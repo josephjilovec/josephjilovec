@@ -1,0 +1,23 @@
+{
+  "name": "josephjilovec-nextjs-vercel",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "check:links": "node scripts/check-links.mjs"
+  },
+  "dependencies": {
+    "next": "16.2.12",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.9.3"
+  }
+}
