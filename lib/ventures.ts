@@ -46,7 +46,7 @@ export const ventures: Venture[] = [
       "Run a clearly defined pilot and measure completion, perceived value, repeat interest, and where the format does or does not help.",
     opportunity:
       "Pilot participants, referral partners, and collaborators in ethical performance coaching and behavior design.",
-    externalUrl: "https://myhealthyaura.vercel.app/",
+    externalUrl: "https://myhealthyaura.com/",
     externalLabel: "Visit My Healthy Aura",
     art: "/project-art/aura.svg",
     heroArt: "/project-hero/aura-hero.svg",
@@ -75,7 +75,7 @@ export const ventures: Venture[] = [
       "Interview the first customer segment and test one narrow transaction workflow with explicit compliance boundaries.",
     opportunity:
       "Operating partners, market-domain advisers, and pilot participants with real transaction experience.",
-    externalUrl: "https://swiftdealsolutions.vercel.app/",
+    externalUrl: "https://swiftdealsolutions.com/",
     externalLabel: "Visit Swift Deal Solutions",
     art: "/project-art/swift.svg",
     heroArt: "/project-hero/swift-hero.svg",
@@ -162,7 +162,7 @@ export const ventures: Venture[] = [
       "Tighten the connection between the seed-bank experience and JJ Stash so product discovery, genetics documentation, and editorial content reinforce one another.",
     opportunity:
       "Breeders, genetics collaborators, editorial contributors, collectors, and compliant industry partners.",
-    externalUrl: "https://www.cannacoreseeds.com/",
+    externalUrl: "https://cannacoreseeds.com/",
     externalLabel: "Visit CannaCore Seeds",
     art: "/project-art/cannacore.svg",
     heroArt: "/project-hero/cannacore-hero.svg",
