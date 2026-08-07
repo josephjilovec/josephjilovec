@@ -5,6 +5,16 @@ import { useState } from "react";
 import type { CSSProperties } from "react";
 import { ventures } from "@/lib/ventures";
 
+const constellationArt: Record<string, string> = {
+  "my-healthy-aura": "/constellation-art/aura-map.svg",
+  "swift-deal-solutions": "/constellation-art/swift-map.svg",
+  "dj-hotwax": "/constellation-art/hotwax-map.svg",
+  "vanta-helix": "/constellation-art/vanta-map.svg",
+  "cannacore-seeds": "/constellation-art/cannacore-map.svg",
+  "snarklogic": "/constellation-art/snark-map.svg",
+  "alder-and-meridian": "/constellation-art/alder-map.svg"
+};
+
 export function VentureConstellation() {
   const [activeSlug, setActiveSlug] = useState(ventures[0].slug);
   const active = ventures.find((venture) => venture.slug === activeSlug) ?? ventures[0];
@@ -14,9 +24,9 @@ export function VentureConstellation() {
       <div className="constellation-map" aria-label="Interactive venture constellation">
         <div className="constellation-rings" aria-hidden="true" />
         <div className="constellation-core">
-          <span>JOSEPH</span>
-          <strong>JJ</strong>
-          <small>parent brand</small>
+          <span>JJ</span>
+          <strong>Venture</strong>
+          <small>Studio</small>
         </div>
         {ventures.map((venture, index) => (
           <button
@@ -29,7 +39,7 @@ export function VentureConstellation() {
             <span className="constellation-node-index">{String(index + 1).padStart(2, "0")}</span>
             <div className="constellation-node-body">
               <div className="constellation-node-art" aria-hidden="true">
-                <img src={venture.art} alt="" />
+                <img src={constellationArt[venture.slug] ?? venture.art} alt="" />
               </div>
               <div className="constellation-node-copy">
                 <strong>{venture.name}</strong>
