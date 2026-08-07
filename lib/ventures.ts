@@ -172,7 +172,7 @@ export const ventures: Venture[] = [
   },
   {
     slug: "snarklogic",
-    name: "SnarkLogic",
+    name: "Snark Logic",
     eyebrow: "Creative intelligence prototype",
     category: "Technology",
     stage: "Prototype",
