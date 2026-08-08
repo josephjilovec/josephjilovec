@@ -10,11 +10,10 @@ export default function ContactPage() {
       <section className="page-hero contact-hero"><div><p className="hero-kicker">Contact / opportunity routing</p><h1>Tell me what caught your <span>attention.</span></h1></div><p>Investor conversations, technical collaboration, operating partnerships, media, creative work, music licensing, and focused project questions can all start here.</p></section>
       <section className="section contact-section">
         <div className="contact-layout">
-          <aside><span className="section-kicker">01 / Routing</span><h2>Use the lane that matches the opportunity.</h2><div className="contact-lanes"><p><strong>Investor</strong>Defined thesis, validation milestone, or project brief.</p><p><strong>Technical collaborator</strong>Architecture, AI systems, BCI/HCI, product prototypes, and technical experiments.</p><p><strong>Business partner</strong>Operating, distribution, transaction, or market-domain collaboration.</p><p><strong>Creative / music</strong>Production, placements, licensing, visual worlds, partnerships.</p></div><a href={site.booking} target="_blank" rel="noreferrer" className="text-link">Prefer a call? Book a founder conversation <span>↗</span></a></aside>
+          <aside><span className="section-kicker">01 / Contact</span><h2>One place to start the conversation.</h2><div className="contact-lanes"><p><strong>Investor</strong>Defined thesis, validation milestone, or project brief.</p><p><strong>Technical collaborator</strong>Architecture, AI systems, BCI/HCI, product prototypes, and technical experiments.</p><p><strong>Business partner</strong>Operating, distribution, transaction, or market-domain collaboration.</p><p><strong>Creative / music</strong>Production, placements, licensing, visual worlds, partnerships.</p></div><a href={site.booking} target="_blank" rel="noreferrer" className="text-link">Prefer a call? Book a founder conversation <span>↗</span></a></aside>
           <ContactForm />
         </div>
       </section>
-      <section className="section brief-section" id="brief"><div className="brief-header"><span className="section-kicker">02 / Private venture materials</span><h2>Request a deeper project brief.</h2><p>Materials vary by project and may require a separate nondisclosure agreement. A request does not guarantee access.</p></div><ContactForm mode="brief" /></section>
     </>
   );
 }
