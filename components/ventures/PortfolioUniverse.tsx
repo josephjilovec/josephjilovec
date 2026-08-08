@@ -74,7 +74,7 @@ export function PortfolioUniverse() {
       <div className="venture-universe-v3" style={{ "--active-accent": active.accent, "--active-soft": active.accentSoft } as CSSProperties}>
         <section className="venture-selector-panel" aria-label="Venture selector">
           <div className="venture-selector-head"><div><span className="venture-selector-eyebrow">Portfolio signal map</span><h3>Choose a project world.</h3></div><div className="venture-selector-count" aria-label={`${ventures.length} projects`}><strong>{String(activeIndex + 1).padStart(2, "0")}</strong><span>/ {String(ventures.length).padStart(2, "0")}</span></div></div>
-          <p className="venture-selector-intro">{ventures.length} projects, one operating system. Select a signal to inspect its stage, thesis, and current public state.</p>
+          <p className="venture-selector-intro">{ventures.length} projects, one operating system. Select a signal to inspect its stage, thesis, and project details.</p>
           <div className="venture-node-grid" role="group" aria-label="Project worlds" onPointerLeave={clearHoverIntent}>
             {ventures.map((venture, index) => {
               const isActive = venture.slug === active.slug;
@@ -86,7 +86,7 @@ export function PortfolioUniverse() {
         <aside className="venture-preview-card" aria-live="polite" aria-atomic="true" onPointerEnter={clearHoverIntent}>
           <div className="venture-preview-swap" key={active.slug}>
             <div className="venture-preview-art" aria-hidden="true"><img src={previewArt[active.slug] ?? active.heroArt ?? active.art} alt="" /><div className="venture-preview-grid" /><div className="venture-preview-signal"><span>ACTIVE SIGNAL</span><i /><strong>{String(activeIndex + 1).padStart(2, "0")}</strong></div></div>
-            <div className="venture-preview-content"><div className="venture-preview-meta"><span>{active.category}</span><span>{active.stage}</span></div><h3>{active.name}</h3><p>{active.summary}</p><div className="venture-preview-status"><span><i /> Current state</span><strong>{active.status}</strong></div><div className="venture-preview-tags" aria-label="Project themes">{active.tags.slice(0, 3).map((tag) => <span key={tag}>{tag}</span>)}</div><div className="venture-preview-actions"><Link className="button" href={`/ventures/${active.slug}`}>Open project file</Link>{active.externalUrl ? <a className="text-link" href={active.externalUrl} target="_blank" rel="noreferrer">Visit project <span>↗</span></a> : null}</div></div>
+            <div className="venture-preview-content"><div className="venture-preview-meta"><span>{active.category}</span><span>{active.stage}</span></div><h3>{active.name}</h3><p>{active.summary}</p><div className="venture-preview-tags" aria-label="Project themes">{active.tags.slice(0, 3).map((tag) => <span key={tag}>{tag}</span>)}</div><div className="venture-preview-actions"><Link className="button" href={`/ventures/${active.slug}`}>Open project file</Link>{active.externalUrl ? <a className="text-link" href={active.externalUrl} target="_blank" rel="noreferrer">Visit project <span>↗</span></a> : null}</div></div>
           </div>
         </aside>
 
@@ -238,20 +238,6 @@ export function PortfolioUniverse() {
             .venture-preview-content > p {
               font-size: 15px;
               line-height: 1.72;
-            }
-
-            .venture-preview-status {
-              gap: 9px;
-              margin-top: 28px;
-              padding: 18px 0;
-            }
-
-            .venture-preview-status span {
-              font-size: 10px;
-            }
-
-            .venture-preview-status strong {
-              font-size: 15px;
             }
 
             .venture-preview-tags {
