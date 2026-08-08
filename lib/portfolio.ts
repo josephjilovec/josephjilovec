@@ -1,6 +1,20 @@
 import { ventures as baseVentures, ventureCategories } from "@/lib/ventures";
 import type { Venture } from "@/lib/ventures";
 
+const brandedSubdomains: Record<string, string> = {
+  "dj-hotwax": "https://djhotwax.josephjilovec.com/",
+  "vanta-helix": "https://vantahelix.josephjilovec.com/",
+  snarklogic: "https://snarklogic.josephjilovec.com/",
+  "alder-and-meridian": "https://aldermeridian.josephjilovec.com/",
+  "united-american-future": "https://unitedamericanfuture.josephjilovec.com/",
+  "world-forward-foundation": "https://worldforwardfoundation.josephjilovec.com/"
+};
+
+const portfolioVentures: Venture[] = baseVentures.map((venture) => ({
+  ...venture,
+  externalUrl: brandedSubdomains[venture.slug] ?? venture.externalUrl
+}));
+
 const givewiseInsights: Venture = {
   slug: "givewise-insights",
   name: "Givewise Insights",
@@ -22,7 +36,7 @@ const givewiseInsights: Venture = {
     "Convert the public advisory model into a small number of clearly scoped consulting engagements and document the resulting decision process, deliverables, and measurable operating outcomes.",
   opportunity:
     "Organizations evaluating AI strategy, automation, agentic workflows, data readiness, governance, technology modernization, and implementation priorities.",
-  externalUrl: "https://givewiseinsights.vercel.app/",
+  externalUrl: "https://givewiseinsights.josephjilovec.com/",
   externalLabel: "Visit Givewise Insights",
   art: "/project-art/givewise.svg",
   heroArt: "/project-hero/givewise-hero.svg",
@@ -31,7 +45,7 @@ const givewiseInsights: Venture = {
   tags: ["technology", "ai", "consulting", "transformation", "advisory"]
 };
 
-export const ventures: Venture[] = [...baseVentures, givewiseInsights];
+export const ventures: Venture[] = [...portfolioVentures, givewiseInsights];
 export { ventureCategories };
 
 export function getVenture(slug: string) {
