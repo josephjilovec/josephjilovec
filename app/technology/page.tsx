@@ -1,17 +1,17 @@
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import Image from "next/image";
-import { ventures } from "@/lib/ventures";
+import { ventures } from "@/lib/portfolio";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { pageMetadata } from "@/lib/metadata";
 
-export const metadata = pageMetadata("Technology", "AI advertising systems, adaptive-interface concepts, and technical prototypes by Joseph Jilovec.", "/technology");
+export const metadata = pageMetadata("Technology", "AI transformation advisory, adaptive-interface concepts, creative-intelligence systems, and technical prototypes by Joseph Jilovec.", "/technology");
 
 export default function TechnologyPage() {
   const tech = ventures.filter((venture) => venture.category === "Technology");
   return (
     <>
-      <section className="page-hero tech-hero"><div><p className="hero-kicker">Technology / systems & prototypes</p><h1>Architecture before <span>automation theater.</span></h1></div><p>Joseph&apos;s current public technology work centers on adaptive interfaces and creative-intelligence systems. The parent site labels prototypes as prototypes and separates demonstrable software from future-facing product ideas.</p></section>
+      <section className="page-hero tech-hero"><div><p className="hero-kicker">Technology / systems, advisory & prototypes</p><h1>Architecture before <span>automation theater.</span></h1></div><p>Joseph&apos;s current public technology work spans AI transformation advisory, adaptive interfaces, creative-intelligence systems, and experimental technical concepts. The parent site labels consulting brands, prototypes, and future-facing ideas according to what actually exists.</p></section>
       <section className="section"><SectionHeading index="01" eyebrow="Current systems" title={`${tech.length} public technology directions.`} />
         <div className="tech-projects">
           {tech.map((venture) => <article key={venture.slug} style={{ "--venture-accent": venture.accent } as CSSProperties}><div className="tech-art"><Image src={venture.art} alt="" fill sizes="(max-width: 800px) 100vw, 50vw" /></div><span>{venture.stage}</span><h3>{venture.name}</h3><p>{venture.summary}</p><Link href={`/ventures/${venture.slug}`} className="text-link">Open technical file <span>↗</span></Link></article>)}
