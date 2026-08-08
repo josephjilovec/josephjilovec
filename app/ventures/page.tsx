@@ -1,6 +1,7 @@
 import { VentureGrid } from "@/components/ventures/VentureGrid";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { pageMetadata } from "@/lib/metadata";
+import { ventures } from "@/lib/portfolio";
 
 export const metadata = pageMetadata("Ventures", "Explore Joseph Jilovec's venture concepts, civic initiatives, prototypes, operating projects, and creative work.", "/ventures");
 
@@ -10,9 +11,9 @@ export default function VenturesPage() {
       <section className="page-hero compact-hero">
         <div>
           <p className="hero-kicker">Venture universe / current public portfolio</p>
-          <h1>Nine project worlds.<br /><span>Different proof requirements.</span></h1>
+          <h1>{ventures.length} project worlds.<br /><span>Different proof requirements.</span></h1>
         </div>
-        <p>Every project file states the current stage, the core thesis, what exists now, and the next milestone. Commercial ventures, civic initiatives, technical prototypes, and creative identities are presented on their own terms rather than being forced into one definition of progress.</p>
+        <p>Every project file states the current stage, the core thesis, what exists now, and the next milestone. Commercial ventures, civic initiatives, technical prototypes, consulting brands, and creative identities are presented on their own terms rather than being forced into one definition of progress.</p>
       </section>
       <section className="section ventures-index-section">
         <SectionHeading index="01" eyebrow="Portfolio explorer" title="Filter by working discipline." />
