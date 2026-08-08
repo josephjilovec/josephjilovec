@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ventureCategories, ventures } from "@/lib/ventures";
+import { ventureCategories, ventures } from "@/lib/portfolio";
 
 export function FounderHero() {
   return (
