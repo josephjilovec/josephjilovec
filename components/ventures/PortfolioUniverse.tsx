@@ -17,6 +17,8 @@ const nodeArt: Record<string, string> = {
   "united-american-future": "/constellation-art/uaf-map.svg",
   "world-forward-foundation": "/constellation-art/wff-map.svg",
   "givewise-insights": "/constellation-art/givewise-map.svg",
+  "advibe-central": "/constellation-art/advibe-map.svg",
+  "kinetic-botanicals": "/constellation-art/kinetic-botanicals-map.svg",
 };
 
 const previewArt: Record<string, string> = {
@@ -72,7 +74,7 @@ export function PortfolioUniverse() {
       <div className="venture-universe-v3" style={{ "--active-accent": active.accent, "--active-soft": active.accentSoft } as CSSProperties}>
         <section className="venture-selector-panel" aria-label="Venture selector">
           <div className="venture-selector-head"><div><span className="venture-selector-eyebrow">Portfolio signal map</span><h3>Choose a project world.</h3></div><div className="venture-selector-count" aria-label={`${ventures.length} projects`}><strong>{String(activeIndex + 1).padStart(2, "0")}</strong><span>/ {String(ventures.length).padStart(2, "0")}</span></div></div>
-          <p className="venture-selector-intro">Ten projects, one operating system. Select a signal to inspect its stage, thesis, and current public state.</p>
+          <p className="venture-selector-intro">{ventures.length} projects, one operating system. Select a signal to inspect its stage, thesis, and current public state.</p>
           <div className="venture-node-grid" role="group" aria-label="Project worlds" onPointerLeave={clearHoverIntent}>
             {ventures.map((venture, index) => {
               const isActive = venture.slug === active.slug;
