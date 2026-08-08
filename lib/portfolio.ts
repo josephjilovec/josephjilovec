@@ -127,7 +127,7 @@ const kineticBotanicals: PortfolioVenture = {
     "Finalize production and fulfillment details, verify product and packaging inputs, connect a tested payment flow, and validate initial demand with a controlled launch rather than relying on prototype engagement alone.",
   opportunity:
     "Product manufacturing, packaging, fulfillment, fitness partnerships, retail testing, creator collaborations, and active-lifestyle distribution.",
-  externalUrl: "https://kineticbotanicals.com/",
+  externalUrl: "https://kineticbotanicals.josephjilovec.com/",
   externalLabel: "Visit Kinetic Botanicals",
   art: "/project-art/kinetic-botanicals.svg",
   heroArt: "/project-hero/kinetic-botanicals-hero.svg",
