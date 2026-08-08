@@ -2,7 +2,7 @@
 
 import { FormEvent, useState } from "react";
 
-const interestOptions = ["Investor", "Technical collaborator", "Business partner", "Civic / nonprofit collaboration", "Media", "Creative collaboration", "Music / licensing", "General inquiry"];
+const interestOptions = ["Investor", "Technical collaborator", "Business partner", "Civic / nonprofit collaboration", "AI / technology advisory", "Media", "Creative collaboration", "Music / licensing", "General inquiry"];
 
 export function ContactForm({ mode = "contact" }: { mode?: "contact" | "brief" }) {
   const [state, setState] = useState<"idle" | "sending" | "success" | "error">("idle");
@@ -60,6 +60,7 @@ export function ContactForm({ mode = "contact" }: { mode?: "contact" | "brief" }
             <option>Alder &amp; Meridian</option>
             <option>United American Future</option>
             <option>World Forward Foundation</option>
+            <option>Givewise Insights</option>
           </select>
         </label>
       </div>
