@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import type { CSSProperties, PointerEvent } from "react";
 import { VentureConstellation as LegacyUniverseStyles } from "@/components/ventures/VentureConstellation";
 import { ventures } from "@/lib/portfolio";
@@ -26,18 +26,39 @@ const previewArt: Record<string, string> = {
   "alder-and-meridian": "/constellation-preview/alder-preview.svg",
 };
 
+const HOVER_INTENT_MS = 240;
+
 export function PortfolioUniverse() {
   const [activeSlug, setActiveSlug] = useState(ventures[0]?.slug ?? "");
+  const hoverTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const activeIndex = Math.max(0, ventures.findIndex((venture) => venture.slug === activeSlug));
   const active = ventures[activeIndex] ?? ventures[0];
 
   if (!active) return null;
 
-  const activateOnPointer = (event: PointerEvent<HTMLButtonElement>, slug: string) => {
-    if (event.pointerType === "mouse" || event.pointerType === "pen") setActiveSlug(slug);
+  const clearHoverIntent = () => {
+    if (hoverTimerRef.current) {
+      clearTimeout(hoverTimerRef.current);
+      hoverTimerRef.current = null;
+    }
+  };
+
+  const activateWithIntent = (event: PointerEvent<HTMLButtonElement>, slug: string) => {
+    if (event.pointerType !== "mouse" && event.pointerType !== "pen") return;
+    clearHoverIntent();
+    hoverTimerRef.current = setTimeout(() => {
+      setActiveSlug(slug);
+      hoverTimerRef.current = null;
+    }, HOVER_INTENT_MS);
+  };
+
+  const selectImmediately = (slug: string) => {
+    clearHoverIntent();
+    setActiveSlug(slug);
   };
 
   const moveSelection = (direction: -1 | 1) => {
+    clearHoverIntent();
     const next = (activeIndex + direction + ventures.length) % ventures.length;
     setActiveSlug(ventures[next].slug);
   };
@@ -55,7 +76,7 @@ export function PortfolioUniverse() {
             <div className="venture-selector-count" aria-label={`${ventures.length} projects`}><strong>{String(activeIndex + 1).padStart(2, "0")}</strong><span>/ {String(ventures.length).padStart(2, "0")}</span></div>
           </div>
           <p className="venture-selector-intro">Ten projects, one operating system. Select a signal to inspect its stage, thesis, and current public state.</p>
-          <div className="venture-node-grid" role="group" aria-label="Project worlds">
+          <div className="venture-node-grid" role="group" aria-label="Project worlds" onPointerLeave={clearHoverIntent}>
             {ventures.map((venture, index) => {
               const isActive = venture.slug === active.slug;
               return (
@@ -66,9 +87,10 @@ export function PortfolioUniverse() {
                   style={{ "--node-accent": venture.accent, "--node-soft": venture.accentSoft } as CSSProperties}
                   aria-pressed={isActive}
                   aria-label={`Select ${venture.name}`}
-                  onClick={() => setActiveSlug(venture.slug)}
-                  onPointerEnter={(event) => activateOnPointer(event, venture.slug)}
-                  onFocus={() => setActiveSlug(venture.slug)}
+                  onClick={() => selectImmediately(venture.slug)}
+                  onPointerEnter={(event) => activateWithIntent(event, venture.slug)}
+                  onPointerLeave={clearHoverIntent}
+                  onFocus={() => selectImmediately(venture.slug)}
                 >
                   <span className="venture-node-topline"><span>{String(index + 1).padStart(2, "0")}</span><i aria-hidden="true" /><em>{venture.category}</em></span>
                   <span className="venture-node-body-v3">
@@ -80,11 +102,16 @@ export function PortfolioUniverse() {
             })}
           </div>
           <div className="venture-selector-footer">
-            <span className="venture-selector-hint">Hover, focus, or tap to inspect · swipe cards on smaller screens</span>
+            <span className="venture-selector-hint">Hover deliberately to preview · click, focus, or tap to select · swipe cards on smaller screens</span>
             <div className="venture-selector-nav" aria-label="Cycle project selection"><button type="button" onClick={() => moveSelection(-1)} aria-label="Previous project">←</button><button type="button" onClick={() => moveSelection(1)} aria-label="Next project">→</button></div>
           </div>
         </section>
-        <aside className="venture-preview-card" aria-live="polite" aria-atomic="true">
+        <aside
+          className="venture-preview-card"
+          aria-live="polite"
+          aria-atomic="true"
+          onPointerEnter={clearHoverIntent}
+        >
           <div className="venture-preview-swap" key={active.slug}>
             <div className="venture-preview-art" aria-hidden="true">
               <img src={previewArt[active.slug] ?? active.heroArt ?? active.art} alt="" />
