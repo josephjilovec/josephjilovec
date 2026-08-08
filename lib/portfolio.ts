@@ -14,6 +14,7 @@ const brandedSubdomains: Record<string, string> = {
 };
 
 // Stage describes operational maturity. Status describes the project's current public/operating mode.
+// These labels intentionally replace generic terms such as Prototype, Concept designed, and Active brand in the public portfolio UI.
 const maturityStages: Record<string, string> = {
   "my-healthy-aura": "Pilot Operations",
   "swift-deal-solutions": "Market-Mapped",
