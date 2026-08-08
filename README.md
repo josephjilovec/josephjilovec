@@ -9,7 +9,7 @@ A production-oriented rebuild of **josephjilovec.com** as a multi-page personal 
 - TypeScript
 - App Router + Server Components by default
 - Focused client components for navigation and interactive portfolio systems
-- Native Next.js route handlers for contact / venture-brief requests
+- Native Next.js route handlers for contact requests
 - Resend REST API for server-side email delivery
 - No client-side secrets
 
@@ -23,7 +23,7 @@ A production-oriented rebuild of **josephjilovec.com** as a multi-page personal 
 - `/technology` — systems / prototype portfolio
 - `/creative` — DJ Hotwax and creative identity
 - `/writing` — selected Medium writing
-- `/contact` — opportunity routing + private venture brief request
+- `/contact` — single opportunity-routing contact hub
 
 ## Featured portfolio
 
@@ -34,7 +34,10 @@ A production-oriented rebuild of **josephjilovec.com** as a multi-page personal 
 - CannaCore Seeds, with JJ Stash as its editorial/publication layer
 - Snark Logic
 - Alder & Meridian
+- United American Future
+- World Forward Foundation
 
+The portfolio now spans five working disciplines: Technology, Commerce, Civic, Behavioral, and Creative.
 
 ## Local development
 
@@ -100,9 +103,10 @@ The parent site intentionally distinguishes:
 - active brand
 - concept designed
 - prototype / concept experience
+- civic initiative
 - creative project
 
-Future product specifications or illustrative performance models on standalone prototype sites are not repeated here as independently verified commercial achievements.
+Future product specifications, organizational claims, or illustrative performance models on standalone project sites are not repeated here as independently verified achievements unless explicitly supported.
 
 ## Asset replacement
 
