@@ -20,12 +20,12 @@ A production-oriented rebuild of **josephjilovec.com** as a multi-page personal 
 - `/ventures/[slug]` — individual project files with stage disclosure
 - `/founder` — founder blueprint and interactive timeline
 - `/studio` — studio operating model
-- `/technology` — systems / prototype portfolio
+- `/technology` — systems, AI advisory, and prototype portfolio
 - `/creative` — DJ Hotwax and creative identity
 - `/writing` — selected Medium writing
 - `/contact` — single opportunity-routing contact hub
 
-## Featured portfolio
+## Featured portfolio — 10 project worlds
 
 - My Healthy Aura
 - Swift Deal Solutions
@@ -36,8 +36,9 @@ A production-oriented rebuild of **josephjilovec.com** as a multi-page personal 
 - Alder & Meridian
 - United American Future
 - World Forward Foundation
+- Givewise Insights
 
-The portfolio now spans five working disciplines: Technology, Commerce, Civic, Behavioral, and Creative.
+The portfolio spans five working disciplines: Technology, Commerce, Civic, Behavioral, and Creative.
 
 ## Local development
 
@@ -106,7 +107,7 @@ The parent site intentionally distinguishes:
 - civic initiative
 - creative project
 
-Future product specifications, organizational claims, or illustrative performance models on standalone project sites are not repeated here as independently verified achievements unless explicitly supported.
+Future product specifications, organizational claims, consulting outcomes, or illustrative performance models on standalone project sites are not repeated here as independently verified achievements unless explicitly supported.
 
 ## Asset replacement
 
