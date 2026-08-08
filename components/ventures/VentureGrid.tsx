@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { CSSProperties } from "react";
-import { ventureCategories, ventures } from "@/lib/ventures";
+import { ventureCategories, ventures } from "@/lib/portfolio";
 
 export function VentureGrid() {
   const [filter, setFilter] = useState<(typeof ventureCategories)[number]>("All");
