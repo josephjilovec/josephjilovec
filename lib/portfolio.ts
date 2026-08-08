@@ -1,6 +1,7 @@
 import { ventures as baseVentures, ventureCategories } from "@/lib/ventures";
 import type { Venture } from "@/lib/ventures";
 
+// Public portfolio links use branded josephjilovec.com subdomains when a project has no dedicated custom domain.
 const brandedSubdomains: Record<string, string> = {
   "dj-hotwax": "https://djhotwax.josephjilovec.com/",
   "vanta-helix": "https://vantahelix.josephjilovec.com/",
