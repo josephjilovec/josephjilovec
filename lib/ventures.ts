@@ -220,6 +220,8 @@ export const ventures: Venture[] = [
       "Complete product photography and supplier verification, legal/compliance review, test-mode payments, order storage, fulfillment mapping, and a complete test order before enabling live commerce.",
     opportunity:
       "Supplier relationships, product curation, e-commerce operations, brand partnerships, and launch-readiness collaborators.",
+    externalUrl: "https://alder-and-meridian.vercel.app/",
+    externalLabel: "Explore Alder & Meridian",
     art: "/project-art/alder.svg",
     heroArt: "/project-hero/alder-hero.svg",
     accent: "#74a9b8",
