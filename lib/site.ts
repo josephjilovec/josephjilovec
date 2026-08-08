@@ -3,7 +3,7 @@ export const site = {
   studioName: "Joseph Jilovec Venture Studio",
   url: "https://josephjilovec.com",
   description:
-    "Concepts built to become real — founder-led venture development across commerce, civic initiatives, behavioral design, technology, and creative work.",
+    "Concepts built to become companies — founder-led venture development across commerce, civic initiatives, behavioral design, technology, and creative work.",
   location: "Phoenix, Arizona",
   linkedin: "https://www.linkedin.com/in/jilovecjoseph/",
   medium: "https://medium.com/@jilovecjoseph",
