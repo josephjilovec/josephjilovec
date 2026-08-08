@@ -31,7 +31,7 @@ export default function Home() {
           <p>The portfolio is intentionally careful about the difference between past operating experience, current experiments, and future possibilities.</p>
         </SectionHeading>
         <div className="evidence-grid">
-          <article><span>01 / Commerce</span><strong>Scaled commerce</strong><p>Track record of scaling digital commerce platforms, optimizing multi-channel operations, and building durable systems designed for sustained growth and structural revenue stability.</p></article>
+          <article><span>01 / Commerce</span><strong>Scaled Commerce</strong><p>Track record of scaling digital commerce platforms, optimizing multi-channel operations, and building durable systems designed for sustained growth and structural revenue stability.</p></article>
           <article><span>02 / Education</span><strong>B.A.</strong><p>Psychology · Northern Illinois University. Used as a behavioral-design lens rather than a substitute for clinical credentials.</p></article>
           <article><span>03 / Practice</span><strong>NGH</strong><p>Certified hypnotist. Applied here to attention, motivation, and behavior-design thinking within appropriate non-clinical boundaries.</p></article>
           <article><span>04 / Portfolio</span><strong>7</strong><p>Featured projects across commerce, behavioral services, technology concepts, music, genetics, and creative systems.</p></article>
