@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
 import { FounderHero } from "@/components/hero/FounderHero";
@@ -5,6 +6,18 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 import { VentureConstellation } from "@/components/ventures/VentureConstellation";
 import { StudioLoop } from "@/components/interactive/StudioLoop";
 import { ventures } from "@/lib/ventures";
+import styles from "./home.module.css";
+
+const selectedWorldSlugs = [
+  "swift-deal-solutions",
+  "vanta-helix",
+  "united-american-future",
+  "dj-hotwax",
+] as const;
+
+const selectedWorlds = selectedWorldSlugs
+  .map((slug) => ventures.find((venture) => venture.slug === slug))
+  .filter((venture): venture is (typeof ventures)[number] => Boolean(venture));
 
 export default function Home() {
   return (
@@ -40,18 +53,48 @@ export default function Home() {
 
       <section className="section worlds-section">
         <div className="worlds-header">
-          <SectionHeading index="04" eyebrow="Selected worlds" title="The projects are allowed to look different." />
-          <p className="worlds-note">A parent brand should create coherence without forcing a music identity, a civic initiative, an adaptive technology concept, a seed brand, and a transaction venture into the same costume.</p>
+          <SectionHeading index="04" eyebrow="Selected worlds" title="Four projects. Four different modes of building." />
+          <p className="worlds-note">The homepage does not need to repeat the entire portfolio. These four are a cross-section of commercial, technical, civic, and creative work; the full nine-project universe stays available in Ventures.</p>
         </div>
-        <div className="world-strip">
-          {ventures.slice(2).map((venture) => (
-            <Link href={`/ventures/${venture.slug}`} key={venture.slug} className="world-panel" style={{ "--venture-accent": venture.accent } as CSSProperties}>
-              <span>{venture.eyebrow}</span>
-              <h3>{venture.name}</h3>
-              <p>{venture.summary}</p>
-              <i>Open world ↗</i>
+
+        <div className={styles.selectedWorldsGrid}>
+          {selectedWorlds.map((venture, index) => (
+            <Link
+              href={`/ventures/${venture.slug}`}
+              key={venture.slug}
+              className={`${styles.selectedWorld} ${index === 0 || index === 3 ? styles.wide : ""}`}
+              style={{ "--venture-accent": venture.accent } as CSSProperties}
+            >
+              <div className={styles.worldImage} aria-hidden="true">
+                <Image
+                  src={venture.heroArt ?? venture.art}
+                  alt=""
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 900px) 50vw, 66vw"
+                />
+              </div>
+              <div className={styles.worldShade} aria-hidden="true" />
+              <div className={styles.worldContent}>
+                <div className={styles.worldMeta}>
+                  <span>{venture.category}</span>
+                  <span>{venture.stage}</span>
+                </div>
+                <div>
+                  <p>{venture.eyebrow}</p>
+                  <h3>{venture.name}</h3>
+                  <div className={styles.worldFooter}>
+                    <span>{venture.summary}</span>
+                    <i>Open project file ↗</i>
+                  </div>
+                </div>
+              </div>
             </Link>
           ))}
+        </div>
+
+        <div className={styles.worldsCta}>
+          <span>4 shown / {ventures.length} total</span>
+          <Link href="/ventures" className="text-link">Explore the complete venture universe <span>↗</span></Link>
         </div>
       </section>
 
