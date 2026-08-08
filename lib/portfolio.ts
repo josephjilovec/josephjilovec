@@ -1,6 +1,8 @@
 import { ventures as baseVentures, ventureCategories } from "@/lib/ventures";
 import type { Venture } from "@/lib/ventures";
 
+export type PortfolioVenture = Omit<Venture, "stage"> & { stage: string };
+
 // Public portfolio links use branded josephjilovec.com subdomains when a project has no dedicated custom domain.
 const brandedSubdomains: Record<string, string> = {
   "dj-hotwax": "https://djhotwax.josephjilovec.com/",
@@ -11,18 +13,45 @@ const brandedSubdomains: Record<string, string> = {
   "world-forward-foundation": "https://worldforwardfoundation.josephjilovec.com/"
 };
 
-const portfolioVentures: Venture[] = baseVentures.map((venture) => ({
+// Stage describes operational maturity. Status describes the project's current public/operating mode.
+const maturityStages: Record<string, string> = {
+  "my-healthy-aura": "Pilot Operations",
+  "swift-deal-solutions": "Market-Mapped",
+  "dj-hotwax": "Active Creative Brand",
+  "vanta-helix": "Functional Architecture",
+  "cannacore-seeds": "Live Market",
+  snarklogic: "Experimental Build",
+  "alder-and-meridian": "Venture-Ready",
+  "united-american-future": "Nonprofit",
+  "world-forward-foundation": "Nonprofit"
+};
+
+const portfolioStatuses: Record<string, string> = {
+  "my-healthy-aura": "Public",
+  "swift-deal-solutions": "Public",
+  "dj-hotwax": "Public",
+  "vanta-helix": "Experimental",
+  "cannacore-seeds": "Operating",
+  snarklogic: "Experimental",
+  "alder-and-meridian": "Public",
+  "united-american-future": "Public",
+  "world-forward-foundation": "Public"
+};
+
+const portfolioVentures: PortfolioVenture[] = baseVentures.map((venture) => ({
   ...venture,
+  stage: maturityStages[venture.slug] ?? venture.stage,
+  status: portfolioStatuses[venture.slug] ?? venture.status,
   externalUrl: brandedSubdomains[venture.slug] ?? venture.externalUrl
 }));
 
-const givewiseInsights: Venture = {
+const givewiseInsights: PortfolioVenture = {
   slug: "givewise-insights",
   name: "Givewise Insights",
   eyebrow: "AI transformation & technology advisory",
   category: "Technology",
-  stage: "Active brand",
-  status: "Public consulting brand",
+  stage: "Market-Ready Advisory",
+  status: "Public",
   summary:
     "A founder-led AI transformation and technology advisory helping organizations make clearer decisions about AI strategy, agentic workflows, data readiness, governance, automation, and modernization.",
   problem:
@@ -46,7 +75,7 @@ const givewiseInsights: Venture = {
   tags: ["technology", "ai", "consulting", "transformation", "advisory"]
 };
 
-export const ventures: Venture[] = [...portfolioVentures, givewiseInsights];
+export const ventures: PortfolioVenture[] = [...portfolioVentures, givewiseInsights];
 export { ventureCategories };
 
 export function getVenture(slug: string) {
