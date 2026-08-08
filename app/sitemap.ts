@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/lib/site";
-import { ventures } from "@/lib/ventures";
+import { ventures } from "@/lib/portfolio";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const pages = ["", "/ventures", "/founder", "/studio", "/technology", "/creative", "/writing", "/contact"];
