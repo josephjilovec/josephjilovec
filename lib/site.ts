@@ -7,5 +7,5 @@ export const site = {
   location: "Phoenix, Arizona",
   linkedin: "https://www.linkedin.com/in/jilovecjoseph/",
   medium: "https://medium.com/@jilovecjoseph",
-  booking: "https://calendly.com/jilovecjoseph/50-minute-meeting"
+  booking: "https://calendar.app.google/Wa1YCdLV9LGK1jH98"
 };
