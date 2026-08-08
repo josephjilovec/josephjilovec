@@ -1,4 +1,4 @@
-export type VentureCategory = "Commerce" | "Behavioral" | "Technology" | "Creative";
+export type VentureCategory = "Commerce" | "Behavioral" | "Technology" | "Creative" | "Civic";
 export type VentureStage = "Concept designed" | "Prototype" | "Creative project" | "Active brand";
 
 export type Venture = {
@@ -227,6 +227,64 @@ export const ventures: Venture[] = [
     accent: "#74a9b8",
     accentSoft: "rgba(116,169,184,.14)",
     tags: ["commerce", "prototype", "ecommerce", "curation", "operations"]
+  },
+  {
+    slug: "united-american-future",
+    name: "United American Future",
+    eyebrow: "Civic / American opportunity",
+    category: "Civic",
+    stage: "Concept designed",
+    status: "Public civic initiative",
+    summary:
+      "A nonpartisan civic initiative focused on American opportunity, stronger communities, future generations, service, stability, and innovation.",
+    problem:
+      "Important community needs are often addressed through fragmented programs, short attention cycles, and institutions that struggle to communicate how local action connects to long-term national strength.",
+    thesis:
+      "A disciplined, nonpartisan civic organization can connect practical community work with a broader story about opportunity, service, resilience, and the country's next chapter.",
+    currentState:
+      "A full multi-page public website, distinct civic brand system, transparent launch-stage disclosures, and Stripe-enabled support flow are live. Formal organizational, governance, program, and legal claims remain limited to what is actually verified.",
+    founderRole:
+      "Mission architecture, brand direction, digital platform, program framing, fundraising infrastructure, partnership strategy, and public communication.",
+    nextMilestone:
+      "Formalize the operating and governance structure, then launch one narrow community initiative with defined objectives, documentation, and public reporting.",
+    opportunity:
+      "Community organizations, educators, service networks, veterans groups, program advisers, volunteers, and mission-aligned supporters.",
+    externalUrl: "https://united-american-future.vercel.app/",
+    externalLabel: "Visit United American Future",
+    art: "/project-art/uaf.svg",
+    heroArt: "/project-hero/uaf-hero.svg",
+    accent: "#e24755",
+    accentSoft: "rgba(226,71,85,.15)",
+    tags: ["civic", "community", "nonpartisan", "opportunity", "public-interest"]
+  },
+  {
+    slug: "world-forward-foundation",
+    name: "World Forward Foundation",
+    eyebrow: "Civic / global human progress",
+    category: "Civic",
+    stage: "Concept designed",
+    status: "Public global initiative",
+    summary:
+      "A global humanitarian initiative connecting practical projects, credible local partners, measurable outcomes, and durable community capacity.",
+    problem:
+      "Humanitarian work can become disconnected from local context, long-term capacity, transparent evidence, or the people whose lives sit behind the statistics.",
+    thesis:
+      "A modern global foundation can pair strong human storytelling with disciplined project design, local partnership, measurable outcomes, and transparent reporting.",
+    currentState:
+      "A full multi-page public website, editorial humanitarian brand system, transparency framework, and Stripe-enabled support flow are live. Programs, partnerships, governance, and organizational status are presented only at the level that can currently be supported.",
+    founderRole:
+      "Mission design, brand architecture, digital platform, program framework, impact-reporting model, fundraising infrastructure, and partnership development.",
+    nextMilestone:
+      "Establish the formal operating structure and develop one partner-led pilot with a defined need, delivery model, budget, evidence standard, and public outcome report.",
+    opportunity:
+      "Humanitarian partners, field organizations, researchers, technical advisers, volunteers, program designers, and mission-aligned supporters.",
+    externalUrl: "https://world-forward-foundation.vercel.app/",
+    externalLabel: "Visit World Forward Foundation",
+    art: "/project-art/wff.svg",
+    heroArt: "/project-hero/wff-hero.svg",
+    accent: "#e57a45",
+    accentSoft: "rgba(229,122,69,.15)",
+    tags: ["civic", "global", "humanitarian", "capacity", "public-interest"]
   }
 ];
 
@@ -234,4 +292,4 @@ export function getVenture(slug: string) {
   return ventures.find((venture) => venture.slug === slug);
 }
 
-export const ventureCategories = ["All", "Technology", "Commerce", "Behavioral", "Creative"] as const;
+export const ventureCategories = ["All", "Technology", "Commerce", "Civic", "Behavioral", "Creative"] as const;
