@@ -25,6 +25,18 @@ const constellationPreview: Record<string, string> = {
   "alder-and-meridian": "/constellation-preview/alder-preview.svg"
 };
 
+const nodePositions = [
+  { left: "50%", top: "5%" },
+  { left: "15%", top: "18%" },
+  { left: "85%", top: "18%" },
+  { left: "9%", top: "46%" },
+  { left: "91%", top: "46%" },
+  { left: "16%", top: "73%" },
+  { left: "84%", top: "73%" },
+  { left: "32%", top: "88%" },
+  { left: "68%", top: "88%" }
+] as const;
+
 export function VentureConstellation() {
   const [activeSlug, setActiveSlug] = useState(ventures[0].slug);
   const active = ventures.find((venture) => venture.slug === activeSlug) ?? ventures[0];
@@ -38,26 +50,34 @@ export function VentureConstellation() {
           <strong>Venture</strong>
           <small>Studio</small>
         </div>
-        {ventures.map((venture, index) => (
-          <button
-            key={venture.slug}
-            className={`constellation-node node-${index + 1} ${activeSlug === venture.slug ? "is-active" : ""}`}
-            style={{ "--node-accent": venture.accent } as CSSProperties}
-            onClick={() => setActiveSlug(venture.slug)}
-            aria-pressed={activeSlug === venture.slug}
-          >
-            <span className="constellation-node-index">{String(index + 1).padStart(2, "0")}</span>
-            <div className="constellation-node-body">
-              <div className="constellation-node-art" aria-hidden="true">
-                <img src={constellationArt[venture.slug] ?? venture.art} alt="" />
+        {ventures.map((venture, index) => {
+          const position = nodePositions[index] ?? nodePositions[nodePositions.length - 1];
+          return (
+            <button
+              key={venture.slug}
+              className={`constellation-node ${activeSlug === venture.slug ? "is-active" : ""}`}
+              style={{
+                "--node-accent": venture.accent,
+                left: position.left,
+                top: position.top,
+                translate: "-50% -50%"
+              } as CSSProperties}
+              onClick={() => setActiveSlug(venture.slug)}
+              aria-pressed={activeSlug === venture.slug}
+            >
+              <span className="constellation-node-index">{String(index + 1).padStart(2, "0")}</span>
+              <div className="constellation-node-body">
+                <div className="constellation-node-art" aria-hidden="true">
+                  <img src={constellationArt[venture.slug] ?? venture.art} alt="" />
+                </div>
+                <div className="constellation-node-copy">
+                  <strong>{venture.name}</strong>
+                  <small>{venture.category}</small>
+                </div>
               </div>
-              <div className="constellation-node-copy">
-                <strong>{venture.name}</strong>
-                <small>{venture.category}</small>
-              </div>
-            </div>
-          </button>
-        ))}
+            </button>
+          );
+        })}
       </div>
       <div className="constellation-detail">
         <div className="constellation-detail-preview" aria-hidden="true">
