@@ -24,7 +24,7 @@ export default function Home() {
     <>
       <FounderHero />
 
-      <section className="section section-dark-edge">
+      <section className="section section-dark-edge venture-universe-section">
         <SectionHeading index="01" eyebrow="Venture universe" title="A portfolio with explicit stages.">
           <p>Different ideas need different evidence. The parent brand makes it clear what is operating, what is designed, what is prototyped, what is civic, and what is purely creative.</p>
         </SectionHeading>
