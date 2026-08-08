@@ -10,7 +10,7 @@ export function FounderHero() {
         <p className="hero-kicker">Founder · Venture builder · Creative operator · Phoenix, Arizona</p>
         <h1>
           Concepts built to become<br />
-          <span>real.</span>
+          <span>companies.</span>
         </h1>
         <p className="hero-lede">
           Joseph Jilovec develops venture concepts, civic initiatives, technical systems, behavioral formats, and creative projects—then makes the current stage, evidence, and next step visible.
