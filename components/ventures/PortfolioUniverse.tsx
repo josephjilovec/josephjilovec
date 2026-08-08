@@ -14,6 +14,9 @@ const nodeArt: Record<string, string> = {
   "cannacore-seeds": "/constellation-art/cannacore-map.svg",
   "snarklogic": "/constellation-art/snark-map.svg",
   "alder-and-meridian": "/constellation-art/alder-map.svg",
+  "united-american-future": "/constellation-art/uaf-map.svg",
+  "world-forward-foundation": "/constellation-art/wff-map.svg",
+  "givewise-insights": "/constellation-art/givewise-map.svg",
 };
 
 const previewArt: Record<string, string> = {
