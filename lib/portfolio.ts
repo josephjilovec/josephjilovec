@@ -13,8 +13,8 @@ const brandedSubdomains: Record<string, string> = {
   "world-forward-foundation": "https://worldforwardfoundation.josephjilovec.com/"
 };
 
-// Stage describes operational maturity. Status describes the project's current public/operating mode.
-// These labels intentionally replace generic terms such as Prototype, Concept designed, and Active brand in the public portfolio UI.
+// Stage describes operational maturity. Status describes the project's current real-world operating mode.
+// Current-state progression is intentionally simple: Public -> Pilot -> Operating.
 const maturityStages: Record<string, string> = {
   "my-healthy-aura": "Pilot Operations",
   "swift-deal-solutions": "Market-Mapped",
@@ -28,12 +28,12 @@ const maturityStages: Record<string, string> = {
 };
 
 const portfolioStatuses: Record<string, string> = {
-  "my-healthy-aura": "Public",
+  "my-healthy-aura": "Pilot",
   "swift-deal-solutions": "Public",
-  "dj-hotwax": "Public",
-  "vanta-helix": "Experimental",
-  "cannacore-seeds": "Operating",
-  snarklogic: "Experimental",
+  "dj-hotwax": "Operating",
+  "vanta-helix": "Public",
+  "cannacore-seeds": "Pilot",
+  snarklogic: "Public",
   "alder-and-meridian": "Public",
   "united-american-future": "Public",
   "world-forward-foundation": "Public"
