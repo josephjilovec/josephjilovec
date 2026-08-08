@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ventures } from "@/lib/ventures";
+import { ventureCategories, ventures } from "@/lib/ventures";
 
 export function FounderHero() {
   return (
@@ -10,10 +10,10 @@ export function FounderHero() {
         <p className="hero-kicker">Founder · Venture builder · Creative operator · Phoenix, Arizona</p>
         <h1>
           Concepts built to become<br />
-          <span>companies.</span>
+          <span>real.</span>
         </h1>
         <p className="hero-lede">
-          Joseph Jilovec develops venture concepts, technical systems, behavioral formats, and creative projects—then makes the current stage, evidence, and next step visible.
+          Joseph Jilovec develops venture concepts, civic initiatives, technical systems, behavioral formats, and creative projects—then makes the current stage, evidence, and next step visible.
         </p>
         <div className="hero-actions">
           <Link href="/ventures" className="button">Explore the venture universe</Link>
@@ -21,7 +21,7 @@ export function FounderHero() {
         </div>
         <div className="hero-signals" aria-label="Portfolio overview">
           <div><strong>{ventures.length}</strong><span>public project worlds</span></div>
-          <div><strong>4</strong><span>working disciplines</span></div>
+          <div><strong>{ventureCategories.length - 1}</strong><span>working disciplines</span></div>
           <div><strong>01→04</strong><span>identify · design · test · build</span></div>
         </div>
       </div>
