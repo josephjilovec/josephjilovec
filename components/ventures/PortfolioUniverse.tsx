@@ -91,3 +91,5 @@ export function PortfolioUniverse() {
     </>
   );
 }
+
+// Production sync marker: current main includes maturity labels, branded links, and unified Signal Map icons.
