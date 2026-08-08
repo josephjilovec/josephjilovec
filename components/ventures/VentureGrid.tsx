@@ -28,7 +28,7 @@ export function VentureGrid() {
               <span className="venture-card-stage">{venture.stage}</span>
             </Link>
             <div className="venture-card-copy">
-              <div className="card-meta"><span>{venture.category}</span><span>{venture.status}</span></div>
+              <div className="card-meta"><span>{venture.category}</span></div>
               <h3><Link href={`/ventures/${venture.slug}`}>{venture.name}</Link></h3>
               <p>{venture.summary}</p>
               <div className="card-links">
