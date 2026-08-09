@@ -105,17 +105,17 @@ const adVibeCentral: PortfolioVenture = {
   tags: ["creative", "advertising", "media", "ai", "discovery"]
 };
 
-const kineticBotanicals: PortfolioVenture = {
-  slug: "kinetic-botanicals",
-  name: "Kinetic Botanicals",
-  eyebrow: "Active-lifestyle botanical roll-ons",
+const kineticAromatics: PortfolioVenture = {
+  slug: "kinetic-aromatics",
+  name: "Kinetic Aromatics",
+  eyebrow: "Active-lifestyle aromatic roll-ons",
   category: "Commerce",
   stage: "Launch-Ready Brand",
   status: "Public",
   summary:
-    "A gym- and active-lifestyle botanical brand centered on compact essential-oil roll-ons designed as personal scent rituals for before training, after training, and everyday movement.",
+    "A gym- and active-lifestyle aromatic brand centered on compact essential-oil roll-ons designed as personal scent rituals for before training, after training, and everyday movement.",
   problem:
-    "Gym-bag personal care often splits between fragrance, supplements, and generic wellness products, leaving little room for a compact botanical ritual positioned specifically around active routines and personal scent.",
+    "Gym-bag personal care often splits between fragrance, supplements, and generic wellness products, leaving little room for a compact aromatic ritual positioned specifically around active routines and personal scent.",
   thesis:
     "A focused roll-on format can occupy a distinct active-lifestyle lane when scent profiles, portability, packaging, and the before-and-after workout ritual are treated as one coherent product experience rather than as broad wellness claims.",
   currentState:
@@ -126,13 +126,13 @@ const kineticBotanicals: PortfolioVenture = {
     "Finalize production and fulfillment details, verify product and packaging inputs, connect a tested payment flow, and validate initial demand with a controlled launch rather than relying on prototype engagement alone.",
   opportunity:
     "Product manufacturing, packaging, fulfillment, fitness partnerships, retail testing, creator collaborations, and active-lifestyle distribution.",
-  externalUrl: "https://kineticbotanicals.josephjilovec.com/",
-  externalLabel: "Visit Kinetic Botanicals",
+  externalUrl: "https://kineticaromatics.josephjilovec.com/",
+  externalLabel: "Visit Kinetic Aromatics",
   art: "/project-art/kinetic-botanicals.svg",
   heroArt: "/project-hero/kinetic-botanicals-hero.svg",
   accent: "#b7ef55",
   accentSoft: "rgba(183,239,85,.15)",
-  tags: ["commerce", "active-lifestyle", "botanicals", "fitness", "product"]
+  tags: ["commerce", "active-lifestyle", "aromatics", "fitness", "product"]
 };
 
 const atlasAssets: PortfolioVenture = {
@@ -199,7 +199,7 @@ export const ventures: PortfolioVenture[] = [
   ...portfolioVentures,
   givewiseInsights,
   adVibeCentral,
-  kineticBotanicals,
+  kineticAromatics,
   atlasAssets,
   autoCompCorp
 ];
