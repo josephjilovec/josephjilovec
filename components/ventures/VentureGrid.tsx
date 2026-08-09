@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { CSSProperties } from "react";
 import { ventureCategories, ventures } from "@/lib/portfolio";
+import { ventureSignalArt } from "@/lib/ventureVisuals";
 
 export function VentureGrid() {
   const [filter, setFilter] = useState<(typeof ventureCategories)[number]>("All");
@@ -23,7 +24,7 @@ export function VentureGrid() {
         {visible.map((venture, index) => (
           <article className="venture-card" key={venture.slug} style={{ "--venture-accent": venture.accent, "--venture-soft": venture.accentSoft } as CSSProperties}>
             <Link href={`/ventures/${venture.slug}`} className="venture-card-art" aria-label={`Open ${venture.name}`}>
-              <Image src={venture.art} alt="" fill sizes="(max-width: 800px) 100vw, 45vw" />
+              <Image src={ventureSignalArt[venture.slug] ?? venture.art} alt="" fill sizes="(max-width: 800px) 100vw, 45vw" />
               <span className="venture-card-number">{String(index + 1).padStart(2, "0")}</span>
               <span className="venture-card-stage">{venture.stage}</span>
             </Link>
