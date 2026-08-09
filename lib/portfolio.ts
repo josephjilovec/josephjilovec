@@ -156,7 +156,7 @@ const atlasAssets: PortfolioVenture = {
     "Test the structure-review workflow against a narrow set of realistic founder and digital-asset scenarios, then refine the handoff materials with qualified legal, tax, banking, and compliance professionals.",
   opportunity:
     "Cross-border founders, digital-asset operators, international business advisers, legal and tax professionals, banking specialists, and compliance collaborators.",
-  externalUrl: "https://atlasassets-five.vercel.app/",
+  externalUrl: "https://atlasassets.josephjilovec.com/",
   externalLabel: "Visit Atlas Assets",
   art: "/project-art/atlas-assets.svg",
   heroArt: "/project-art/atlas-assets.svg",
@@ -186,6 +186,8 @@ const autoCompCorp: PortfolioVenture = {
     "Validate one narrow compliance workflow end to end with realistic evidence inputs, measurable review time, explicit escalation criteria, and a qualified professional in the approval loop.",
   opportunity:
     "Compliance teams, governance and risk operators, legal-operations professionals, audit and evidence-management partners, and enterprise workflow collaborators.",
+  externalUrl: "https://autocompcorp.josephjilovec.com/",
+  externalLabel: "Visit AutoComp Corp",
   art: "/project-art/autocomp-corp.svg",
   heroArt: "/project-art/autocomp-corp.svg",
   accent: "#b8ff4a",
@@ -214,6 +216,8 @@ const aliasAlibi: PortfolioVenture = {
     "Validate a narrow concierge use case, formalize the professional referral and approval boundaries, and test the client workflow without overstating legal or privacy outcomes.",
   opportunity:
     "Privacy-conscious clients, attorneys, tax professionals, registered agents, title and real-estate specialists, secure-mail providers, and other qualified service partners.",
+  externalUrl: "https://aliasalibi.josephjilovec.com/",
+  externalLabel: "Visit Alias & Alibi",
   art: "/project-art/alias-alibi.svg",
   heroArt: "/project-art/alias-alibi.svg",
   accent: "#c3a36a",
