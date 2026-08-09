@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { CSSProperties, PointerEvent } from "react";
 import { VentureConstellation as LegacyUniverseStyles } from "@/components/ventures/VentureConstellation";
 import { ventures } from "@/lib/portfolio";
@@ -32,12 +32,52 @@ const previewArt: Record<string, string> = {
 };
 
 const HOVER_INTENT_MS = 240;
+const FEATURED_COUNT = 9;
+const FEATURED_STORAGE_KEY = "jj-featured-project-worlds-v1";
+
+function pickFeaturedVentures() {
+  const pool = [...ventures];
+  for (let index = pool.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [pool[index], pool[swapIndex]] = [pool[swapIndex], pool[index]];
+  }
+  return pool.slice(0, Math.min(FEATURED_COUNT, pool.length));
+}
 
 export function PortfolioUniverse() {
-  const [activeSlug, setActiveSlug] = useState(ventures[0]?.slug ?? "");
+  const initialFeatured = ventures.slice(0, Math.min(FEATURED_COUNT, ventures.length));
+  const [featuredVentures, setFeaturedVentures] = useState(initialFeatured);
+  const [activeSlug, setActiveSlug] = useState(initialFeatured[0]?.slug ?? "");
   const hoverTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const activeIndex = Math.max(0, ventures.findIndex((venture) => venture.slug === activeSlug));
-  const active = ventures[activeIndex] ?? ventures[0];
+  const activeIndex = Math.max(0, featuredVentures.findIndex((venture) => venture.slug === activeSlug));
+  const active = featuredVentures[activeIndex] ?? featuredVentures[0] ?? ventures[0];
+
+  useEffect(() => {
+    let nextFeatured = pickFeaturedVentures();
+
+    try {
+      const stored = window.sessionStorage.getItem(FEATURED_STORAGE_KEY);
+      if (stored) {
+        const storedSlugs = JSON.parse(stored) as unknown;
+        if (Array.isArray(storedSlugs)) {
+          const restored = storedSlugs
+            .map((slug) => typeof slug === "string" ? ventures.find((venture) => venture.slug === slug) : undefined)
+            .filter(Boolean) as typeof ventures;
+          if (restored.length === Math.min(FEATURED_COUNT, ventures.length)) nextFeatured = restored;
+        }
+      }
+      window.sessionStorage.setItem(FEATURED_STORAGE_KEY, JSON.stringify(nextFeatured.map((venture) => venture.slug)));
+    } catch {
+      // Session storage is an enhancement only; the selector still works without it.
+    }
+
+    setFeaturedVentures(nextFeatured);
+    setActiveSlug(nextFeatured[0]?.slug ?? "");
+
+    return () => {
+      if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
+    };
+  }, []);
 
   if (!active) return null;
 
@@ -64,8 +104,8 @@ export function PortfolioUniverse() {
 
   const moveSelection = (direction: -1 | 1) => {
     clearHoverIntent();
-    const next = (activeIndex + direction + ventures.length) % ventures.length;
-    setActiveSlug(ventures[next].slug);
+    const next = (activeIndex + direction + featuredVentures.length) % featuredVentures.length;
+    setActiveSlug(featuredVentures[next].slug);
   };
 
   return (
@@ -73,15 +113,15 @@ export function PortfolioUniverse() {
       <div style={{ display: "none" }} aria-hidden="true"><LegacyUniverseStyles /></div>
       <div className="venture-universe-v3" style={{ "--active-accent": active.accent, "--active-soft": active.accentSoft } as CSSProperties}>
         <section className="venture-selector-panel" aria-label="Venture selector">
-          <div className="venture-selector-head"><div><span className="venture-selector-eyebrow">Portfolio signal map</span><h3>Choose a project world.</h3></div><div className="venture-selector-count" aria-label={`${ventures.length} projects`}><strong>{String(activeIndex + 1).padStart(2, "0")}</strong><span>/ {String(ventures.length).padStart(2, "0")}</span></div></div>
-          <p className="venture-selector-intro">{ventures.length} projects, one operating system. Select a signal to inspect its stage, thesis, and project details.</p>
-          <div className="venture-node-grid" role="group" aria-label="Project worlds" onPointerLeave={clearHoverIntent}>
-            {ventures.map((venture, index) => {
+          <div className="venture-selector-head"><div><span className="venture-selector-eyebrow">Portfolio signal map</span><h3>Choose a project world.</h3></div><div className="venture-selector-count" aria-label={`${featuredVentures.length} featured projects of ${ventures.length} total`}><strong>{String(activeIndex + 1).padStart(2, "0")}</strong><span>/ {String(featuredVentures.length).padStart(2, "0")} featured</span></div></div>
+          <p className="venture-selector-intro">{featuredVentures.length} project worlds are featured per visit from a {ventures.length}-project portfolio. Hover deliberately to preview, then open the full portfolio below whenever you want the complete index.</p>
+          <div className="venture-node-grid" role="group" aria-label="Featured project worlds" onPointerLeave={clearHoverIntent}>
+            {featuredVentures.map((venture, index) => {
               const isActive = venture.slug === active.slug;
               return <button key={venture.slug} type="button" className={`venture-node-card ${isActive ? "is-active" : ""}`} style={{ "--node-accent": venture.accent, "--node-soft": venture.accentSoft } as CSSProperties} aria-pressed={isActive} aria-label={`Select ${venture.name}`} onClick={() => selectImmediately(venture.slug)} onPointerEnter={(event) => activateWithIntent(event, venture.slug)} onPointerLeave={clearHoverIntent} onFocus={() => selectImmediately(venture.slug)}><span className="venture-node-topline"><span>{String(index + 1).padStart(2, "0")}</span><i aria-hidden="true" /><em>{venture.category}</em></span><span className="venture-node-body-v3"><span className="venture-node-icon" aria-hidden="true"><img src={nodeArt[venture.slug] ?? venture.art} alt="" /></span><span className="venture-node-copy-v3"><strong>{venture.name}</strong><small>{venture.stage}</small></span></span></button>;
             })}
           </div>
-          <div className="venture-selector-footer"><span className="venture-selector-hint">Hover deliberately to preview · click, focus, or tap to select · swipe cards on smaller screens</span><div className="venture-selector-nav" aria-label="Cycle project selection"><button type="button" onClick={() => moveSelection(-1)} aria-label="Previous project">←</button><button type="button" onClick={() => moveSelection(1)} aria-label="Next project">→</button></div></div>
+          <div className="venture-selector-footer"><span className="venture-selector-hint">Hover deliberately to preview · click, focus, or tap to select · nine featured worlds rotate by session</span><div className="venture-selector-nav" aria-label="Cycle featured project selection"><button type="button" onClick={() => moveSelection(-1)} aria-label="Previous project">←</button><button type="button" onClick={() => moveSelection(1)} aria-label="Next project">→</button></div></div>
         </section>
         <aside className="venture-preview-card" aria-live="polite" aria-atomic="true" onPointerEnter={clearHoverIntent}>
           <div className="venture-preview-swap" key={active.slug}>
@@ -284,4 +324,4 @@ export function PortfolioUniverse() {
   );
 }
 
-// Production sync marker: current main includes maturity labels, branded links, unified Signal Map icons, and desktop readability scaling.
+// Production sync marker: homepage uses nine rotating featured worlds while the complete portfolio remains available in /ventures.

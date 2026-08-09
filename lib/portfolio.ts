@@ -13,8 +13,7 @@ const brandedSubdomains: Record<string, string> = {
   "world-forward-foundation": "https://worldforwardfoundation.josephjilovec.com/"
 };
 
-// Stage describes operational maturity. Status describes the project's current real-world operating mode.
-// Current-state progression is intentionally simple: Public -> Pilot -> Operating.
+// Stage describes operational maturity. Status remains available as internal portfolio data even when it is not surfaced in the public UI.
 const maturityStages: Record<string, string> = {
   "my-healthy-aura": "Pilot Operations",
   "swift-deal-solutions": "Market-Mapped",
@@ -30,7 +29,7 @@ const maturityStages: Record<string, string> = {
 const portfolioStatuses: Record<string, string> = {
   "my-healthy-aura": "Pilot",
   "swift-deal-solutions": "Public",
-  "dj-hotwax": "Operating",
+  "dj-hotwax": "Public",
   "vanta-helix": "Public",
   "cannacore-seeds": "Pilot",
   snarklogic: "Public",
@@ -136,11 +135,100 @@ const kineticBotanicals: PortfolioVenture = {
   tags: ["commerce", "active-lifestyle", "botanicals", "fitness", "product"]
 };
 
+const atlasAssets: PortfolioVenture = {
+  slug: "atlas-assets",
+  name: "Atlas Assets",
+  eyebrow: "Cross-border structure simulation & professional coordination",
+  category: "Technology",
+  stage: "Cross-Border Modeling Platform",
+  status: "Public",
+  summary:
+    "A cross-border structure modeling concept that maps how entities, intellectual property, digital assets, tax residence, banking, custody, and jurisdiction rules interact before consequential implementation decisions are made.",
+  problem:
+    "Globally distributed companies and asset structures can span residence, operating entities, intellectual property, banking, custody, customers, and counterparties across multiple jurisdictions, making dependencies difficult to evaluate as one system.",
+  thesis:
+    "A structured simulation and professional-review workflow can make cross-border dependencies easier to inspect before formation, transfer, banking, custody, or tax decisions are handed to the qualified professionals responsible for execution.",
+  currentState:
+    "The public Next.js experience is deployed with jurisdiction comparison, structure modeling, control rules, and an interactive structure-review pathway. It is presented as scenario modeling and professional coordination rather than legal, tax, securities, fiduciary, banking, or regulated advice.",
+  founderRole:
+    "Brand architecture, cross-border systems framing, scenario-model design, jurisdiction interface, professional-review workflow, guardrail design, and digital platform development.",
+  nextMilestone:
+    "Test the structure-review workflow against a narrow set of realistic founder and digital-asset scenarios, then refine the handoff materials with qualified legal, tax, banking, and compliance professionals.",
+  opportunity:
+    "Cross-border founders, digital-asset operators, international business advisers, legal and tax professionals, banking specialists, and compliance collaborators.",
+  externalUrl: "https://atlasassets-five.vercel.app/",
+  externalLabel: "Visit Atlas Assets",
+  art: "/project-art/atlas-assets.svg",
+  heroArt: "/project-art/atlas-assets.svg",
+  accent: "#68d4ff",
+  accentSoft: "rgba(104,212,255,.15)",
+  tags: ["technology", "cross-border", "structures", "digital-assets", "professional-review"]
+};
+
+const autoCompCorp: PortfolioVenture = {
+  slug: "autocomp-corp",
+  name: "AutoComp Corp",
+  eyebrow: "Autonomous compliance operations & evidence systems",
+  category: "Technology",
+  stage: "Compliance Operations Prototype",
+  status: "Public",
+  summary:
+    "A compliance-operations software concept for continuous monitoring, evidence capture, controlled document drafting, and permissioned execution workflows with human authority preserved for consequential decisions.",
+  problem:
+    "Corporate compliance work is often fragmented across alerts, spreadsheets, evidence requests, policy documents, calendars, and manual follow-up, making it difficult to maintain a continuous operational picture.",
+  thesis:
+    "A coordinated agent system can reduce repetitive monitoring and evidence work when automation is separated from legal judgment and high-consequence actions remain permissioned to authorized professionals and company officers.",
+  currentState:
+    "A Next.js product prototype and readiness-check workflow are built around system monitoring, specialized agents, evidence management, control routing, and explicit human approval boundaries. It is not presented as a substitute for legal or regulated professional judgment.",
+  founderRole:
+    "Product concept, compliance-operations architecture, autonomous-agent model, evidence workflow, permission system, risk framing, and digital platform development.",
+  nextMilestone:
+    "Validate one narrow compliance workflow end to end with realistic evidence inputs, measurable review time, explicit escalation criteria, and a qualified professional in the approval loop.",
+  opportunity:
+    "Compliance teams, governance and risk operators, legal-operations professionals, audit and evidence-management partners, and enterprise workflow collaborators.",
+  art: "/project-art/autocomp-corp.svg",
+  heroArt: "/project-art/autocomp-corp.svg",
+  accent: "#b8ff4a",
+  accentSoft: "rgba(184,255,74,.14)",
+  tags: ["technology", "compliance", "agents", "evidence", "governance"]
+};
+
+const aliasAlibi: PortfolioVenture = {
+  slug: "alias-alibi",
+  name: "Alias & Alibi",
+  eyebrow: "Private identity & exposure-reduction concierge",
+  category: "Commerce",
+  stage: "Private Service Architecture",
+  status: "Public",
+  summary:
+    "A premium concierge-service concept for coordinating privacy-minded identity, entity, correspondence, and real-estate exposure-reduction workflows through a restrained private client experience.",
+  problem:
+    "Public records, property ownership, business filings, correspondence addresses, and fragmented service providers can expose more personal information than privacy-conscious clients expect or know how to coordinate.",
+  thesis:
+    "A high-touch coordination layer can make exposure-reduction work easier to navigate when it clearly separates concierge organization from the legal, tax, title, fiduciary, filing, and regulated work that must be performed or approved by appropriately authorized professionals.",
+  currentState:
+    "The Next.js brand and service architecture are built with a private editorial experience, service pathways, process explanation, real-estate exposure framing, and a structured intake flow. Live client operations and professional-network execution are not presented as established proof.",
+  founderRole:
+    "Brand strategy, service architecture, privacy-exposure framing, client journey, intake design, professional-routing model, and digital platform development.",
+  nextMilestone:
+    "Validate a narrow concierge use case, formalize the professional referral and approval boundaries, and test the client workflow without overstating legal or privacy outcomes.",
+  opportunity:
+    "Privacy-conscious clients, attorneys, tax professionals, registered agents, title and real-estate specialists, secure-mail providers, and other qualified service partners.",
+  art: "/project-art/alias-alibi.svg",
+  heroArt: "/project-art/alias-alibi.svg",
+  accent: "#c3a36a",
+  accentSoft: "rgba(195,163,106,.15)",
+  tags: ["commerce", "privacy", "concierge", "identity", "professional-coordination"]
+};
+
 export const ventures: PortfolioVenture[] = [
   ...portfolioVentures,
   givewiseInsights,
   adVibeCentral,
-  kineticBotanicals
+  kineticBotanicals,
+  atlasAssets,
+  autoCompCorp,
+  aliasAlibi
 ];
 export { ventureCategories };
 
