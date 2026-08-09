@@ -173,31 +173,31 @@ export const ventures: Venture[] = [
   {
     slug: "snarklogic",
     name: "Snark Logic",
-    eyebrow: "Creative intelligence prototype",
+    eyebrow: "MediaTech / comedy R&D + enterprise communications",
     category: "Technology",
     stage: "Prototype",
-    status: "Interactive prototype",
+    status: "MediaTech prototype / private enterprise concept",
     summary:
-      "An AI advertising and comedic-intelligence concept combining creative systems, structured agent disagreement, risk controls, and performance feedback.",
+      "A dual-engine comedy and communications R&D platform: a public algorithmic writers’ room for creators and a private enterprise tone-and-satire firewall for communication risk.",
     problem:
-      "Generative content made advertising easier to produce but did not solve sameness, taste, governance, or learning from what actually performs.",
+      "Digital creators need high-velocity hook, timing, and narrative experimentation without flattening their voice, while enterprises need more human communication without turning wit or satire into unmanaged brand and reputation risk.",
     thesis:
-      "Creative, behavioral, finance, and risk perspectives can be encoded as explicit decision roles so campaign concepts are challenged before production and measured after deployment.",
+      "The same structured disagreement core—behavioral, cultural, creative, and risk perspectives—can support both content R&D and corporate communication stress-testing when the two products keep separate objectives, data boundaries, and escalation thresholds.",
     currentState:
-      "The public Next.js prototype includes reusable UI, multi-page product architecture, server routes, interactive client behavior, and illustrative campaign/performance systems; external production integrations remain future work.",
+      "The public Next.js prototype has been rebuilt around two product surfaces: Creator R&D and a private Enterprise Communications OS, with an interactive dual-mode workbench and explicit human review gates. Production model integrations and real customer datasets remain future validation work.",
     founderRole:
-      "System concept, multi-agent operating model, creative strategy, behavioral framing, risk architecture, and prototype direction.",
+      "Company pivot, brand architecture, dual-engine product strategy, multi-agent operating model, creator workflow design, enterprise risk framing, and prototype direction.",
     nextMilestone:
-      "Connect the orchestration flow to a real campaign dataset or controlled test and measure whether structured dissent improves decision quality.",
+      "Validate the creator workflow against a real content/retention dataset and separately run one narrow private enterprise communication stress-test pilot with explicit review criteria.",
     opportunity:
-      "Creative technologists, performance marketers, agencies, brand teams, and experiment partners.",
-    externalUrl: "https://snarklogic.vercel.app/",
+      "Digital creators, meme and culture pages, content studios, entertainment brands, corporate communications teams, PR/reputation teams, and private enterprise pilot partners.",
+    externalUrl: "https://snarklogic.josephjilovec.com/",
     externalLabel: "Explore Snark Logic",
     art: "/project-art/snark.svg",
     heroArt: "/project-hero/snark-hero.svg",
     accent: "#ff4f8b",
     accentSoft: "rgba(255,79,139,.14)",
-    tags: ["technology", "experimental", "advertising", "ai", "creative"]
+    tags: ["technology", "mediatech", "comedy", "content-r&d", "enterprise-comms", "brand-defense"]
   },
   {
     slug: "alder-and-meridian",
