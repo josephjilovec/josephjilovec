@@ -195,44 +195,13 @@ const autoCompCorp: PortfolioVenture = {
   tags: ["technology", "compliance", "agents", "evidence", "governance"]
 };
 
-const aliasAlibi: PortfolioVenture = {
-  slug: "alias-alibi",
-  name: "Alias & Alibi",
-  eyebrow: "Private identity & exposure-reduction concierge",
-  category: "Commerce",
-  stage: "Private Service Architecture",
-  status: "Public",
-  summary:
-    "A premium concierge-service concept for coordinating privacy-minded identity, entity, correspondence, and real-estate exposure-reduction workflows through a restrained private client experience.",
-  problem:
-    "Public records, property ownership, business filings, correspondence addresses, and fragmented service providers can expose more personal information than privacy-conscious clients expect or know how to coordinate.",
-  thesis:
-    "A high-touch coordination layer can make exposure-reduction work easier to navigate when it clearly separates concierge organization from the legal, tax, title, fiduciary, filing, and regulated work that must be performed or approved by appropriately authorized professionals.",
-  currentState:
-    "The Next.js brand and service architecture are built with a private editorial experience, service pathways, process explanation, real-estate exposure framing, and a structured intake flow. Live client operations and professional-network execution are not presented as established proof.",
-  founderRole:
-    "Brand strategy, service architecture, privacy-exposure framing, client journey, intake design, professional-routing model, and digital platform development.",
-  nextMilestone:
-    "Validate a narrow concierge use case, formalize the professional referral and approval boundaries, and test the client workflow without overstating legal or privacy outcomes.",
-  opportunity:
-    "Privacy-conscious clients, attorneys, tax professionals, registered agents, title and real-estate specialists, secure-mail providers, and other qualified service partners.",
-  externalUrl: "https://aliasalibi.josephjilovec.com/",
-  externalLabel: "Visit Alias & Alibi",
-  art: "/project-art/alias-alibi.svg",
-  heroArt: "/project-art/alias-alibi.svg",
-  accent: "#c3a36a",
-  accentSoft: "rgba(195,163,106,.15)",
-  tags: ["commerce", "privacy", "concierge", "identity", "professional-coordination"]
-};
-
 export const ventures: PortfolioVenture[] = [
   ...portfolioVentures,
   givewiseInsights,
   adVibeCentral,
   kineticBotanicals,
   atlasAssets,
-  autoCompCorp,
-  aliasAlibi
+  autoCompCorp
 ];
 export { ventureCategories };
 
