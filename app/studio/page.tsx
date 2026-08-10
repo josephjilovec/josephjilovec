@@ -1,18 +1,32 @@
 import Link from "next/link";
-import { StudioLoop } from "@/components/interactive/StudioLoop";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { pageMetadata } from "@/lib/metadata";
 
-export const metadata = pageMetadata("Studio Model", "How the Joseph Jilovec Venture Studio identifies, designs, tests, and builds new ventures.", "/studio");
+export const metadata = pageMetadata("Studio Model", "How the Joseph Jilovec Venture Studio connects ventures across commerce, technology, civic infrastructure, behavioral design, and creative work.", "/studio");
 
 export default function StudioPage() {
   return (
     <>
       <section className="page-hero">
-        <div><p className="hero-kicker">Studio model / 01 → 04</p><h1>A good idea is only the <span>starting point.</span></h1></div>
+        <div><p className="hero-kicker">Studio model</p><h1>A good idea is only the <span>starting point.</span></h1></div>
         <p>The studio is a way to turn a promising thesis into something serious people can evaluate. Every project should show the assumptions, the evidence, the risks, and the next measurable step.</p>
       </section>
-      <section className="section"><SectionHeading index="01" eyebrow="Operating loop" title="Identify → Design → Test → Build." /><StudioLoop /></section>
+
+      <section className="section">
+        <SectionHeading index="01" eyebrow="Portfolio thesis" title="Many project worlds. One operating thesis." />
+        <div className="studio-thesis-copy" style={{ maxWidth: "980px", display: "grid", gap: "1.4rem" }}>
+          <p style={{ fontSize: "clamp(1.08rem, 1.7vw, 1.35rem)", lineHeight: 1.7 }}>
+            A traditional portfolio assumes a founder should stay in one narrow lane. This studio is built on a different idea: useful systems and opportunities often emerge at the intersection of commerce, technology, civic infrastructure, behavioral design, and creative work.
+          </p>
+          <p style={{ fontSize: "clamp(1rem, 1.45vw, 1.18rem)", lineHeight: 1.75, opacity: 0.82 }}>
+            Across ventures ranging from consumer commerce and AI governance to civic initiatives and creative brands, each project operates as its own testing ground while contributing to a larger system. Software architecture developed for one venture can inform another. Behavioral concepts can shape product design. Research, compliance, data, branding, and market strategy can move across categories.
+          </p>
+          <p style={{ fontSize: "clamp(1rem, 1.45vw, 1.18rem)", lineHeight: 1.75, opacity: 0.82 }}>
+            The projects may have different audiences, stages, and standards of proof. What connects them is a shared studio philosophy: identify strong opportunities, design deliberately, test ideas against the real world, and build what proves useful.
+          </p>
+        </div>
+      </section>
+
       <section className="section decision-section">
         <SectionHeading index="02" eyebrow="Decision discipline" title="What has to be true before the next commitment?" />
         <div className="decision-grid">
