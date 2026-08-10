@@ -229,6 +229,35 @@ export const ventures: Venture[] = [
     tags: ["commerce", "prototype", "ecommerce", "curation", "operations"]
   },
   {
+    slug: "jentlemens",
+    name: "Jentlemens",
+    eyebrow: "Menswear / wardrobe systems",
+    category: "Commerce",
+    stage: "Prototype",
+    status: "Menswear commerce prototype",
+    summary:
+      "A focused menswear brand built around Athletic Fit, made-to-order tailoring, a permanent neutral wardrobe, and fewer pieces designed to work together.",
+    problem:
+      "Men's wardrobes often become collections of disconnected purchases with inconsistent fit, too many near-duplicate options, and little guidance on how pieces combine across work, travel, and everyday life.",
+    thesis:
+      "A disciplined wardrobe system can reduce choice without reducing usefulness: one recognizable house fit, a permanent tailoring palette, a small set of shirts and accessories, and footwear designed around repeatable combinations rather than endless assortment.",
+    currentState:
+      "The multi-page Next.js commerce prototype is live in development with dedicated departments for suits, shirts, trousers, shoes, accessories, fit guidance, and made-to-order measurement capture. Supplier fulfillment and live payment operations remain future launch work.",
+    founderRole:
+      "Brand architecture, Athletic Fit positioning, wardrobe-system design, merchandising strategy, made-to-order experience, footwear direction, product taxonomy, and commerce prototype development.",
+    nextMilestone:
+      "Finalize proprietary product imagery and supplier specifications, validate the Athletic Fit measurement model, connect payment and fulfillment infrastructure, and complete an end-to-end test order.",
+    opportunity:
+      "Menswear manufacturers, made-to-order tailoring partners, footwear suppliers, apparel sourcing specialists, e-commerce operators, and brand collaborators.",
+    externalUrl: "https://jentlemens.vercel.app/",
+    externalLabel: "Explore Jentlemens",
+    art: "/project-art/jentlemens.svg",
+    heroArt: "/project-hero/jentlemens-hero.svg",
+    accent: "#a8875a",
+    accentSoft: "rgba(168,135,90,.15)",
+    tags: ["commerce", "menswear", "fashion", "made-to-order", "wardrobe-system", "athletic-fit"]
+  },
+  {
     slug: "united-american-future",
     name: "United American Future",
     eyebrow: "Civic / American opportunity",
