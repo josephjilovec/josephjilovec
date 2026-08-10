@@ -34,6 +34,7 @@ export function VentureGrid() {
               <p>{venture.summary}</p>
               <div className="card-links">
                 <Link href={`/ventures/${venture.slug}`} className="text-link">Project file <span>↗</span></Link>
+                <Link href={`/ventures/${venture.slug}/capital`} className="text-link">Capital file <span>↗</span></Link>
                 {venture.externalUrl && <a href={venture.externalUrl} target="_blank" rel="noreferrer" className="text-link muted">Website <span>↗</span></a>}
               </div>
             </div>
