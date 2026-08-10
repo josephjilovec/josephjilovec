@@ -23,8 +23,8 @@ export function SiteFooter() {
           <span className="footer-label">Public work</span>
           <Link href="/creative">Creative</Link>
           <Link href="/writing">Writing</Link>
-          <a href="https://united-american-future.vercel.app/" target="_blank" rel="noreferrer">United American Future ↗</a>
-          <a href="https://world-forward-foundation.vercel.app/" target="_blank" rel="noreferrer">World Forward Foundation ↗</a>
+          <a href="https://unitedamericanfuture.josephjilovec.com/" target="_blank" rel="noreferrer">United American Future ↗</a>
+          <a href="https://worldforwardfoundation.josephjilovec.com/" target="_blank" rel="noreferrer">World Forward Foundation ↗</a>
         </div>
         <div className="footer-column">
           <span className="footer-label">Connect</span>
