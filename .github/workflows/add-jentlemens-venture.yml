@@ -1,0 +1,42 @@
+name: Add Jentlemens venture
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/add-jentlemens-venture.yml']
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add Jentlemens to venture registry
+        shell: python
+        run: |
+          from pathlib import Path
+          p=Path('lib/ventures.ts')
+          s=p.read_text()
+          if 'slug: "jentlemens"' not in s:
+            anchor='''  {\n    slug: "united-american-future",'''
+            block='''  {\n    slug: "jentlemens",\n    name: "Jentlemens",\n    eyebrow: "Menswear / wardrobe systems",\n    category: "Commerce",\n    stage: "Prototype",\n    status: "Menswear commerce prototype",\n    summary:\n      "A focused menswear brand built around Athletic Fit, made-to-order tailoring, a permanent neutral wardrobe, and fewer pieces designed to work together.",\n    problem:\n      "Men's wardrobes often become collections of disconnected purchases with inconsistent fit, too many near-duplicate options, and little guidance on how pieces combine across work, travel, and everyday life.",\n    thesis:\n      "A disciplined wardrobe system can reduce choice without reducing usefulness: one recognizable house fit, a permanent tailoring palette, a small set of shirts and accessories, and footwear designed around repeatable combinations rather than endless assortment.",\n    currentState:\n      "The multi-page Next.js commerce prototype is live in development with dedicated departments for suits, shirts, trousers, shoes, accessories, fit guidance, and made-to-order measurement capture. Supplier fulfillment and live payment operations remain future launch work.",\n    founderRole:\n      "Brand architecture, Athletic Fit positioning, wardrobe-system design, merchandising strategy, made-to-order experience, footwear direction, product taxonomy, and commerce prototype development.",\n    nextMilestone:\n      "Finalize proprietary product imagery and supplier specifications, validate the Athletic Fit measurement model, connect payment and fulfillment infrastructure, and complete an end-to-end test order.",\n    opportunity:\n      "Menswear manufacturers, made-to-order tailoring partners, footwear suppliers, apparel sourcing specialists, e-commerce operators, and brand collaborators.",\n    externalUrl: "https://jentlemens.vercel.app/",\n    externalLabel: "Explore Jentlemens",\n    art: "/project-art/jentlemens.svg",\n    heroArt: "/project-hero/jentlemens-hero.svg",\n    accent: "#a8875a",\n    accentSoft: "rgba(168,135,90,.15)",\n    tags: ["commerce", "menswear", "fashion", "made-to-order", "wardrobe-system", "athletic-fit"]\n  },\n'''
+            if anchor not in s: raise SystemExit('anchor not found')
+            s=s.replace(anchor, block+anchor, 1)
+            p.write_text(s)
+      - name: Add Jentlemens artwork
+        shell: bash
+        run: |
+          mkdir -p public/project-art public/project-hero
+          cat > public/project-art/jentlemens.svg <<'SVG'
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#171512"/><stop offset="1" stop-color="#6f5a41"/></linearGradient></defs><rect width="800" height="800" rx="110" fill="url(#g)"/><path d="M235 175h330l-62 105 35 350H262l35-350-62-105Z" fill="#d8c6a7" opacity=".12"/><path d="M319 179l81 102 81-102M400 281v347" fill="none" stroke="#d9c29a" stroke-width="10"/><path d="M304 372h192M283 501h234" stroke="#d9c29a" stroke-width="6" opacity=".7"/><text x="400" y="705" text-anchor="middle" fill="#f5efe4" font-family="Georgia,serif" font-size="54" letter-spacing="12">JENTLEMENS</text></svg>
+          SVG
+          cat > public/project-hero/jentlemens-hero.svg <<'SVG'
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000"><defs><radialGradient id="r"><stop stop-color="#a8875a" stop-opacity=".34"/><stop offset="1" stop-color="#07090b" stop-opacity="0"/></radialGradient><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0c0d0e"/><stop offset="1" stop-color="#211c17"/></linearGradient></defs><rect width="1600" height="1000" fill="url(#b)"/><circle cx="1160" cy="300" r="520" fill="url(#r)"/><g transform="translate(840 115)"><path d="M180 0h330l-62 115 45 620H197l45-620L180 0Z" fill="#e6d9c1" opacity=".08"/><path d="M262 10l83 120 83-120M345 130v600" stroke="#b99b70" stroke-width="10" fill="none"/><path d="M235 300h220M220 500h250" stroke="#b99b70" stroke-width="5" opacity=".55"/></g><text x="120" y="380" fill="#f5efe4" font-family="Georgia,serif" font-size="120">Athletic Fit.</text><text x="120" y="495" fill="#f5efe4" font-family="Georgia,serif" font-size="120">Permanent wardrobe.</text><text x="128" y="590" fill="#b9a788" font-family="Arial,sans-serif" font-size="28" letter-spacing="9">JENTLEMENS / MENSWEAR SYSTEMS</text></svg>
+          SVG
+      - name: Commit and remove workflow
+        run: |
+          rm .github/workflows/add-jentlemens-venture.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Add Jentlemens to venture portfolio" || true
+          git push
