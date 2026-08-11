@@ -53,8 +53,8 @@ export default function Home() {
 
       <section className="section worlds-section">
         <div className="worlds-header">
-          <SectionHeading index="04" eyebrow="Selected worlds" title="Four projects. Four different modes of building." />
-          <p className="worlds-note">The homepage does not need to repeat the entire portfolio. These four are a cross-section of commercial, technical, civic, and creative work; the full {ventures.length}-project universe stays available in Ventures.</p>
+          <SectionHeading index="04" eyebrow="Featured projects" title="A few projects from across the studio." />
+          <p className="worlds-note">A selection of work spanning commercial, technical, civic, and creative directions. Explore the projects below, or visit the full portfolio for the complete studio.</p>
         </div>
 
         <div className={styles.selectedWorldsGrid}>
@@ -70,7 +70,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className={styles.worldsCta}><span>4 shown / {ventures.length} total</span><Link href="/ventures" className="text-link">Explore the complete venture universe <span>↗</span></Link></div>
+        <div className={styles.worldsCta}><span>Selected work</span><Link href="/ventures" className="text-link">View the full portfolio <span>↗</span></Link></div>
       </section>
 
       <section className="cta-band"><div><span>05 / Next conversation</span><h2>Build, back, test, license, support, or challenge something.</h2></div><div><p>Choose the lane that fits: investor, technical collaborator, civic or nonprofit partner, business partner, media, creative work, or music licensing.</p><Link href="/contact" className="button">Start a conversation</Link></div></section>
