@@ -8,9 +8,6 @@ const nav = [
   ["Ventures", "/ventures"],
   ["Founder", "/founder"],
   ["Studio", "/studio"],
-  ["Technology", "/technology"],
-  ["Creative", "/creative"],
-  ["Writing", "/writing"],
 ] as const;
 
 export function SiteHeader() {
