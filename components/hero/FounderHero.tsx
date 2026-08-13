@@ -9,15 +9,15 @@ export function FounderHero() {
       <div className="hero-copy">
         <p className="hero-kicker">Studio lead · Venture architect · Strategic advisor · Phoenix, Arizona</p>
         <h1>
-          Concepts built to become<br />
-          <span>companies.</span>
+          Concepts Built To Become<br />
+          <span>Companies</span>
         </h1>
         <p className="hero-lede">
-          Joseph Jilovec directs a multi-asset portfolio by shaping venture theses, product foundations, capital priorities, and partner alignment—then connecting each asset with the people best equipped to operate and scale it.
+          Looking to build, fund, or step in to lead a venture? Let&apos;s connect and get to work.
         </p>
         <div className="hero-actions">
-          <Link href="/ventures" className="button">Explore the venture universe</Link>
-          <Link href="/founder" className="text-link">Founder & studio lead <span>↗</span></Link>
+          <Link href="/ventures" className="button">Explore the Venture Universe</Link>
+          <Link href="/founder" className="text-link">Founder & Studio Lead <span>↗</span></Link>
         </div>
         <div className="hero-signals" aria-label="Portfolio overview">
           <div><strong>{ventures.length}</strong><span>public project worlds</span></div>
