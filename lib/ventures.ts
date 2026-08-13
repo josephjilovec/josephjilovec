@@ -1,5 +1,5 @@
 export type VentureCategory = "Commerce" | "Behavioral" | "Technology" | "Creative" | "Civic";
-export type VentureStage = "Concept designed" | "Prototype" | "Creative project" | "Active brand";
+export type VentureStage = "Concept designed" | "System build" | "Commerce build" | "Creative project" | "Active brand";
 
 export type Venture = {
   slug: string;
@@ -117,7 +117,7 @@ export const ventures: Venture[] = [
     name: "Vanta Helix",
     eyebrow: "Adaptive interface concept",
     category: "Technology",
-    stage: "Prototype",
+    stage: "System build",
     status: "Concept experience",
     summary:
       "A futuristic adaptive-interface concept exploring neural-interface ideas, privacy-forward computing, and ambient personalized experiences.",
@@ -126,9 +126,9 @@ export const ventures: Venture[] = [
     thesis:
       "A future adaptive interface could become more useful by learning personal baselines, keeping sensitive processing local, and changing the environment instead of demanding more screen attention.",
     currentState:
-      "The public site is a designed concept experience. Future-facing specifications and launch language are treated here as prototype storytelling rather than independently verified commercial performance.",
+      "The public site is a designed concept experience. Future-facing specifications and launch language are treated here as product storytelling rather than independently verified commercial performance.",
     founderRole:
-      "Concept direction, product storytelling, privacy principles, interaction thesis, experience design, and prototype framing.",
+      "Concept direction, product storytelling, privacy principles, interaction thesis, experience design, and launch framing.",
     nextMilestone:
       "Separate demonstrable software interaction from speculative hardware assumptions and validate one useful adaptive feedback loop.",
     opportunity:
@@ -139,7 +139,7 @@ export const ventures: Venture[] = [
     heroArt: "/project-hero/vanta-hero.svg",
     accent: "#a18cff",
     accentSoft: "rgba(161,140,255,.15)",
-    tags: ["technology", "experimental", "bci", "product-concept"]
+    tags: ["technology", "adaptive", "bci", "product-concept"]
   },
   {
     slug: "cannacore-seeds",
@@ -175,18 +175,18 @@ export const ventures: Venture[] = [
     name: "Snark Logic",
     eyebrow: "MediaTech / comedy R&D + enterprise communications",
     category: "Technology",
-    stage: "Prototype",
-    status: "MediaTech prototype / private enterprise concept",
+    stage: "System build",
+    status: "MediaTech platform / private enterprise concept",
     summary:
       "A dual-engine comedy and communications R&D platform: a public algorithmic writers’ room for creators and a private enterprise tone-and-satire firewall for communication risk.",
     problem:
-      "Digital creators need high-velocity hook, timing, and narrative experimentation without flattening their voice, while enterprises need more human communication without turning wit or satire into unmanaged brand and reputation risk.",
+      "Digital creators need high-velocity hook, timing, and narrative iteration without flattening their voice, while enterprises need more human communication without turning wit or satire into unmanaged brand and reputation risk.",
     thesis:
       "The same structured disagreement core—behavioral, cultural, creative, and risk perspectives—can support both content R&D and corporate communication stress-testing when the two products keep separate objectives, data boundaries, and escalation thresholds.",
     currentState:
-      "The public Next.js prototype has been rebuilt around two product surfaces: Creator R&D and a private Enterprise Communications OS, with an interactive dual-mode workbench and explicit human review gates. Production model integrations and real customer datasets remain future validation work.",
+      "The public Next.js platform has been rebuilt around two product surfaces: Creator R&D and a private Enterprise Communications OS, with an interactive dual-mode workbench and explicit human review gates. Production model integrations and real customer datasets remain future validation work.",
     founderRole:
-      "Company pivot, brand architecture, dual-engine product strategy, multi-agent operating model, creator workflow design, enterprise risk framing, and prototype direction.",
+      "Company pivot, brand architecture, dual-engine product strategy, multi-agent operating model, creator workflow design, enterprise risk framing, and platform direction.",
     nextMilestone:
       "Validate the creator workflow against a real content/retention dataset and separately run one narrow private enterprise communication stress-test pilot with explicit review criteria.",
     opportunity:
@@ -202,10 +202,10 @@ export const ventures: Venture[] = [
   {
     slug: "alder-and-meridian",
     name: "Alder & Meridian",
-    eyebrow: "Curated commerce prototype",
+    eyebrow: "Curated commerce platform",
     category: "Commerce",
-    stage: "Prototype",
-    status: "E-commerce prototype",
+    stage: "Commerce build",
+    status: "E-commerce platform",
     summary:
       "A premium e-commerce concept built around a tightly curated catalog, restrained presentation, and a fulfillment architecture designed to become more rigorous before live selling is enabled.",
     problem:
@@ -213,7 +213,7 @@ export const ventures: Venture[] = [
     thesis:
       "A smaller, deliberately curated catalog can feel more credible when product data, checkout validation, supplier mapping, legal review, and fulfillment controls are treated as part of the product from the beginning.",
     currentState:
-      "The repository documents a Next.js App Router prototype with a typed local catalog, integer-cent prices, an ID/quantity cart, and server-side checkout validation. Live Stripe and supplier ordering are intentionally disabled pending verification and testing.",
+      "The repository documents a Next.js App Router commerce build with a typed local catalog, integer-cent prices, an ID/quantity cart, and server-side checkout validation. Live Stripe and supplier ordering are intentionally disabled pending verification and testing.",
     founderRole:
       "Brand concept, catalog direction, commerce architecture, product experience, supplier-integration planning, and launch-readiness framing.",
     nextMilestone:
@@ -226,15 +226,15 @@ export const ventures: Venture[] = [
     heroArt: "/project-hero/alder-hero.svg",
     accent: "#74a9b8",
     accentSoft: "rgba(116,169,184,.14)",
-    tags: ["commerce", "prototype", "ecommerce", "curation", "operations"]
+    tags: ["commerce", "platform", "ecommerce", "curation", "operations"]
   },
   {
     slug: "jentlemens",
     name: "Jentlemens",
     eyebrow: "Menswear / wardrobe systems",
     category: "Commerce",
-    stage: "Prototype",
-    status: "Menswear commerce prototype",
+    stage: "Commerce build",
+    status: "Menswear commerce platform",
     summary:
       "A focused menswear brand built around Athletic Fit, made-to-order tailoring, a permanent neutral wardrobe, and fewer pieces designed to work together.",
     problem:
@@ -242,9 +242,9 @@ export const ventures: Venture[] = [
     thesis:
       "A disciplined wardrobe system can reduce choice without reducing usefulness: one recognizable house fit, a permanent tailoring palette, a small set of shirts and accessories, and footwear designed around repeatable combinations rather than endless assortment.",
     currentState:
-      "The multi-page Next.js commerce prototype is live in development with dedicated departments for suits, shirts, trousers, shoes, accessories, fit guidance, and made-to-order measurement capture. Supplier fulfillment and live payment operations remain future launch work.",
+      "The multi-page Next.js commerce platform is live in development with dedicated departments for suits, shirts, trousers, shoes, accessories, fit guidance, and made-to-order measurement capture. Supplier fulfillment and live payment operations remain future launch work.",
     founderRole:
-      "Brand architecture, Athletic Fit positioning, wardrobe-system design, merchandising strategy, made-to-order experience, footwear direction, product taxonomy, and commerce prototype development.",
+      "Brand architecture, Athletic Fit positioning, wardrobe-system design, merchandising strategy, made-to-order experience, footwear direction, product taxonomy, and commerce platform development.",
     nextMilestone:
       "Finalize proprietary product imagery and supplier specifications, validate the Athletic Fit measurement model, connect payment and fulfillment infrastructure, and complete an end-to-end test order.",
     opportunity:

@@ -5,7 +5,7 @@ import { useState } from "react";
 const steps = [
   { id: "01", name: "Identify", copy: "Find a recurring problem or creative territory worth examining, then define who cares and why." },
   { id: "02", name: "Design", copy: "Map the offer, workflow, business logic, user experience, operating requirements, and major risks." },
-  { id: "03", name: "Test", copy: "Attack the assumptions with interviews, prototypes, demand tests, technical experiments, or creative releases." },
+  { id: "03", name: "Test", copy: "Challenge the assumptions with interviews, demand tests, technical benchmarks, pilot workflows, or creative releases." },
   { id: "04", name: "Build", copy: "Commit resources only after the next step is clear—then recruit the people, capital, and partnerships the work actually needs." },
 ];
 

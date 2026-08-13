@@ -20,7 +20,7 @@ const maturityStages: Record<string, string> = {
   "dj-hotwax": "Active Creative Brand",
   "vanta-helix": "Functional Architecture",
   "cannacore-seeds": "Live Market",
-  snarklogic: "Experimental Build",
+  snarklogic: "Active System Build",
   "alder-and-meridian": "Venture-Ready",
   "united-american-future": "Nonprofit",
   "world-forward-foundation": "Nonprofit"
@@ -55,7 +55,7 @@ const givewiseInsights: PortfolioVenture = {
   summary:
     "A founder-led AI transformation and technology advisory helping organizations make clearer decisions about AI strategy, agentic workflows, data readiness, governance, automation, and modernization.",
   problem:
-    "Organizations increasingly have access to powerful AI tools but still struggle to decide where AI belongs, which workflows should change, whether their data is ready, how autonomy should be governed, and which experiments deserve to scale.",
+    "Organizations increasingly have access to powerful AI tools but still struggle to decide where AI belongs, which workflows should change, whether their data is ready, how autonomy should be governed, and which initiatives deserve to scale.",
   thesis:
     "Independent, decision-first advisory can help leaders connect AI investment to real operating problems by evaluating workflow, data, controls, people, cost, and implementation sequence before technology choices become commitments.",
   currentState:
@@ -123,7 +123,7 @@ const kineticAromatics: PortfolioVenture = {
   founderRole:
     "Brand strategy, category positioning, scent-system direction, product architecture, active-lifestyle framing, commerce experience, quiz design, and digital platform development.",
   nextMilestone:
-    "Finalize production and fulfillment details, verify product and packaging inputs, connect a tested payment flow, and validate initial demand with a controlled launch rather than relying on prototype engagement alone.",
+    "Finalize production and fulfillment details, verify product and packaging inputs, connect a tested payment flow, and validate initial demand with a controlled launch rather than relying on demonstration engagement alone.",
   opportunity:
     "Product manufacturing, packaging, fulfillment, fitness partnerships, retail testing, creator collaborations, and active-lifestyle distribution.",
   externalUrl: "https://kineticaromatics.josephjilovec.com/",
@@ -170,7 +170,7 @@ const autoCompCorp: PortfolioVenture = {
   name: "AutoComp Corp",
   eyebrow: "Autonomous compliance operations & evidence systems",
   category: "Technology",
-  stage: "Compliance Operations Prototype",
+  stage: "Compliance Operations Platform",
   status: "Public",
   summary:
     "A compliance-operations software concept for continuous monitoring, evidence capture, controlled document drafting, and permissioned execution workflows with human authority preserved for consequential decisions.",
@@ -179,7 +179,7 @@ const autoCompCorp: PortfolioVenture = {
   thesis:
     "A coordinated agent system can reduce repetitive monitoring and evidence work when automation is separated from legal judgment and high-consequence actions remain permissioned to authorized professionals and company officers.",
   currentState:
-    "A Next.js product prototype and readiness-check workflow are built around system monitoring, specialized agents, evidence management, control routing, and explicit human approval boundaries. It is not presented as a substitute for legal or regulated professional judgment.",
+    "A Next.js product system and readiness-check workflow are built around monitoring, specialized agents, evidence management, control routing, and explicit human approval boundaries. It is not presented as a substitute for legal or regulated professional judgment.",
   founderRole:
     "Product concept, compliance-operations architecture, autonomous-agent model, evidence workflow, permission system, risk framing, and digital platform development.",
   nextMilestone:

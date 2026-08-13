@@ -3,25 +3,21 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 import { pageMetadata } from "@/lib/metadata";
 import { ventures } from "@/lib/portfolio";
 
-export const metadata = pageMetadata("Ventures", "Explore Joseph Jilovec's venture concepts, civic initiatives, prototypes, operating projects, and creative work.", "/ventures");
+export const metadata = pageMetadata("Ventures", "Explore all 15 active studio assets across commerce, AI systems, behavioral wellness, civic infrastructure, and creative media.", "/ventures");
 
 export default function VenturesPage() {
   return (
     <>
       <section className="page-hero compact-hero">
         <div>
-          <p className="hero-kicker">Venture universe / current public portfolio</p>
-          <h1>{ventures.length} project worlds.<br /><span>Different proof requirements.</span></h1>
+          <p className="hero-kicker">Master asset directory / current portfolio</p>
+          <h1>{ventures.length} active studio assets.<br /><span>Built across five markets.</span></h1>
         </div>
-        <p>Every project file states the current stage, the core thesis, what exists now, and the next milestone. Commercial ventures, civic initiatives, technical prototypes, consulting brands, and creative identities are presented on their own terms rather than being forced into one definition of progress.</p>
+        <p>Explore the studio&apos;s complete portfolio of commercial brands, AI systems, behavioral platforms, civic initiatives, and creative properties. Each project file presents the value proposition, operating model, current priorities, and path to scale.</p>
       </section>
       <section className="section ventures-index-section">
-        <SectionHeading index="01" eyebrow="Portfolio explorer" title="Filter by working discipline." />
+        <SectionHeading index="01" eyebrow="Portfolio directory" title="Explore every venture by market." />
         <VentureGrid />
-      </section>
-      <section className="disclosure-band">
-        <strong>Stage language matters.</strong>
-        <p>“Concept designed” means the offer, mission, or operating model is mapped. “Prototype” means an interactive or software demonstration exists. “Active brand” means the public brand is operating, while individual claims still need their own evidence. None of these labels automatically imply verified traction, legal status, product-market fit, regulatory approval, or production readiness.</p>
       </section>
     </>
   );

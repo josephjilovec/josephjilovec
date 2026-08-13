@@ -37,7 +37,7 @@ export const capitalProfiles: CapitalProfile[] = [
     industry: "Technology / Human-Computer Interaction (HCI) & Hardware/Software",
     benchmark: "Spatial computing, ambient UX, and privacy-first OS concepts (e.g., Humane, Rabbit, Sightful) raise $3M–$10M Seed rounds for deep R&D, hardware prototyping, and OS kernel development.",
     stages: [
-      { label: "Institutional Seed Round", ask: "$3,500,000", valuation: "$17,500,000", justification: "Funds hardware/sensor prototyping, local zero-knowledge privacy architecture development, and optical/spatial UI engine R&D.", asset: "Alpha Hardware Prototype + Adaptive Ambient Interface SDK.", metric: "1,000 Developer Edition pre-orders at $1,500 ($1.5M upfront commitments)." },
+      { label: "Institutional Seed Round", ask: "$3,500,000", valuation: "$17,500,000", justification: "Funds hardware and sensor development, local zero-knowledge privacy architecture, and optical/spatial UI engine R&D.", asset: "Alpha Hardware Build + Adaptive Ambient Interface SDK.", metric: "1,000 Developer Edition pre-orders at $1,500 ($1.5M upfront commitments)." },
       { label: "Venture Expansion Round", ask: "$12,000,000", valuation: "$60,000,000", asset: "Specialized optical/hardware testing facility, mass manufacturing tooling, and proprietary chip-level firmware integrations.", metric: "$10M ARR in consumer hardware and platform subscription licenses." },
       { label: "Portfolio Series A", ask: "$35,000,000", valuation: "$175,000,000", asset: "Commercial launch of consumer neural/ambient compute ecosystem competing with major tech OEM platforms.", metric: "$50M+ ARR." },
     ]

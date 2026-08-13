@@ -2,12 +2,11 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { ReadabilityControls } from "@/components/navigation/ReadabilityControls";
 
 const nav = [
   ["Ventures", "/ventures"],
-  ["Founder", "/founder"],
   ["Studio", "/studio"],
+  ["Founder", "/founder"],
 ] as const;
 
 export function SiteHeader() {
@@ -35,7 +34,6 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className="nav-actions">
-          <ReadabilityControls />
           <Link className="button button-small" href="/contact">Start a conversation</Link>
           <button
             className="menu-button"
@@ -53,7 +51,7 @@ export function SiteHeader() {
           {nav.map(([label, href]) => (
             <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>
           ))}
-          <Link href="/contact" onClick={() => setOpen(false)}>Contact</Link>
+          <Link className="mobile-nav-cta" href="/contact" onClick={() => setOpen(false)}>Start a conversation</Link>
         </nav>
       )}
     </header>

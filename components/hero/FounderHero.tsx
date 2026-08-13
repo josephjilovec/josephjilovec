@@ -41,7 +41,7 @@ export function FounderHero() {
             <span>JJ · 33.4°N</span>
           </div>
         </div>
-        <div className="signal-card signal-a"><small>Current signal</small><strong>Venture systems</strong><span>Thesis → prototype → proof</span></div>
+        <div className="signal-card signal-a"><small>Current signal</small><strong>Venture systems</strong><span>Architecture → deployment → scale</span></div>
       </div>
     </section>
   );
