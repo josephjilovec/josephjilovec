@@ -20,7 +20,7 @@ export default function FounderPage() {
         </div>
       </section>
       <section className="section">
-        <SectionHeading index="01" eyebrow="Studio lead model" title="Set the direction. Align the resources. Empower the operator.">
+        <SectionHeading index="01" eyebrow="Studio lead model" title="Set the direction. Align the resources. Empower the people.">
           <p>Joseph serves as a strategic consultant, advising on venture direction, portfolio strategy, and partner alignment. Venture-level leaders drive daily performance and implementation, backed by regular strategic reviews and collaborative problem-solving to keep execution aligned with the core vision.</p>
         </SectionHeading>
         <FounderTimeline />
