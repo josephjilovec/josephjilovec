@@ -68,7 +68,7 @@ export function FeaturedProjects() {
 
       <div className={styles.worldsCta}>
         <span>15 project worlds</span>
-        <Link href="/portfolio" className="button">Explore all 15 project worlds on the Portfolio tab ↗</Link>
+        <Link href="/portfolio" className="button">Explore all project worlds on the Portfolio tab ↗</Link>
       </div>
     </>
   );
