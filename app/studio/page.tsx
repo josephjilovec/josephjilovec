@@ -9,14 +9,14 @@ export default function StudioPage() {
     <>
       <section className="page-hero">
         <div><p className="hero-kicker">Studio operating model</p><h1>Set direction centrally.<br /><span>Scale through aligned leadership.</span></h1></div>
-        <p>Joseph Jilovec Venture Studio defines venture theses, foundational product architecture, portfolio priorities, and capital strategy—then aligns each asset with the operators and cross-functional partners equipped to lead execution.</p>
+        <p>Joseph Jilovec Venture Studio defines ventures foundational product architecture, portfolio priorities, and capital strategy—then aligns each asset with the operators and cross-functional partners equipped to lead execution.</p>
       </section>
 
       <section className="section studio-operating-section">
         <SectionHeading index="01" eyebrow="Operating model" title="One strategic layer. Clear venture-level ownership." />
         <div className="studio-operating-grid">
           <article className="studio-operating-lead">
-            <p>The studio retains responsibility for venture design, portfolio priorities, capital allocation decisions, foundational brand and product direction, and cross-venture leverage. Day-to-day execution belongs to the operators and functional leaders closest to each company.</p>
+            <p>The studio is a hub for venture designs, portfolio priorities, capital allocation decisions, foundational brand and product direction, and cross-venture leverage.</p>
           </article>
           <div className="studio-operating-points">
             <article><span>01</span><h3>Architect</h3><p>Define the customer, value proposition, business model, product foundation, operating requirements, and defensible market position.</p></article>
