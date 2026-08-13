@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 import { pageMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
 
-export const metadata = pageMetadata("Founder", "Joseph Jilovec's founder background, operating experience, behavioral-design lens, and systems work.", "/founder");
+export const metadata = pageMetadata("Founder", "Joseph Jilovec directs a multi-asset venture studio through venture design, capital strategy, product architecture, and cross-functional partner alignment.", "/founder");
 
 export default function FounderPage() {
   return (
@@ -13,30 +13,30 @@ export default function FounderPage() {
       <section className="founder-page-hero">
         <div className="founder-page-image"><Image src="/images/joseph-founder.png" alt="Joseph Jilovec" fill priority sizes="(max-width: 900px) 100vw, 44vw" /></div>
         <div className="founder-page-copy">
-          <p className="hero-kicker">Founder & studio leadership / Joseph Jilovec</p>
-          <h1>Cross-disciplinary leadership built for venture deployment.</h1>
-          <p>Joseph Jilovec combines behavioral science, custom AI workflow automation, brand strategy, product architecture, and commercial execution to build and direct a portfolio of 15 studio assets.</p>
+          <p className="hero-kicker">Studio lead & strategic advisor / Joseph Jilovec</p>
+          <h1>Cross-disciplinary vision built for venture deployment.</h1>
+          <p>Joseph Jilovec directs a multi-asset studio portfolio by pairing commercial strategy with behavioral insight and foundational product architecture. His role is to design the venture, set its strategic direction, determine where capital and attention can create leverage, and bring the right operators and cross-functional partners into each asset.</p>
           <div className="hero-actions"><Link href="/contact#brief" className="button">Request a founder briefing</Link><a className="text-link" href={site.linkedin} target="_blank" rel="noreferrer">View LinkedIn <span>↗</span></a></div>
         </div>
       </section>
       <section className="section">
-        <SectionHeading index="01" eyebrow="Background" title="Business, behavior, technology, and brand direction.">
-          <p>Joseph&apos;s leadership model comes from connecting disciplines that are often separated: understanding how people make decisions, how businesses operate, how technical systems are structured, and how brands earn attention and trust.</p>
+        <SectionHeading index="01" eyebrow="Studio lead model" title="Design the venture. Align the resources. Empower the operator.">
+          <p>The studio is not built around Joseph personally managing every daily workflow. It is built around clear venture architecture, deliberate capital and resource allocation, and high-caliber people taking responsibility for the functions they are best equipped to lead.</p>
         </SectionHeading>
         <FounderTimeline />
       </section>
       <section className="section disciplines-section">
-        <SectionHeading index="02" eyebrow="Core capabilities" title="Four capabilities that move assets from architecture to execution." />
+        <SectionHeading index="02" eyebrow="Foundational lenses" title="The perspective behind every venture decision." />
         <div className="discipline-grid">
-          <article><span>01</span><h3>AI systems integration</h3><p>Custom AI workflows, agent coordination, automation planning, data and governance requirements, and practical integration into real operating processes.</p></article>
-          <article><span>02</span><h3>Behavioral engineering</h3><p>Attention, motivation, decision architecture, focus conditioning, adoption, and ethical persuasion informed by psychology and hypnosis training.</p></article>
-          <article><span>03</span><h3>Product architecture</h3><p>Turning commercial and human problems into clear offers, workflows, technical requirements, interfaces, controls, and build sequences.</p></article>
-          <article><span>04</span><h3>Commercial execution</h3><p>Brand strategy, customer acquisition, pricing, digital commerce, fulfillment, reputation, market entry, and operational decision-making.</p></article>
+          <article><span>01</span><h3>Commercial strategy</h3><p>Define the market opening, customer, offer, revenue logic, competitive position, and path through which an asset can become a durable standalone company.</p></article>
+          <article><span>02</span><h3>Behavioral insight</h3><p>Use psychology-informed thinking about attention, motivation, decisions, adoption, trust, and human behavior to shape products and market strategy.</p></article>
+          <article><span>03</span><h3>Product architecture</h3><p>Translate the venture thesis into a foundational product system: the workflows, interfaces, technical requirements, controls, and build priorities others can execute.</p></article>
+          <article><span>04</span><h3>Portfolio judgment</h3><p>Decide where founder attention, capital, operating capacity, and strategic relationships can create the most leverage across the studio portfolio.</p></article>
         </div>
       </section>
       <section className="founder-partner-cta">
-        <div><span>03 / Investor & operator access</span><h2>Discuss a venture directly with the founder.</h2></div>
-        <div><p>Accredited investors and operational partners can request a focused conversation about a selected asset, its commercial model, execution priorities, and partnership requirements.</p><Link className="button" href="/contact#brief">Request a founder briefing</Link></div>
+        <div><span>03 / Operator & capital alignment</span><h2>The right people should lead the right parts of the company.</h2></div>
+        <div><p>Joseph works as studio lead and strategic advisor, collaborating with aligned operators, technical leaders, functional specialists, and capital partners who can take real ownership within a selected venture. The objective is a sustainable company with capable leadership—not a portfolio bottlenecked by one founder.</p><Link className="button" href="/contact#brief">Discuss an asset with Joseph</Link></div>
       </section>
     </>
   );

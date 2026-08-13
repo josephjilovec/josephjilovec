@@ -3,10 +3,10 @@
 import { useState } from "react";
 
 const moments = [
-  { year: "Commerce", title: "Operating before theorizing", copy: "Built and operated Jentlemens, learning customer acquisition, pricing, fulfillment, reputation, and supply-chain pressure through a real independent e-commerce business." },
-  { year: "Behavior", title: "Psychology as a design lens", copy: "A B.A. in Psychology and hypnosis training shape how Joseph thinks about attention, motivation, choice, behavior change, and ethical persuasion." },
-  { year: "Systems", title: "Technical work becomes a second language", copy: "Open-source projects, data work, AI workflows, product systems, and architecture studies became tools for translating ideas into buildable requirements." },
-  { year: "Studio", title: "A portfolio becomes an operating system", copy: "The current studio model connects distinct commercial, technical, behavioral, civic, and creative assets through shared architecture and execution discipline." },
+  { year: "Vision", title: "Set the direction before adding complexity", copy: "Define what the venture is, who it serves, why it should exist, where it can win, and what must remain true as other people take responsibility for building and operating it." },
+  { year: "Architecture", title: "Create a foundation other leaders can execute", copy: "Shape the commercial model, behavioral logic, brand position, product requirements, operating structure, and decision boundaries clearly enough for a cross-functional team to move with purpose." },
+  { year: "Allocation", title: "Direct resources toward the highest-leverage constraint", copy: "Evaluate where capital, founder attention, technical capacity, distribution, or specialist knowledge can most materially change the trajectory of each studio asset." },
+  { year: "Partners", title: "Put capable people into consequential roles", copy: "Identify aligned operators, technical leaders, functional specialists, advisers, and capital partners who can own their discipline while Joseph remains engaged at the portfolio and strategic level." },
 ];
 
 export function FounderTimeline() {
