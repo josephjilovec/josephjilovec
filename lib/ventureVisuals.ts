@@ -10,7 +10,7 @@ export const ventureSignalArt: Record<string, string> = {
   "world-forward-foundation": "/constellation-art/wff-map.svg",
   "givewise-insights": "/constellation-art/givewise-map.svg",
   "advibe-central": "/constellation-art/advibe-map.svg",
-  "kinetic-botanicals": "/constellation-art/kinetic-botanicals-map.svg",
+  "kinetic-aromatics": "/constellation-art/kinetic-botanicals-map.svg",
 };
 
 export const venturePreviewArt: Record<string, string> = {

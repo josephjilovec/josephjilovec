@@ -145,7 +145,7 @@ export function VentureConstellation() {
             </div>
 
             <div className="venture-preview-actions">
-              <Link className="button" href={`/ventures/${active.slug}`}>Open project file</Link>
+              <Link className="button" href={`/portfolio/${active.slug}`}>Open project file</Link>
               {active.externalUrl ? (
                 <a className="text-link" href={active.externalUrl} target="_blank" rel="noreferrer">
                   Visit project <span>↗</span>

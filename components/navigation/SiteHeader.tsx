@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const nav = [
-  ["Portfolio", "/ventures"],
+  ["Portfolio", "/portfolio"],
   ["Studio", "/studio"],
   ["Founder", "/founder"],
 ] as const;

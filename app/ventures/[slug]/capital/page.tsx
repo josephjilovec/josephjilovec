@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const profile = getCapitalProfile(slug);
   if (!profile) return {};
-  return pageMetadata(`${profile.name} Capital File`, `Three-stage capital progression model for ${profile.name}.`, `/ventures/${slug}/capital`);
+  return pageMetadata(`${profile.name} Capital File`, `Three-stage capital progression model for ${profile.name}.`, `/portfolio/${slug}/capital`);
 }
 
 export default async function CapitalFilePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -62,7 +62,7 @@ export default async function CapitalFilePage({ params }: { params: Promise<{ sl
 
       <section className="capital-hero" style={{ "--venture-accent": venture.accent, "--venture-soft": venture.accentSoft } as CSSProperties}>
         <div>
-          <Link className="capital-back" href={`/ventures/${slug}`}>← {profile.name} project file</Link>
+          <Link className="capital-back" href={`/portfolio/${slug}`}>← {profile.name} project file</Link>
           <p className="capital-kicker">Capital file / three-stage progression</p>
           <h1>{profile.name}</h1>
           <p className="capital-lede">A staged capital model showing what an institutional Seed, Expansion, and Series A path could unlock if the venture reaches the evidence required for each round.</p>

@@ -2,6 +2,14 @@
   font-size: 10px !important;
 }
 
+.portfolio-command-section {
+  max-width: 1720px;
+}
+
+.portfolio-page-hero {
+  max-width: 1720px;
+}
+
 .venture-universe-v3 .venture-selector-intro {
   font-size: 13.5px !important;
   line-height: 1.65 !important;

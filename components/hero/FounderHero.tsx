@@ -7,7 +7,7 @@ export function FounderHero() {
     <section className="hero-shell">
       <div className="hero-grid-lines" aria-hidden="true" />
       <div className="hero-copy">
-        <p className="hero-kicker">Studio lead · Venture architect · Strategic advisor · Phoenix, Arizona</p>
+        <p className="hero-kicker">Venture Architect · Strategic Advisor · Phoenix, Arizona</p>
         <h1>
           Concepts Built To Become<br />
           <span>Companies</span>
@@ -16,7 +16,7 @@ export function FounderHero() {
           Looking to build, fund, or step into a venture? Explore the portfolio and find where your experience, capital, or relationships can create leverage. Let&apos;s connect and get to work.
         </p>
         <div className="hero-actions">
-          <Link href="/ventures" className="button">Explore the Venture Universe</Link>
+          <Link href="/portfolio" className="button">Explore the Venture Universe</Link>
           <Link href="/founder" className="text-link">Founder & Studio Lead <span>↗</span></Link>
         </div>
         <div className="hero-signals" aria-label="Portfolio overview">

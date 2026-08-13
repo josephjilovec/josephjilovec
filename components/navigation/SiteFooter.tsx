@@ -14,7 +14,7 @@ export function SiteFooter() {
         </div>
         <div className="footer-column">
           <span className="footer-label">Explore</span>
-          <Link href="/ventures">Venture universe</Link>
+          <Link href="/portfolio">Portfolio</Link>
           <Link href="/founder">Founder</Link>
           <Link href="/studio">Studio model</Link>
           <Link href="/technology">Technology</Link>

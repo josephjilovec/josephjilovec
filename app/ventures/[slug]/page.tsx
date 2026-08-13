@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const venture = getVenture(slug);
   if (!venture) return {};
-  return pageMetadata(venture.name, venture.summary, `/ventures/${venture.slug}`);
+  return pageMetadata(venture.name, venture.summary, `/portfolio/${venture.slug}`);
 }
 
 export default async function VenturePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -27,14 +27,14 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
     <>
       <section className="project-hero" style={{ "--venture-accent": venture.accent, "--venture-soft": venture.accentSoft } as CSSProperties}>
         <div className="project-hero-copy">
-          <Link href="/ventures" className="back-link">← Venture universe</Link>
+          <Link href="/portfolio" className="back-link">← Portfolio</Link>
           <div className="project-meta"><span>{venture.category}</span><span>{venture.stage}</span></div>
           <p className="hero-kicker">{venture.eyebrow}</p>
           <h1>{venture.name}</h1>
           <p className="project-summary">{venture.summary}</p>
           <div className="hero-actions">
             {venture.externalUrl && <a className="button" href={venture.externalUrl} target="_blank" rel="noreferrer">{venture.externalLabel ?? "Visit project"} ↗</a>}
-            <Link href={`/ventures/${venture.slug}/capital`} className="button button-ghost">View capital file ↗</Link>
+            <Link href={`/portfolio/${venture.slug}/capital`} className="button button-ghost">View capital file ↗</Link>
             <Link href={`/contact?venture=${encodeURIComponent(venture.name)}`} className="text-link">Discuss this project <span>↗</span></Link>
           </div>
         </div>

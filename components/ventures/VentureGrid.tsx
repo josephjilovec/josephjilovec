@@ -34,16 +34,16 @@ export function VentureGrid() {
       <div className="venture-grid">
         {visible.map((venture, index) => (
           <article className="venture-card" key={venture.slug} style={{ "--venture-accent": venture.accent, "--venture-soft": venture.accentSoft } as CSSProperties}>
-            <Link href={`/ventures/${venture.slug}`} className="venture-card-art" aria-label={`Open ${venture.name}`}>
+            <Link href={`/portfolio/${venture.slug}`} className="venture-card-art" aria-label={`Open ${venture.name}`}>
               <Image src={ventureSignalArt[venture.slug] ?? venture.art} alt="" fill sizes="(max-width: 800px) 100vw, 45vw" />
               <span className="venture-card-number">{String(index + 1).padStart(2, "0")}</span>
             </Link>
             <div className="venture-card-copy">
               <div className="card-meta"><span>{venture.category}</span><span>{venture.eyebrow}</span></div>
-              <h3><Link href={`/ventures/${venture.slug}`}>{venture.name}</Link></h3>
+              <h3><Link href={`/portfolio/${venture.slug}`}>{venture.name}</Link></h3>
               <p>{venture.summary}</p>
               <div className="card-links">
-                <Link href={`/ventures/${venture.slug}`} className="button button-small">Explore Project File</Link>
+                <Link href={`/portfolio/${venture.slug}`} className="button button-small">Explore Project File</Link>
               </div>
             </div>
           </article>

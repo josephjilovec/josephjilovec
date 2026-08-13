@@ -20,6 +20,18 @@
   min-height: 410px;
 }
 
+.loadingWorld {
+  background:
+    linear-gradient(105deg, transparent 34%, rgba(255,255,255,.045) 45%, transparent 56%) 0 0 / 220% 100%,
+    linear-gradient(145deg, rgba(85,217,255,.055), transparent 48%),
+    #0a0e11;
+  animation: featuredLoading 1.2s ease-in-out infinite;
+}
+
+@keyframes featuredLoading {
+  to { background-position: -220% 0, 0 0, 0 0; }
+}
+
 .selectedWorld:hover,
 .selectedWorld:focus-visible {
   transform: translateY(-4px);
@@ -144,6 +156,10 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .15em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loadingWorld { animation: none; }
 }
 
 @media (max-width: 1000px) {

@@ -3,7 +3,7 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 import { pageMetadata } from "@/lib/metadata";
 import { ventures } from "@/lib/portfolio";
 
-export const metadata = pageMetadata("Ventures", "Explore all 15 active studio assets across commerce, AI systems, behavioral wellness, civic infrastructure, and creative media.", "/ventures");
+export const metadata = pageMetadata("Portfolio", "Explore all 15 active studio assets across commerce, AI systems, behavioral wellness, civic infrastructure, and creative media.", "/portfolio");
 
 export default function VenturesPage() {
   return (
