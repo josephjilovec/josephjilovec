@@ -30,13 +30,13 @@ export default function FounderPage() {
         <div className="discipline-grid">
           <article><span>01</span><h3>Commercial strategy</h3><p>Define the market opening, customer, offer, revenue logic, competitive position, and path through which an asset can become a durable standalone company.</p></article>
           <article><span>02</span><h3>Behavioral insight</h3><p>Apply psychology-informed thinking about attention, motivation, decisions, adoption, and trust to product design and market strategy.</p></article>
-          <article><span>03</span><h3>Product architecture</h3><p>Translate the venture thesis into foundational workflows, interfaces, technical requirements, controls, and build priorities that a cross-functional team can execute.</p></article>
+          <article><span>03</span><h3>Product architecture</h3><p>Translate the venture into foundational workflows, interfaces, technical requirements, controls, and build priorities that a cross-functional team can execute.</p></article>
           <article><span>04</span><h3>Portfolio judgment</h3><p>Determine where founder attention, capital, operating capacity, and strategic relationships can create the greatest leverage across the portfolio.</p></article>
         </div>
       </section>
       <section className="founder-partner-cta">
         <div><span>03 / Operator & capital alignment</span><h2>The right people should lead the right parts of each company.</h2></div>
-        <div><p>Joseph acts as studio lead and strategic advisor, collaborating with aligned operators, technical leaders, functional specialists, advisers, and capital partners who can take real ownership within a selected venture. The objective is a sustainable company with capable leadership—not a portfolio bottlenecked by one founder.</p><Link className="button" href="/contact#brief">Discuss an asset with Joseph</Link></div>
+        <div><p>Joseph excells as studio lead and strategic advisor, collaborating with aligned operators, technical leaders, functional specialists, advisers, and capital partners who can take real ownership within a selected venture. The objective is a sustainable company with capable leadership—not a portfolio bottlenecked by one founder.</p><Link className="button" href="/contact#brief">Discuss an asset with Joseph</Link></div>
       </section>
     </>
   );
