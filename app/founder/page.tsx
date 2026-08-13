@@ -21,7 +21,7 @@ export default function FounderPage() {
       </section>
       <section className="section">
         <SectionHeading index="01" eyebrow="Studio lead model" title="Set the direction. Align the resources. Empower the operator.">
-          <p>Joseph remains accountable for the venture thesis, strategic direction, portfolio priorities, and partner alignment. Venture-level leaders own implementation and daily performance within clear decision boundaries.</p>
+          <p>Joseph serves as a remote strategic consultant, advising on venture direction, portfolio strategy, and partner alignment. Venture-level leaders drive daily performance and implementation, backed by regular strategic reviews and collaborative problem-solving to keep execution aligned with the core vision.</p>
         </SectionHeading>
         <FounderTimeline />
       </section>
