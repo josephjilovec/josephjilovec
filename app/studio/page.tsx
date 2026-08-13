@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { pageMetadata } from "@/lib/metadata";
@@ -7,7 +8,16 @@ export const metadata = pageMetadata("Studio Model", "How Joseph Jilovec Venture
 export default function StudioPage() {
   return (
     <>
-      <section className="page-hero">
+      <section className="page-hero studio-page-hero">
+        <div className="studio-hero-visual" aria-hidden="true">
+          <Image
+            src="/images/studio-architectural-monolith.webp"
+            alt=""
+            fill
+            priority
+            sizes="(max-width: 900px) 100vw, 1440px"
+          />
+        </div>
         <div><p className="hero-kicker">Studio operating model</p><h1>Set direction centrally.<br /><span>Scale through aligned leadership.</span></h1></div>
         <p>Joseph Jilovec Venture Studio defines organizations foundational product architecture, portfolio priorities, and capital strategy—then aligns each asset with the operators and cross-functional partners equipped to lead execution.</p>
       </section>

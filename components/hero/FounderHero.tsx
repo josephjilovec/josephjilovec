@@ -13,7 +13,7 @@ export function FounderHero() {
           <span>Companies</span>
         </h1>
         <p className="hero-lede">
-          Looking to build, fund, or step in to lead a venture? Let&apos;s connect and get to work.
+          Looking to build, fund, or step into a venture? Explore the portfolio and find where your experience, capital, or relationships can create leverage. Let&apos;s connect and get to work.
         </p>
         <div className="hero-actions">
           <Link href="/ventures" className="button">Explore the Venture Universe</Link>
