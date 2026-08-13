@@ -9,7 +9,7 @@ export default function StudioPage() {
     <>
       <section className="page-hero">
         <div><p className="hero-kicker">Studio operating model</p><h1>Set direction centrally.<br /><span>Scale through aligned leadership.</span></h1></div>
-        <p>Joseph Jilovec Venture Studio defines ventures foundational product architecture, portfolio priorities, and capital strategy—then aligns each asset with the operators and cross-functional partners equipped to lead execution.</p>
+        <p>Joseph Jilovec Venture Studio defines organizations foundational product architecture, portfolio priorities, and capital strategy—then aligns each asset with the operators and cross-functional partners equipped to lead execution.</p>
       </section>
 
       <section className="section studio-operating-section">
