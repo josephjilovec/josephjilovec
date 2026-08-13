@@ -12,8 +12,8 @@ export default function Home() {
 
       <section className="section worlds-section">
         <div className="worlds-header">
-          <SectionHeading index="01" eyebrow="Featured projects" title="Selected assets from across the studio." />
-          <p className="worlds-note">Four active studio assets spanning commerce, intelligent systems, civic infrastructure, and creative media. Open any project file to review its model, operating direction, and current priorities.</p>
+          <SectionHeading index="01" eyebrow="Featured projects" title="Featured assets from across the studio." />
+          <p className="worlds-note">Portfolio assets spanning commerce, intelligent systems, civic infrastructure, and creative media. Open any project file to review its model, operating direction, and current priorities.</p>
         </div>
 
         <FeaturedProjects />
