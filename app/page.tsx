@@ -28,7 +28,7 @@ export default function Home() {
 
       <section className="section evidence-section">
         <SectionHeading index="03" eyebrow="Operating evidence" title="Credibility comes from specifics.">
-          <p>The studio combines operating experience, behavioral training, technical architecture, and a growing portfolio of public assets.</p>
+          <p>Operating experience, behavioral training, technical architecture, and a growing portfolio of public assets.</p>
         </SectionHeading>
         <div className="evidence-grid">
           <article><span>01 / Commerce</span><strong>Scaled Commerce</strong><p>Track record of scaling digital commerce platforms, optimizing multi-channel operations, and building durable systems designed for sustained growth and structural revenue stability.</p></article>
