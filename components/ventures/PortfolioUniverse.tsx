@@ -65,7 +65,7 @@ export function PortfolioUniverse() {
           <div className="venture-selector-head">
             <div>
               <span className="venture-selector-eyebrow">Portfolio signal map</span>
-              <h3>Choose a project world.</h3>
+              <h3>Explore a venture.</h3>
             </div>
             <div className="venture-selector-count" aria-label={`${activeIndex + 1} of ${ventures.length} projects`}>
               <strong>{String(activeIndex + 1).padStart(2, "0")}</strong>
@@ -74,7 +74,7 @@ export function PortfolioUniverse() {
           </div>
 
           <p className="venture-selector-intro">
-            All {ventures.length} public project worlds, organized in one interactive command center. Pause on a signal to inspect its stage, focus, and current direction.
+            All ventures are organized below. Hover over a project to inspect its stage, focus, and current direction.
           </p>
 
           <div className="venture-node-grid" role="group" aria-label="All portfolio project worlds" onPointerLeave={clearIntent}>
