@@ -4,8 +4,28 @@ import { ventureCategories, ventures } from "@/lib/portfolio";
 
 export function FounderHero() {
   return (
-    <section className="hero-shell">
-      <div className="hero-grid-lines" aria-hidden="true" />
+    <section className="hero-shell hero-shell-carousel">
+      <div className="hero-photo-carousel" aria-hidden="true">
+        <div className="hero-photo-slide hero-photo-slide-one">
+          <Image
+            src="/images/studio-architectural-monolith.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+          />
+        </div>
+        <div className="hero-photo-slide hero-photo-slide-two">
+          <Image
+            src="/images/joseph-founder.png"
+            alt=""
+            fill
+            sizes="100vw"
+          />
+        </div>
+        <div className="hero-photo-shade" />
+      </div>
+
       <div className="hero-copy">
         <p className="hero-kicker">Venture Architect · Strategic Advisor · Phoenix, Arizona</p>
         <h1>
@@ -25,6 +45,7 @@ export function FounderHero() {
           <div><strong>01→04</strong><span>identify · design · test · build</span></div>
         </div>
       </div>
+
       <div className="hero-visual">
         <div className="hero-orbit orbit-one" aria-hidden="true" />
         <div className="hero-orbit orbit-two" aria-hidden="true" />
