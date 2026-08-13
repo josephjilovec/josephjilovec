@@ -1,1 +1,1 @@
-export function FounderCopy(){return <div>Founder blueprint</div>}
+export function FounderCopy(){return <div><p className="section-kicker">03 / Founder Blueprint</p><h2>One founder. Three working disciplines.</h2><p>My work draws on commercial operations, behavioral design, and product and systems logic. I use that cross-disciplinary perspective to keep each venture strategically coherent as it moves from concept toward validation and execution.</p></div>}
