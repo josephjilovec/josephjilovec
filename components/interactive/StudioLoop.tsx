@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const steps = [
   { id: "01", name: "Identify", copy: "Find a recurring problem or creative territory worth examining, then define who cares and why.", metric: "Problem clarity", status: "Signal mapped" },
@@ -56,7 +56,34 @@ function PhaseGraphic({ phase }: { phase: number }) {
 
 export function StudioLoop() {
   const [active, setActive] = useState(0);
+  const [revealed, setRevealed] = useState(() => new Set([0]));
+  const stepRefs = useRef<(HTMLElement | null)[]>([]);
   const activeStep = steps[active];
+
+  useEffect(() => {
+    const observers = stepRefs.current.map((element, index) => {
+      if (!element) return null;
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (!entry.isIntersecting) return;
+          setActive(index);
+          setRevealed((current) => {
+            if (current.has(index)) return current;
+            const next = new Set(current);
+            next.add(index);
+            return next;
+          });
+        },
+        { rootMargin: "-32% 0px -48%", threshold: 0 },
+      );
+
+      observer.observe(element);
+      return observer;
+    });
+
+    return () => observers.forEach((observer) => observer?.disconnect());
+  }, []);
 
   return (
     <div className="studio-loop">
@@ -76,14 +103,19 @@ export function StudioLoop() {
       </div>
 
       <div className="studio-steps-shell">
-        <p className="studio-steps-helper">Select a phase to inspect framework</p>
-        <div className="studio-steps" role="tablist" aria-label="Studio operating phases">
+        <p className="studio-steps-helper">Scroll to follow the operating sequence</p>
+        <div className="studio-steps" aria-label="Studio operating phases">
           {steps.map((step, index) => (
-            <button key={step.id} type="button" role="tab" onClick={() => setActive(index)} className={active === index ? "is-active" : ""} aria-selected={active === index} aria-controls="studio-phase-visual">
+            <article
+              key={step.id}
+              ref={(element) => { stepRefs.current[index] = element; }}
+              className={`${active === index ? "is-active" : ""} ${revealed.has(index) ? "is-revealed" : ""}`}
+              aria-current={active === index ? "step" : undefined}
+            >
               <span>{step.id}</span>
               <div><strong>{step.name}</strong><p>{step.copy}</p></div>
-              <i className="studio-step-arrow" aria-hidden="true">↗</i>
-            </button>
+              <i className="studio-step-marker" aria-hidden="true" />
+            </article>
           ))}
         </div>
       </div>

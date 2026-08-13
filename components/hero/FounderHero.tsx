@@ -9,11 +9,11 @@ export function FounderHero() {
       <div className="hero-copy">
         <p className="hero-kicker">Venture Architect · Strategic Advisor · Phoenix, Arizona</p>
         <h1>
-          Concepts Built To Become<br />
-          <span>Companies</span>
+          Active Assets &amp;<br />
+          <span>Operating Ventures</span>
         </h1>
         <p className="hero-lede">
-          Looking to build, fund, or step into a venture? Explore the portfolio and find where your experience, capital, or relationships can create leverage. Let&apos;s connect and get to work.
+          Architected from the ground up, built for market presence, and scaled for long-term operation.
         </p>
         <div className="hero-actions">
           <Link href="/portfolio" className="button">Explore the Venture Universe</Link>
@@ -28,20 +28,15 @@ export function FounderHero() {
       <div className="hero-visual">
         <div className="hero-orbit orbit-one" aria-hidden="true" />
         <div className="hero-orbit orbit-two" aria-hidden="true" />
-        <div className="hero-portrait-card">
+        <div className="hero-network-card" aria-hidden="true">
           <Image
-            src="/images/joseph-founder.png"
-            alt="Joseph Jilovec, founder of Joseph Jilovec Venture Studio"
+            src="/images/studio-network-field.svg"
+            alt=""
             fill
             priority
             sizes="(max-width: 900px) 92vw, 42vw"
           />
-          <div className="portrait-overlay">
-            <span>Founder file / 2026</span>
-            <span>JJ · 33.4°N</span>
-          </div>
         </div>
-        <div className="signal-card signal-a"><small>Current signal</small><strong>Venture systems</strong><span>Architecture → deployment → scale</span></div>
       </div>
     </section>
   );
