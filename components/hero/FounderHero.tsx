@@ -7,17 +7,17 @@ export function FounderHero() {
     <section className="hero-shell">
       <div className="hero-grid-lines" aria-hidden="true" />
       <div className="hero-copy">
-        <p className="hero-kicker">Founder · Venture builder · Creative operator · Phoenix, Arizona</p>
+        <p className="hero-kicker">Studio lead · Venture architect · Strategic advisor · Phoenix, Arizona</p>
         <h1>
           Concepts built to become<br />
           <span>companies.</span>
         </h1>
         <p className="hero-lede">
-          Joseph Jilovec develops venture concepts, civic initiatives, technical systems, behavioral formats, and creative projects—then makes the current stage, evidence, and next step visible.
+          Joseph Jilovec directs a multi-asset portfolio by shaping venture theses, product foundations, capital priorities, and partner alignment—then connecting each asset with the people best equipped to operate and scale it.
         </p>
         <div className="hero-actions">
           <Link href="/ventures" className="button">Explore the venture universe</Link>
-          <Link href="/founder" className="text-link">Founder blueprint <span>↗</span></Link>
+          <Link href="/founder" className="text-link">Founder & studio lead <span>↗</span></Link>
         </div>
         <div className="hero-signals" aria-label="Portfolio overview">
           <div><strong>{ventures.length}</strong><span>public project worlds</span></div>

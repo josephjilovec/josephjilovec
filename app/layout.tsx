@@ -32,7 +32,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
     url: site.url,
     homeLocation: { "@type": "Place", name: site.location },
     sameAs: [site.linkedin, site.medium],
-    knowsAbout: ["venture development", "civic initiatives", "behavioral design", "AI systems", "music production"]
+    knowsAbout: ["venture design", "portfolio strategy", "product architecture", "behavioral design", "operator partnerships"]
   };
 
   return (

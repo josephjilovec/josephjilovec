@@ -55,8 +55,8 @@ export default function Home() {
       </section>
 
       <section className="section studio-section">
-        <SectionHeading index="03" eyebrow="Studio operating system" title="Architecture that moves assets forward.">
-          <p>The studio gives each venture a clear commercial model, operating structure, deployment path, and next measurable objective.</p>
+        <SectionHeading index="03" eyebrow="Studio operating system" title="Direction at the center. Ownership at the venture level.">
+          <p>The studio defines the commercial model, foundational architecture, capital priorities, and decision boundaries—then aligns the venture with operators and partners who can lead execution.</p>
         </SectionHeading>
         <StudioLoop />
       </section>
@@ -73,7 +73,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="cta-band"><div><span>05 / Next conversation</span><h2>Build, back, test, license, support, or challenge something.</h2></div><div><p>Choose the lane that fits: investor, technical collaborator, civic or nonprofit partner, business partner, media, creative work, or music licensing.</p><Link href="/contact" className="button">Start a conversation</Link></div></section>
+      <section className="cta-band"><div><span>05 / Next conversation</span><h2>Lead, back, build, distribute, or advise the right venture.</h2></div><div><p>Choose the role that fits: operating leader, investor, technical collaborator, distribution partner, civic or nonprofit partner, adviser, media, or creative collaborator.</p><Link href="/contact" className="button">Start a conversation</Link></div></section>
     </>
   );
 }

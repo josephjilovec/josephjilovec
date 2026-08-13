@@ -2,45 +2,45 @@ import Link from "next/link";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { pageMetadata } from "@/lib/metadata";
 
-export const metadata = pageMetadata("Studio Model", "How the Joseph Jilovec Venture Studio connects ventures across commerce, technology, civic infrastructure, behavioral design, and creative work.", "/studio");
+export const metadata = pageMetadata("Studio Model", "How Joseph Jilovec Venture Studio sets portfolio direction, builds foundational architecture, aligns capital, and assembles operating leadership around selected ventures.", "/studio");
 
 export default function StudioPage() {
   return (
     <>
       <section className="page-hero">
-        <div><p className="hero-kicker">Studio operating engine</p><h1>Build centrally.<br /><span>Scale deliberately.</span></h1></div>
-        <p>Joseph Jilovec Venture Studio develops distinct companies and public-facing assets through one central operating system for architecture, execution, deployment, and growth.</p>
+        <div><p className="hero-kicker">Studio operating model</p><h1>Set direction centrally.<br /><span>Scale through aligned leadership.</span></h1></div>
+        <p>Joseph Jilovec Venture Studio defines venture theses, foundational product architecture, portfolio priorities, and capital strategy—then aligns each asset with the operators and cross-functional partners equipped to lead execution.</p>
       </section>
 
       <section className="section studio-operating-section">
-        <SectionHeading index="01" eyebrow="Operating model" title="One command layer across multiple ventures." />
+        <SectionHeading index="01" eyebrow="Operating model" title="One strategic layer. Clear venture-level ownership." />
         <div className="studio-operating-grid">
           <article className="studio-operating-lead">
-            <p>The studio maintains central responsibility for venture architecture, brand direction, digital product design, operating priorities, and deployment sequencing. That structure gives every asset a defined owner, market position, commercial path, and next execution target.</p>
+            <p>The studio retains responsibility for venture design, portfolio priorities, capital allocation decisions, foundational brand and product direction, and cross-venture leverage. Day-to-day execution belongs to the operators and functional leaders closest to each company.</p>
           </article>
           <div className="studio-operating-points">
-            <article><span>01</span><h3>Architect</h3><p>Define the customer, value proposition, business model, product system, operating requirements, and defensible market position.</p></article>
-            <article><span>02</span><h3>Deploy</h3><p>Turn the architecture into a public brand, digital product, commercial workflow, partnership channel, or operating platform.</p></article>
-            <article><span>03</span><h3>Scale</h3><p>Direct capital, talent, distribution, automation, and strategic relationships toward the constraints that most affect growth.</p></article>
+            <article><span>01</span><h3>Architect</h3><p>Define the customer, value proposition, business model, product foundation, operating requirements, and defensible market position.</p></article>
+            <article><span>02</span><h3>Allocate</h3><p>Direct founder attention, capital priorities, shared infrastructure, and strategic resources toward the constraints that matter most.</p></article>
+            <article><span>03</span><h3>Align</h3><p>Connect each venture with operating leadership, technical talent, advisers, distribution, and capital partners suited to its next stage.</p></article>
           </div>
         </div>
       </section>
 
       <section className="section studio-infrastructure-section">
         <SectionHeading index="02" eyebrow="Shared infrastructure" title="Build once. Apply across the portfolio." />
-        <p className="studio-section-lede">The 15 ventures remain distinct companies and brands, but they benefit from a common infrastructure layer that reduces repeated work and increases operating leverage.</p>
+        <p className="studio-section-lede">The 15 ventures remain distinct companies and brands under venture-level leadership, while a shared infrastructure layer reduces repeated work and gives operators greater leverage.</p>
         <div className="studio-infrastructure-grid">
-          <article><span>AI automation</span><h3>Connected workflows</h3><p>Reusable AI-assisted research, content, analysis, routing, and operational systems support faster execution across multiple asset categories.</p></article>
+          <article><span>AI automation</span><h3>Connected workflows</h3><p>Reusable AI-assisted research, content, analysis, routing, and operational systems give venture teams a stronger starting point.</p></article>
           <article><span>Brand frameworks</span><h3>Distinct identities, shared discipline</h3><p>Each venture receives its own market language and visual world while drawing from a common standard for positioning, trust, and conversion.</p></article>
-          <article><span>Operational pipelines</span><h3>Repeatable deployment</h3><p>Product planning, web delivery, documentation, measurement, partner outreach, and iteration follow a reusable studio workflow.</p></article>
-          <article><span>Portfolio intelligence</span><h3>Learning compounds</h3><p>Commercial, technical, behavioral, and market lessons from one asset improve decisions across the rest of the portfolio.</p></article>
+          <article><span>Operational pipelines</span><h3>Repeatable deployment</h3><p>Product planning, web delivery, documentation, measurement, partner outreach, and iteration give each operator a repeatable launch framework.</p></article>
+          <article><span>Portfolio intelligence</span><h3>Learning compounds</h3><p>Commercial, technical, behavioral, and market lessons from one asset improve strategic decisions across the rest of the portfolio.</p></article>
         </div>
       </section>
 
       <section className="section studio-capital-section">
-        <SectionHeading index="03" eyebrow="Capital & scale strategy" title="Capital follows a defined operating objective." />
+        <SectionHeading index="03" eyebrow="Capital & scale strategy" title="Capital and leadership follow a defined venture objective." />
         <div className="studio-capital-grid">
-          <article><strong>Strategic capital</strong><p>Direct investment can fund specific product, distribution, hiring, infrastructure, or market-entry objectives within a selected company.</p></article>
+          <article><strong>Strategic capital</strong><p>Capital is aligned to a specific product, distribution, leadership, infrastructure, or market-entry objective within a selected company.</p></article>
           <article><strong>Operating leadership</strong><p>Experienced partners can take responsibility for day-to-day execution and turn a studio-built asset into a focused standalone operation.</p></article>
           <article><strong>Distribution partnerships</strong><p>Channel access, customer relationships, manufacturing, licensing, and institutional partnerships can accelerate market reach without rebuilding the core asset.</p></article>
         </div>

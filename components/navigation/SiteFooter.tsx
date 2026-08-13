@@ -10,7 +10,7 @@ export function SiteFooter() {
             <span className="brand-monogram">JJ</span>
             <span className="brand-copy"><strong>Joseph Jilovec</strong><small>Venture Studio</small></span>
           </div>
-          <p className="footer-note">Founder-led venture development across commerce, civic initiatives, behavioral design, technology, and creative work.</p>
+          <p className="footer-note">Founder-led venture architecture, capital alignment, and operator partnerships across commerce, civic initiatives, behavioral design, technology, and creative work.</p>
         </div>
         <div className="footer-column">
           <span className="footer-label">Explore</span>

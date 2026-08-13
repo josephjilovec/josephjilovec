@@ -3,7 +3,7 @@ export const site = {
   studioName: "Joseph Jilovec Venture Studio",
   url: "https://josephjilovec.com",
   description:
-    "Concepts built to become companies — founder-led venture development across commerce, civic initiatives, behavioral design, technology, and creative work.",
+    "A multi-asset venture studio led through venture design, portfolio strategy, capital alignment, foundational product architecture, and operator partnerships.",
   location: "Phoenix, Arizona",
   linkedin: "https://www.linkedin.com/in/jilovecjoseph/",
   medium: "https://medium.com/@jilovecjoseph",

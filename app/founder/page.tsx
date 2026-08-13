@@ -5,7 +5,7 @@ import { SectionHeading } from "@/components/shared/SectionHeading";
 import { pageMetadata } from "@/lib/metadata";
 import { site } from "@/lib/site";
 
-export const metadata = pageMetadata("Founder", "Joseph Jilovec directs a multi-asset venture studio through venture design, capital strategy, product architecture, and cross-functional partner alignment.", "/founder");
+export const metadata = pageMetadata("Founder", "Joseph Jilovec leads a multi-asset venture studio through venture design, portfolio strategy, capital alignment, product architecture, and operator partnerships.", "/founder");
 
 export default function FounderPage() {
   return (
@@ -20,8 +20,8 @@ export default function FounderPage() {
         </div>
       </section>
       <section className="section">
-        <SectionHeading index="01" eyebrow="Studio lead model" title="Design the venture. Align the resources. Empower the operator.">
-          <p>The studio is not built around Joseph personally managing every daily workflow. It is built around clear venture architecture, deliberate capital and resource allocation, and high-caliber people taking responsibility for the functions they are best equipped to lead.</p>
+        <SectionHeading index="01" eyebrow="Studio lead model" title="Set the direction. Align the resources. Empower the operator.">
+          <p>Joseph remains accountable for the venture thesis, strategic direction, portfolio priorities, and partner alignment. Venture-level leaders own implementation and daily performance within clear decision boundaries.</p>
         </SectionHeading>
         <FounderTimeline />
       </section>
@@ -29,14 +29,14 @@ export default function FounderPage() {
         <SectionHeading index="02" eyebrow="Foundational lenses" title="The perspective behind every venture decision." />
         <div className="discipline-grid">
           <article><span>01</span><h3>Commercial strategy</h3><p>Define the market opening, customer, offer, revenue logic, competitive position, and path through which an asset can become a durable standalone company.</p></article>
-          <article><span>02</span><h3>Behavioral insight</h3><p>Use psychology-informed thinking about attention, motivation, decisions, adoption, trust, and human behavior to shape products and market strategy.</p></article>
-          <article><span>03</span><h3>Product architecture</h3><p>Translate the venture thesis into a foundational product system: the workflows, interfaces, technical requirements, controls, and build priorities others can execute.</p></article>
-          <article><span>04</span><h3>Portfolio judgment</h3><p>Decide where founder attention, capital, operating capacity, and strategic relationships can create the most leverage across the studio portfolio.</p></article>
+          <article><span>02</span><h3>Behavioral insight</h3><p>Apply psychology-informed thinking about attention, motivation, decisions, adoption, and trust to product design and market strategy.</p></article>
+          <article><span>03</span><h3>Product architecture</h3><p>Translate the venture thesis into foundational workflows, interfaces, technical requirements, controls, and build priorities that a cross-functional team can execute.</p></article>
+          <article><span>04</span><h3>Portfolio judgment</h3><p>Determine where founder attention, capital, operating capacity, and strategic relationships can create the greatest leverage across the portfolio.</p></article>
         </div>
       </section>
       <section className="founder-partner-cta">
-        <div><span>03 / Operator & capital alignment</span><h2>The right people should lead the right parts of the company.</h2></div>
-        <div><p>Joseph works as studio lead and strategic advisor, collaborating with aligned operators, technical leaders, functional specialists, and capital partners who can take real ownership within a selected venture. The objective is a sustainable company with capable leadership—not a portfolio bottlenecked by one founder.</p><Link className="button" href="/contact#brief">Discuss an asset with Joseph</Link></div>
+        <div><span>03 / Operator & capital alignment</span><h2>The right people should lead the right parts of each company.</h2></div>
+        <div><p>Joseph acts as studio lead and strategic advisor, collaborating with aligned operators, technical leaders, functional specialists, advisers, and capital partners who can take real ownership within a selected venture. The objective is a sustainable company with capable leadership—not a portfolio bottlenecked by one founder.</p><Link className="button" href="/contact#brief">Discuss an asset with Joseph</Link></div>
       </section>
     </>
   );
