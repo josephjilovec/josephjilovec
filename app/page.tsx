@@ -1,44 +1,53 @@
-import Link from "next/link";
+import "./venture-overlay.css";
+import "./home-polish.css";
 import { FounderHero } from "@/components/hero/FounderHero";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { FeaturedProjects } from "@/components/ventures/FeaturedProjects";
 import { StudioLoop } from "@/components/interactive/StudioLoop";
-import { ventures } from "@/lib/portfolio";
+import { BlueprintSection } from "@/components/home/BlueprintSection";
+import { ParticipationSection } from "@/components/home/ParticipationSection";
+import { PrivateBriefsSection } from "@/components/home/PrivateBriefsSection";
+import { HomeVentureOverlay } from "@/components/home/HomeVentureOverlay";
+import { VentureUniverseTrigger } from "@/components/home/VentureUniverseTrigger";
+import { ContactForm } from "@/components/shared/ContactForm";
 
 export default function Home() {
   return (
     <>
       <FounderHero />
 
-      <section className="section worlds-section">
+      <section className="section worlds-section home-anchor" id="venture-pipeline">
         <div className="worlds-header">
-          <SectionHeading index="01" eyebrow="Featured projects" title="Featured assets from across the studio." />
-          <p className="worlds-note">Portfolio assets spanning commerce, intelligent systems, civic infrastructure, and creative media. Open any project file to review its model, operating direction, and current priorities.</p>
+          <SectionHeading index="01" eyebrow="Venture Pipeline" title="Selected ventures in active development." />
+          <p className="worlds-note">A focused view of projects moving through the studio. Open any project file for its current direction, operating model, and public materials.</p>
         </div>
-
         <FeaturedProjects />
+        <VentureUniverseTrigger label="View All Ventures" className="home-view-all" />
       </section>
 
-      <section className="section studio-section">
-        <SectionHeading index="02" eyebrow="Studio operating system" title="Direction at the center. Ownership at the venture level.">
-          <p>The studio defines the commercial model, foundational architecture, capital priorities, and decision boundaries—then aligns the venture with operators and partners who can lead execution.</p>
+      <section className="section studio-section home-anchor" id="studio">
+        <SectionHeading index="02" eyebrow="The Studio" title="A good idea is only the starting point.">
+          <p>Each concept moves through a disciplined sequence that connects customer perspective, venture architecture, evidence, and execution.</p>
         </SectionHeading>
         <StudioLoop />
       </section>
 
-      <section className="section evidence-section">
-        <SectionHeading index="03" eyebrow="Operating evidence" title="Credibility comes from specifics.">
-          <p>Operating experience, behavioral training, technical architecture, and a growing portfolio of public assets.</p>
-        </SectionHeading>
-        <div className="evidence-grid">
-          <article><span>01 / Commerce</span><strong>Scaled Commerce</strong><p>Track record of scaling digital commerce platforms, optimizing multi-channel operations, and building durable systems designed for sustained growth and structural revenue stability.</p></article>
-          <article><span>02 / Education</span><strong>B.A.</strong><p>Psychology · Northern Illinois University. Used as a behavioral-design lens rather than a substitute for clinical credentials.</p></article>
-          <article><span>03 / Practice</span><strong>NGH</strong><p>Certified hypnotist. Applied here to attention, motivation, and behavior-design thinking within appropriate non-clinical boundaries.</p></article>
-          <article><span>04 / Portfolio</span><strong>{ventures.length}</strong><p>Featured projects across commerce, civic initiatives, behavioral services, technology concepts, AI advisory, music, genetics, and creative systems.</p></article>
+      <BlueprintSection />
+      <ParticipationSection />
+      <PrivateBriefsSection />
+
+      <section id="contact" className="section contact-section home-anchor">
+        <div className="contact-layout">
+          <aside>
+            <SectionHeading index="06" eyebrow="Contact" title="Interested in building or backing one of these ventures?">
+              <p>Use the form to start a focused conversation about a venture, partnership, private brief, or other relevant opportunity.</p>
+            </SectionHeading>
+          </aside>
+          <ContactForm />
         </div>
       </section>
 
-      <section className="cta-band"><div><span>04 / Next conversation</span><h2>Lead, back, build, distribute, or advise the right venture.</h2></div><div><p>Choose the role that fits: operating leader, investor, technical collaborator, distribution partner, civic or nonprofit partner, adviser, media, or creative collaborator.</p><Link href="/contact" className="button">Start a conversation</Link></div></section>
+      <HomeVentureOverlay />
     </>
   );
 }
