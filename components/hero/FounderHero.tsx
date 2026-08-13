@@ -9,11 +9,11 @@ export function FounderHero() {
       <div className="hero-copy">
         <p className="hero-kicker">Venture Architect · Strategic Advisor · Phoenix, Arizona</p>
         <h1>
-          Active Assets &amp;<br />
-          <span>Operating Ventures</span>
+          Cross-Disciplinary Vision<br />
+          <span>Built for Venture Deployment</span>
         </h1>
         <p className="hero-lede">
-          Architected from the ground up, built for market presence, and scaled for long-term operation.
+          A multi-asset studio portfolio where capital and attention can create leverage.
         </p>
         <div className="hero-actions">
           <Link href="/portfolio" className="button">Explore the Venture Universe</Link>
