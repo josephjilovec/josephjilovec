@@ -15,7 +15,7 @@ export default function FounderPage() {
         <div className="founder-page-copy">
           <p className="hero-kicker">Studio lead & strategic advisor / Joseph Jilovec</p>
           <h1>Cross-disciplinary vision built for venture deployment.</h1>
-          <p>Joseph Jilovec directs a multi-asset studio portfolio by pairing commercial strategy with behavioral insight and foundational product architecture. His role is to design the venture, set its strategic direction, determine where capital and attention can create leverage, and bring the right operators and cross-functional partners into each asset.</p>
+          <p>Joseph Jilovec directs a multi-asset studio portfolio by pairing commercial strategy with behavioral insight and foundational product architecture. He designs ventures, sets strategic directions, determines where capital and attention can create leverage, and brings the right operators and cross-functional partners into each asset.</p>
           <div className="hero-actions"><Link href="/contact#brief" className="button">Request a founder briefing</Link><a className="text-link" href={site.linkedin} target="_blank" rel="noreferrer">View LinkedIn <span>↗</span></a></div>
         </div>
       </section>
