@@ -36,7 +36,7 @@ export default function FounderPage() {
       </section>
       <section className="founder-partner-cta">
         <div><span>03 / Operator & capital alignment</span><h2>The right people should lead the right parts of each company.</h2></div>
-        <div><p>Joseph is actively building and shaping this studio model, collaborating with aligned operators, technical leaders, and functional specialists who want to take real ownership within a growing venture. The goal is to build sustainable companies with autonomous leadership—not a portfolio bottlenecked by a single founder.</p><Link className="button" href="/contact#brief">Discuss an asset with Joseph</Link></div>
+        <div><p>Joseph is actively building and shaping this studio model, looking to collaborate with aligned operators, technical leaders, and domain experts who want to take real ownership within a growing venture. The goal is to build sustainable companies with autonomous leadership—not a portfolio bottlenecked by a single founder.</p><Link className="button" href="/contact#brief">Discuss an asset with Joseph</Link></div>
       </section>
     </>
   );
