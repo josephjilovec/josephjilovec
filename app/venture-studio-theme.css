@@ -66,6 +66,8 @@ body {
   border: 0;
   background: transparent;
   cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .desktop-nav a:hover,
