@@ -31,31 +31,26 @@ export async function POST(request: Request) {
 
     const name = clean(body.name, 120);
     const email = clean(body.email, 200);
-    const interest = clean(body.interest, 120);
+    const interest = clean(body.interest, 200);
     const message = clean(body.message, 3000);
     const consent = clean(body.consent, 20);
 
-    if (!name || !emailPattern.test(email) || !interest || !message || consent !== "yes") {
+    if (!name || !emailPattern.test(email) || !message || consent !== "yes") {
       return NextResponse.json({ error: "Please complete the required fields with a valid email address." }, { status: 400 });
     }
 
-    const organization = clean(body.organization, 160) || "—";
-    const role = clean(body.role, 120) || "—";
-    const venture = clean(body.venture, 160) || "General / studio";
     const text = [
       "New website inquiry",
       "",
       `Name: ${name}`,
       `Email: ${email}`,
-      `Organization: ${organization}`,
-      `Role: ${role}`,
-      `Area: ${interest}`,
-      `Venture: ${venture}`,
+      `Area of interest: ${interest || "—"}`,
       "",
       message,
     ].join("\n");
 
-    const result = await sendWithResend(`[JosephJilovec.com] ${interest} — ${name}`, email, text);
+    const subjectFocus = interest || "Website inquiry";
+    const result = await sendWithResend(`[JosephJilovec.com] ${subjectFocus} — ${name}`, email, text);
     if (!result.ok) return NextResponse.json({ error: result.error }, { status: result.status });
     return NextResponse.json({ message: "Inquiry sent. Thank you." });
   } catch (error) {
