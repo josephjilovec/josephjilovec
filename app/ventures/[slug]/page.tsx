@@ -5,6 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { VentureProofPanel } from "@/components/interactive/VentureProofPanel";
 import { getVenture, ventures } from "@/lib/portfolio";
+import { getVentureImage } from "@/lib/ventureImagery";
 import { pageMetadata } from "@/lib/metadata";
 
 export function generateStaticParams() {
@@ -22,9 +23,17 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const venture = getVenture(slug);
   if (!venture) notFound();
+  const ventureImage = getVentureImage(venture.slug);
+  const projectImage = ventureImage?.src ?? venture.heroArt;
 
   return (
     <>
+      <style>{`
+        .project-hero-art .venture-project-photo{object-fit:cover;filter:saturate(.68) contrast(1.08) brightness(.76);transform:scale(1.012)}
+        .project-hero-art .venture-project-photo-tone{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(5,6,7,.03),rgba(5,6,7,.18) 46%,rgba(5,6,7,.70) 100%),linear-gradient(135deg,var(--venture-soft),transparent 58%)}
+        .project-hero-art .project-art-caption{z-index:2}
+        .project-hero-art{box-shadow:0 34px 90px rgba(0,0,0,.32),0 0 58px var(--venture-soft)}
+      `}</style>
       <section className="project-hero" style={{ "--venture-accent": venture.accent, "--venture-soft": venture.accentSoft } as CSSProperties}>
         <div className="project-hero-copy">
           <Link href="/portfolio" className="back-link">← Portfolio</Link>
@@ -39,7 +48,16 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
           </div>
         </div>
         <div className="project-hero-art">
-          <Image src={venture.heroArt} alt={`${venture.name} project hero artwork`} fill priority sizes="(max-width: 900px) 100vw, 50vw" />
+          <Image
+            className="venture-project-photo"
+            src={projectImage}
+            alt={ventureImage?.alt ?? `${venture.name} project visual`}
+            fill
+            priority
+            sizes="(max-width: 900px) 100vw, 50vw"
+            style={{ objectPosition: ventureImage?.position ?? "center" }}
+          />
+          <div className="venture-project-photo-tone" aria-hidden="true" />
           <div className="project-art-caption"><span>PROJECT FILE / {venture.slug.toUpperCase()}</span><span>STAGE / {venture.stage.toUpperCase()}</span></div>
         </div>
       </section>
@@ -54,7 +72,7 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
         opportunity={venture.opportunity}
         externalUrl={venture.externalUrl}
         externalLabel={venture.externalLabel}
-        heroArt={venture.heroArt}
+        heroArt={projectImage}
         accent={venture.accent}
         accentSoft={venture.accentSoft}
       />
