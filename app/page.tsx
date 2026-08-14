@@ -43,8 +43,8 @@ export default function Home() {
         </figure>
         <div className="contact-layout">
           <aside>
-            <SectionHeading index="06" eyebrow="Contact" title="Interested in building or backing one of these ventures?">
-              <p>Use the form to start a focused conversation about a venture, partnership, private brief, or other relevant opportunity.</p>
+            <SectionHeading index="06" eyebrow="Contact" title="Interested in building, backing, or collaborating? Let’s start a focused conversation.">
+              <p>Use the form below to discuss a venture, partnership, private brief, or any other relevant opportunity.</p>
             </SectionHeading>
           </aside>
           <ContactForm />
