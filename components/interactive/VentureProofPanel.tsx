@@ -59,7 +59,7 @@ export function VentureProofPanel({
     >
       <div className="proof-heading reveal-item">
         <p>Product proof / live system</p>
-        <h2 id={`${slug}-proof-title`}>See what exists beyond the thesis.</h2>
+        <h2 id={`${slug}-proof-title`}>See how the venture is taking shape.</h2>
         <span>
           A visual operating snapshot built from the current project state, validation target, and public product surface.
         </span>
