@@ -5,7 +5,7 @@ export function PrivateBriefsSection(){
   return <section id="investor-access" className="section home-anchor private-briefs-section">
     <div className="home-photo-intro home-photo-intro-reverse">
       <figure className="home-photo-panel private-briefs-photo">
-        <img src="https://images.pexels.com/photos/34823908/pexels-photo-34823908.jpeg?cs=srgb&dl=pexels-ranamatloob567-34823908.jpg&fm=jpg" alt="Modern executive conference room" loading="lazy" />
+        <img src="/images/private-venture-materials.webp" alt="Executive boardroom overlooking a downtown skyline" loading="lazy" />
         <figcaption>Private materials / diligence environment</figcaption>
       </figure>
       <SectionHeading index="05" eyebrow="Private venture materials" title="Go beyond the public overview.">
