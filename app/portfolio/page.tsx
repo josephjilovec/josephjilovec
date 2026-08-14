@@ -1,7 +1,6 @@
 import { PortfolioUniverse } from "@/components/ventures/PortfolioUniverse";
 import { SectionHeading } from "@/components/shared/SectionHeading";
 import { pageMetadata } from "@/lib/metadata";
-import { ventures } from "@/lib/portfolio";
 
 export const metadata = pageMetadata(
   "Portfolio",
@@ -12,20 +11,23 @@ export const metadata = pageMetadata(
 export default function PortfolioPage() {
   return (
     <>
-      <section className="page-hero compact-hero portfolio-page-hero">
-        <div>
-          <p className="hero-kicker">Portfolio / interactive command center</p>
-          <h1>Multi-Asset Studio<br /><span>Architecture</span></h1>
-        </div>
-        <p>Check out the current active portfolio. Each company represents an enterprise framework, technology platform, or strategic venture currently mapped with a complete enterprise file, operating model, direction, and path to scale.</p>
-      </section>
+      <style>{`@media (min-width: 721px){.venture-tab-scale{zoom:1.25;width:80%;margin:0 auto}}`}</style>
+      <div className="venture-tab-scale">
+        <section className="page-hero compact-hero portfolio-page-hero">
+          <div>
+            <p className="hero-kicker">Portfolio / interactive command center</p>
+            <h1>Multi-Asset Studio<br /><span>Architecture</span></h1>
+          </div>
+          <p>Check out the current active portfolio. Each company represents an enterprise framework, technology platform, or strategic venture currently mapped with a complete enterprise file, operating model, direction, and path to scale.</p>
+        </section>
 
-      <section className="section section-dark-edge portfolio-command-section">
-        <SectionHeading index="01" eyebrow="Portfolio signal map" title="The Company Index">
-          <p>All brands and entities managed within the network. Review individual models and current market focus.</p>
-        </SectionHeading>
-        <PortfolioUniverse />
-      </section>
+        <section className="section section-dark-edge portfolio-command-section">
+          <SectionHeading index="01" eyebrow="Portfolio signal map" title="The Company Index">
+            <p>All brands and entities managed within the network. Review individual models and current market focus.</p>
+          </SectionHeading>
+          <PortfolioUniverse />
+        </section>
+      </div>
     </>
   );
 }
