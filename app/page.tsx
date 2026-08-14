@@ -38,7 +38,7 @@ export default function Home() {
 
       <section id="contact" className="section contact-section home-anchor">
         <figure className="contact-photo-strip">
-          <img src="https://images.pexels.com/photos/22725910/pexels-photo-22725910.jpeg?cs=srgb&dl=pexels-anish-sharma-1231731988-22725910.jpg&fm=jpg" alt="Modern office lobby in a city business district" loading="lazy" />
+          <img src="/images/contact-conversation.webp" alt="Luxury executive lounge overlooking a downtown skyline" loading="lazy" />
           <figcaption>Studio contact / business environment</figcaption>
         </figure>
         <div className="contact-layout">
