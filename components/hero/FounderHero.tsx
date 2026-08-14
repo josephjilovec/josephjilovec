@@ -2,32 +2,33 @@ import Image from "next/image";
 import Link from "next/link";
 import { ventureCategories, ventures } from "@/lib/portfolio";
 
+const heroCarousel = [
+  "/images/studio-architectural-monolith.webp",
+  "/project-hero/vanta-hero.svg",
+  "/project-hero/alder-hero.svg",
+  "/project-hero/cannacore-hero.svg",
+  "/project-hero/hotwax-hero.svg",
+];
+
 export function FounderHero() {
   return (
     <section className="hero-shell hero-shell-carousel">
       <div className="hero-photo-carousel" aria-hidden="true">
-        <div className="hero-photo-slide hero-photo-slide-one">
-          <Image
-            src="/images/studio-architectural-monolith.webp"
-            alt=""
-            fill
-            priority
-            sizes="100vw"
-          />
-        </div>
-        <div className="hero-photo-slide hero-photo-slide-two">
-          <Image
-            src="/images/joseph-founder.png"
-            alt=""
-            fill
-            sizes="100vw"
-          />
-        </div>
+        {heroCarousel.map((src, index) => (
+          <div className={`hero-photo-slide hero-photo-slide-${index + 1}`} key={src}>
+            <Image
+              src={src}
+              alt=""
+              fill
+              priority={index === 0}
+              sizes="100vw"
+            />
+          </div>
+        ))}
         <div className="hero-photo-shade" />
       </div>
 
       <div className="hero-copy">
-        <p className="hero-kicker">Venture Architect · Strategic Advisor · Phoenix, Arizona</p>
         <h1>
           Cross-Disciplinary Vision<br />
           <span>Built for Venture Deployment</span>
