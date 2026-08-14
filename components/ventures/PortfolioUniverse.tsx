@@ -38,9 +38,7 @@ export function PortfolioUniverse() {
   };
 
   const activateOnPointer = (event: PointerEvent<HTMLButtonElement>, slug: string) => {
-    if (event.pointerType === "mouse" || event.pointerType === "pen") {
-      activateAfterDelay(slug);
-    }
+    if (event.pointerType === "mouse" || event.pointerType === "pen") activateAfterDelay(slug);
   };
 
   const selectImmediately = (slug: string) => {
@@ -57,30 +55,24 @@ export function PortfolioUniverse() {
   return (
     <>
       <div className="legacy-universe-styles" aria-hidden="true"><LegacyUniverseStyles /></div>
-      <div
-        className="venture-universe-v3 portfolio-universe"
-        style={{ "--active-accent": active.accent, "--active-soft": active.accentSoft } as CSSProperties}
-      >
-        <section className="venture-selector-panel" aria-label="Portfolio project selector">
+      <div className="venture-universe-v3 portfolio-universe" style={{ "--active-accent": active.accent, "--active-soft": active.accentSoft } as CSSProperties}>
+        <section className="venture-selector-panel" aria-label="Portfolio venture selector">
           <div className="venture-selector-head">
             <div>
-              <span className="venture-selector-eyebrow">Portfolio signal map</span>
+              <span className="venture-selector-eyebrow">Portfolio index</span>
               <h3>Explore a venture.</h3>
             </div>
-            <div className="venture-selector-count" aria-label={`${activeIndex + 1} of ${ventures.length} projects`}>
+            <div className="venture-selector-count" aria-label={`${activeIndex + 1} of ${ventures.length} ventures`}>
               <strong>{String(activeIndex + 1).padStart(2, "0")}</strong>
               <span>/ {String(ventures.length).padStart(2, "0")}</span>
             </div>
           </div>
 
-          <p className="venture-selector-intro">
-            All ventures are organized below. Hover over a project to inspect its stage, focus, and current direction.
-          </p>
+          <p className="venture-selector-intro">All ventures are organized below. Hover over a project to inspect its stage, focus, and current direction.</p>
 
-          <div className="venture-node-grid" role="group" aria-label="All portfolio project worlds" onPointerLeave={clearIntent}>
+          <div className="venture-node-grid" role="group" aria-label="All portfolio ventures" onPointerLeave={clearIntent}>
             {ventures.map((venture, index) => {
               const isActive = venture.slug === active.slug;
-
               return (
                 <button
                   key={venture.slug}
@@ -101,13 +93,8 @@ export function PortfolioUniverse() {
                     <em>{venture.category}</em>
                   </span>
                   <span className="venture-node-body-v3">
-                    <span className="venture-node-icon" aria-hidden="true">
-                      <Image src={ventureSignalArt[venture.slug] ?? venture.art} alt="" fill sizes="48px" />
-                    </span>
-                    <span className="venture-node-copy-v3">
-                      <strong>{venture.name}</strong>
-                      <small>{venture.stage}</small>
-                    </span>
+                    <span className="venture-node-icon" aria-hidden="true"><Image src={ventureSignalArt[venture.slug] ?? venture.art} alt="" fill sizes="48px" /></span>
+                    <span className="venture-node-copy-v3"><strong>{venture.name}</strong><small>{venture.stage}</small></span>
                   </span>
                 </button>
               );
@@ -117,8 +104,8 @@ export function PortfolioUniverse() {
           <div className="venture-selector-footer">
             <span className="venture-selector-hint">Pause briefly to preview · click or tap to select · swipe the project rail on smaller screens</span>
             <div className="venture-selector-nav" aria-label="Cycle portfolio selection">
-              <button type="button" onClick={() => moveSelection(-1)} aria-label="Previous project">←</button>
-              <button type="button" onClick={() => moveSelection(1)} aria-label="Next project">→</button>
+              <button type="button" onClick={() => moveSelection(-1)} aria-label="Previous venture">←</button>
+              <button type="button" onClick={() => moveSelection(1)} aria-label="Next venture">→</button>
             </div>
           </div>
         </section>
@@ -126,22 +113,15 @@ export function PortfolioUniverse() {
         <aside className="venture-preview-card" aria-live="polite" aria-atomic="true" onPointerEnter={clearIntent}>
           <div className="venture-preview-swap" key={active.slug}>
             <div className="venture-preview-art" aria-hidden="true">
-              <Image
-                src={venturePreviewArt[active.slug] ?? active.heroArt ?? active.art}
-                alt=""
-                fill
-                sizes="(max-width: 900px) 100vw, 36vw"
-              />
+              <Image src={venturePreviewArt[active.slug] ?? active.heroArt ?? active.art} alt="" fill sizes="(max-width: 900px) 100vw, 36vw" />
               <div className="venture-preview-grid" />
-              <div className="venture-preview-signal"><span>ACTIVE SIGNAL</span><i /><strong>{String(activeIndex + 1).padStart(2, "0")}</strong></div>
+              <div className="venture-preview-signal"><span>SELECTED VENTURE</span><i /><strong>{String(activeIndex + 1).padStart(2, "0")}</strong></div>
             </div>
             <div className="venture-preview-content">
               <div className="venture-preview-meta"><span>{active.category}</span><span>{active.stage}</span></div>
               <h3>{active.name}</h3>
               <p>{active.summary}</p>
-              <div className="venture-preview-tags" aria-label="Project themes">
-                {active.tags.slice(0, 3).map((tag) => <span key={tag}>{tag}</span>)}
-              </div>
+              <div className="venture-preview-tags" aria-label="Project themes">{active.tags.slice(0, 3).map((tag) => <span key={tag}>{tag}</span>)}</div>
               <div className="venture-preview-actions">
                 <Link className="button" href={`/portfolio/${active.slug}`}>Open Project File</Link>
                 <a className="button button-ghost" href={active.externalUrl} target="_blank" rel="noreferrer">Visit Site ↗</a>
@@ -153,67 +133,25 @@ export function PortfolioUniverse() {
 
         <style>{`
           .legacy-universe-styles { display: none; }
-
-          .portfolio-universe {
-            grid-template-columns: minmax(0, 1.35fr) minmax(390px, .65fr);
-            gap: 26px;
-          }
-
+          .portfolio-universe { grid-template-columns: minmax(0, 1.35fr) minmax(390px, .65fr); gap: 26px; }
           .portfolio-universe .venture-selector-panel { padding: 30px; }
-
-          .portfolio-universe .venture-node-grid {
-            grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
-            gap: 11px;
-          }
-
-          .portfolio-universe .venture-node-card {
-            min-height: 138px;
-            padding: 14px;
-          }
-
-          .portfolio-universe .venture-node-icon,
-          .portfolio-universe .venture-preview-art { position: relative; }
-
-          .portfolio-universe .venture-node-icon img,
-          .portfolio-universe .venture-preview-art > img { object-fit: cover; }
-
-          .portfolio-universe .venture-preview-card {
-            align-self: start;
-            position: sticky;
-            top: 102px;
-          }
-
-          .portfolio-universe .venture-preview-actions {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 10px;
-          }
-
-          .portfolio-universe .venture-preview-actions .button {
-            width: 100%;
-            min-height: 46px;
-            text-align: center;
-          }
-
+          .portfolio-universe .venture-node-grid { grid-template-columns: repeat(auto-fit, minmax(168px, 1fr)); gap: 11px; }
+          .portfolio-universe .venture-node-card { min-height: 138px; padding: 14px; }
+          .portfolio-universe .venture-node-icon,.portfolio-universe .venture-preview-art { position: relative; }
+          .portfolio-universe .venture-node-icon img,.portfolio-universe .venture-preview-art > img { object-fit: cover; }
+          .portfolio-universe .venture-preview-card { align-self: start; position: sticky; top: 102px; }
+          .portfolio-universe .venture-preview-actions { display: grid; grid-template-columns: 1fr; gap: 10px; }
+          .portfolio-universe .venture-preview-actions .button { width: 100%; min-height: 46px; text-align: center; }
           @media (max-width: 1180px) {
-            .portfolio-universe {
-              grid-template-columns: minmax(0, 1fr) minmax(360px, .72fr);
-            }
-
-            .portfolio-universe .venture-node-grid {
-              grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
-            }
+            .portfolio-universe { grid-template-columns: minmax(0, 1fr) minmax(360px, .72fr); }
+            .portfolio-universe .venture-node-grid { grid-template-columns: repeat(auto-fit, minmax(155px, 1fr)); }
           }
-
           @media (max-width: 900px) {
             .portfolio-universe { grid-template-columns: 1fr; }
             .portfolio-universe .venture-preview-card { position: relative; top: auto; }
             .portfolio-universe .venture-node-grid { display: flex; }
           }
-
-          @media (max-width: 640px) {
-            .portfolio-universe .venture-selector-panel { padding: 18px; }
-          }
+          @media (max-width: 640px) { .portfolio-universe .venture-selector-panel { padding: 18px; } }
         `}</style>
       </div>
     </>
