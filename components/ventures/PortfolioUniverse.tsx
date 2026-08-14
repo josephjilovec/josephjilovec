@@ -6,7 +6,8 @@ import { useEffect, useRef, useState } from "react";
 import type { CSSProperties, PointerEvent } from "react";
 import { VentureConstellation as LegacyUniverseStyles } from "@/components/ventures/VentureConstellation";
 import { ventures } from "@/lib/portfolio";
-import { venturePreviewArt, ventureSignalArt } from "@/lib/ventureVisuals";
+import { ventureSignalArt } from "@/lib/ventureVisuals";
+import { getVentureImage } from "@/lib/ventureImagery";
 
 const HOVER_INTENT_MS = 180;
 
@@ -28,6 +29,7 @@ export function PortfolioUniverse() {
   }, []);
 
   if (!active) return null;
+  const activeImage = getVentureImage(active.slug);
 
   const activateAfterDelay = (slug: string) => {
     clearIntent();
@@ -113,7 +115,14 @@ export function PortfolioUniverse() {
         <aside className="venture-preview-card" aria-live="polite" aria-atomic="true" onPointerEnter={clearIntent}>
           <div className="venture-preview-swap" key={active.slug}>
             <div className="venture-preview-art" aria-hidden="true">
-              <Image src={venturePreviewArt[active.slug] ?? active.heroArt ?? active.art} alt="" fill sizes="(max-width: 900px) 100vw, 36vw" />
+              <Image
+                src={activeImage?.src ?? active.heroArt ?? active.art}
+                alt=""
+                fill
+                sizes="(max-width: 900px) 100vw, 36vw"
+                style={{ objectPosition: activeImage?.position ?? "center" }}
+              />
+              <div className="venture-preview-photo-tone" />
               <div className="venture-preview-grid" />
               <div className="venture-preview-signal"><span>SELECTED VENTURE</span><i /><strong>{String(activeIndex + 1).padStart(2, "0")}</strong></div>
             </div>
@@ -138,8 +147,11 @@ export function PortfolioUniverse() {
           .portfolio-universe .venture-node-grid { grid-template-columns: repeat(auto-fit, minmax(168px, 1fr)); gap: 11px; }
           .portfolio-universe .venture-node-card { min-height: 138px; padding: 14px; }
           .portfolio-universe .venture-node-icon,.portfolio-universe .venture-preview-art { position: relative; }
-          .portfolio-universe .venture-node-icon img,.portfolio-universe .venture-preview-art > img { object-fit: cover; }
-          .portfolio-universe .venture-preview-card { align-self: start; position: sticky; top: 102px; }
+          .portfolio-universe .venture-node-icon img { object-fit: cover; }
+          .portfolio-universe .venture-preview-art > img { object-fit: cover; filter: saturate(.62) contrast(1.08) brightness(.74); transform: scale(1.015); }
+          .portfolio-universe .venture-preview-photo-tone { position:absolute; inset:0; z-index:1; pointer-events:none; background:linear-gradient(180deg,rgba(5,6,7,.08),rgba(5,6,7,.38) 58%,rgba(5,6,7,.88)),linear-gradient(135deg,var(--active-soft),transparent 58%); }
+          .portfolio-universe .venture-preview-grid,.portfolio-universe .venture-preview-signal { z-index:2; }
+          .portfolio-universe .venture-preview-card { align-self: start; position: sticky; top: 102px; box-shadow:0 28px 90px rgba(0,0,0,.34),0 0 58px var(--active-soft); }
           .portfolio-universe .venture-preview-actions { display: grid; grid-template-columns: 1fr; gap: 10px; }
           .portfolio-universe .venture-preview-actions .button { width: 100%; min-height: 46px; text-align: center; }
           @media (max-width: 1180px) {
