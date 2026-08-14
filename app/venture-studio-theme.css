@@ -50,9 +50,30 @@ body {
   text-transform: uppercase;
 }
 
-.desktop-nav a { color: #CFC8BD; }
+.desktop-nav a,
+.desktop-nav .header-venture-button {
+  color: #CFC8BD;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: .04em;
+}
+
+.desktop-nav .header-venture-button {
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
 .desktop-nav a:hover,
-.desktop-nav a:focus-visible { color: var(--studio-gold); }
+.desktop-nav a:focus-visible,
+.desktop-nav .header-venture-button:hover,
+.desktop-nav .header-venture-button:focus-visible {
+  color: var(--studio-gold);
+}
 
 .button {
   min-height: 64px;
@@ -183,6 +204,17 @@ body {
     min-height: 44px;
     padding-inline: 18px;
     font-size: 12px;
+  }
+  .mobile-nav .mobile-venture-button {
+    width: 100%;
+    display: block;
+    padding: 13px 0;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    background: transparent;
+    color: #d9e0e4;
+    text-align: left;
+    cursor: pointer;
   }
 }
 
