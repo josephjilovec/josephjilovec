@@ -9,37 +9,41 @@
 #founder .founder-intro-copy .hero-actions{margin-bottom:14px}
 
 /* Photography-led Studio scrollytelling */
-.studio-loop-photographic .studio-visual-panel{min-height:610px;background:#090909;border-color:rgba(176,141,87,.22);box-shadow:0 34px 90px rgba(0,0,0,.32)}
+.studio-loop-photographic{transition:--phase-accent .45s ease,--phase-soft .45s ease,--phase-panel .45s ease,--phase-panel-deep .45s ease}
+.studio-loop-photographic .studio-visual-panel{min-height:610px;background:#090909;border-color:color-mix(in srgb,var(--phase-accent) 34%,rgba(255,255,255,.08));box-shadow:0 34px 90px rgba(0,0,0,.32),0 0 54px var(--phase-soft);transition:border-color .45s ease,box-shadow .45s ease}
 .studio-loop-photographic .studio-visual-panel::before{display:none}
-.studio-loop-photographic .studio-visual-topline{position:relative;z-index:5;padding:22px 24px 18px;background:linear-gradient(180deg,rgba(5,6,7,.92),rgba(5,6,7,.58),transparent)}
+.studio-loop-photographic .studio-visual-topline{position:relative;z-index:5;padding:22px 24px 18px;background:linear-gradient(180deg,rgba(5,6,7,.94),rgba(5,6,7,.60),transparent)}
 .studio-loop-photographic .studio-visual-topline span{font-size:12px;font-weight:700;line-height:1.35;letter-spacing:.09em}
-.studio-loop-photographic .studio-visual-topline span:last-child{color:#B08D57}
+.studio-loop-photographic .studio-visual-topline span:last-child{color:var(--phase-accent);transition:color .45s ease}
 .studio-loop-photographic .studio-visual-frame{min-height:500px;margin-top:-58px}
 .studio-phase-photo{position:absolute;inset:0;opacity:0;transform:scale(1.025);pointer-events:none;transition:opacity .5s ease,transform 1.2s cubic-bezier(.2,.75,.2,1)}
 .studio-phase-photo.is-active{opacity:1;transform:scale(1)}
-.studio-phase-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.74) sepia(.05) contrast(1.08) brightness(.76)}
-.studio-phase-photo:nth-child(1) img{object-position:center 48%}
-.studio-phase-photo:nth-child(2) img{object-position:center 46%}
-.studio-phase-photo:nth-child(3) img{object-position:center 42%}
-.studio-phase-photo:nth-child(4) img{object-position:center 48%}
-.studio-phase-photo-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,5,6,.18),rgba(4,5,6,.08) 42%,rgba(4,5,6,.72) 100%),linear-gradient(90deg,rgba(4,5,6,.24),transparent 60%)}
+.studio-phase-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.72) contrast(1.08) brightness(.78)}
+.studio-phase-photo:nth-child(1) img{object-position:center 45%}
+.studio-phase-photo:nth-child(2) img{object-position:center 48%}
+.studio-phase-photo:nth-child(3) img{object-position:center 46%}
+.studio-phase-photo:nth-child(4) img{object-position:center 50%}
+.studio-phase-photo-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,5,6,.16),rgba(4,5,6,.07) 40%,rgba(4,5,6,.74) 100%),linear-gradient(90deg,rgba(4,5,6,.24),transparent 60%),radial-gradient(circle at 82% 18%,var(--phase-soft),transparent 48%);transition:background .45s ease}
 .studio-phase-caption{position:absolute;left:26px;bottom:118px;z-index:3;display:flex;align-items:baseline;gap:12px;color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.55)}
-.studio-phase-caption span{color:#B08D57;font-size:12px;font-weight:800;letter-spacing:.18em}
+.studio-phase-caption span{color:var(--phase-accent);font-size:12px;font-weight:800;letter-spacing:.18em;transition:color .45s ease}
 .studio-phase-caption strong{font-size:clamp(32px,4vw,50px);font-weight:650;letter-spacing:-.05em}
-.studio-loop-photographic .studio-data-overlay{border-color:rgba(176,141,87,.24);background:rgba(8,8,8,.82)}
+.studio-loop-photographic .studio-data-overlay{border-color:color-mix(in srgb,var(--phase-accent) 34%,rgba(255,255,255,.08));background:linear-gradient(110deg,color-mix(in srgb,var(--phase-panel-deep) 82%,#080808),rgba(8,8,8,.88));transition:border-color .45s ease,background .45s ease}
 .studio-loop-photographic .studio-data-overlay span{font-size:11px;line-height:1.35;letter-spacing:.1em}
 .studio-loop-photographic .studio-data-overlay strong{font-size:14px;line-height:1.35}
-.studio-loop-photographic .studio-data-overlay strong i{background:#B08D57;box-shadow:0 0 12px rgba(176,141,87,.75)}
-.studio-loop-photographic .studio-steps-helper{font-size:12px;line-height:1.5;letter-spacing:.06em}
-.studio-loop-photographic .studio-steps-helper::before{color:#B08D57}
-.studio-loop-photographic .studio-steps article::before{background:linear-gradient(90deg,rgba(176,141,87,.10),transparent 68%)}
-.studio-loop-photographic .studio-steps article.is-active{border-color:rgba(176,141,87,.48);background:rgba(176,141,87,.035)}
+.studio-loop-photographic .studio-data-overlay strong i{background:var(--phase-accent);box-shadow:0 0 12px var(--phase-accent);transition:background .45s ease,box-shadow .45s ease}
+.studio-loop-photographic .studio-steps-shell{position:relative;min-width:0;border-radius:24px;background:radial-gradient(circle at 10% 8%,var(--phase-soft),transparent 28%),linear-gradient(180deg,color-mix(in srgb,var(--phase-panel-deep) 42%,var(--bg)),var(--bg) 32%);transition:background .55s ease;overflow:hidden}
+.studio-loop-photographic .studio-steps-helper{font-size:12px;line-height:1.5;letter-spacing:.06em;padding-left:20px;padding-right:20px;background:linear-gradient(90deg,color-mix(in srgb,var(--phase-panel-deep) 64%,var(--bg)) 72%,transparent);transition:background .45s ease}
+.studio-loop-photographic .studio-steps-helper::before{color:var(--phase-accent);transition:color .45s ease}
+.studio-loop-photographic .studio-steps article{margin:0 14px;border-radius:18px;border-top-color:rgba(255,255,255,.08);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.75,.2,1),border-color .45s ease,background .55s ease,box-shadow .55s ease}
+.studio-loop-photographic .studio-steps article:last-child{margin-bottom:14px}
+.studio-loop-photographic .studio-steps article::before{background:linear-gradient(90deg,var(--step-soft),transparent 68%)}
+.studio-loop-photographic .studio-steps article.is-active{border-color:color-mix(in srgb,var(--step-accent) 48%,rgba(255,255,255,.08));background:linear-gradient(118deg,var(--step-panel),var(--step-panel-deep) 66%,rgba(5,7,9,.22));box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 24px 60px rgba(0,0,0,.18),0 0 42px var(--step-soft)}
 .studio-loop-photographic .studio-steps article>span{font-size:12px;font-weight:800;line-height:1.35;letter-spacing:.12em}
 .studio-loop-photographic .studio-steps article strong{font-size:clamp(21px,1.55vw,25px);font-weight:700;line-height:1.16;letter-spacing:-.025em}
 .studio-loop-photographic .studio-steps article p{font-size:15px;line-height:1.65}
-.studio-loop-photographic .studio-step-marker{background:#5f5546}
-.studio-loop-photographic .studio-steps article.is-active .studio-step-marker{background:#B08D57;box-shadow:0 0 18px rgba(176,141,87,.72)}
-.studio-loop-photographic .studio-steps .is-active>span{color:#B08D57}
+.studio-loop-photographic .studio-step-marker{background:#53606a}
+.studio-loop-photographic .studio-steps article.is-active .studio-step-marker{background:var(--step-accent);box-shadow:0 0 18px var(--step-accent)}
+.studio-loop-photographic .studio-steps .is-active>span{color:var(--step-accent)}
 
 /* Editorial photography across supporting sections */
 .home-photo-intro{display:grid;grid-template-columns:minmax(0,.88fr) minmax(420px,1.12fr);gap:clamp(42px,6vw,88px);align-items:end;margin-bottom:54px}
@@ -73,6 +77,9 @@
   .studio-loop-photographic .studio-visual-panel{min-height:520px}
   .studio-loop-photographic .studio-visual-frame{min-height:430px}
   .studio-loop-photographic .studio-visual-topline span{font-size:11px}
+  .studio-loop-photographic .studio-steps-shell{border-radius:20px}
+  .studio-loop-photographic .studio-steps-helper{padding-left:14px;padding-right:14px}
+  .studio-loop-photographic .studio-steps article{margin-left:8px;margin-right:8px;border-radius:15px}
   .studio-loop-photographic .studio-steps article strong{font-size:21px}
   .studio-loop-photographic .studio-steps article p{font-size:14.5px;line-height:1.62}
   .studio-phase-caption{left:20px;bottom:112px}
