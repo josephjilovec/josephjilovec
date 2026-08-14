@@ -44,7 +44,7 @@ export default function Home() {
         <div className="contact-layout">
           <aside>
             <SectionHeading index="06" eyebrow="Contact" title="Interested in building, backing, or collaborating? Let’s start a focused conversation.">
-              <p>Use the form below to discuss a venture, partnership, private brief, or any other relevant opportunity.</p>
+              <p>Use the form to start a discussion, talk about a venture, partnership, private brief, or any other relevant opportunity.</p>
             </SectionHeading>
           </aside>
           <ContactForm />
