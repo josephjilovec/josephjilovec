@@ -62,7 +62,7 @@ export function PortfolioUniverse() {
           <div className="venture-selector-head">
             <div>
               <span className="venture-selector-eyebrow">Portfolio index</span>
-              <h3>Explore a venture.</h3>
+              <h3>Pick a venture.</h3>
             </div>
             <div className="venture-selector-count" aria-label={`${activeIndex + 1} of ${ventures.length} ventures`}>
               <strong>{String(activeIndex + 1).padStart(2, "0")}</strong>
@@ -70,7 +70,7 @@ export function PortfolioUniverse() {
             </div>
           </div>
 
-          <p className="venture-selector-intro">All ventures are organized below. Hover over a project to inspect its stage, focus, and current direction.</p>
+          <p className="venture-selector-intro">All companies are organized below. Hover over a project to inspect its stage, focus, and current direction.</p>
 
           <div className="venture-node-grid" role="group" aria-label="All portfolio ventures" onPointerLeave={clearIntent}>
             {ventures.map((venture, index) => {
