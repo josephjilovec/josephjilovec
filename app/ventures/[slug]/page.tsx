@@ -27,7 +27,8 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
   const ventureImage = getVentureImage(venture.slug);
   const projectImage = ventureImage?.src ?? venture.heroArt;
   const hasCapitalFile = Boolean(getCapitalProfile(venture.slug));
-  const externalUrl = venture.externalUrl;
+  const externalUrl = venture.slug === "crestline-metals" ? "https://ferrixcorp.josephjilovec.com/" : venture.externalUrl;
+  const externalLabel = venture.slug === "crestline-metals" ? "View website" : venture.externalLabel;
 
   return (
     <>
@@ -45,7 +46,7 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
           <h1>{venture.name}</h1>
           <p className="project-summary">{venture.summary}</p>
           <div className="hero-actions">
-            {externalUrl && <a className="button" href={externalUrl} target="_blank" rel="noreferrer">{venture.externalLabel ?? "View website"} ↗</a>}
+            {externalUrl && <a className="button" href={externalUrl} target="_blank" rel="noreferrer">{externalLabel ?? "View website"} ↗</a>}
             {hasCapitalFile && <Link href={`/portfolio/${venture.slug}/capital`} className="button button-ghost">View capital file ↗</Link>}
             <Link href={`/contact?venture=${encodeURIComponent(venture.name)}`} className="text-link">Discuss this project <span>↗</span></Link>
           </div>
@@ -74,7 +75,7 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
         nextMilestone={venture.nextMilestone}
         opportunity={venture.opportunity}
         externalUrl={externalUrl}
-        externalLabel={externalUrl ? venture.externalLabel : undefined}
+        externalLabel={externalUrl ? externalLabel : undefined}
         heroArt={projectImage}
         accent={venture.accent}
         accentSoft={venture.accentSoft}
