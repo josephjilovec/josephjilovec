@@ -16,6 +16,8 @@ const nextConfig: NextConfig = {
     return [
       { source: "/ventures", destination: "/portfolio", permanent: true },
       { source: "/ventures/:path*", destination: "/portfolio/:path*", permanent: true },
+      { source: "/portfolio/ferrix-corp", destination: "/portfolio/crestline-metals", permanent: true },
+      { source: "/portfolio/ferrix-corp/capital", destination: "/portfolio/crestline-metals/capital", permanent: true },
     ];
   },
   async headers() {
