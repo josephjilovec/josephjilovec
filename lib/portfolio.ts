@@ -198,9 +198,9 @@ const autoCompCorp: PortfolioVenture = {
   tags: ["technology", "compliance", "agents", "evidence", "governance"]
 };
 
-const ferrixCorp: PortfolioVenture = {
-  slug: "ferrix-corp",
-  name: "Ferrix Corp",
+const crestlineMetals: PortfolioVenture = {
+  slug: "crestline-metals",
+  name: "Crestline Metals",
   eyebrow: "Industrial manufacturing / high-performance steel",
   category: "Industrial",
   stage: "Industrial Build Plan",
@@ -212,17 +212,17 @@ const ferrixCorp: PortfolioVenture = {
   thesis:
     "A focused domestic steel manufacturer can create a credible premium position by treating process control, specification discipline, quality documentation, traceability, supply responsiveness, and customer communication as part of the product rather than as secondary operating details.",
   currentState:
-    "The Ferrix public website is live with defined company, capability, market, quality, critical-response, careers, contact, and industry-intelligence positioning. Bethlehem, Pennsylvania is presented as the planned operating base. Manufacturing facilities, production capacity, certifications, customer contracts, defense qualifications, and operating output are not presented as existing achievements.",
+    "The Crestline Metals public website is live with defined company, capability, market, quality, critical-response, careers, contact, and industry-intelligence positioning. Bethlehem, Pennsylvania is presented as the planned operating base. Manufacturing facilities, production capacity, certifications, customer contracts, defense qualifications, and operating output are not presented as existing achievements.",
   founderRole:
     "Company concept, brand architecture, commercial positioning, public platform, operating-system framing, venture roadmap, and coordination of the technical, industrial, partnership, and capital work required to move from a public company concept toward an operating manufacturer.",
   nextMilestone:
     "Narrow the initial product and process route, validate real buyer requirements, develop the facility, equipment, utility, logistics, permitting, quality-system, and capital plan with qualified industrial and metallurgical specialists, and establish evidence before making operating claims.",
   opportunity:
     "Steelmaking and processing operators, metallurgical and plant engineers, equipment suppliers, industrial customers, energy and logistics partners, economic-development stakeholders, quality-system specialists, and capital partners.",
-  externalUrl: "https://ferrixcorp.josephjilovec.com/",
-  externalLabel: "Visit Ferrix Corp",
-  art: "/project-art/ferrix-corp.svg",
-  heroArt: "/project-art/ferrix-corp.svg",
+  externalUrl: "https://crestlinemetals.josephjilovec.com/",
+  externalLabel: "Visit Crestline Metals",
+  art: "/project-art/crestline-metals.svg",
+  heroArt: "/project-art/crestline-metals.svg",
   accent: "#9AA9B5",
   accentSoft: "rgba(154,169,181,.16)",
   tags: ["industrial", "steel", "manufacturing", "quality", "domestic-supply"]
@@ -235,7 +235,7 @@ export const ventures: PortfolioVenture[] = [
   kineticAromatics,
   atlasAssets,
   autoCompCorp,
-  ferrixCorp
+  crestlineMetals
 ];
 
 export const ventureCategories = [...baseVentureCategories, "Industrial"] as const;
