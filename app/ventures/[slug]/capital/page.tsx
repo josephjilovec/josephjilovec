@@ -3,7 +3,7 @@ import type { CSSProperties } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { DataRoomRequest } from "@/components/ventures/DataRoomRequest";
-import { getCapitalProfile, capitalProfiles } from "@/lib/capital";
+import { getCapitalProfile, capitalProfiles } from "@/lib/capitalRegistry";
 import { getVenture } from "@/lib/portfolio";
 import { pageMetadata } from "@/lib/metadata";
 
