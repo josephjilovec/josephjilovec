@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { VentureProofPanel } from "@/components/interactive/VentureProofPanel";
-import { getCapitalProfile } from "@/lib/capital";
+import { getCapitalProfile } from "@/lib/capitalRegistry";
 import { getVenture, ventures } from "@/lib/portfolio";
 import { getVentureImage } from "@/lib/ventureImagery";
 import { pageMetadata } from "@/lib/metadata";
