@@ -1,7 +1,10 @@
-import { ventures as baseVentures, ventureCategories } from "@/lib/ventures";
+import { ventures as baseVentures, ventureCategories as baseVentureCategories } from "@/lib/ventures";
 import type { Venture } from "@/lib/ventures";
 
-export type PortfolioVenture = Omit<Venture, "stage"> & { stage: string };
+export type PortfolioVenture = Omit<Venture, "stage" | "category"> & {
+  stage: string;
+  category: Venture["category"] | "Industrial";
+};
 
 // Public portfolio links use branded josephjilovec.com subdomains when a project has no dedicated custom domain.
 const brandedSubdomains: Record<string, string> = {
@@ -195,15 +198,47 @@ const autoCompCorp: PortfolioVenture = {
   tags: ["technology", "compliance", "agents", "evidence", "governance"]
 };
 
+const ferrixCorp: PortfolioVenture = {
+  slug: "ferrix-corp",
+  name: "Ferrix Corp",
+  eyebrow: "Industrial manufacturing / high-performance steel",
+  category: "Industrial",
+  stage: "Industrial Build Plan",
+  status: "Public",
+  summary:
+    "A planned American industrial manufacturing company focused on high-performance steel, disciplined process control, traceability, dependable supply, demanding specifications, and long-term customer relationships.",
+  problem:
+    "Industrial customers with demanding steel requirements need more than nominal material specifications: they also depend on process discipline, documentation, traceability, delivery reliability, responsive technical communication, and confidence that the manufacturing system can perform consistently.",
+  thesis:
+    "A focused domestic steel manufacturer can create a credible premium position by treating process control, specification discipline, quality documentation, traceability, supply responsiveness, and customer communication as part of the product rather than as secondary operating details.",
+  currentState:
+    "The Ferrix public website is live with defined company, capability, market, quality, critical-response, careers, contact, and industry-intelligence positioning. Bethlehem, Pennsylvania is presented as the planned operating base. Manufacturing facilities, production capacity, certifications, customer contracts, defense qualifications, and operating output are not presented as existing achievements.",
+  founderRole:
+    "Company concept, brand architecture, commercial positioning, public platform, operating-system framing, venture roadmap, and coordination of the technical, industrial, partnership, and capital work required to move from a public company concept toward an operating manufacturer.",
+  nextMilestone:
+    "Narrow the initial product and process route, validate real buyer requirements, develop the facility, equipment, utility, logistics, permitting, quality-system, and capital plan with qualified industrial and metallurgical specialists, and establish evidence before making operating claims.",
+  opportunity:
+    "Steelmaking and processing operators, metallurgical and plant engineers, equipment suppliers, industrial customers, energy and logistics partners, economic-development stakeholders, quality-system specialists, and capital partners.",
+  externalUrl: "https://ferrixcorp.josephjilovec.com/",
+  externalLabel: "Visit Ferrix Corp",
+  art: "/project-art/ferrix-corp.svg",
+  heroArt: "/project-art/ferrix-corp.svg",
+  accent: "#9AA9B5",
+  accentSoft: "rgba(154,169,181,.16)",
+  tags: ["industrial", "steel", "manufacturing", "quality", "domestic-supply"]
+};
+
 export const ventures: PortfolioVenture[] = [
   ...portfolioVentures,
   givewiseInsights,
   adVibeCentral,
   kineticAromatics,
   atlasAssets,
-  autoCompCorp
+  autoCompCorp,
+  ferrixCorp
 ];
-export { ventureCategories };
+
+export const ventureCategories = [...baseVentureCategories, "Industrial"] as const;
 
 export function getVenture(slug: string) {
   return ventures.find((venture) => venture.slug === slug);
