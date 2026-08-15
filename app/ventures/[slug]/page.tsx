@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { VentureProofPanel } from "@/components/interactive/VentureProofPanel";
+import { getCapitalProfile } from "@/lib/capital";
 import { getVenture, ventures } from "@/lib/portfolio";
 import { getVentureImage } from "@/lib/ventureImagery";
 import { pageMetadata } from "@/lib/metadata";
@@ -25,6 +26,7 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
   if (!venture) notFound();
   const ventureImage = getVentureImage(venture.slug);
   const projectImage = ventureImage?.src ?? venture.heroArt;
+  const hasCapitalFile = Boolean(getCapitalProfile(venture.slug));
 
   return (
     <>
@@ -43,7 +45,7 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
           <p className="project-summary">{venture.summary}</p>
           <div className="hero-actions">
             {venture.externalUrl && <a className="button" href={venture.externalUrl} target="_blank" rel="noreferrer">{venture.externalLabel ?? "Visit project"} ↗</a>}
-            <Link href={`/portfolio/${venture.slug}/capital`} className="button button-ghost">View capital file ↗</Link>
+            {hasCapitalFile && <Link href={`/portfolio/${venture.slug}/capital`} className="button button-ghost">View capital file ↗</Link>}
             <Link href={`/contact?venture=${encodeURIComponent(venture.name)}`} className="text-link">Discuss this project <span>↗</span></Link>
           </div>
         </div>
