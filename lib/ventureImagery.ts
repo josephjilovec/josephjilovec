@@ -83,7 +83,7 @@ export const ventureImagery: Record<string, VentureImage> = {
     alt: "Laptop in a modern office displaying a cybersecurity interface",
     position: "center 50%",
   },
-  "ferrix-corp": {
+  "crestline-metals": {
     src: "https://images.pexels.com/photos/7739856/pexels-photo-7739856.jpeg?auto=compress&cs=tinysrgb&w=2400",
     alt: "Heavy industrial steel manufacturing environment",
     position: "center 48%",
