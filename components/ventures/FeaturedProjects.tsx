@@ -72,7 +72,7 @@ export function FeaturedProjects() {
       </div>
 
       <div className={styles.worldsCta}>
-        <span>15 portfolio ventures</span>
+        <span>{ventures.length} portfolio ventures</span>
         <Link href="/portfolio" className="button">Explore the full portfolio ↗</Link>
       </div>
     </>
