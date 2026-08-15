@@ -25,7 +25,7 @@ export default async function CapitalFilePage({ params }: { params: Promise<{ sl
   if (!profile || !venture) notFound();
 
   const isNonprofit = profile.stages.every((stage) => stage.valuation.startsWith("N/A"));
-  const externalUrl = venture.slug === "crestline-metals" ? undefined : venture.externalUrl;
+  const externalUrl = venture.slug === "crestline-metals" ? "https://ferrixcorp.josephjilovec.com/" : venture.externalUrl;
 
   return (
     <>
@@ -69,7 +69,7 @@ export default async function CapitalFilePage({ params }: { params: Promise<{ sl
           <p className="capital-lede">A staged capital model showing what an institutional Seed, Expansion, and Series A path could unlock if the venture reaches the evidence required for each round.</p>
           <div className="capital-hero-actions">
             <a className="button" href="#data-room">Request data room</a>
-            {externalUrl && <a className="button button-ghost" href={externalUrl} target="_blank" rel="noreferrer">Visit website ↗</a>}
+            {externalUrl && <a className="button button-ghost" href={externalUrl} target="_blank" rel="noreferrer">View website ↗</a>}
           </div>
         </div>
         <aside className="capital-context">
