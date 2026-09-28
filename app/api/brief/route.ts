@@ -10,13 +10,16 @@ export async function POST(request: Request) {
 
     const name = clean(body.name, 120);
     const email = clean(body.email, 200);
-    const interest = clean(body.interest, 120);
-    const venture = clean(body.venture, 160);
-    const focus = clean(body.focus, 200);
-    const message = clean(body.message, 3000);
+    const interest = clean(body.interest, 160);
+    const venture = clean(body.venture, 180) || "General / studio";
+    const focus = clean(body.focus, 240);
+    const message = clean(body.message, 1800);
+    const organization = clean(body.organization, 160) || "—";
+    const role = clean(body.role, 120) || "—";
+    const accreditation = clean(body.accreditation, 160) || "Not applicable";
     const consent = clean(body.consent, 20);
 
-    if (!name || !emailPattern.test(email) || !interest || !message || consent !== "yes") {
+    if (!name || !emailPattern.test(email) || !interest || !venture || !focus || !message || consent !== "yes") {
       return NextResponse.json({ error: "Please complete the required fields with a valid email address." }, { status: 400 });
     }
 
@@ -27,8 +30,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Mail delivery is not configured yet. Add the Resend environment variables in Vercel." }, { status: 503 });
     }
 
-    const organization = clean(body.organization, 160) || "—";
-    const role = clean(body.role, 120) || "—";
     const text = [
       "Private venture brief request",
       "",
@@ -36,19 +37,28 @@ export async function POST(request: Request) {
       `Email: ${email}`,
       `Organization: ${organization}`,
       `Role: ${role}`,
-      `Area: ${interest}`,
-      `Venture: ${venture || "General / studio"}`,
-      `Focus: ${focus || "—"}`,
+      `Audience: ${interest}`,
+      `Venture: ${venture}`,
+      `Investor status: ${accreditation}`,
+      `Evaluation focus: ${focus}`,
       "",
+      "Additional context:",
       message,
       "",
-      "Note: submission alone does not create confidentiality or an investment relationship."
+      "Private data-room access is not granted automatically. Review this request before sharing confidential materials.",
+      "Submission does not create confidentiality or an investment/advisory/partnership relationship."
     ].join("\n");
 
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: { "content-type": "application/json", authorization: `Bearer ${apiKey}` },
-      body: JSON.stringify({ from, to: [to], reply_to: email, subject: `[JosephJilovec.com] Venture brief request — ${venture || name}`, text })
+      body: JSON.stringify({
+        from,
+        to: [to],
+        reply_to: email,
+        subject: `[JosephJilovec.com] Venture brief request — ${venture}`,
+        text
+      })
     });
 
     if (!response.ok) {
@@ -56,7 +66,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Mail delivery failed. Please try again later." }, { status: 502 });
     }
 
-    return NextResponse.json({ message: "Brief request sent. Thank you." });
+    return NextResponse.json({ message: "Request received. Private materials remain subject to studio review." });
   } catch (error) {
     console.error("Brief route error", error);
     return NextResponse.json({ error: "Invalid request." }, { status: 400 });

@@ -28,12 +28,32 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   const schema = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Joseph Jilovec",
-    url: site.url,
-    homeLocation: { "@type": "Place", name: site.location },
-    sameAs: [site.linkedin, site.medium],
-    knowsAbout: ["venture design", "portfolio strategy", "product architecture", "behavioral design", "operator partnerships"]
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": `${site.url}/#founder`,
+        name: "Joseph Jilovec",
+        url: site.url,
+        homeLocation: { "@type": "Place", name: site.location },
+        sameAs: [site.linkedin, site.medium],
+        knowsAbout: ["venture design", "portfolio strategy", "product architecture", "behavioral design", "operator partnerships"]
+      },
+      {
+        "@type": "Organization",
+        "@id": `${site.url}/#studio`,
+        name: site.studioName,
+        url: site.url,
+        description: site.description,
+        founder: { "@id": `${site.url}/#founder` }
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${site.url}/#website`,
+        name: site.studioName,
+        url: site.url,
+        publisher: { "@id": `${site.url}/#studio` }
+      }
+    ]
   };
 
   return (

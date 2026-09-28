@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { SectionHeading } from "@/components/shared/SectionHeading";
+import { PrivateBriefRequest } from "@/components/ventures/PrivateBriefRequest";
 
 export function PrivateBriefsSection(){
   return <section id="investor-access" className="section home-anchor private-briefs-section">
@@ -9,17 +9,15 @@ export function PrivateBriefsSection(){
         <figcaption>Private materials / diligence environment</figcaption>
       </figure>
       <SectionHeading index="05" eyebrow="Private venture materials" title="Go beyond the public overview.">
-        <p>Prospective investors and venture partners can request a private brief for selected projects.</p>
+        <p>Selected projects have a concise public executive brief. Deeper diligence materials remain access-controlled and are shared after the studio reviews the request.</p>
       </SectionHeading>
     </div>
     <div className="contact-lanes">
-      <p><strong>One-page venture overview</strong>Concise project context and current direction.</p>
-      <p><strong>Customer and problem definition</strong>The market need and audience being addressed.</p>
-      <p><strong>Proposed revenue model</strong>How the venture may create and capture value.</p>
-      <p><strong>Research and validation</strong>Work completed to date and current signals.</p>
-      <p><strong>Key assumptions</strong>What still matters most to validate.</p>
-      <p><strong>Development roadmap</strong>Near-term priorities and milestones.</p>
+      <p><strong>Executive one-pager</strong>High-level project context, thesis, current state, and next proof points.</p>
+      <p><strong>Targeted routing</strong>Tell the studio whether you are an investor, technical operator, pilot/distribution partner, or strategic adviser.</p>
+      <p><strong>Venture selection</strong>Choose the specific project you are evaluating so the follow-up can stay focused.</p>
+      <p><strong>Private diligence</strong>Capital models, financing assumptions, valuation scenarios, and other sensitive materials are not public-facing.</p>
     </div>
-    <div className="section-action"><Link className="button" href="/#contact">Request a Venture Brief</Link></div>
+    <div className="section-action"><PrivateBriefRequest /></div>
   </section>
 }

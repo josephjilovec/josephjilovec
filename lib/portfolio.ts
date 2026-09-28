@@ -1,5 +1,6 @@
-import { ventures as baseVentures, ventureCategories as baseVentureCategories } from "@/lib/ventures";
+import { ventures as baseVentures } from "@/lib/ventures";
 import type { Venture } from "@/lib/ventures";
+import { parsePortfolioVentureList, type VentureLifecycle, type VentureTier } from "@/lib/ventureSchema";
 
 export type PortfolioVenture = Omit<Venture, "stage" | "category"> & {
   stage: string;
@@ -17,36 +18,45 @@ const brandedSubdomains: Record<string, string> = {
 };
 
 // Stage describes operational maturity. Status remains available as internal portfolio data even when it is not surfaced in the public UI.
-const maturityStages: Record<string, string> = {
-  "my-healthy-aura": "Pilot Operations",
-  "swift-deal-solutions": "Market-Mapped",
-  "dj-hotwax": "Active Creative Brand",
-  "vanta-helix": "Functional Architecture",
-  "cannacore-seeds": "Live Market",
-  snarklogic: "Active System Build",
-  "alder-and-meridian": "Venture-Ready",
-  "united-american-future": "Nonprofit",
-  "world-forward-foundation": "Nonprofit"
+const rawPortfolioVentures: PortfolioVenture[] = baseVentures.map((venture) => ({ ...venture, stage: venture.stage, externalUrl: brandedSubdomains[venture.slug] ?? venture.externalUrl }));
+
+const lifecycleBySlug: Record<string, VentureLifecycle> = {
+  "my-healthy-aura": "TEST",
+  "swift-deal-solutions": "TEST",
+  "dj-hotwax": "BUILD",
+  "vanta-helix": "BUILD",
+  "cannacore-seeds": "BUILD",
+  "snarklogic": "BUILD",
+  "alder-and-meridian": "BUILD",
+  "jentlemens": "BUILD",
+  "united-american-future": "DESIGN",
+  "world-forward-foundation": "DESIGN",
+  "givewise-insights": "TEST",
+  "advibe-central": "TEST",
+  "kinetic-aromatics": "TEST",
+  "atlas-assets": "TEST",
+  "autocomp-corp": "TEST",
+  "crestline-metals": "DESIGN"
 };
 
-const portfolioStatuses: Record<string, string> = {
-  "my-healthy-aura": "Pilot",
-  "swift-deal-solutions": "Public",
-  "dj-hotwax": "Public",
-  "vanta-helix": "Public",
-  "cannacore-seeds": "Pilot",
-  snarklogic: "Public",
-  "alder-and-meridian": "Public",
-  "united-american-future": "Public",
-  "world-forward-foundation": "Public"
+const tierBySlug: Record<string, VentureTier> = {
+  "crestline-metals": "Flagship Assets",
+  "givewise-insights": "Flagship Assets",
+  "autocomp-corp": "Flagship Assets",
+  "atlas-assets": "Flagship Assets",
+  "my-healthy-aura": "Active Validations",
+  "swift-deal-solutions": "Active Validations",
+  "dj-hotwax": "Active Validations",
+  "vanta-helix": "Active Validations",
+  "cannacore-seeds": "Active Validations",
+  "snarklogic": "Active Validations",
+  "alder-and-meridian": "Active Validations",
+  "jentlemens": "Active Validations",
+  "advibe-central": "Active Validations",
+  "kinetic-aromatics": "Active Validations",
+  "united-american-future": "Incubation Concepts",
+  "world-forward-foundation": "Incubation Concepts"
 };
-
-const portfolioVentures: PortfolioVenture[] = baseVentures.map((venture) => ({
-  ...venture,
-  stage: maturityStages[venture.slug] ?? venture.stage,
-  status: portfolioStatuses[venture.slug] ?? venture.status,
-  externalUrl: brandedSubdomains[venture.slug] ?? venture.externalUrl
-}));
 
 const givewiseInsights: PortfolioVenture = {
   slug: "givewise-insights",
@@ -228,17 +238,20 @@ const crestlineMetals: PortfolioVenture = {
   tags: ["industrial", "steel", "manufacturing", "quality", "domestic-supply"]
 };
 
-export const ventures: PortfolioVenture[] = [
-  ...portfolioVentures,
-  givewiseInsights,
-  adVibeCentral,
-  kineticAromatics,
-  atlasAssets,
-  autoCompCorp,
-  crestlineMetals
-];
+export const ventures = parsePortfolioVentureList(
+  [...rawPortfolioVentures, givewiseInsights, adVibeCentral, kineticAromatics, atlasAssets, autoCompCorp, crestlineMetals].map((venture) => {
+    const lifecycle = lifecycleBySlug[venture.slug] ?? "IDENTIFY";
+    return {
+      ...venture,
+      tier: tierBySlug[venture.slug] ?? "Incubation Concepts",
+      lifecycle,
+      stage: lifecycle
+    };
+  })
+);
 
-export const ventureCategories = [...baseVentureCategories, "Industrial"] as const;
+export const ventureTiers = ["All Assets", "Flagship Assets", "Active Validations", "Incubation Concepts"] as const;
+export const ventureCategories = ["All", "Technology", "Commerce", "Industrial", "Behavioral", "Creative", "Civic"] as const;
 
 export function getVenture(slug: string) {
   return ventures.find((venture) => venture.slug === slug);
