@@ -271,7 +271,7 @@ const crestlineMetals: PortfolioVenture = {
 };
 
 export const ventures = parsePortfolioVentureList(
-  [...rawPortfolioVentures, givewiseInsights, adVibeCentral, kineticAromatics, atlasAssets, autoCompCorp, crestlineMetals].map((venture) => {
+  [...rawPortfolioVentures, payerDeltaArizona, givewiseInsights, adVibeCentral, kineticAromatics, atlasAssets, autoCompCorp, crestlineMetals].map((venture) => {
     const lifecycle = lifecycleBySlug[venture.slug] ?? "IDENTIFY";
     return {
       ...venture,
