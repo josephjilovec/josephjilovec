@@ -20,7 +20,7 @@ export function PortfolioUniverse() {
   const activeIndex = Math.max(0, ventures.findIndex((venture) => venture.slug === active.slug));
 
   return (
-    <div className="portfolio-universe" style={{ "--active-accent": active.accent, "--active-soft": active.accentSoft } as CSSProperties}>
+    <div className="venture-universe-v3 portfolio-universe" style={{ "--active-accent": active.accent, "--active-soft": active.accentSoft } as CSSProperties}>
       <section className="venture-selector-panel" aria-label="Portfolio venture selector">
         <div className="venture-selector-head">
           <div>
