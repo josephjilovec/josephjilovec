@@ -17,7 +17,9 @@ const nextConfig: NextConfig = {
       { source: "/ventures", destination: "/portfolio", permanent: true },
       { source: "/ventures/:path*", destination: "/portfolio/:path*", permanent: true },
       { source: "/portfolio/ferrix-corp", destination: "/portfolio/crestline-metals", permanent: true },
-      { source: "/portfolio/ferrix-corp/capital", destination: "/portfolio/crestline-metals/capital", permanent: true },
+      { source: "/portfolio/:slug/capital", destination: "/contact?venture=:slug", permanent: false },
+      { source: "/ventures/:slug/capital", destination: "/contact?venture=:slug", permanent: false },
+      { source: "/portfolio/ferrix-corp/capital", destination: "/contact?venture=crestline-metals", permanent: false },
     ];
   },
   async headers() {
