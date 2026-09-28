@@ -21,6 +21,7 @@ const brandedSubdomains: Record<string, string> = {
 const rawPortfolioVentures: PortfolioVenture[] = baseVentures.map((venture) => ({ ...venture, stage: venture.stage, externalUrl: brandedSubdomains[venture.slug] ?? venture.externalUrl }));
 
 const lifecycleBySlug: Record<string, VentureLifecycle> = {
+  "payer-delta-az": "BUILD",
   "my-healthy-aura": "TEST",
   "swift-deal-solutions": "TEST",
   "dj-hotwax": "BUILD",
@@ -41,6 +42,7 @@ const lifecycleBySlug: Record<string, VentureLifecycle> = {
 
 const tierBySlug: Record<string, VentureTier> = {
   "crestline-metals": "Flagship Assets",
+  "payer-delta-az": "Active Validations",
   "givewise-insights": "Flagship Assets",
   "autocomp-corp": "Flagship Assets",
   "atlas-assets": "Flagship Assets",
@@ -56,6 +58,36 @@ const tierBySlug: Record<string, VentureTier> = {
   "kinetic-aromatics": "Active Validations",
   "united-american-future": "Incubation Concepts",
   "world-forward-foundation": "Incubation Concepts"
+};
+
+const payerDeltaArizona: PortfolioVenture = {
+  slug: "payer-delta-az",
+  name: "Payer Delta Arizona",
+  eyebrow: "Healthcare RCM / revenue integrity intelligence",
+  category: "Technology",
+  stage: "Revenue Integrity Monitoring",
+  status: "Public service",
+  summary:
+    "A founder-run revenue integrity guardrail for Arizona RCM teams: public payer and hospital pricing changes monitored daily and distilled into a concise weekly operating brief.",
+  problem:
+    "Payer and pricing changes are spread across public sources. The issue is not that the information is inaccessible; it is that someone has to keep watching it, recognize what changed, and put the relevant piece in front of the people who can act on it.",
+  thesis:
+    "An external monitoring layer can give smaller RCM teams a standing change watch without asking IT or billing staff to build and maintain another internal workflow.",
+  currentState:
+    "The public Payer Delta landing page is live. The supporting system maintains a public-source watchlist, daily hashing/watch runs, and a recurring hospital-rate slice; the client-facing product is a concise brief rather than a dashboard. Claims about financial outcomes are not presented as established proof.",
+  founderRole:
+    "Source mapping, monitoring rules, signal extraction, brief format, operating model, prospect research, and client positioning.",
+  nextMilestone:
+    "Run a small recurring pilot with Arizona RCM and specialty-clinic teams, then document which changes are useful enough to drive a concrete review or workflow adjustment.",
+  opportunity:
+    "Arizona RCM and billing shops, specialty clinics, denials and revenue-integrity teams, and healthcare operations partners that need payer-change visibility without adding another full-time monitoring task.",
+  externalUrl: "https://payer-delta-az.vercel.app/",
+  externalLabel: "Visit Payer Delta Arizona",
+  art: "/project-art/givewise.svg",
+  heroArt: "/project-hero/givewise-hero.svg",
+  accent: "#3fa7a3",
+  accentSoft: "rgba(63,167,163,.15)",
+  tags: ["healthcare", "rcm", "revenue-integrity", "payer-monitoring", "intelligence"]
 };
 
 const givewiseInsights: PortfolioVenture = {
