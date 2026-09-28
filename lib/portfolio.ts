@@ -1,4 +1,4 @@
-import { ventures as baseVentures, ventureCategories as baseVentureCategories } from "@/lib/ventures";
+import { ventures as baseVentures } from "@/lib/ventures";
 import type { Venture } from "@/lib/ventures";
 import { parsePortfolioVentureList, type VentureLifecycle, type VentureTier } from "@/lib/ventureSchema";
 
