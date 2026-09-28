@@ -97,7 +97,7 @@ export function PrivateBriefRequest({ defaultVenture = "general", label = "Reque
                 <h3>The public overview is open. Private materials remain review-gated.</h3>
                 <p>{message}</p>
                 {selectedVenture?.slug === "crestline-metals" && (
-                  <a className="button" href="/downloads/crestline-metals-executive-brief.pdf" target="_blank" rel="noreferrer">Open Crestline executive brief ↗</a>
+                  <a className="button" href="/api/executive-brief/crestline-metals" target="_blank" rel="noreferrer">Open Crestline executive brief ↗</a>
                 )}
                 <button type="button" className="button button-ghost" onClick={close}>Close</button>
               </div>
