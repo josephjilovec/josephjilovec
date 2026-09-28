@@ -18,12 +18,12 @@ export default function PortfolioPage() {
             <p className="hero-kicker">Portfolio / Company Index</p>
             <h1>Multi-Asset Studio<br /><span>Portfolio</span></h1>
           </div>
-          <p>Review the current portfolio across commercial brands, technology platforms, behavioral concepts, civic initiatives, and creative properties. Each project file presents its operating context, current direction, and public materials.</p>
+          <p>Review the current portfolio through three maturity tiers: Flagship Assets, Active Validations, and Incubation Concepts. Each project file presents its operating context, current lifecycle, and public materials.</p>
         </section>
 
         <section className="section section-dark-edge portfolio-command-section">
           <SectionHeading index="01" eyebrow="Operating portfolio" title="The Company Index">
-            <p>Browse the ventures and projects currently represented within the studio portfolio.</p>
+            <p>Browse by maturity first, then use the sector filter to narrow the set. Public pages show operating context and next proof points; private diligence is handled separately.</p>
           </SectionHeading>
           <PortfolioUniverse />
         </section>
