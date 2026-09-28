@@ -58,6 +58,11 @@ export const ventureImagery: Record<string, VentureImage> = {
     alt: "Volunteers organizing donated supplies in a warehouse",
     position: "center 46%",
   },
+  "payer-delta-az": {
+    src: "https://images.pexels.com/photos/3184436/pexels-photo-3184436.jpeg?auto=compress&cs=tinysrgb&w=2200",
+    alt: "Business professionals reviewing information together",
+    position: "center 46%",
+  },
   "givewise-insights": {
     src: "https://images.pexels.com/photos/7869102/pexels-photo-7869102.jpeg?auto=compress&cs=tinysrgb&w=2200",
     alt: "Professionals discussing strategy in a modern office",
