@@ -11,14 +11,6 @@ const nav = [
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
-  const openVentures = () => {
-    setOpen(false);
-    if (window.location.pathname !== "/") {
-      window.location.href = "/#venture-universe";
-      return;
-    }
-    window.dispatchEvent(new Event("openVentureUniverse"));
-  };
 
   useEffect(() => {
     const onResize = () => window.innerWidth > 880 && setOpen(false);
@@ -34,17 +26,17 @@ export function SiteHeader() {
           <span className="brand-copy"><strong>Joseph Jilovec</strong><small>Venture Studio</small></span>
         </Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
-          <button className="header-venture-button" type="button" onClick={openVentures}>Ventures</button>
-          {nav.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
+          <Link className="header-venture-button" href="/portfolio" onClick={() => setOpen(false)}>Ventures</Link>
+          {nav.map(([label, href]) => <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>)}
         </nav>
         <div className="nav-actions">
-          <Link className="button button-small" href="/#contact">Start a conversation</Link>
+          <Link className="button button-small" href="/#contact" onClick={() => setOpen(false)}>Start a conversation</Link>
           <button className="menu-button" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(value => !value)}><span/><span/></button>
         </div>
       </div>
       {open && (
         <nav className="mobile-nav" aria-label="Mobile navigation">
-          <button className="mobile-venture-button" type="button" onClick={openVentures}>Ventures</button>
+          <Link className="mobile-venture-button" href="/portfolio" onClick={() => setOpen(false)}>Ventures</Link>
           {nav.map(([label, href]) => <Link key={href} href={href} onClick={() => setOpen(false)}>{label}</Link>)}
           <Link className="mobile-nav-cta" href="/#contact" onClick={() => setOpen(false)}>Start a conversation</Link>
         </nav>
