@@ -24,6 +24,10 @@ export function SiteFooter() {
       </div>
       <div className="footer-bottom">
         <span>© 2026 Joseph Jilovec Venture Studio</span>
+        <span className="footer-legal-links">
+          <Link href="/terms">Terms of Service</Link>
+          <Link href="/privacy">Privacy Policy</Link>
+        </span>
         <span>Concept stages and plans may change. No investment solicitation or financial advice.</span>
       </div>
     </footer>
