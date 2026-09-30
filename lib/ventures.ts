@@ -258,6 +258,35 @@ export const ventures: Venture[] = [
     tags: ["commerce", "menswear", "fashion", "made-to-order", "wardrobe-system", "athletic-fit"]
   },
   {
+    slug: "toenail-fungus-survivor-foundation",
+    name: "Toenail Fungus Survivor Foundation",
+    eyebrow: "Civic / health education + survivor support",
+    category: "Civic",
+    stage: "Concept designed",
+    status: "Founding-stage public-interest concept",
+    summary:
+      "A public-interest project focused on practical toenail-fungus education, lived-experience stories, professional-care pathways, and community support without shame or miracle-cure marketing.",
+    problem:
+      "Toenail fungus is a real and often persistent health problem, but people may also avoid discussing it because they feel embarrassed, while online information mixes useful guidance with stigma, anecdote, and unsupported claims.",
+    thesis:
+      "A trusted survivor-centered resource can make an awkward health problem easier to navigate by combining plain-language education, permission-based first-person stories, clinical review, and a clear boundary between information, professional care, and commerce.",
+    currentState:
+      "The first public website is now built as a founding-stage concept inside the Joseph Jilovec venture ecosystem. It includes an evidence desk, survivor-story framework, future professional-directory model, and organizational-status disclosure. No clinical partners, survivor counts, certification program, or tax-deductible donation status are claimed.",
+    founderRole:
+      "Concept architecture, brand positioning, digital platform, community model, evidence-first content structure, partnership criteria, and operating-model design.",
+    nextMilestone:
+      "Form the organization appropriately, recruit the first clinical reviewers and survivor contributors with permission, build a small evidence library, and validate whether the community and education model creates measurable value before adding monetization.",
+    opportunity:
+      "Podiatrists, dermatologists, patient advocates, researchers, survivor contributors, digital health educators, nonprofit advisers, and mission-aligned supporters.",
+    externalUrl: "https://josephjilovec.com/survivor-foundation",
+    externalLabel: "Visit TFSF",
+    art: "/project-art/tfsf.svg",
+    heroArt: "/project-art/tfsf.svg",
+    accent: "#2F80ED",
+    accentSoft: "rgba(47,128,237,.16)",
+    tags: ["civic", "health", "education", "support", "onychomycosis", "public-interest"]
+  },
+  {
     slug: "united-american-future",
     name: "United American Future",
     eyebrow: "Civic / American opportunity",
