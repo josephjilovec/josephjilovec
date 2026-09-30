@@ -88,6 +88,11 @@ export const ventureImagery: Record<string, VentureImage> = {
     alt: "Laptop in a modern office displaying a cybersecurity interface",
     position: "center 50%",
   },
+  "toenail-fungus-survivor-foundation": {
+    src: "/project-art/tfsf.svg",
+    alt: "Abstract TFSF illustration representing survivor support and evidence-based health education",
+    position: "center",
+  },
   "crestline-metals": {
     src: "https://images.pexels.com/photos/7739856/pexels-photo-7739856.jpeg?auto=compress&cs=tinysrgb&w=2400",
     alt: "Heavy industrial steel manufacturing environment",
