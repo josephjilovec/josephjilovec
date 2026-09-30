@@ -36,6 +36,7 @@ A production-oriented rebuild of **josephjilovec.com** as a multi-page personal 
 - Alder & Meridian
 - United American Future
 - World Forward Foundation
+- Toenail Fungus Survivor Foundation
 - Givewise Insights
 
 The portfolio spans five working disciplines: Technology, Commerce, Civic, Behavioral, and Creative.
