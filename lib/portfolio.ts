@@ -31,6 +31,7 @@ const lifecycleBySlug: Record<string, VentureLifecycle> = {
   "alder-and-meridian": "BUILD",
   "jentlemens": "BUILD",
   "united-american-future": "DESIGN",
+  "toenail-fungus-survivor-foundation": "DESIGN",
   "world-forward-foundation": "DESIGN",
   "givewise-insights": "TEST",
   "advibe-central": "TEST",
@@ -57,6 +58,7 @@ const tierBySlug: Record<string, VentureTier> = {
   "advibe-central": "Active Validations",
   "kinetic-aromatics": "Active Validations",
   "united-american-future": "Incubation Concepts",
+  "toenail-fungus-survivor-foundation": "Incubation Concepts",
   "world-forward-foundation": "Incubation Concepts"
 };
 
