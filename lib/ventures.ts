@@ -278,7 +278,7 @@ export const ventures: Venture[] = [
       "Form the organization appropriately, recruit the first clinical reviewers and survivor contributors with permission, build a small evidence library, and validate whether the community and education model creates measurable value before adding monetization.",
     opportunity:
       "Podiatrists, dermatologists, patient advocates, researchers, survivor contributors, digital health educators, nonprofit advisers, and mission-aligned supporters.",
-    externalUrl: "https://josephjilovec.com/survivor-foundation",
+    externalUrl: "https://tfsf.vercel.app/",
     externalLabel: "Visit TFSF",
     art: "/project-art/tfsf.svg",
     heroArt: "/project-art/tfsf.svg",
