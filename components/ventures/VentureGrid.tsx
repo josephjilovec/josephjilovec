@@ -83,16 +83,7 @@ export function VentureGrid() {
                         sizes="(max-width: 800px) 100vw, 45vw"
                         style={{
                           objectFit: "cover",
-                          objectPosition: image?.position ?? "center",
-                          filter: "saturate(.68) contrast(1.07) brightness(.74)"
-                        }}
-                      />
-                      <span
-                        aria-hidden="true"
-                        style={{
-                          position: "absolute",
-                          inset: 0,
-                          background: "linear-gradient(180deg,rgba(5,6,7,.04),rgba(5,6,7,.28) 48%,rgba(5,6,7,.82)),linear-gradient(135deg,var(--venture-soft),transparent 58%)"
+                          objectPosition: image?.position ?? "center"
                         }}
                       />
                       <span className="venture-card-number">{String(index + 1).padStart(2, "0")}</span>
