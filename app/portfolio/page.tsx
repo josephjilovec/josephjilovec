@@ -58,7 +58,7 @@ export default function VenturesPage() {
 
         .portfolio-page-dark .page-hero h1 span,
         .portfolio-page-dark .section-heading .section-kicker {
-          color: #55d9ff !important;
+          color: #B08D57 !important;
         }
 
         .portfolio-page-dark .filter-bar button {
