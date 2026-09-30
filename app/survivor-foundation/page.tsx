@@ -6,6 +6,13 @@ export const metadata: Metadata = {
   title: "Toenail Fungus Survivor Foundation | Support, Evidence, Next Steps",
   description:
     "A founding-stage public-interest project for people dealing with toenail fungus: practical education, survivor stories, professional pathways, and community support without shame.",
+  alternates: { canonical: "/survivor-foundation" },
+  openGraph: {
+    title: "Toenail Fungus Survivor Foundation | Support, Evidence, Next Steps",
+    description:
+      "A founding-stage public-interest project for people dealing with toenail fungus: practical education, survivor stories, professional pathways, and community support without shame.",
+    url: "/survivor-foundation",
+  },
 };
 
 const evidence = [
