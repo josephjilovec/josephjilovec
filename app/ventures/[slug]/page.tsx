@@ -34,8 +34,8 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       <style>{`
-        .project-hero-art .venture-project-photo{object-fit:cover;filter:saturate(.68) contrast(1.08) brightness(.76);transform:scale(1.012)}
-        .project-hero-art .venture-project-photo-tone{position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(5,6,7,.03),rgba(5,6,7,.18) 46%,rgba(5,6,7,.70) 100%),linear-gradient(135deg,var(--venture-soft),transparent 58%)}
+        .project-hero-art .venture-project-photo{object-fit:cover;transform:scale(1.012)}
+        .project-hero-art .venture-project-photo-tone{position:absolute;inset:0;z-index:1;pointer-events:none;background:transparent}
         .project-hero-art .project-art-caption{z-index:2}
         .project-hero-art{box-shadow:0 34px 90px rgba(0,0,0,.32),0 0 58px var(--venture-soft)}
       `}</style>
