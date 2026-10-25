@@ -295,7 +295,7 @@ const ameliora: PortfolioVenture = {
     "Deploy the MVP Living Assessment flow with regional church benevolence ministries and local nonprofit partners, sponsoring the first 50 household upgrade roadmaps.",
   opportunity:
     "Nonprofit leaders, church pastors and benevolence teams, municipal housing authorities, managed care organizations, and community advocates seeking measurable living-standard improvements.",
-  externalUrl: "https://amelioras.vercel.app/",
+  externalUrl: "https://amelioras.josephjilovec.com/",
   externalLabel: "Visit Ameliora",
   art: "/project-art/ameliora.svg",
   heroArt: "/project-hero/ameliora-hero.svg",
