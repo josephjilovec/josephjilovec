@@ -21,7 +21,7 @@ const brandedSubdomains: Record<string, string> = {
 const rawPortfolioVentures: PortfolioVenture[] = baseVentures.map((venture) => ({ ...venture, stage: venture.stage, externalUrl: brandedSubdomains[venture.slug] ?? venture.externalUrl }));
 
 const lifecycleBySlug: Record<string, VentureLifecycle> = {
-  "payer-delta-az": "BUILD",
+  "payer-delta": "BUILD",
   "my-healthy-aura": "TEST",
   "swift-deal-solutions": "TEST",
   "dj-hotwax": "BUILD",
@@ -43,7 +43,7 @@ const lifecycleBySlug: Record<string, VentureLifecycle> = {
 
 const tierBySlug: Record<string, VentureTier> = {
   "crestline-metals": "Flagship Assets",
-  "payer-delta-az": "Active Validations",
+  "payer-delta": "Active Validations",
   "givewise-insights": "Flagship Assets",
   "autocomp-corp": "Flagship Assets",
   "atlas-assets": "Flagship Assets",
@@ -62,34 +62,34 @@ const tierBySlug: Record<string, VentureTier> = {
   "world-forward-foundation": "Incubation Concepts"
 };
 
-const payerDeltaArizona: PortfolioVenture = {
-  slug: "payer-delta-az",
-  name: "Payer Delta Arizona",
-  eyebrow: "Healthcare RCM / revenue integrity intelligence",
+const payerDelta: PortfolioVenture = {
+  slug: "payer-delta",
+  name: "Payer Delta",
+  eyebrow: "Healthcare RCM & Operational Automation",
   category: "Technology",
-  stage: "Revenue Integrity Monitoring",
+  stage: "Automated Appeal Execution",
   status: "Public service",
   summary:
-    "A founder-run revenue integrity guardrail for Arizona RCM teams: public payer and hospital pricing changes monitored daily and distilled into a concise weekly operating brief.",
+    "An automated workflow engine designed to eliminate denial backlogs. Payer Delta integrates directly with billing pipelines to match denial codes, extract policy citations, assemble chart notes, and generate structured internal appeal packets.",
   problem:
-    "Payer and pricing changes are spread across public sources. The issue is not that the information is inaccessible; it is that someone has to keep watching it, recognize what changed, and put the relevant piece in front of the people who can act on it.",
+    "Billing companies process claim denials daily through internal payer appeal channels. Assembling the exact denial codes, payer medical policy citations, and supporting clinical chart notes manually creates repetitive paperwork and persistent denial backlogs.",
   thesis:
-    "An external monitoring layer can give smaller RCM teams a standing change watch without asking IT or billing staff to build and maintain another internal workflow.",
+    "Automated denial management and internal appeal execution for medical billing teams. Payer Delta automates this repetitive paperwork—ensuring every appeal includes the exact codes, clinical chart notes, and policy citations required for swift reconsideration.",
   currentState:
-    "The public Payer Delta landing page is live. The supporting system maintains a public-source watchlist, daily hashing/watch runs, and a recurring hospital-rate slice; the client-facing product is a concise brief rather than a dashboard. Claims about financial outcomes are not presented as established proof.",
+    "The public Payer Delta platform is live at payerdelta.josephjilovec.com, detailing the four-stage execution pipeline—Denial Matching, Policy Extraction, Chart Assembly, and Appeal Generation—for internal payer appeal workflows. Specific financial recovery or turnaround claims are not presented as established proof unless independently supported.",
   founderRole:
-    "Source mapping, monitoring rules, signal extraction, brief format, operating model, prospect research, and client positioning.",
+    "Workflow engine architecture, denial-code and policy-citation mapping, clinical chart-assembly logic, appeal packet structure, RCM operating model, and product positioning.",
   nextMilestone:
-    "Run a small recurring pilot with Arizona RCM and specialty-clinic teams, then document which changes are useful enough to drive a concrete review or workflow adjustment.",
+    "Validate the four-stage appeal execution pipeline across high-volume denial categories with medical billing teams, measuring packet completeness, biller review time, and reconsideration turnaround.",
   opportunity:
-    "Arizona RCM and billing shops, specialty clinics, denials and revenue-integrity teams, and healthcare operations partners that need payer-change visibility without adding another full-time monitoring task.",
-  externalUrl: "https://payer-delta-az.vercel.app/",
-  externalLabel: "Visit Payer Delta Arizona",
+    "Medical billing companies, RCM operations leaders, specialty clinic billing teams, and healthcare workflow partners looking to eliminate denial backlogs through structured internal appeal execution.",
+  externalUrl: "https://payerdelta.josephjilovec.com",
+  externalLabel: "Visit Payer Delta",
   art: "/project-art/givewise.svg",
   heroArt: "/project-hero/givewise-hero.svg",
   accent: "#3fa7a3",
   accentSoft: "rgba(63,167,163,.15)",
-  tags: ["healthcare", "rcm", "revenue-integrity", "payer-monitoring", "intelligence"]
+  tags: ["healthcare", "rcm", "denial-management", "appeals", "automation"]
 };
 
 const givewiseInsights: PortfolioVenture = {
@@ -273,7 +273,7 @@ const crestlineMetals: PortfolioVenture = {
 };
 
 export const ventures = parsePortfolioVentureList(
-  [...rawPortfolioVentures, payerDeltaArizona, givewiseInsights, adVibeCentral, kineticAromatics, atlasAssets, autoCompCorp, crestlineMetals].map((venture) => {
+  [...rawPortfolioVentures, payerDelta, givewiseInsights, adVibeCentral, kineticAromatics, atlasAssets, autoCompCorp, crestlineMetals].map((venture) => {
     const lifecycle = lifecycleBySlug[venture.slug] ?? "IDENTIFY";
     return {
       ...venture,
