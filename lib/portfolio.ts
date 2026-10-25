@@ -276,7 +276,7 @@ const crestlineMetals: PortfolioVenture = {
 
 const ameliora: PortfolioVenture = {
   slug: "ameliora",
-  name: "Ameliora",
+  name: "Amelioras",
   eyebrow: "Living conditions & shared prosperity",
   category: "Civic",
   stage: "Shared Prosperity Model",
@@ -286,7 +286,7 @@ const ameliora: PortfolioVenture = {
   problem:
     "Millions of people feel their living conditions are inadequate, yet standard market solutions polarize between high-cost luxury renovations and emergency crisis relief—leaving everyday friction points in sleep, acoustics, and domestic flow unaddressed.",
   thesis:
-    "Practical, accessible upgrades to physical space, air, lighting, acoustics, and daily habits can meaningfully improve how people experience life. By operating as a transparent for-profit that reinvests the majority of surplus, Ameliora scales sustainably alongside community partners.",
+    "Practical, accessible upgrades to physical space, air, lighting, acoustics, and daily habits can meaningfully improve how people experience life. By operating as a transparent for-profit that reinvests the majority of surplus, Amelioras scales sustainably alongside community partners.",
   currentState:
     "The foundational operating platform, Living Assessment diagnostic, tiered upgrade pathways, and public balance-sheet architecture are established. Initial priorities focus on regional church benevolence partnerships and local nonprofit co-delivery pilots.",
   founderRole:
@@ -296,7 +296,7 @@ const ameliora: PortfolioVenture = {
   opportunity:
     "Nonprofit leaders, church pastors and benevolence teams, municipal housing authorities, managed care organizations, and community advocates seeking measurable living-standard improvements.",
   externalUrl: "https://amelioras.josephjilovec.com/",
-  externalLabel: "Visit Ameliora",
+  externalLabel: "Visit Amelioras",
   art: "/project-art/ameliora.svg",
   heroArt: "/project-hero/ameliora-hero.svg",
   accent: "#20A39E",
