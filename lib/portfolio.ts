@@ -38,11 +38,13 @@ const lifecycleBySlug: Record<string, VentureLifecycle> = {
   "kinetic-aromatics": "TEST",
   "atlas-assets": "TEST",
   "autocomp-corp": "TEST",
-  "crestline-metals": "DESIGN"
+  "crestline-metals": "DESIGN",
+  "ameliora": "DESIGN"
 };
 
 const tierBySlug: Record<string, VentureTier> = {
   "crestline-metals": "Flagship Assets",
+  "ameliora": "Active Validations",
   "payer-delta": "Active Validations",
   "givewise-insights": "Flagship Assets",
   "autocomp-corp": "Flagship Assets",
@@ -272,8 +274,38 @@ const crestlineMetals: PortfolioVenture = {
   tags: ["industrial", "steel", "manufacturing", "quality", "domestic-supply"]
 };
 
+const ameliora: PortfolioVenture = {
+  slug: "ameliora",
+  name: "Ameliora",
+  eyebrow: "Living conditions & shared prosperity",
+  category: "Civic",
+  stage: "Shared Prosperity Model",
+  status: "Public venture",
+  summary:
+    "A for-profit living-conditions improvement platform helping people upgrade home environments, daily routines, and household friction points through accessible pathways, public balance-sheet transparency, and church and nonprofit partnerships.",
+  problem:
+    "Millions of people feel their living conditions are inadequate, yet standard market solutions polarize between high-cost luxury renovations and emergency crisis relief—leaving everyday friction points in sleep, acoustics, and domestic flow unaddressed.",
+  thesis:
+    "Practical, accessible upgrades to physical space, air, lighting, acoustics, and daily habits can meaningfully improve how people experience life. By operating as a transparent for-profit that reinvests the majority of surplus, Ameliora scales sustainably alongside community partners.",
+  currentState:
+    "The foundational operating platform, Living Assessment diagnostic, tiered upgrade pathways, and public balance-sheet architecture are established. Initial priorities focus on regional church benevolence partnerships and local nonprofit co-delivery pilots.",
+  founderRole:
+    "Venture design, business model formulation, Living Assessment diagnostic architecture, public balance sheet design, governance framework, and partnership models.",
+  nextMilestone:
+    "Deploy the MVP Living Assessment flow with regional church benevolence ministries and local nonprofit partners, sponsoring the first 50 household upgrade roadmaps.",
+  opportunity:
+    "Nonprofit leaders, church pastors and benevolence teams, municipal housing authorities, managed care organizations, and community advocates seeking measurable living-standard improvements.",
+  externalUrl: "https://amelioras.vercel.app/",
+  externalLabel: "Visit Ameliora",
+  art: "/project-art/ameliora.svg",
+  heroArt: "/project-hero/ameliora-hero.svg",
+  accent: "#20A39E",
+  accentSoft: "rgba(32,163,158,.15)",
+  tags: ["living-conditions", "shared-prosperity", "civic", "impact", "wellbeing", "transparency"]
+};
+
 export const ventures = parsePortfolioVentureList(
-  [...rawPortfolioVentures, payerDelta, givewiseInsights, adVibeCentral, kineticAromatics, atlasAssets, autoCompCorp, crestlineMetals].map((venture) => {
+  [...rawPortfolioVentures, payerDelta, givewiseInsights, adVibeCentral, kineticAromatics, atlasAssets, autoCompCorp, crestlineMetals, ameliora].map((venture) => {
     const lifecycle = lifecycleBySlug[venture.slug] ?? "IDENTIFY";
     return {
       ...venture,

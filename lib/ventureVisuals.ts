@@ -11,6 +11,7 @@ export const ventureSignalArt: Record<string, string> = {
   "givewise-insights": "/constellation-art/givewise-map.svg",
   "advibe-central": "/constellation-art/advibe-map.svg",
   "kinetic-aromatics": "/constellation-art/kinetic-botanicals-map.svg",
+  "ameliora": "/constellation-art/ameliora-map.svg",
 };
 
 export const venturePreviewArt: Record<string, string> = {
@@ -21,4 +22,5 @@ export const venturePreviewArt: Record<string, string> = {
   "cannacore-seeds": "/constellation-preview/cannacore-site-preview.svg",
   "snarklogic": "/constellation-preview/snark-site-preview.svg",
   "alder-and-meridian": "/constellation-preview/alder-site-preview.svg",
+  "ameliora": "/constellation-preview/ameliora-site-preview.svg",
 };

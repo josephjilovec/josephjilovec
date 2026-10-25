@@ -98,6 +98,11 @@ export const ventureImagery: Record<string, VentureImage> = {
     alt: "Heavy industrial steel manufacturing environment",
     position: "center 48%",
   },
+  "ameliora": {
+    src: "https://images.pexels.com/photos/33714885/pexels-photo-33714885.jpeg?auto=compress&cs=tinysrgb&w=2200",
+    alt: "Diverse community members engaging in a welcoming and comfortable living space",
+    position: "center 48%",
+  },
 };
 
 export function getVentureImage(slug: string): VentureImage | undefined {
