@@ -325,23 +325,23 @@ const eversteadLiving: PortfolioVenture = {
   stage: "Concept designed",
   status: "Public design prototype",
   summary:
-    "A considered-living venture exploring accessible home assessments, adaptable interiors, and practical aging-in-place planning that balances everyday independence with a warm residential experience.",
+    "Keep the place you love. Make everyday life work better. A thoughtful planning concept for homeowners and families considering practical, comfortable changes at home.",
   problem:
-    "Homeowners and families often encounter fragmented guidance when trying to improve accessibility, safety, comfort, and long-term adaptability without turning their homes into clinical spaces.",
+    "A difficult threshold. A bathroom that no longer fits your routine. Lighting that makes an evening walk down the hall harder than it should be. Home adaptation is often a collection of small decisions before it becomes a building project.",
   thesis:
-    "An approachable assessment and planning experience, supported by qualified local specialists, could help households prioritize improvements that fit their routines, budgets, and changing needs.",
+    "Everstead Living is being designed to turn those concerns into an organized, room-by-room brief: what matters now, what can wait, and which questions need a qualified professional. The starting point is your routine, your priorities, and a home that still feels like yours.",
   currentState:
-    "The public Everstead Living repository contains a responsive editorial homepage concept with a clear three-stage approach. Assessment tooling, professional partnerships, customer pilots, and commercial service delivery have not yet been established.",
+    "The public repository now contains a complete responsive concept website, custom AI-generated hero imagery, a defined initial audience, the proposed The Home Adaptation Brief, practical service examples, FAQs and a browser-local inquiry builder. Service delivery, professional partnerships and the validation targets remain proposed; no commercial results are claimed.",
   founderRole:
     "Venture concept, accessible-living positioning, customer journey, brand and visual direction, preliminary website architecture, and early service-validation planning.",
   nextMilestone:
-    "Interview homeowners, caregivers, accessibility specialists, and qualified home-modification professionals; validate one assessment-to-referral workflow before presenting services as operational.",
+    "Proposed first cohort: interview 10 households and 3 home-accessibility professionals to identify repeated planning problems. Trial the brief with 5 volunteer households in one local service area, subject to partner availability. Check whether priorities are understood, a professional can act on the brief, and follow-up questions decrease. These are validation goals, not reported results.",
   opportunity:
-    "Occupational therapists, certified aging-in-place specialists, home-modification contractors, accessibility designers, local service operators, and pilot households.",
+    "Initial customers: Homeowners planning ahead. People who want to understand access and comfort before a move, renovation, or change in household needs. Potential collaborators: Occupational therapists, accessibility designers and home-modification contractors interested in a clearer client handoff.",
   externalUrl: "https://eversteadliving.vercel.app",
   externalLabel: "Explore Everstead Living",
-  art: "/project-art/everstead-living.svg",
-  heroArt: "/project-art/everstead-living.svg",
+  art: "/project-hero/everstead-living.webp",
+  heroArt: "/project-hero/everstead-living.webp",
   accent: "#9DB5A0",
   accentSoft: "rgba(157,181,160,.16)",
   tags: ["commerce","accessible-living","aging-in-place","home-services","design","concept"]
@@ -355,23 +355,23 @@ const qshipSupplyCo: PortfolioVenture = {
   stage: "Concept designed",
   status: "Public design prototype",
   summary:
-    "An operations-technology venture exploring simpler procurement, supplier coordination, shipment visibility, and accountable handoffs for small and growing businesses.",
+    "A practical purchasing desk for growing businesses. Bring repeat orders, supplier follow-ups and delivery handoffs into one accountable workflow, starting with a focused manual pilot.",
   problem:
-    "Smaller organizations frequently manage sourcing requests, supplier records, purchasing status, and delivery follow-up across disconnected email threads, spreadsheets, and informal handoffs.",
+    "For a small distributor or online retailer, an ordinary reorder can involve a quote in one inbox, approval in a chat and a delivery date in somebody’s spreadsheet. The cost is often uncertainty: who owns the next action, and what is actually confirmed?",
   thesis:
-    "A focused, workflow-first coordination layer could help operators organize supplier-to-delivery decisions without forcing them into a complex enterprise resource planning system.",
+    "QShip’s first proposed offer is a managed coordination workflow for recurring, non-regulated business supplies. Start with an agreed supplier list and a single purchasing process. Add software only after the workflow proves useful.",
   currentState:
-    "The public QShip Supply Co. repository contains a responsive industrial-style concept website and illustrative logistics dashboard. The dashboard is not connected to live suppliers, orders, or inventory; no production platform or paying customers are claimed.",
+    "The public repository now contains a complete responsive concept website, custom AI-generated hero imagery, a defined initial audience, the proposed The Purchasing Coordination Pilot, practical service examples, FAQs and a browser-local inquiry builder. Service delivery, professional partnerships and the validation targets remain proposed; no commercial results are claimed.",
   founderRole:
     "Business concept, initial workflow taxonomy, B2B product positioning, visual system, interface direction, and early technical architecture.",
   nextMilestone:
-    "Choose one narrow business segment, document its current purchasing and fulfillment process, test a prototype with real operators, and define the smallest secure working integration.",
+    "Proposed discovery: interview 8 small-business operators about recurring supply purchases and approval bottlenecks. Test one category with 3 design-partner businesses for 4 weeks, with written responsibilities and direct supplier payment. Track overdue follow-ups, missing approvals and staff effort against the pre-pilot process. No savings or delivery performance is claimed yet.",
   opportunity:
-    "Small-business operators, purchasing managers, logistics and fulfillment specialists, supplier networks, operations software partners, and pilot customers.",
+    "Initial customers: Small distributors. Owner-led businesses reordering packaging, consumables or general operating supplies from recurring suppliers. Potential collaborators: Operators with enough repeat buying to need a process, but no appetite for a large enterprise-system rollout.",
   externalUrl: "https://qshipsupplyco.vercel.app",
   externalLabel: "Explore QShip Supply Co.",
-  art: "/project-art/qship-supply-co.svg",
-  heroArt: "/project-art/qship-supply-co.svg",
+  art: "/project-hero/qship-supply-co.webp",
+  heroArt: "/project-hero/qship-supply-co.webp",
   accent: "#A5F5D4",
   accentSoft: "rgba(165,245,212,.15)",
   tags: ["technology","b2b","logistics","procurement","supply-chain","workflow"]
@@ -385,23 +385,23 @@ const solvanti: PortfolioVenture = {
   stage: "Concept designed",
   status: "Public design prototype",
   summary:
-    "A home-energy planning venture exploring clearer ways to evaluate efficiency, backup-power options, household resilience, and qualified implementation pathways.",
+    "Efficiency, solar and backup power solve different problems. Solvanti is a planning concept that helps homeowners organize their needs, compare assumptions and prepare better questions for qualified providers.",
   problem:
-    "Households considering energy upgrades often face competing product claims, confusing cost assumptions, and disconnected conversations about consumption, storage, outages, and installation.",
+    "Lower routine consumption. Keep a few essentials running during an outage. Prepare for an electric vehicle. These are different goals, with different costs and design questions. A product quote rarely answers all of them on its own.",
   thesis:
-    "An educational, scenario-based planning experience could help homeowners understand energy trade-offs and connect with qualified professionals without presenting unverified savings or installation guarantees.",
+    "Solvanti’s proposed starting point is a human-reviewed household energy brief. It organizes bill history, priorities and property questions before a homeowner chooses equipment, financing or an installer.",
   currentState:
-    "The Solvanti public repository includes a cinematic, scroll-driven concept homepage and a three-step planning narrative. There is no live energy calculator, installation network, or verified customer savings dataset yet.",
+    "The public repository now contains a complete responsive concept website, custom AI-generated hero imagery, a defined initial audience, the proposed The Household Energy Brief, practical service examples, FAQs and a browser-local inquiry builder. Service delivery, professional partnerships and the validation targets remain proposed; no commercial results are claimed.",
   founderRole:
     "Energy-resilience venture framing, brand strategy, experience narrative, early assessment design, product direction, and partner-validation planning.",
   nextMilestone:
-    "Validate the target homeowner segment, research regional energy and licensing requirements, source reliable assumptions, and test one transparent energy-resilience planning tool.",
+    "Proposed discovery: interview 10 homeowners who are comparing efficiency or backup-power options. Review 5 sample household briefs with qualified energy professionals in one initial service region. Measure whether homeowners can explain trade-offs and providers receive the information they need. Savings, payback and uptime remain unverified.",
   opportunity:
-    "Licensed energy contractors, efficiency assessors, solar and storage specialists, utilities and program advisers, home insurers, and pilot homeowners.",
+    "Initial customers: Homeowners comparing options. People considering efficiency upgrades, solar or storage who want to make assumptions visible before committing. Potential collaborators: Assessors and licensed contractors interested in receiving a more organized account of household goals.",
   externalUrl: "https://solvanti-two.vercel.app",
   externalLabel: "Explore Solvanti",
-  art: "/project-art/solvanti.svg",
-  heroArt: "/project-art/solvanti.svg",
+  art: "/project-hero/solvanti.webp",
+  heroArt: "/project-hero/solvanti.webp",
   accent: "#E7BD77",
   accentSoft: "rgba(231,189,119,.15)",
   tags: ["technology","energy","resilience","home-services","efficiency","concept"]
@@ -415,23 +415,23 @@ const techwater: PortfolioVenture = {
   stage: "Concept designed",
   status: "Public design prototype",
   summary:
-    "A water-intelligence venture exploring understandable water-use information, conservation planning, and decision support for properties, facilities, and irrigation-intensive operations.",
+    "Start with the data you already have. TechWater is a reporting concept for property teams that want to understand billed water use, investigate changes and prioritize practical follow-up.",
   problem:
-    "Water-use data can be difficult to interpret across bills, meters, facilities, and seasonal demand, leaving potential inefficiencies hard to see and conservation priorities hard to rank.",
+    "A longer billing period, a new tenant, landscape irrigation or a faulty fixture can all change a property’s water use. Looking at the bill total alone makes it difficult to know what deserves attention.",
   thesis:
-    "Clearer measurement, visualization, and practical planning could help property and operations teams identify meaningful water-efficiency opportunities when the underlying data and assumptions are reliable.",
+    "TechWater’s first proposed product is a monthly review built from client-supplied bills or meter exports. It would normalize records by billing duration, document context and flag questions for the property team. Connected sensors can wait until the reporting workflow earns its place.",
   currentState:
-    "The public TechWater repository has a responsive concept website with an illustrative water-analytics interface. It is not connected to meters or live customer data, and no monitoring or savings claims have been validated.",
+    "The public repository now contains a complete responsive concept website, custom AI-generated hero imagery, a defined initial audience, the proposed The Water Use Review, practical service examples, FAQs and a browser-local inquiry builder. Service delivery, professional partnerships and the validation targets remain proposed; no commercial results are claimed.",
   founderRole:
     "Water-technology market exploration, analytics concept, brand positioning, visual language, dashboard experience design, and early product research.",
   nextMilestone:
-    "Select an initial customer segment such as commercial property operators or irrigation managers, define data access and privacy requirements, and validate a narrowly scoped water-use reporting prototype.",
+    "Proposed discovery: work with 3 property operators to understand bill access, units and common data gaps. Test up to 10 properties over 3 reporting cycles, with permission to use records and a named follow-up owner. Track usable records, explained flags and completed site checks. Conservation savings and leak-detection performance are not claimed.",
   opportunity:
-    "Water-efficiency professionals, irrigation operators, property managers, facility teams, utility program specialists, data-integration partners, and pilot customers.",
+    "Initial customers: Small commercial portfolios. Property managers overseeing a handful of offices, retail locations or mixed-use buildings with separate water records. Potential collaborators: Professionals interested in a clearer data handoff before a site visit or equipment assessment.",
   externalUrl: "https://techwater.vercel.app",
   externalLabel: "Explore TechWater",
-  art: "/project-art/techwater.svg",
-  heroArt: "/project-art/techwater.svg",
+  art: "/project-hero/techwater.webp",
+  heroArt: "/project-hero/techwater.webp",
   accent: "#28B8C0",
   accentSoft: "rgba(40,184,192,.15)",
   tags: ["technology","water","conservation","analytics","facilities","climate"]
@@ -445,23 +445,23 @@ const motoryn: PortfolioVenture = {
   stage: "Concept designed",
   status: "Public design prototype",
   summary:
-    "A premium automotive-services venture exploring easier vehicle-care planning, maintenance understanding, and access to appropriate service providers throughout the ownership journey.",
+    "A clearer record. A practical service plan. Motoryn is an ownership-planning concept for drivers who want to organize maintenance, ask informed questions and coordinate care with independent professionals.",
   problem:
-    "Vehicle owners must piece together maintenance records, service timing, provider quality, and cost expectations across scattered tools and inconsistent service experiences.",
+    "A receipt in a drawer. A reminder you dismissed. A recommended service without enough context to compare it. Vehicle care becomes easier to manage when records and next steps live in one understandable place.",
   thesis:
-    "A thoughtfully designed ownership companion and curated service-coordination experience could reduce uncertainty while leaving diagnosis and repairs to appropriately qualified professionals.",
+    "Motoryn’s proposed first offer is a maintenance organization brief for a household vehicle. It brings owner-supplied records and manufacturer guidance together, while leaving inspection, diagnosis and repair decisions with qualified technicians.",
   currentState:
-    "The Motoryn public repository contains a bold, responsive automotive concept homepage with a stylized performance-car illustration and three service pillars. Service booking, provider vetting, vehicle-data integrations, and live commerce are not yet operational.",
+    "The public repository now contains a complete responsive concept website, custom AI-generated hero imagery, a defined initial audience, the proposed The Ownership Care Brief, practical service examples, FAQs and a browser-local inquiry builder. Service delivery, professional partnerships and the validation targets remain proposed; no commercial results are claimed.",
   founderRole:
     "Automotive venture thesis, brand identity, visual art direction, ownership journey design, service-marketplace concept, and early partner strategy.",
   nextMilestone:
-    "Select a narrow initial vehicle-care category, interview owners and service shops, define provider-verification standards, and test one manual coordination pilot before automating booking.",
+    "Proposed discovery: interview 10 owners and 3 independent shops about records and service handoffs. Trial 5 vehicle briefs with owner permission and professional feedback before building booking or vehicle integrations. Measure record completeness, clarity of the service request and owner understanding. No repair savings, reliability improvement or vetted network is claimed.",
   opportunity:
-    "Independent repair and detailing shops, automotive technicians, fleet operators, vehicle owners, service-network partners, and automotive product collaborators.",
+    "Initial customers: Everyday vehicle owners. Drivers keeping a vehicle for the long term who want a clearer view of records, open questions and upcoming maintenance. Potential collaborators: Qualified providers interested in receiving organized service history and a focused customer request.",
   externalUrl: "https://motoryn-amber.vercel.app",
   externalLabel: "Explore Motoryn",
-  art: "/project-art/motoryn.svg",
-  heroArt: "/project-art/motoryn.svg",
+  art: "/project-hero/motoryn.webp",
+  heroArt: "/project-hero/motoryn.webp",
   accent: "#D7FA5C",
   accentSoft: "rgba(215,250,92,.14)",
   tags: ["commerce","automotive","vehicle-care","service-marketplace","maintenance","concept"]
@@ -475,23 +475,23 @@ const experienceElsewhere: PortfolioVenture = {
   stage: "Concept designed",
   status: "Public design prototype",
   summary:
-    "A travel and experiences venture exploring memorable itineraries, destination storytelling, and curated journeys built around personal interests rather than generic travel packages.",
+    "Stay a little longer. Choose a little better. Experience Elsewhere is a travel-planning concept for people who want a personal, practical journey with room to discover what was never on the list.",
   problem:
-    "Travelers face an overwhelming volume of destination content and booking choices but often lack a coherent way to translate personal interests into distinctive, practical experiences.",
+    "A hundred saved places do not make a journey. The distance between them, the time on your feet and the moments you actually enjoy matter just as much. Planning should bring those pieces together without filling every hour.",
   thesis:
-    "Editorial discovery paired with a focused, human-reviewed trip-planning experience could help travelers find more meaningful journeys and make informed choices about operators and activities.",
+    "Experience Elsewhere’s proposed first offer is a human-reviewed planning brief for a short, independent trip in one region. It pairs a clear route and realistic pacing with direct booking links that travelers verify and purchase themselves.",
   currentState:
-    "The public Experience Elsewhere repository contains a responsive, atmospheric travel-editorial homepage and three illustrative journey categories. No trips, supplier inventory, bookings, or paid travel services are currently represented as live.",
+    "The public repository now contains a complete responsive concept website, custom AI-generated hero imagery, a defined initial audience, the proposed The Elsewhere Journey Brief, practical service examples, FAQs and a browser-local inquiry builder. Service delivery, professional partnerships and the validation targets remain proposed; no commercial results are claimed.",
   founderRole:
     "Travel venture concept, experience curation thesis, editorial positioning, brand and visual storytelling, initial trip-planning journey, and partner-research direction.",
   nextMilestone:
-    "Select a first destination niche, validate traveler demand, research booking and seller-of-travel obligations where applicable, and pilot one clearly scoped itinerary-planning experience.",
+    "Proposed discovery: interview 10 independent travelers and identify a region where specialist knowledge can be validated. Test 5 planning briefs with volunteer travelers and qualified local contributors before offering paid planning. Review pacing, source accuracy and how much of the plan travelers find useful. No bookings, supplier inventory or traveler outcomes are claimed.",
   opportunity:
-    "Destination specialists, local guides, hospitality operators, travel advisers, experience curators, photographers, and travelers interested in pilot planning services.",
+    "Initial customers: Curious couples & friends. Independent travelers planning a roughly week-long trip who prefer a considered route to an exhaustive checklist. Potential collaborators: Guides and hospitality professionals interested in contributing grounded local knowledge to a planning pilot.",
   externalUrl: "https://experienceelsewhere.vercel.app",
   externalLabel: "Explore Experience Elsewhere",
-  art: "/project-art/experience-elsewhere.svg",
-  heroArt: "/project-art/experience-elsewhere.svg",
+  art: "/project-hero/experience-elsewhere.webp",
+  heroArt: "/project-hero/experience-elsewhere.webp",
   accent: "#DDA879",
   accentSoft: "rgba(221,168,121,.16)",
   tags: ["commerce","travel","hospitality","experiences","editorial","curation"]

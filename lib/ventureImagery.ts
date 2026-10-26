@@ -9,33 +9,33 @@ export type VentureImage = {
 // truth for hover glow, interface tinting, Project Files, and Capital Files.
 export const ventureImagery: Record<string, VentureImage> = {
   "everstead-living": {
-    src: "/project-art/everstead-living.svg",
-    alt: "Warm architectural illustration of an adaptable, sunlit home interior",
+    src: "/project-hero/everstead-living.webp",
+    alt: "AI-generated concept of a sunlit home with clear circulation, pale oak floors and sage seating",
     position: "center",
   },
   "qship-supply-co": {
-    src: "/project-art/qship-supply-co.svg",
-    alt: "Industrial logistics illustration showing connected suppliers, operational routing and fulfillment",
+    src: "/project-hero/qship-supply-co.webp",
+    alt: "AI-generated concept image of an orderly small fulfillment workspace with cartons and a pallet truck",
     position: "center",
   },
   "solvanti": {
-    src: "/project-art/solvanti.svg",
-    alt: "Cinematic solar-energy illustration with a glowing sphere and technical geometry",
+    src: "/project-hero/solvanti.webp",
+    alt: "AI-generated concept of a modest solar-equipped home in warm evening light",
     position: "center",
   },
   "techwater": {
-    src: "/project-art/techwater.svg",
-    alt: "Water-intelligence illustration with layered water flows, sensor rings and measurement lines",
+    src: "/project-hero/techwater.webp",
+    alt: "AI-generated concept of brass water-meter hardware and copper pipes in a clean utility room",
     position: "center",
   },
   "motoryn": {
-    src: "/project-art/motoryn.svg",
-    alt: "Premium automotive illustration of a streamlined performance vehicle in a dark studio",
+    src: "/project-hero/motoryn.webp",
+    alt: "AI-generated concept of an unbranded graphite wagon in an understated independent workshop",
     position: "center",
   },
   "experience-elsewhere": {
-    src: "/project-art/experience-elsewhere.svg",
-    alt: "Atmospheric travel illustration of layered mountain landscapes at sunset",
+    src: "/project-hero/experience-elsewhere.webp",
+    alt: "AI-generated Mediterranean-inspired lane with warm stone walls, olive foliage and a view of the blue sea",
     position: "center",
   },
   "my-healthy-aura": {

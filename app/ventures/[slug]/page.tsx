@@ -7,6 +7,8 @@ import { VentureProofPanel } from "@/components/interactive/VentureProofPanel";
 import { PrivateBriefRequest } from "@/components/ventures/PrivateBriefRequest";
 import { getVenture, ventures } from "@/lib/portfolio";
 import { getVentureImage } from "@/lib/ventureImagery";
+import { VentureLaunchPlan } from "@/components/ventures/VentureLaunchPlan";
+import { venturePlans } from "@/lib/venturePlans";
 import { pageMetadata } from "@/lib/metadata";
 import { ventureJsonLd } from "@/lib/structuredData";
 
@@ -84,6 +86,8 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
           <article><span>06 / Opportunity</span><h2>Who could materially help?</h2><p>{venture.opportunity}</p></article>
         </div>
       </section>
+
+      {venturePlans[venture.slug] && <VentureLaunchPlan plan={venturePlans[venture.slug]} accent={venture.accent} />}
 
       <section className="project-disclaimer" style={{ "--venture-accent": venture.accent } as CSSProperties}>
         <span>Public project information</span>
