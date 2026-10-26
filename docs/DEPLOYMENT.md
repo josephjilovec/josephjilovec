@@ -1,47 +1,5 @@
-# Vercel Deployment
+# Joseph Jilovec Venture Studio — Public File Notice
 
-## 1. Push repository
+The original internal technical planning and operational document that formerly appeared here has been preserved in the Venture Studio's restricted repository. This public reference remains so links from the website repository's README continue working.
 
-`package.json` is directly at the repository root. Push the root folder to GitHub.
-
-## 2. Import into Vercel
-
-Use Vercel's standard Next.js detection.
-
-- Framework Preset: Next.js
-- Root Directory: `./`
-- Install Command: default
-- Build Command: default
-- Output Directory: default
-
-## 3. Mail environment
-
-Add to Production, Preview, and Development as appropriate:
-
-- `RESEND_API_KEY`
-- `CONTACT_TO_EMAIL`
-- `CONTACT_FROM_EMAIL`
-
-Verify the sender domain with Resend before expecting production delivery.
-
-## 4. Domain
-
-Add `josephjilovec.com` in Vercel → Domains. Follow Vercel's current DNS instructions for the existing registrar.
-
-## 5. Smoke test after deployment
-
-Check:
-
-- `/`
-- `/ventures`
-- all seven project files
-- `/founder`
-- `/studio`
-- `/technology`
-- `/creative`
-- `/writing`
-- `/contact`
-- `sitemap.xml`
-- `robots.txt`
-
-Submit a contact test only after Resend environment variables are configured.
+For outward-facing project information visit https://josephjilovec.com. Historic Git revisions may continue to contain the originally published planning document.
