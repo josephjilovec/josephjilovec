@@ -8,6 +8,11 @@ export type VentureImage = {
 // The existing venture.accent and venture.accentSoft values remain the source of
 // truth for hover glow, interface tinting, Project Files, and Capital Files.
 export const ventureImagery: Record<string, VentureImage> = {
+  kinora: {
+    src: "/project-art/kinora.svg",
+    alt: "Kinora concept illustration showing complementary people connected around a shared network",
+    position: "center",
+  },
   "everstead-living": {
     src: "/project-hero/everstead-living.webp",
     alt: "AI-generated concept of a sunlit home with clear circulation, pale oak floors and sage seating",
