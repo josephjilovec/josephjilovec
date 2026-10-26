@@ -21,6 +21,7 @@ const brandedSubdomains: Record<string, string> = {
 const rawPortfolioVentures: PortfolioVenture[] = baseVentures.map((venture) => ({ ...venture, stage: venture.stage, externalUrl: brandedSubdomains[venture.slug] ?? venture.externalUrl }));
 
 const lifecycleBySlug: Record<string, VentureLifecycle> = {
+  "kinora": "BUILD",
   "experience-elsewhere": "DESIGN",
   "motoryn": "DESIGN",
   "techwater": "DESIGN",
@@ -49,6 +50,7 @@ const lifecycleBySlug: Record<string, VentureLifecycle> = {
 };
 
 const tierBySlug: Record<string, VentureTier> = {
+  "kinora": "Active Validations",
   "experience-elsewhere": "Incubation Concepts",
   "motoryn": "Incubation Concepts",
   "techwater": "Incubation Concepts",
@@ -497,8 +499,38 @@ const experienceElsewhere: PortfolioVenture = {
   tags: ["commerce","travel","hospitality","experiences","editorial","curation"]
 };
 
+const kinora: PortfolioVenture = {
+  slug: "kinora",
+  name: "Kinora",
+  eyebrow: "AI-assisted human connection / relationship intelligence",
+  category: "Technology",
+  stage: "System build",
+  status: "Public concept website",
+  summary:
+    "A privacy-first connection platform exploring how people can discover complementary collaborators, meaningful friendships, and intentional communities through explainable, opt-in matching.",
+  problem:
+    "Professional and social networks optimize discovery and attention, but people still struggle to find collaborators whose skills complement their own or communities where they genuinely belong.",
+  thesis:
+    "Consent-based profiles combining self-described interests, strengths, goals, values, and working preferences could help people discover more relevant connections, while transparent recommendations and mutual introductions preserve individual agency.",
+  currentState:
+    "A responsive Next.js public website and interactive concept demo have been committed to GitHub and deployed by the founder. Demo matches are fictional and browser-local; production accounts, real matchmaking, messaging, and user data infrastructure are not yet implemented or validated.",
+  founderRole:
+    "Venture concept, human-connection thesis, product positioning, privacy principles, matching-system direction, brand selection, experience design, and early platform development.",
+  nextMilestone:
+    "Interview founders and independent professionals, test whether explainable recommendations improve mutually accepted introductions, and prototype opt-in profiles, consent controls, and a narrowly scoped matching pilot.",
+  opportunity:
+    "Potential collaborators in matchmaking systems, human-computer interaction, privacy engineering, community design, organizational psychology, and startup team formation; initial design partners and pilot participants.",
+  externalUrl: "https://github.com/josephjilovec/kinora",
+  externalLabel: "View Kinora on GitHub",
+  art: "/project-art/kinora.svg",
+  heroArt: "/project-art/kinora.svg",
+  accent: "#D99177",
+  accentSoft: "rgba(217,145,119,.17)",
+  tags: ["technology", "ai", "matching", "community", "founder-teams", "privacy"]
+};
+
 export const ventures = parsePortfolioVentureList(
-  [...rawPortfolioVentures, payerDelta, givewiseInsights, adVibeCentral, kineticAromatics, atlasAssets, autoCompCorp, crestlineMetals, ameliora, eversteadLiving, qshipSupplyCo, solvanti, techwater, motoryn, experienceElsewhere].map((venture) => {
+  [...rawPortfolioVentures, payerDelta, givewiseInsights, adVibeCentral, kineticAromatics, atlasAssets, autoCompCorp, crestlineMetals, ameliora, eversteadLiving, qshipSupplyCo, solvanti, techwater, motoryn, experienceElsewhere, kinora].map((venture) => {
     const lifecycle = lifecycleBySlug[venture.slug] ?? "IDENTIFY";
     return {
       ...venture,
