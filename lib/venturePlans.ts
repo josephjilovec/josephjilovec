@@ -7,6 +7,26 @@ export type VenturePlan = {
 };
 
 export const venturePlans: Record<string, VenturePlan> = {
+  kinora: {
+    audiences: [
+      {title:"Early-stage founders",description:"People looking for complementary cofounders and collaborators who share their operating priorities."},
+      {title:"Independent professionals",description:"People seeking purposeful professional relationships beyond traditional feeds and follower counts."},
+      {title:"Community organizers",description:"Hosts who want to form smaller groups around shared interests and mutual participation."}
+    ],
+    offer:"The Kinora Introduction Pilot",
+    offerDescription:"A proposed, consent-based pilot to test transparent recommendations and mutual introductions among a small group of participants. No production matching or verified outcomes are claimed.",
+    deliverables:[
+      {title:"Opt-in connection profile",description:"A user-controlled profile describing interests, skills, goals, availability, and preferred collaboration style."},
+      {title:"Explainable shortlist",description:"A limited set of recommendations with plain-language reasons and visible limitations rather than invented compatibility scores."},
+      {title:"Mutual introduction workflow",description:"An introduction request that proceeds only when both parties agree, with feedback, blocking, and deletion controls."}
+    ],
+    milestones:[
+      {title:"Validate the need",description:"Interview 12 founders and independent professionals about unsuccessful introductions, trust concerns, and collaboration criteria."},
+      {title:"Test a small cohort",description:"Run a manually reviewed, opt-in introduction pilot with a limited participant group before deploying automated matching."},
+      {title:"Measure meaningful outcomes",description:"Track accepted introductions, useful follow-up conversations, privacy concerns, and sustained collaboration without claiming predictive accuracy prematurely."}
+    ]
+  },
+
   "everstead-living": {
     "audiences": [
       {
