@@ -13,7 +13,7 @@ export default function CreativePage() {
       <section className="creative-hero">
         <Image src={hotwax.art} alt="DJ Hotwax abstract artwork" fill priority sizes="100vw" />
         <div className="creative-hero-overlay" />
-        <div className="creative-hero-copy"><p className="hero-kicker">Creative channel / DJ Hotwax</p><h1>Genre is the palette.<br /><span>Atmosphere is the signature.</span></h1><p>Jazz, hip-hop, global rhythms, electronic music, and cinematic atmosphere live here without being forced into the visual language of a software company.</p><a className="button" href="https://djhotwax.vercel.app/" target="_blank" rel="noreferrer">Visit DJ Hotwax ↗</a></div>
+        <div className="creative-hero-copy"><p className="hero-kicker">Creative channel / DJ Hotwax</p><h1>Genre is the palette.<br /><span>Atmosphere is the signature.</span></h1><p>Jazz, hip-hop, global rhythms, electronic music, and cinematic atmosphere live here without being forced into the visual language of a software company.</p><a className="button" href="https://djhotwax.josephjilovec.com/" target="_blank" rel="noreferrer">Visit DJ Hotwax ↗</a></div>
       </section>
       <section className="section"><SectionHeading index="01" eyebrow="One name / four worlds" title="Music can move without losing identity." />
         <div className="music-world-grid"><article><span>01</span><h3>Velvet Rooms</h3><p>French jazz · Cuban nights · hot jazz</p></article><article><span>02</span><h3>Coastal Motion</h3><p>West Coast · soul · cruising music</p></article><article><span>03</span><h3>Heavy Gold</h3><p>Hip-hop · trap-soul · instrumental beats</p></article><article><span>04</span><h3>Night Current</h3><p>House · trance · electronic fusion</p></article></div>

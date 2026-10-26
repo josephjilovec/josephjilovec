@@ -340,7 +340,7 @@ const eversteadLiving: PortfolioVenture = {
     "Proposed first cohort: interview 10 households and 3 home-accessibility professionals to identify repeated planning problems. Trial the brief with 5 volunteer households in one local service area, subject to partner availability. Check whether priorities are understood, a professional can act on the brief, and follow-up questions decrease. These are validation goals, not reported results.",
   opportunity:
     "Initial customers: Homeowners planning ahead. People who want to understand access and comfort before a move, renovation, or change in household needs. Potential collaborators: Occupational therapists, accessibility designers and home-modification contractors interested in a clearer client handoff.",
-  externalUrl: "https://eversteadliving.vercel.app",
+  externalUrl: "https://eversteadliving.josephjilovec.com",
   externalLabel: "Explore Everstead Living",
   art: "/project-hero/everstead-living.webp",
   heroArt: "/project-hero/everstead-living.webp",
@@ -370,7 +370,7 @@ const qshipSupplyCo: PortfolioVenture = {
     "Proposed discovery: interview 8 small-business operators about recurring supply purchases and approval bottlenecks. Test one category with 3 design-partner businesses for 4 weeks, with written responsibilities and direct supplier payment. Track overdue follow-ups, missing approvals and staff effort against the pre-pilot process. No savings or delivery performance is claimed yet.",
   opportunity:
     "Initial customers: Small distributors. Owner-led businesses reordering packaging, consumables or general operating supplies from recurring suppliers. Potential collaborators: Operators with enough repeat buying to need a process, but no appetite for a large enterprise-system rollout.",
-  externalUrl: "https://qshipsupplyco.vercel.app",
+  externalUrl: "https://qshipsupplyco.josephjilovec.com",
   externalLabel: "Explore QShip Supply Co.",
   art: "/project-hero/qship-supply-co.webp",
   heroArt: "/project-hero/qship-supply-co.webp",
@@ -400,7 +400,7 @@ const solvanti: PortfolioVenture = {
     "Proposed discovery: interview 10 homeowners who are comparing efficiency or backup-power options. Review 5 sample household briefs with qualified energy professionals in one initial service region. Measure whether homeowners can explain trade-offs and providers receive the information they need. Savings, payback and uptime remain unverified.",
   opportunity:
     "Initial customers: Homeowners comparing options. People considering efficiency upgrades, solar or storage who want to make assumptions visible before committing. Potential collaborators: Assessors and licensed contractors interested in receiving a more organized account of household goals.",
-  externalUrl: "https://solvanti-two.vercel.app",
+  externalUrl: "https://solvanti.josephjilovec.com",
   externalLabel: "Explore Solvanti",
   art: "/project-hero/solvanti.webp",
   heroArt: "/project-hero/solvanti.webp",
@@ -430,10 +430,10 @@ const techwater: PortfolioVenture = {
     "Proposed discovery: work with 3 property operators to understand bill access, units and common data gaps. Test up to 10 properties over 3 reporting cycles, with permission to use records and a named follow-up owner. Track usable records, explained flags and completed site checks. Conservation savings and leak-detection performance are not claimed.",
   opportunity:
     "Initial customers: Small commercial portfolios. Property managers overseeing a handful of offices, retail locations or mixed-use buildings with separate water records. Potential collaborators: Professionals interested in a clearer data handoff before a site visit or equipment assessment.",
-  externalUrl: "https://techwater.vercel.app",
+  externalUrl: "https://techwater.josephjilovec.com",
   externalLabel: "Explore TechWater",
-  art: "/project-hero/techwater.webp",
-  heroArt: "/project-hero/techwater.webp",
+  art: "/project-art/techwater-report.svg",
+  heroArt: "/project-art/techwater-report.svg",
   accent: "#28B8C0",
   accentSoft: "rgba(40,184,192,.15)",
   tags: ["technology","water","conservation","analytics","facilities","climate"]
@@ -490,7 +490,7 @@ const experienceElsewhere: PortfolioVenture = {
     "Proposed discovery: interview 10 independent travelers and identify a region where specialist knowledge can be validated. Test 5 planning briefs with volunteer travelers and qualified local contributors before offering paid planning. Review pacing, source accuracy and how much of the plan travelers find useful. No bookings, supplier inventory or traveler outcomes are claimed.",
   opportunity:
     "Initial customers: Curious couples & friends. Independent travelers planning a roughly week-long trip who prefer a considered route to an exhaustive checklist. Potential collaborators: Guides and hospitality professionals interested in contributing grounded local knowledge to a planning pilot.",
-  externalUrl: "https://experienceelsewhere.vercel.app",
+  externalUrl: "https://experienceelsewhere.josephjilovec.com",
   externalLabel: "Explore Experience Elsewhere",
   art: "/project-hero/experience-elsewhere.webp",
   heroArt: "/project-hero/experience-elsewhere.webp",

@@ -104,7 +104,7 @@ export const ventures: Venture[] = [
       "Keep expanding the catalog while selectively pursuing placements, licensing, production work, and creative partnerships.",
     opportunity:
       "Production collaboration, music licensing, placements, visual work, and creative partnerships.",
-    externalUrl: "https://djhotwax.vercel.app/",
+    externalUrl: "https://djhotwax.josephjilovec.com/",
     externalLabel: "Visit DJ Hotwax",
     art: "/project-art/hotwax.svg",
     heroArt: "/project-hero/hotwax-hero.svg",
@@ -133,7 +133,7 @@ export const ventures: Venture[] = [
       "Separate demonstrable software interaction from speculative hardware assumptions and validate one useful adaptive feedback loop.",
     opportunity:
       "Human-computer interaction, BCI, privacy, signal-processing, and product-design collaborators.",
-    externalUrl: "https://vantahelix.vercel.app/",
+    externalUrl: "https://vantahelix.josephjilovec.com/",
     externalLabel: "Explore Vanta Helix",
     art: "/project-art/vanta.svg",
     heroArt: "/project-hero/vanta-hero.svg",
@@ -220,7 +220,7 @@ export const ventures: Venture[] = [
       "Complete product photography and supplier verification, legal/compliance review, test-mode payments, order storage, fulfillment mapping, and a complete test order before enabling live commerce.",
     opportunity:
       "Supplier relationships, product curation, e-commerce operations, brand partnerships, and launch-readiness collaborators.",
-    externalUrl: "https://alder-and-meridian.vercel.app/",
+    externalUrl: "https://aldermeridian.josephjilovec.com/",
     externalLabel: "Explore Alder & Meridian",
     art: "/project-art/alder.svg",
     heroArt: "/project-hero/alder-hero.svg",
@@ -249,7 +249,7 @@ export const ventures: Venture[] = [
       "Finalize proprietary product imagery and supplier specifications, validate the Athletic Fit measurement model, connect payment and fulfillment infrastructure, and complete an end-to-end test order.",
     opportunity:
       "Menswear manufacturers, made-to-order tailoring partners, footwear suppliers, apparel sourcing specialists, e-commerce operators, and brand collaborators.",
-    externalUrl: "https://jentlemens.vercel.app/",
+    externalUrl: "https://jentlemens.josephjilovec.com/",
     externalLabel: "Explore Jentlemens",
     art: "/project-art/jentlemens.svg",
     heroArt: "/project-hero/jentlemens-hero.svg",
@@ -307,7 +307,7 @@ export const ventures: Venture[] = [
       "Formalize the operating and governance structure, then launch one narrow community initiative with defined objectives, documentation, and public reporting.",
     opportunity:
       "Community organizations, educators, service networks, veterans groups, program advisers, volunteers, and mission-aligned supporters.",
-    externalUrl: "https://united-american-future.vercel.app/",
+    externalUrl: "https://unitedamericanfuture.josephjilovec.com/",
     externalLabel: "Visit United American Future",
     art: "/project-art/uaf.svg",
     heroArt: "/project-hero/uaf-hero.svg",
@@ -336,7 +336,7 @@ export const ventures: Venture[] = [
       "Establish the formal operating structure and develop one partner-led pilot with a defined need, delivery model, budget, evidence standard, and public outcome report.",
     opportunity:
       "Humanitarian partners, field organizations, researchers, technical advisers, volunteers, program designers, and mission-aligned supporters.",
-    externalUrl: "https://world-forward-foundation.vercel.app/",
+    externalUrl: "https://worldforwardfoundation.josephjilovec.com/",
     externalLabel: "Visit World Forward Foundation",
     art: "/project-art/wff.svg",
     heroArt: "/project-hero/wff-hero.svg",

@@ -2,10 +2,10 @@ const links = [
   "https://josephjilovec.com/",
   "https://myhealthyaura.com/",
   "https://swiftdealsolutions.com/",
-  "https://djhotwax.vercel.app/",
-  "https://vantahelix.vercel.app/",
+  "https://djhotwax.josephjilovec.com/",
+  "https://vantahelix.josephjilovec.com/",
   "https://www.cannacoreseeds.com/",
-  "https://snarklogic.vercel.app/",
+  "https://snarklogic.josephjilovec.com/",
   "https://medium.com/@jilovecjoseph",
   "https://calendar.app.google/Wa1YCdLV9LGK1jH98"
 ];

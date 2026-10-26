@@ -29,8 +29,8 @@ export const ventureImagery: Record<string, VentureImage> = {
     position: "center",
   },
   "techwater": {
-    src: "/project-hero/techwater.webp",
-    alt: "AI-generated concept of brass water-meter hardware and copper pipes in a clean utility room",
+    src: "/project-art/techwater-report.svg",
+    alt: "Illustrative TechWater Water Use Review with fictional billing data",
     position: "center",
   },
   "motoryn": {
