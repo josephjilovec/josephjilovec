@@ -333,7 +333,7 @@ const eversteadLiving: PortfolioVenture = {
   thesis:
     "Everstead Living is being designed to turn those concerns into an organized, room-by-room brief: what matters now, what can wait, and which questions need a qualified professional. The starting point is your routine, your priorities, and a home that still feels like yours.",
   currentState:
-    "The public repository now contains a complete responsive concept website, custom AI-generated hero imagery, a defined initial audience, the proposed The Home Adaptation Brief, practical service examples, FAQs and a browser-local inquiry builder. Service delivery, professional partnerships and the validation targets remain proposed; no commercial results are claimed.",
+    "Explore the home one routine at a time: arrival, movement, bathing and evening light. Select rooms, see an illustrative adaptation brief, and prepare a household-planning note. The proposed service remains in development; clinical assessment, technical design and construction require appropriately qualified professionals.",
   founderRole:
     "Venture concept, accessible-living positioning, customer journey, brand and visual direction, preliminary website architecture, and early service-validation planning.",
   nextMilestone:
@@ -363,7 +363,7 @@ const qshipSupplyCo: PortfolioVenture = {
   thesis:
     "QShip’s first proposed offer is a managed coordination workflow for recurring, non-regulated business supplies. Start with an agreed supplier list and a single purchasing process. Add software only after the workflow proves useful.",
   currentState:
-    "The public repository now contains a complete responsive concept website, custom AI-generated hero imagery, a defined initial audience, the proposed The Purchasing Coordination Pilot, practical service examples, FAQs and a browser-local inquiry builder. Service delivery, professional partnerships and the validation targets remain proposed; no commercial results are claimed.",
+    "Follow a fictional carton purchase from specification through quote comparison, client approval and a receiving discrepancy. See who owns each next action, then describe one recurring purchasing handoff. This is a proposed coordination pilot; no live orders, supplier inventory, carriage or handling of client funds is offered.",
   founderRole:
     "Business concept, initial workflow taxonomy, B2B product positioning, visual system, interface direction, and early technical architecture.",
   nextMilestone:
@@ -393,7 +393,7 @@ const solvanti: PortfolioVenture = {
   thesis:
     "Solvanti’s proposed starting point is a human-reviewed household energy brief. It organizes bill history, priorities and property questions before a homeowner chooses equipment, financing or an installer.",
   currentState:
-    "The public repository now contains a complete responsive concept website, custom AI-generated hero imagery, a defined initial audience, the proposed The Household Energy Brief, practical service examples, FAQs and a browser-local inquiry builder. Service delivery, professional partnerships and the validation targets remain proposed; no commercial results are claimed.",
+    "Explore daytime use, evening demand and interruption priorities, then make the assumptions in an illustrative energy example visible. Compare efficiency, solar and backup as different decisions and prepare questions for a qualified provider. The example is not equipment sizing, a system quote or verified household performance.",
   founderRole:
     "Energy-resilience venture framing, brand strategy, experience narrative, early assessment design, product direction, and partner-validation planning.",
   nextMilestone:
@@ -423,7 +423,7 @@ const techwater: PortfolioVenture = {
   thesis:
     "TechWater’s first proposed product is a monthly review built from client-supplied bills or meter exports. It would normalize records by billing duration, document context and flag questions for the property team. Connected sensors can wait until the reporting workflow earns its place.",
   currentState:
-    "Explore an illustrative Water Use Review, compare billed totals with daily consumption, and prepare an inquiry in your browser. The sample uses fictional records to explain the proposed reporting method. Pilot availability, service delivery and professional partnerships remain in development; no completed client results are claimed.",
+    "Trace an illustrative Water Use Review from bill records to daily-normalized consumption, property-context questions and an owned follow-up. Compare totals with daily use and prepare a record-readiness note. All sample records are fictional. Pilot availability and service delivery remain in development; no leak diagnosis or measured savings is claimed.",
   founderRole:
     "Water-technology market exploration, analytics concept, brand positioning, visual language, dashboard experience design, and early product research.",
   nextMilestone:
@@ -453,7 +453,7 @@ const motoryn: PortfolioVenture = {
   thesis:
     "Motoryn’s proposed first offer is a maintenance organization brief for a household vehicle. It brings owner-supplied records and manufacturer guidance together, while leaving inspection, diagnosis and repair decisions with qualified technicians.",
   currentState:
-    "The public repository now contains a complete responsive concept website, custom AI-generated hero imagery, a defined initial audience, the proposed The Ownership Care Brief, practical service examples, FAQs and a browser-local inquiry builder. Service delivery, professional partnerships and the validation targets remain proposed; no commercial results are claimed.",
+    "Explore a fictional ownership timeline that separates documented work, owner recollection and unknown service history. See a workshop handoff and prepare questions from the gaps in your own record. The planning concept does not provide inspections, diagnoses, repair bookings or a vetted service network.",
   founderRole:
     "Automotive venture thesis, brand identity, visual art direction, ownership journey design, service-marketplace concept, and early partner strategy.",
   nextMilestone:
@@ -483,7 +483,7 @@ const experienceElsewhere: PortfolioVenture = {
   thesis:
     "Experience Elsewhere’s proposed first offer is a human-reviewed planning brief for a short, independent trip in one region. It pairs a clear route and realistic pacing with direct booking links that travelers verify and purchase themselves.",
   currentState:
-    "The public repository now contains a complete responsive concept website, custom AI-generated hero imagery, a defined initial audience, the proposed The Elsewhere Journey Brief, practical service examples, FAQs and a browser-local inquiry builder. Service delivery, professional partnerships and the validation targets remain proposed; no commercial results are claimed.",
+    "Explore an editorial coastal journey and adjust a fictional six-day, two-base pacing study. Choose your rhythm and interests to prepare a first planning note. The photographs are imagined concept scenes, and the sample is not a bookable itinerary. Pilot scope remains in development; travelers verify current details and book directly.",
   founderRole:
     "Travel venture concept, experience curation thesis, editorial positioning, brand and visual storytelling, initial trip-planning journey, and partner-research direction.",
   nextMilestone:
