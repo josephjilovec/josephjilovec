@@ -21,6 +21,12 @@ const brandedSubdomains: Record<string, string> = {
 const rawPortfolioVentures: PortfolioVenture[] = baseVentures.map((venture) => ({ ...venture, stage: venture.stage, externalUrl: brandedSubdomains[venture.slug] ?? venture.externalUrl }));
 
 const lifecycleBySlug: Record<string, VentureLifecycle> = {
+  "experience-elsewhere": "DESIGN",
+  "motoryn": "DESIGN",
+  "techwater": "DESIGN",
+  "solvanti": "DESIGN",
+  "qship-supply-co": "DESIGN",
+  "everstead-living": "DESIGN",
   "payer-delta": "BUILD",
   "my-healthy-aura": "TEST",
   "swift-deal-solutions": "TEST",
@@ -43,6 +49,12 @@ const lifecycleBySlug: Record<string, VentureLifecycle> = {
 };
 
 const tierBySlug: Record<string, VentureTier> = {
+  "experience-elsewhere": "Incubation Concepts",
+  "motoryn": "Incubation Concepts",
+  "techwater": "Incubation Concepts",
+  "solvanti": "Incubation Concepts",
+  "qship-supply-co": "Incubation Concepts",
+  "everstead-living": "Incubation Concepts",
   "crestline-metals": "Flagship Assets",
   "ameliora": "Active Validations",
   "payer-delta": "Active Validations",
@@ -304,8 +316,189 @@ const ameliora: PortfolioVenture = {
   tags: ["living-conditions", "shared-prosperity", "civic", "impact", "wellbeing", "transparency"]
 };
 
+// New venture-studio concepts: public design prototypes, not verified operating businesses.
+const eversteadLiving: PortfolioVenture = {
+  slug: "everstead-living",
+  name: "Everstead Living",
+  eyebrow: "Accessible homes / aging-in-place planning",
+  category: "Commerce",
+  stage: "Concept designed",
+  status: "Public design prototype",
+  summary:
+    "A considered-living venture exploring accessible home assessments, adaptable interiors, and practical aging-in-place planning that balances everyday independence with a warm residential experience.",
+  problem:
+    "Homeowners and families often encounter fragmented guidance when trying to improve accessibility, safety, comfort, and long-term adaptability without turning their homes into clinical spaces.",
+  thesis:
+    "An approachable assessment and planning experience, supported by qualified local specialists, could help households prioritize improvements that fit their routines, budgets, and changing needs.",
+  currentState:
+    "The public Everstead Living repository contains a responsive editorial homepage concept with a clear three-stage approach. Assessment tooling, professional partnerships, customer pilots, and commercial service delivery have not yet been established.",
+  founderRole:
+    "Venture concept, accessible-living positioning, customer journey, brand and visual direction, preliminary website architecture, and early service-validation planning.",
+  nextMilestone:
+    "Interview homeowners, caregivers, accessibility specialists, and qualified home-modification professionals; validate one assessment-to-referral workflow before presenting services as operational.",
+  opportunity:
+    "Occupational therapists, certified aging-in-place specialists, home-modification contractors, accessibility designers, local service operators, and pilot households.",
+  externalUrl: "https://eversteadliving.vercel.app",
+  externalLabel: "Explore Everstead Living",
+  art: "/project-art/everstead-living.svg",
+  heroArt: "/project-art/everstead-living.svg",
+  accent: "#9DB5A0",
+  accentSoft: "rgba(157,181,160,.16)",
+  tags: ["commerce","accessible-living","aging-in-place","home-services","design","concept"]
+};
+
+const qshipSupplyCo: PortfolioVenture = {
+  slug: "qship-supply-co",
+  name: "QShip Supply Co.",
+  eyebrow: "B2B logistics / procurement coordination",
+  category: "Technology",
+  stage: "Concept designed",
+  status: "Public design prototype",
+  summary:
+    "An operations-technology venture exploring simpler procurement, supplier coordination, shipment visibility, and accountable handoffs for small and growing businesses.",
+  problem:
+    "Smaller organizations frequently manage sourcing requests, supplier records, purchasing status, and delivery follow-up across disconnected email threads, spreadsheets, and informal handoffs.",
+  thesis:
+    "A focused, workflow-first coordination layer could help operators organize supplier-to-delivery decisions without forcing them into a complex enterprise resource planning system.",
+  currentState:
+    "The public QShip Supply Co. repository contains a responsive industrial-style concept website and illustrative logistics dashboard. The dashboard is not connected to live suppliers, orders, or inventory; no production platform or paying customers are claimed.",
+  founderRole:
+    "Business concept, initial workflow taxonomy, B2B product positioning, visual system, interface direction, and early technical architecture.",
+  nextMilestone:
+    "Choose one narrow business segment, document its current purchasing and fulfillment process, test a prototype with real operators, and define the smallest secure working integration.",
+  opportunity:
+    "Small-business operators, purchasing managers, logistics and fulfillment specialists, supplier networks, operations software partners, and pilot customers.",
+  externalUrl: "https://qshipsupplyco.vercel.app",
+  externalLabel: "Explore QShip Supply Co.",
+  art: "/project-art/qship-supply-co.svg",
+  heroArt: "/project-art/qship-supply-co.svg",
+  accent: "#A5F5D4",
+  accentSoft: "rgba(165,245,212,.15)",
+  tags: ["technology","b2b","logistics","procurement","supply-chain","workflow"]
+};
+
+const solvanti: PortfolioVenture = {
+  slug: "solvanti",
+  name: "Solvanti",
+  eyebrow: "Home energy / resilience / efficiency",
+  category: "Technology",
+  stage: "Concept designed",
+  status: "Public design prototype",
+  summary:
+    "A home-energy planning venture exploring clearer ways to evaluate efficiency, backup-power options, household resilience, and qualified implementation pathways.",
+  problem:
+    "Households considering energy upgrades often face competing product claims, confusing cost assumptions, and disconnected conversations about consumption, storage, outages, and installation.",
+  thesis:
+    "An educational, scenario-based planning experience could help homeowners understand energy trade-offs and connect with qualified professionals without presenting unverified savings or installation guarantees.",
+  currentState:
+    "The Solvanti public repository includes a cinematic, scroll-driven concept homepage and a three-step planning narrative. There is no live energy calculator, installation network, or verified customer savings dataset yet.",
+  founderRole:
+    "Energy-resilience venture framing, brand strategy, experience narrative, early assessment design, product direction, and partner-validation planning.",
+  nextMilestone:
+    "Validate the target homeowner segment, research regional energy and licensing requirements, source reliable assumptions, and test one transparent energy-resilience planning tool.",
+  opportunity:
+    "Licensed energy contractors, efficiency assessors, solar and storage specialists, utilities and program advisers, home insurers, and pilot homeowners.",
+  externalUrl: "https://solvanti-two.vercel.app",
+  externalLabel: "Explore Solvanti",
+  art: "/project-art/solvanti.svg",
+  heroArt: "/project-art/solvanti.svg",
+  accent: "#E7BD77",
+  accentSoft: "rgba(231,189,119,.15)",
+  tags: ["technology","energy","resilience","home-services","efficiency","concept"]
+};
+
+const techwater: PortfolioVenture = {
+  slug: "techwater",
+  name: "TechWater",
+  eyebrow: "Water intelligence / conservation technology",
+  category: "Technology",
+  stage: "Concept designed",
+  status: "Public design prototype",
+  summary:
+    "A water-intelligence venture exploring understandable water-use information, conservation planning, and decision support for properties, facilities, and irrigation-intensive operations.",
+  problem:
+    "Water-use data can be difficult to interpret across bills, meters, facilities, and seasonal demand, leaving potential inefficiencies hard to see and conservation priorities hard to rank.",
+  thesis:
+    "Clearer measurement, visualization, and practical planning could help property and operations teams identify meaningful water-efficiency opportunities when the underlying data and assumptions are reliable.",
+  currentState:
+    "The public TechWater repository has a responsive concept website with an illustrative water-analytics interface. It is not connected to meters or live customer data, and no monitoring or savings claims have been validated.",
+  founderRole:
+    "Water-technology market exploration, analytics concept, brand positioning, visual language, dashboard experience design, and early product research.",
+  nextMilestone:
+    "Select an initial customer segment such as commercial property operators or irrigation managers, define data access and privacy requirements, and validate a narrowly scoped water-use reporting prototype.",
+  opportunity:
+    "Water-efficiency professionals, irrigation operators, property managers, facility teams, utility program specialists, data-integration partners, and pilot customers.",
+  externalUrl: "https://techwater.vercel.app",
+  externalLabel: "Explore TechWater",
+  art: "/project-art/techwater.svg",
+  heroArt: "/project-art/techwater.svg",
+  accent: "#28B8C0",
+  accentSoft: "rgba(40,184,192,.15)",
+  tags: ["technology","water","conservation","analytics","facilities","climate"]
+};
+
+const motoryn: PortfolioVenture = {
+  slug: "motoryn",
+  name: "Motoryn",
+  eyebrow: "Automotive ownership / service coordination",
+  category: "Commerce",
+  stage: "Concept designed",
+  status: "Public design prototype",
+  summary:
+    "A premium automotive-services venture exploring easier vehicle-care planning, maintenance understanding, and access to appropriate service providers throughout the ownership journey.",
+  problem:
+    "Vehicle owners must piece together maintenance records, service timing, provider quality, and cost expectations across scattered tools and inconsistent service experiences.",
+  thesis:
+    "A thoughtfully designed ownership companion and curated service-coordination experience could reduce uncertainty while leaving diagnosis and repairs to appropriately qualified professionals.",
+  currentState:
+    "The Motoryn public repository contains a bold, responsive automotive concept homepage with a stylized performance-car illustration and three service pillars. Service booking, provider vetting, vehicle-data integrations, and live commerce are not yet operational.",
+  founderRole:
+    "Automotive venture thesis, brand identity, visual art direction, ownership journey design, service-marketplace concept, and early partner strategy.",
+  nextMilestone:
+    "Select a narrow initial vehicle-care category, interview owners and service shops, define provider-verification standards, and test one manual coordination pilot before automating booking.",
+  opportunity:
+    "Independent repair and detailing shops, automotive technicians, fleet operators, vehicle owners, service-network partners, and automotive product collaborators.",
+  externalUrl: "https://motoryn-amber.vercel.app",
+  externalLabel: "Explore Motoryn",
+  art: "/project-art/motoryn.svg",
+  heroArt: "/project-art/motoryn.svg",
+  accent: "#D7FA5C",
+  accentSoft: "rgba(215,250,92,.14)",
+  tags: ["commerce","automotive","vehicle-care","service-marketplace","maintenance","concept"]
+};
+
+const experienceElsewhere: PortfolioVenture = {
+  slug: "experience-elsewhere",
+  name: "Experience Elsewhere (EE)",
+  eyebrow: "Curated travel / immersive experiences",
+  category: "Commerce",
+  stage: "Concept designed",
+  status: "Public design prototype",
+  summary:
+    "A travel and experiences venture exploring memorable itineraries, destination storytelling, and curated journeys built around personal interests rather than generic travel packages.",
+  problem:
+    "Travelers face an overwhelming volume of destination content and booking choices but often lack a coherent way to translate personal interests into distinctive, practical experiences.",
+  thesis:
+    "Editorial discovery paired with a focused, human-reviewed trip-planning experience could help travelers find more meaningful journeys and make informed choices about operators and activities.",
+  currentState:
+    "The public Experience Elsewhere repository contains a responsive, atmospheric travel-editorial homepage and three illustrative journey categories. No trips, supplier inventory, bookings, or paid travel services are currently represented as live.",
+  founderRole:
+    "Travel venture concept, experience curation thesis, editorial positioning, brand and visual storytelling, initial trip-planning journey, and partner-research direction.",
+  nextMilestone:
+    "Select a first destination niche, validate traveler demand, research booking and seller-of-travel obligations where applicable, and pilot one clearly scoped itinerary-planning experience.",
+  opportunity:
+    "Destination specialists, local guides, hospitality operators, travel advisers, experience curators, photographers, and travelers interested in pilot planning services.",
+  externalUrl: "https://experienceelsewhere.vercel.app",
+  externalLabel: "Explore Experience Elsewhere",
+  art: "/project-art/experience-elsewhere.svg",
+  heroArt: "/project-art/experience-elsewhere.svg",
+  accent: "#DDA879",
+  accentSoft: "rgba(221,168,121,.16)",
+  tags: ["commerce","travel","hospitality","experiences","editorial","curation"]
+};
+
 export const ventures = parsePortfolioVentureList(
-  [...rawPortfolioVentures, payerDelta, givewiseInsights, adVibeCentral, kineticAromatics, atlasAssets, autoCompCorp, crestlineMetals, ameliora].map((venture) => {
+  [...rawPortfolioVentures, payerDelta, givewiseInsights, adVibeCentral, kineticAromatics, atlasAssets, autoCompCorp, crestlineMetals, ameliora, eversteadLiving, qshipSupplyCo, solvanti, techwater, motoryn, experienceElsewhere].map((venture) => {
     const lifecycle = lifecycleBySlug[venture.slug] ?? "IDENTIFY";
     return {
       ...venture,
