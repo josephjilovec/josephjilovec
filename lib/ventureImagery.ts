@@ -8,6 +8,36 @@ export type VentureImage = {
 // The existing venture.accent and venture.accentSoft values remain the source of
 // truth for hover glow, interface tinting, Project Files, and Capital Files.
 export const ventureImagery: Record<string, VentureImage> = {
+  "everstead-living": {
+    src: "/project-art/everstead-living.svg",
+    alt: "Warm architectural illustration of an adaptable, sunlit home interior",
+    position: "center",
+  },
+  "qship-supply-co": {
+    src: "/project-art/qship-supply-co.svg",
+    alt: "Industrial logistics illustration showing connected suppliers, operational routing and fulfillment",
+    position: "center",
+  },
+  "solvanti": {
+    src: "/project-art/solvanti.svg",
+    alt: "Cinematic solar-energy illustration with a glowing sphere and technical geometry",
+    position: "center",
+  },
+  "techwater": {
+    src: "/project-art/techwater.svg",
+    alt: "Water-intelligence illustration with layered water flows, sensor rings and measurement lines",
+    position: "center",
+  },
+  "motoryn": {
+    src: "/project-art/motoryn.svg",
+    alt: "Premium automotive illustration of a streamlined performance vehicle in a dark studio",
+    position: "center",
+  },
+  "experience-elsewhere": {
+    src: "/project-art/experience-elsewhere.svg",
+    alt: "Atmospheric travel illustration of layered mountain landscapes at sunset",
+    position: "center",
+  },
   "my-healthy-aura": {
     src: "https://images.pexels.com/photos/17640379/pexels-photo-17640379.jpeg?auto=compress&cs=tinysrgb&w=2200",
     alt: "Serene modern wellness interior with soft natural light",
