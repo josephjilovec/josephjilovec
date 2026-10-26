@@ -412,7 +412,7 @@ const solvanti: PortfolioVenture = {
 const techwater: PortfolioVenture = {
   slug: "techwater",
   name: "TechWater",
-  eyebrow: "Water intelligence / conservation technology",
+  eyebrow: "Bill-based water reporting",
   category: "Technology",
   stage: "Concept designed",
   status: "Public design prototype",
@@ -423,7 +423,7 @@ const techwater: PortfolioVenture = {
   thesis:
     "TechWater’s first proposed product is a monthly review built from client-supplied bills or meter exports. It would normalize records by billing duration, document context and flag questions for the property team. Connected sensors can wait until the reporting workflow earns its place.",
   currentState:
-    "The public repository now contains a complete responsive concept website, custom AI-generated hero imagery, a defined initial audience, the proposed The Water Use Review, practical service examples, FAQs and a browser-local inquiry builder. Service delivery, professional partnerships and the validation targets remain proposed; no commercial results are claimed.",
+    "Explore an illustrative Water Use Review, compare billed totals with daily consumption, and prepare an inquiry in your browser. The sample uses fictional records to explain the proposed reporting method. Pilot availability, service delivery and professional partnerships remain in development; no completed client results are claimed.",
   founderRole:
     "Water-technology market exploration, analytics concept, brand positioning, visual language, dashboard experience design, and early product research.",
   nextMilestone:

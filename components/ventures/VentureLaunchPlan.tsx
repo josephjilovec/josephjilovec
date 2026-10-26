@@ -17,7 +17,7 @@ export function VentureLaunchPlan({ plan, accent }: { plan: VenturePlan; accent:
       </div>
       <p className={styles.kicker}>Validation targets</p>
       <ol className={styles.milestones}>{plan.milestones.map((item) => <li key={item.title}><h3>{item.title}</h3><p>{item.description}</p></li>)}</ol>
-      <p className={styles.note}>The project imagery is AI-generated concept art. It does not document an operating service, inspected property, customer engagement or bookable experience.</p>
+      <p className={styles.note}>{plan.imageDisclosure ?? "The project imagery is AI-generated concept art. It does not document an operating service, inspected property, customer engagement or bookable experience."}</p>
     </section>
   );
 }

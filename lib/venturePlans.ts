@@ -1,4 +1,5 @@
 export type VenturePlan = {
+  imageDisclosure?: string;
   audiences: { title: string; description: string }[];
   offer: string;
   offerDescription: string;
@@ -166,6 +167,7 @@ export const venturePlans: Record<string, VenturePlan> = {
     ]
   },
   "techwater": {
+    imageDisclosure: "The sample report is an illustrative diagram with fictional billing records. It does not represent a completed client review, a leak diagnosis or measured savings.",
     "audiences": [
       {
         "title": "Small commercial portfolios",
