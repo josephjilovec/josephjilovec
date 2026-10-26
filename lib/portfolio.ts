@@ -520,8 +520,8 @@ const kinora: PortfolioVenture = {
     "Interview founders and independent professionals, test whether explainable recommendations improve mutually accepted introductions, and prototype opt-in profiles, consent controls, and a narrowly scoped matching pilot.",
   opportunity:
     "Potential collaborators in matchmaking systems, human-computer interaction, privacy engineering, community design, organizational psychology, and startup team formation; initial design partners and pilot participants.",
-  externalUrl: "https://github.com/josephjilovec/kinora",
-  externalLabel: "View Kinora on GitHub",
+  externalUrl: "https://kinora.josephjilovec.com/",
+  externalLabel: "Explore Kinora",
   art: "/project-art/kinora.svg",
   heroArt: "/project-art/kinora.svg",
   accent: "#D99177",
