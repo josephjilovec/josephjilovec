@@ -23,7 +23,6 @@ const rawPortfolioVentures: PortfolioVenture[] = baseVentures.map((venture) => (
 const lifecycleBySlug: Record<string, VentureLifecycle> = {
   "givewise-insights": "TEST",
   "payer-delta": "BUILD",
-  "sam-gov-monitor": "BUILD",
   "atlas-assets": "TEST",
   "autocomp-corp": "TEST",
   "crestline-metals": "DESIGN",
@@ -53,7 +52,6 @@ const lifecycleBySlug: Record<string, VentureLifecycle> = {
 const tierBySlug: Record<string, VentureTier> = {
   "givewise-insights": "Flagship Assets",
   "payer-delta": "Flagship Assets",
-  "sam-gov-monitor": "Flagship Assets",
   "atlas-assets": "Flagship Assets",
   "autocomp-corp": "Flagship Assets",
   "crestline-metals": "Flagship Assets",
@@ -98,7 +96,6 @@ const businessStatusBySlug: Record<string, BusinessStatus> = {
 
   // In Development
   "swift-deal-solutions": "In Development",
-  "sam-gov-monitor": "In Development",
   "atlas-assets": "In Development",
   "autocomp-corp": "In Development",
   "advibe-central": "In Development",
@@ -572,38 +569,8 @@ const kinora: PortfolioVenture = {
   tags: ["technology", "ai", "matching", "community", "founder-teams", "privacy"]
 };
 
-const samGovMonitor: PortfolioVenture = {
-  slug: "sam-gov-monitor",
-  name: "SAM.gov Remote Opportunities Monitor",
-  eyebrow: "Federal contracting intelligence & opportunity scanner",
-  category: "Technology",
-  stage: "API Scanner Pipeline",
-  status: "In Development",
-  summary:
-    "An autonomous scanner and scoring pipeline designed to find niche, solo-executable, remote-friendly federal contract opportunities on SAM.gov.",
-  problem:
-    "Federal solicitations on SAM.gov are voluminous, unstructured, and predominantly require mandatory on-site presence, security clearances, or complex prime contractor infrastructure, making solo and small business discovery inefficient.",
-  thesis:
-    "An automated keyword and exclusion filtering layer can isolate Simplified Acquisition Procedures (SAP under $250k) and small business set-asides suited for solo execution, telework, and targeted service competencies.",
-  currentState:
-    "A functional Python monitor and scoring pipeline scanning SAM.gov API feeds with keyword screening, exclusion gatekeeping, and ranked CSV opportunity exports. Registered under Jentlemens LLC with active daily and biweekly scanning runs.",
-  founderRole:
-    "Pipeline architecture, SAM.gov API integration, keyword taxonomy, exclusion gatekeeper logic, and contract opportunity scoring.",
-  nextMilestone:
-    "Automate daily opportunity scoring and evaluate real bid submissions for targeted service competencies.",
-  opportunity:
-    "Solo consultants, small business contractors, and remote professional service providers seeking high-signal federal contracting intelligence.",
-  externalUrl: "https://sam.gov",
-  externalLabel: "Federal SAM.gov Portal",
-  art: "/project-art/givewise.svg",
-  heroArt: "/project-hero/givewise-hero.svg",
-  accent: "#4A90E2",
-  accentSoft: "rgba(74,144,226,.15)",
-  tags: ["technology", "federal-contracting", "sam-gov", "automation", "intelligence", "remote-work"]
-};
-
 export const ventures = parsePortfolioVentureList(
-  [...rawPortfolioVentures, payerDelta, givewiseInsights, samGovMonitor, adVibeCentral, kineticAromatics, atlasAssets, autoCompCorp, crestlineMetals, ameliora, eversteadLiving, qshipSupplyCo, solvanti, techwater, motoryn, experienceElsewhere, kinora].map((venture) => {
+  [...rawPortfolioVentures, payerDelta, givewiseInsights, adVibeCentral, kineticAromatics, atlasAssets, autoCompCorp, crestlineMetals, ameliora, eversteadLiving, qshipSupplyCo, solvanti, techwater, motoryn, experienceElsewhere, kinora].map((venture) => {
     const lifecycle = lifecycleBySlug[venture.slug] ?? "IDENTIFY";
     return {
       ...venture,
