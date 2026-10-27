@@ -8,9 +8,33 @@ import { ventures, ventureCategories, ventureTiers } from "@/lib/portfolio";
 import type { VentureTier } from "@/lib/ventureSchema";
 import { getVentureImage } from "@/lib/ventureImagery";
 
+function statusToClass(status: string) {
+  return status.toLowerCase().replace(/\s+/g, "-");
+}
+
 export function VentureGrid() {
   const [tier, setTier] = useState<(typeof ventureTiers)[number]>("All Assets");
   const [category, setCategory] = useState<(typeof ventureCategories)[number]>("All");
+
+  const tierCounts = useMemo(() => {
+    const counts: Record<string, number> = { "All Assets": ventures.length };
+    ventureTiers.forEach((t) => {
+      if (t !== "All Assets") {
+        counts[t] = ventures.filter((v) => v.tier === t).length;
+      }
+    });
+    return counts;
+  }, []);
+
+  const categoryCounts = useMemo(() => {
+    const counts: Record<string, number> = { All: ventures.length };
+    ventureCategories.forEach((c) => {
+      if (c !== "All") {
+        counts[c] = ventures.filter((v) => v.category === c).length;
+      }
+    });
+    return counts;
+  }, []);
 
   const visible = useMemo(() => ventures.filter((venture) => {
     const tierMatch = tier === "All Assets" || venture.tier === tier;
@@ -29,23 +53,35 @@ export function VentureGrid() {
   return (
     <div>
       <div className="portfolio-filter-stack">
-        <div className="filter-bar" aria-label="Filter ventures by maturity">
-          {ventureTiers.map((item) => (
-            <button
-              key={item}
-              onClick={() => setTier(item)}
-              className={tier === item ? "active" : ""}
-              aria-pressed={tier === item}
-            >
-              {item}
-            </button>
-          ))}
+        <div className="filter-bar" aria-label="Filter ventures by strategic maturity tier">
+          {ventureTiers.map((item) => {
+            const isActive = tier === item;
+            return (
+              <button
+                key={item}
+                onClick={() => setTier(item)}
+                className={`portfolio-filter-btn ${isActive ? "active" : ""}`}
+                aria-pressed={isActive}
+              >
+                <span className="filter-label">{item}</span>
+                <span className="filter-count">{tierCounts[item]}</span>
+              </button>
+            );
+          })}
         </div>
 
         <label className="portfolio-sector-filter">
-          Sector
-          <select value={category} onChange={(event) => setCategory(event.target.value as typeof category)}>
-            {ventureCategories.map((item) => <option key={item} value={item}>{item}</option>)}
+          <span>Sector / Category</span>
+          <select
+            value={category}
+            onChange={(event) => setCategory(event.target.value as typeof category)}
+            aria-label="Filter ventures by sector or category"
+          >
+            {ventureCategories.map((item) => (
+              <option key={item} value={item}>
+                {item} ({categoryCounts[item]})
+              </option>
+            ))}
           </select>
         </label>
       </div>
@@ -61,6 +97,7 @@ export function VentureGrid() {
             <div className="venture-grid">
               {items.map((venture, index) => {
                 const image = getVentureImage(venture.slug);
+                const statusClass = statusToClass(venture.businessStatus);
 
                 return (
                   <article
@@ -91,9 +128,17 @@ export function VentureGrid() {
 
                     <div className="venture-card-copy">
                       <div className="card-meta">
-                        <span>{venture.tier}</span>
-                        <span>{venture.lifecycle}</span>
-                        <span>{venture.category}</span>
+                        <span className="meta-tier">{venture.tier}</span>
+                        <span className="meta-sep">•</span>
+                        <span className="meta-lifecycle">{venture.lifecycle}</span>
+                      </div>
+
+                      <div className="card-status-row">
+                        <span className={`business-status-pill status-${statusClass}`}>
+                          <span className="status-indicator-dot" aria-hidden="true" />
+                          <span className="status-name">{venture.businessStatus}</span>
+                        </span>
+                        <span className="card-sector-tag">{venture.category}</span>
                       </div>
 
                       <h3><Link href={"/portfolio/" + venture.slug}>{venture.name}</Link></h3>

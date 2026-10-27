@@ -40,11 +40,31 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
         .project-hero-art .venture-project-photo-tone{position:absolute;inset:0;z-index:1;pointer-events:none;background:transparent}
         .project-hero-art .project-art-caption{z-index:2}
         .project-hero-art{box-shadow:0 34px 90px rgba(0,0,0,.32),0 0 58px var(--venture-soft)}
+        .business-status-pill{display:inline-flex;align-items:center;gap:7px;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.03em;line-height:1.2}
+        .status-indicator-dot{width:7px;height:7px;border-radius:50%}
+        .status-operating-business{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.38);color:#4ade80}
+        .status-operating-business .status-indicator-dot{background:#22c55e;box-shadow:0 0 8px rgba(34,197,94,.7)}
+        .status-available-service{background:rgba(14,165,233,.12);border:1px solid rgba(14,165,233,.38);color:#38bdf8}
+        .status-available-service .status-indicator-dot{background:#0284c7;box-shadow:0 0 8px rgba(14,165,233,.7)}
+        .status-in-development{background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.38);color:#fbbf24}
+        .status-in-development .status-indicator-dot{background:#f59e0b;box-shadow:0 0 8px rgba(245,158,11,.7)}
+        .status-previously-operated{background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.35);color:#c4b5fd}
+        .status-previously-operated .status-indicator-dot{background:#a78bfa;box-shadow:0 0 8px rgba(167,139,250,.6)}
+        .status-concept{background:rgba(148,163,184,.10);border:1px solid rgba(148,163,184,.26);color:#cbd5e1}
+        .status-concept .status-indicator-dot{background:#94a3b8}
       `}</style>
       <section className="project-hero" style={{ "--venture-accent": venture.accent, "--venture-soft": venture.accentSoft } as CSSProperties}>
         <div className="project-hero-copy">
           <Link href="/portfolio" className="back-link">← Portfolio</Link>
-          <div className="project-meta"><span>{venture.tier}</span><span>{venture.lifecycle}</span><span>{venture.category}</span></div>
+          <div className="project-meta">
+            <span>{venture.tier}</span>
+            <span>{venture.lifecycle}</span>
+            <span>{venture.category}</span>
+            <span className={`business-status-pill status-${venture.businessStatus.toLowerCase().replace(/\s+/g, "-")}`}>
+              <span className="status-indicator-dot" aria-hidden="true" />
+              {venture.businessStatus}
+            </span>
+          </div>
           <p className="hero-kicker">{venture.eyebrow}</p>
           <h1>{venture.name}</h1>
           <p className="project-summary">{venture.summary}</p>

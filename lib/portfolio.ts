@@ -1,6 +1,6 @@
 import { ventures as baseVentures } from "@/lib/ventures";
 import type { Venture } from "@/lib/ventures";
-import { parsePortfolioVentureList, type VentureLifecycle, type VentureTier } from "@/lib/ventureSchema";
+import { parsePortfolioVentureList, type VentureLifecycle, type VentureTier, type BusinessStatus } from "@/lib/ventureSchema";
 
 export type PortfolioVenture = Omit<Venture, "stage" | "category"> & {
   stage: string;
@@ -21,14 +21,12 @@ const brandedSubdomains: Record<string, string> = {
 const rawPortfolioVentures: PortfolioVenture[] = baseVentures.map((venture) => ({ ...venture, stage: venture.stage, externalUrl: brandedSubdomains[venture.slug] ?? venture.externalUrl }));
 
 const lifecycleBySlug: Record<string, VentureLifecycle> = {
-  "kinora": "BUILD",
-  "experience-elsewhere": "DESIGN",
-  "motoryn": "DESIGN",
-  "techwater": "DESIGN",
-  "solvanti": "DESIGN",
-  "qship-supply-co": "DESIGN",
-  "everstead-living": "DESIGN",
+  "givewise-insights": "TEST",
   "payer-delta": "BUILD",
+  "sam-gov-monitor": "BUILD",
+  "atlas-assets": "TEST",
+  "autocomp-corp": "TEST",
+  "crestline-metals": "DESIGN",
   "my-healthy-aura": "TEST",
   "swift-deal-solutions": "TEST",
   "dj-hotwax": "BUILD",
@@ -37,32 +35,29 @@ const lifecycleBySlug: Record<string, VentureLifecycle> = {
   "snarklogic": "BUILD",
   "alder-and-meridian": "BUILD",
   "jentlemens": "BUILD",
+  "advibe-central": "TEST",
+  "kinetic-aromatics": "TEST",
+  "ameliora": "DESIGN",
+  "kinora": "BUILD",
   "united-american-future": "DESIGN",
   "toenail-fungus-survivor-foundation": "DESIGN",
   "world-forward-foundation": "DESIGN",
-  "givewise-insights": "TEST",
-  "advibe-central": "TEST",
-  "kinetic-aromatics": "TEST",
-  "atlas-assets": "TEST",
-  "autocomp-corp": "TEST",
-  "crestline-metals": "DESIGN",
-  "ameliora": "DESIGN"
+  "everstead-living": "DESIGN",
+  "qship-supply-co": "DESIGN",
+  "solvanti": "DESIGN",
+  "techwater": "DESIGN",
+  "motoryn": "DESIGN",
+  "experience-elsewhere": "DESIGN"
 };
 
 const tierBySlug: Record<string, VentureTier> = {
-  "kinora": "Active Validations",
-  "experience-elsewhere": "Incubation Concepts",
-  "motoryn": "Incubation Concepts",
-  "techwater": "Incubation Concepts",
-  "solvanti": "Incubation Concepts",
-  "qship-supply-co": "Incubation Concepts",
-  "everstead-living": "Incubation Concepts",
-  "crestline-metals": "Flagship Assets",
-  "ameliora": "Active Validations",
-  "payer-delta": "Active Validations",
   "givewise-insights": "Flagship Assets",
-  "autocomp-corp": "Flagship Assets",
+  "payer-delta": "Flagship Assets",
+  "sam-gov-monitor": "Flagship Assets",
   "atlas-assets": "Flagship Assets",
+  "autocomp-corp": "Flagship Assets",
+  "crestline-metals": "Flagship Assets",
+
   "my-healthy-aura": "Active Validations",
   "swift-deal-solutions": "Active Validations",
   "dj-hotwax": "Active Validations",
@@ -73,39 +68,87 @@ const tierBySlug: Record<string, VentureTier> = {
   "jentlemens": "Active Validations",
   "advibe-central": "Active Validations",
   "kinetic-aromatics": "Active Validations",
+  "ameliora": "Active Validations",
+  "kinora": "Active Validations",
+
   "united-american-future": "Incubation Concepts",
   "toenail-fungus-survivor-foundation": "Incubation Concepts",
-  "world-forward-foundation": "Incubation Concepts"
+  "world-forward-foundation": "Incubation Concepts",
+  "everstead-living": "Incubation Concepts",
+  "qship-supply-co": "Incubation Concepts",
+  "solvanti": "Incubation Concepts",
+  "techwater": "Incubation Concepts",
+  "motoryn": "Incubation Concepts",
+  "experience-elsewhere": "Incubation Concepts"
+};
+
+const businessStatusBySlug: Record<string, BusinessStatus> = {
+  // Operating Business
+  "dj-hotwax": "Operating Business",
+
+  // Available Service
+  "givewise-insights": "Available Service",
+  "payer-delta": "Available Service",
+
+  // Previously Operated
+  "my-healthy-aura": "Previously Operated",
+  "cannacore-seeds": "Previously Operated",
+  "jentlemens": "Previously Operated",
+  "kinetic-aromatics": "Previously Operated",
+
+  // In Development
+  "swift-deal-solutions": "In Development",
+  "sam-gov-monitor": "In Development",
+  "atlas-assets": "In Development",
+  "autocomp-corp": "In Development",
+  "advibe-central": "In Development",
+  "ameliora": "In Development",
+  "kinora": "In Development",
+  "snarklogic": "In Development",
+
+  // Concept
+  "crestline-metals": "Concept",
+  "vanta-helix": "Concept",
+  "alder-and-meridian": "Concept",
+  "united-american-future": "Concept",
+  "toenail-fungus-survivor-foundation": "Concept",
+  "world-forward-foundation": "Concept",
+  "everstead-living": "Concept",
+  "qship-supply-co": "Concept",
+  "solvanti": "Concept",
+  "techwater": "Concept",
+  "motoryn": "Concept",
+  "experience-elsewhere": "Concept"
 };
 
 const payerDelta: PortfolioVenture = {
   slug: "payer-delta",
-  name: "Payer Delta",
-  eyebrow: "Healthcare RCM & Operational Automation",
+  name: "Payer Delta Arizona",
+  eyebrow: "Healthcare RCM / Arizona Payer Intelligence & Appeals",
   category: "Technology",
-  stage: "Automated Appeal Execution",
-  status: "Public service",
+  stage: "Live Appeal & Monitoring Engine",
+  status: "Available Service",
   summary:
-    "An automated workflow engine designed to eliminate denial backlogs. Payer Delta integrates directly with billing pipelines to match denial codes, extract policy citations, assemble chart notes, and generate structured internal appeal packets.",
+    "A recurring research, monitoring, and operational intelligence briefing for Arizona medical practices and revenue-cycle operators, paired with an automated denial appeal generation engine.",
   problem:
-    "Billing companies process claim denials daily through internal payer appeal channels. Assembling the exact denial codes, payer medical policy citations, and supporting clinical chart notes manually creates repetitive paperwork and persistent denial backlogs.",
+    "Arizona medical practices and billing teams struggle to keep up with fragmented payer policy updates, hospital pricing shifts, and administrative denial backlogs that delay cash flow and tie up billing staff.",
   thesis:
-    "Automated denial management and internal appeal execution for medical billing teams. Payer Delta automates this repetitive paperwork—ensuring every appeal includes the exact codes, clinical chart notes, and policy citations required for swift reconsideration.",
+    "An external monitoring guardrail and deterministic appeal assembly engine can deliver Arizona RCM teams immediate payer-change intelligence and audit-ready appeal packets without requiring internal IT integration.",
   currentState:
-    "The public Payer Delta platform is live at payerdelta.josephjilovec.com, detailing the four-stage execution pipeline—Denial Matching, Policy Extraction, Chart Assembly, and Appeal Generation—for internal payer appeal workflows. Specific financial recovery or turnaround claims are not presented as established proof unless independently supported.",
+    "The public Payer Delta Arizona platform is live at payerdelta.josephjilovec.com, detailing the four-stage execution pipeline—Denial Matching, Policy Extraction, Chart Assembly, and Appeal Generation. Engine v3.1.0 operates deterministic 835 balance checks, statutory framing under 42 CFR § 447.10, and HIPAA BAA compliance.",
   founderRole:
-    "Workflow engine architecture, denial-code and policy-citation mapping, clinical chart-assembly logic, appeal packet structure, RCM operating model, and product positioning.",
+    "Venture architecture, Arizona payer monitoring rules, statutory framing, deterministic claim balance logic, appeal packet design, and client outreach.",
   nextMilestone:
-    "Validate the four-stage appeal execution pipeline across high-volume denial categories with medical billing teams, measuring packet completeness, biller review time, and reconsideration turnaround.",
+    "Deliver recurring intelligence briefings and appeal packets to initial Arizona specialty clinic cohorts.",
   opportunity:
-    "Medical billing companies, RCM operations leaders, specialty clinic billing teams, and healthcare workflow partners looking to eliminate denial backlogs through structured internal appeal execution.",
+    "Arizona medical practices, revenue-cycle operations leaders, and specialty billing teams seeking denial recovery and payer change intelligence.",
   externalUrl: "https://payerdelta.josephjilovec.com",
-  externalLabel: "Visit Payer Delta",
+  externalLabel: "Visit Payer Delta Arizona",
   art: "/project-art/givewise.svg",
   heroArt: "/project-hero/givewise-hero.svg",
   accent: "#3fa7a3",
   accentSoft: "rgba(63,167,163,.15)",
-  tags: ["healthcare", "rcm", "denial-management", "appeals", "automation"]
+  tags: ["healthcare", "rcm", "denial-management", "appeals", "arizona", "intelligence"]
 };
 
 const givewiseInsights: PortfolioVenture = {
@@ -114,7 +157,7 @@ const givewiseInsights: PortfolioVenture = {
   eyebrow: "AI transformation & technology advisory",
   category: "Technology",
   stage: "Market-Ready Advisory",
-  status: "Public",
+  status: "Available Service",
   summary:
     "A founder-led AI transformation and technology advisory helping organizations make clearer decisions about AI strategy, agentic workflows, data readiness, governance, automation, and modernization.",
   problem:
@@ -124,7 +167,7 @@ const givewiseInsights: PortfolioVenture = {
   currentState:
     "The public consulting website is live with a defined AI transformation positioning, interactive capability explorer, AI-readiness diagnostic, market-signal interface, contact pathway, and Vercel deployment. Client outcomes are not presented as established proof unless independently supported.",
   founderRole:
-    "Consulting brand strategy, AI transformation framework, technology-advisory positioning, decision architecture, workflow and governance models, interactive diagnostic design, and digital platform development.",
+    "Lead advisor. Consulting brand strategy, AI transformation framework, technology-advisory positioning, decision architecture, workflow and governance models, interactive diagnostic design, and digital platform development.",
   nextMilestone:
     "Convert the public advisory model into a small number of clearly scoped consulting engagements and document the resulting decision process, deliverables, and measurable operating outcomes.",
   opportunity:
@@ -173,29 +216,29 @@ const kineticAromatics: PortfolioVenture = {
   name: "Kinetic Aromatics",
   eyebrow: "Active-lifestyle aromatic roll-ons",
   category: "Commerce",
-  stage: "Launch-Ready Brand",
-  status: "Public",
+  stage: "Previously Operated",
+  status: "Previously operated brand",
   summary:
-    "A gym- and active-lifestyle aromatic brand centered on compact essential-oil roll-ons designed as personal scent rituals for before training, after training, and everyday movement.",
+    "A gym- and active-lifestyle aromatic brand centered on compact essential-oil roll-ons previously developed by the founder as personal scent rituals for before and after training.",
   problem:
     "Gym-bag personal care often splits between fragrance, supplements, and generic wellness products, leaving little room for a compact aromatic ritual positioned specifically around active routines and personal scent.",
   thesis:
     "A focused roll-on format can occupy a distinct active-lifestyle lane when scent profiles, portability, packaging, and the before-and-after workout ritual are treated as one coherent product experience rather than as broad wellness claims.",
   currentState:
-    "The public Next.js brand experience is built with a five-scent product system, scent filtering, local cart behavior, an interactive Gym Bag Essential feature, and a three-step scent quiz. Checkout remains a demonstration flow until live payment and fulfillment infrastructure are enabled and tested.",
+    "Physical active-lifestyle aromatic formulations, five-scent product system, and packaging prototypes were previously developed and produced; currently inactive and not in active commercial operation.",
   founderRole:
-    "Brand strategy, category positioning, scent-system direction, product architecture, active-lifestyle framing, commerce experience, quiz design, and digital platform development.",
+    "Founder. Brand strategy, category positioning, scent formulation direction, product packaging architecture, and commerce experience design.",
   nextMilestone:
-    "Finalize production and fulfillment details, verify product and packaging inputs, connect a tested payment flow, and validate initial demand with a controlled launch rather than relying on demonstration engagement alone.",
+    "Brand and formulation archive preserved as founder-owned intellectual property; no ongoing commercial production.",
   opportunity:
-    "Product manufacturing, packaging, fulfillment, fitness partnerships, retail testing, creator collaborations, and active-lifestyle distribution.",
+    "Product formulation archives, active-lifestyle brand assets, and scent-system packaging designs.",
   externalUrl: "https://kineticaromatics.josephjilovec.com/",
   externalLabel: "Visit Kinetic Aromatics",
   art: "/project-art/kinetic-botanicals.svg",
   heroArt: "/project-hero/kinetic-botanicals-hero.svg",
   accent: "#b7ef55",
   accentSoft: "rgba(183,239,85,.15)",
-  tags: ["commerce", "active-lifestyle", "aromatics", "fitness", "product"]
+  tags: ["commerce", "active-lifestyle", "aromatics", "previously-operated"]
 };
 
 const atlasAssets: PortfolioVenture = {
@@ -529,12 +572,43 @@ const kinora: PortfolioVenture = {
   tags: ["technology", "ai", "matching", "community", "founder-teams", "privacy"]
 };
 
+const samGovMonitor: PortfolioVenture = {
+  slug: "sam-gov-monitor",
+  name: "SAM.gov Remote Opportunities Monitor",
+  eyebrow: "Federal contracting intelligence & opportunity scanner",
+  category: "Technology",
+  stage: "API Scanner Pipeline",
+  status: "In Development",
+  summary:
+    "An autonomous scanner and scoring pipeline designed to find niche, solo-executable, remote-friendly federal contract opportunities on SAM.gov.",
+  problem:
+    "Federal solicitations on SAM.gov are voluminous, unstructured, and predominantly require mandatory on-site presence, security clearances, or complex prime contractor infrastructure, making solo and small business discovery inefficient.",
+  thesis:
+    "An automated keyword and exclusion filtering layer can isolate Simplified Acquisition Procedures (SAP under $250k) and small business set-asides suited for solo execution, telework, and targeted service competencies.",
+  currentState:
+    "A functional Python monitor and scoring pipeline scanning SAM.gov API feeds with keyword screening, exclusion gatekeeping, and ranked CSV opportunity exports. Registered under Jentlemens LLC with active daily and biweekly scanning runs.",
+  founderRole:
+    "Pipeline architecture, SAM.gov API integration, keyword taxonomy, exclusion gatekeeper logic, and contract opportunity scoring.",
+  nextMilestone:
+    "Automate daily opportunity scoring and evaluate real bid submissions for targeted service competencies.",
+  opportunity:
+    "Solo consultants, small business contractors, and remote professional service providers seeking high-signal federal contracting intelligence.",
+  externalUrl: "https://sam.gov",
+  externalLabel: "Federal SAM.gov Portal",
+  art: "/project-art/givewise.svg",
+  heroArt: "/project-hero/givewise-hero.svg",
+  accent: "#4A90E2",
+  accentSoft: "rgba(74,144,226,.15)",
+  tags: ["technology", "federal-contracting", "sam-gov", "automation", "intelligence", "remote-work"]
+};
+
 export const ventures = parsePortfolioVentureList(
-  [...rawPortfolioVentures, payerDelta, givewiseInsights, adVibeCentral, kineticAromatics, atlasAssets, autoCompCorp, crestlineMetals, ameliora, eversteadLiving, qshipSupplyCo, solvanti, techwater, motoryn, experienceElsewhere, kinora].map((venture) => {
+  [...rawPortfolioVentures, payerDelta, givewiseInsights, samGovMonitor, adVibeCentral, kineticAromatics, atlasAssets, autoCompCorp, crestlineMetals, ameliora, eversteadLiving, qshipSupplyCo, solvanti, techwater, motoryn, experienceElsewhere, kinora].map((venture) => {
     const lifecycle = lifecycleBySlug[venture.slug] ?? "IDENTIFY";
     return {
       ...venture,
       tier: tierBySlug[venture.slug] ?? "Incubation Concepts",
+      businessStatus: businessStatusBySlug[venture.slug] ?? "Concept",
       lifecycle,
       stage: lifecycle
     };

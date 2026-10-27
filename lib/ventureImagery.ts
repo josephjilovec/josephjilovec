@@ -95,8 +95,13 @@ export const ventureImagery: Record<string, VentureImage> = {
   },
   "payer-delta": {
     src: "https://images.pexels.com/photos/3184436/pexels-photo-3184436.jpeg?auto=compress&cs=tinysrgb&w=2200",
-    alt: "Medical billing operations team reviewing appeal documentation together",
+    alt: "Medical billing operations team reviewing appeal documentation for Payer Delta Arizona",
     position: "center 46%",
+  },
+  "sam-gov-monitor": {
+    src: "https://images.pexels.com/photos/5483077/pexels-photo-5483077.jpeg?auto=compress&cs=tinysrgb&w=2200",
+    alt: "Data intelligence console monitoring structured federal contract opportunity feeds",
+    position: "center 48%",
   },
   "givewise-insights": {
     src: "https://images.pexels.com/photos/7869102/pexels-photo-7869102.jpeg?auto=compress&cs=tinysrgb&w=2200",

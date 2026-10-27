@@ -59,7 +59,7 @@ export function PortfolioUniverse() {
                         <span className="venture-node-topline"><span>{venture.lifecycle}</span><em>{venture.category}</em></span>
                         <span className="venture-node-body-v3">
                           <span className="venture-node-icon" aria-hidden="true"><Image src={ventureSignalArt[venture.slug] ?? venture.art} alt="" fill sizes="48px" /></span>
-                          <span className="venture-node-copy-v3"><strong>{venture.name}</strong><small>{venture.tier}</small></span>
+                          <span className="venture-node-copy-v3"><strong>{venture.name}</strong><small>{venture.businessStatus}</small></span>
                         </span>
                       </button>
                     );
@@ -80,7 +80,7 @@ export function PortfolioUniverse() {
             <div className="venture-preview-signal"><span>SELECTED VENTURE</span><i /><strong>{String(activeIndex + 1).padStart(2, "0")}</strong></div>
           </div>
           <div className="venture-preview-content">
-            <div className="venture-preview-meta"><span>{active.tier}</span><span>{active.lifecycle}</span><span>{active.category}</span></div>
+            <div className="venture-preview-meta"><span>{active.tier}</span><span>{active.lifecycle}</span><span>{active.category}</span><span style={{ color: "#B08D57", fontWeight: 700 }}>{active.businessStatus}</span></div>
             <h3>{active.name}</h3>
             <p>{active.summary}</p>
             <div className="venture-preview-tags">{active.tags.slice(0, 4).map((tag) => <span key={tag}>{tag}</span>)}</div>

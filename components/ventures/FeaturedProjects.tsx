@@ -42,7 +42,7 @@ export function FeaturedProjects() {
                 <div className={styles.worldMeta}>
                   <span>{venture.category}</span>
                   <span>{venture.tier}</span>
-                  <span>{venture.lifecycle}</span>
+                  <span style={{ color: "#B08D57", fontWeight: 700 }}>{venture.businessStatus}</span>
                 </div>
                 <div>
                   <p>{venture.eyebrow}</p>

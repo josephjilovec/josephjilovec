@@ -3,6 +3,13 @@ import { z } from "zod";
 export const ventureLifecycleSchema = z.enum(["IDENTIFY", "DESIGN", "TEST", "BUILD"]);
 export const ventureTierSchema = z.enum(["Flagship Assets", "Active Validations", "Incubation Concepts"]);
 export const ventureCategorySchema = z.enum(["Commerce", "Behavioral", "Technology", "Creative", "Civic", "Industrial"]);
+export const businessStatusSchema = z.enum([
+  "Operating Business",
+  "Available Service",
+  "In Development",
+  "Concept",
+  "Previously Operated"
+]);
 
 export const portfolioVentureSchema = z.object({
   slug: z.string().min(1),
@@ -10,6 +17,7 @@ export const portfolioVentureSchema = z.object({
   eyebrow: z.string().min(1),
   category: ventureCategorySchema,
   tier: ventureTierSchema,
+  businessStatus: businessStatusSchema,
   lifecycle: ventureLifecycleSchema,
   stage: z.string().min(1),
   status: z.string().min(1),
@@ -31,6 +39,7 @@ export const portfolioVentureSchema = z.object({
 
 export type VentureLifecycle = z.infer<typeof ventureLifecycleSchema>;
 export type VentureTier = z.infer<typeof ventureTierSchema>;
+export type BusinessStatus = z.infer<typeof businessStatusSchema>;
 export type PortfolioVenture = z.infer<typeof portfolioVentureSchema>;
 
 export function parsePortfolioVentureList(input: unknown): PortfolioVenture[] {

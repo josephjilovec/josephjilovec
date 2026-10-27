@@ -31,28 +31,28 @@ export const ventures: Venture[] = [
     eyebrow: "Behavioral / personal performance",
     category: "Behavioral",
     stage: "Concept designed",
-    status: "Public concept",
+    status: "Previously operated practice",
     summary:
-      "A one-to-one personal-performance concept built around structured conversation, focus conditioning, personalized routines, and a calmer client experience.",
+      "A one-to-one personal performance and hypnotherapy practice previously operated by the founder, combining structured routine conditioning, guided behavior design, and individualized client sessions.",
     problem:
       "Many productivity tools organize tasks while leaving resistance, attention drift, motivation, and follow-through largely untouched.",
     thesis:
-      "A guided format combining practical behavior design with individualized routines may help some clients create more consistent focus and action.",
+      "A guided format combining practical behavior design with individualized routines can help clients create more consistent focus and personal follow-through.",
     currentState:
-      "The public brand site, service positioning, and initial client journey exist. Outcomes and repeat demand still need disciplined pilot measurement.",
+      "Founder previously provided coaching and hypnotherapy under this brand with real client engagements; no longer actively practicing or accepting new clients.",
     founderRole:
-      "Brand direction, service design, behavioral framing, session structure, client experience, and pilot-measurement design.",
+      "Founder and practitioner. Service design, behavioral framing, hypnotherapy session structure, and individual client protocols.",
     nextMilestone:
-      "Run a clearly defined pilot and measure completion, perceived value, repeat interest, and where the format does or does not help.",
+      "Preserve practice methodology and case frameworks as reference models; no active client acquisition.",
     opportunity:
-      "Pilot participants, referral partners, and collaborators in ethical performance coaching and behavior design.",
+      "Case studies, behavioral research, and methodology insights from historical one-to-one client engagements.",
     externalUrl: "https://myhealthyaura.com/",
     externalLabel: "Visit My Healthy Aura",
     art: "/project-art/aura.svg",
     heroArt: "/project-hero/aura-hero.svg",
     accent: "#8bd5c7",
     accentSoft: "rgba(139,213,199,.14)",
-    tags: ["behavioral", "active", "performance", "services"]
+    tags: ["behavioral", "performance", "hypnotherapy", "previously-operated"]
   },
   {
     slug: "swift-deal-solutions",
@@ -60,28 +60,28 @@ export const ventures: Venture[] = [
     eyebrow: "Private transaction venture",
     category: "Commerce",
     stage: "Concept designed",
-    status: "Public concept",
+    status: "In Development",
     summary:
-      "A structured sourcing and transaction concept for qualified participants in fragmented, high-value asset markets.",
+      "A structured sourcing, qualification, and transaction matching venture for qualified participants in fragmented, high-value asset markets.",
     problem:
-      "High-value transactions can depend on slow discovery, inconsistent screening, and informal coordination across multiple parties.",
+      "High-value transactions often depend on slow discovery, inconsistent screening, and informal coordination across multiple parties.",
     thesis:
-      "A disciplined sourcing workflow, qualification layer, and transaction process may reduce friction for owners and serious buyers without pretending to replace licensed specialists where required.",
+      "A disciplined sourcing workflow, qualification layer, and transaction process can reduce friction for owners and serious buyers without replacing licensed specialists where required.",
     currentState:
-      "The public site and initial workflow are defined. Customer discovery, jurisdiction-specific operating design, and a complete live transaction test remain the next proof points.",
+      "Transaction sourcing workflow, qualification framework, and initial drafted intermediary and fee agreements are established in active development.",
     founderRole:
-      "Opportunity framing, customer and workflow design, commercial model development, partner recruitment, and validation planning.",
+      "Venture architecture, deal sourcing workflow, qualification framework, draft intermediary agreement design, and transaction mechanics.",
     nextMilestone:
-      "Interview the first customer segment and test one narrow transaction workflow with explicit compliance boundaries.",
+      "Execute initial sourcing scenarios under drafted intermediary agreements with qualified commercial counterparties.",
     opportunity:
-      "Operating partners, market-domain advisers, and pilot participants with real transaction experience.",
+      "Operating partners, market-domain advisers, and participants with qualified high-value private market transactions.",
     externalUrl: "https://swiftdealsolutions.com/",
     externalLabel: "Visit Swift Deal Solutions",
     art: "/project-art/swift.svg",
     heroArt: "/project-hero/swift-hero.svg",
     accent: "#c9a76a",
     accentSoft: "rgba(201,167,106,.15)",
-    tags: ["commerce", "active", "marketplaces", "operations"]
+    tags: ["commerce", "transactions", "sourcing", "in-development"]
   },
   {
     slug: "dj-hotwax",
@@ -89,28 +89,28 @@ export const ventures: Venture[] = [
     eyebrow: "Independent music identity",
     category: "Creative",
     stage: "Creative project",
-    status: "Public catalog",
+    status: "Operating business",
     summary:
-      "Joseph's music identity spanning jazz, hip-hop, global rhythms, electronic music, and cinematic atmosphere.",
+      "Joseph's creative music identity and production catalog spanning jazz, hip-hop, global rhythms, electronic music, and cinematic atmosphere.",
     problem:
-      "DJ Hotwax is the creative channel in the portfolio: a place for original music, visual worlds, releases, and collaboration rather than a conventional startup problem statement.",
+      "DJ Hotwax is the creative operating channel in the portfolio: a home for original music, visual worlds, commercial releases, and artist collaboration.",
     thesis:
-      "Different genres can live under one artist identity when the connective tissue is taste, atmosphere, sequencing, and a recognizable point of view.",
+      "Diverse genres can live under one cohesive artist identity when unified by distinct taste, atmosphere, sequencing, and sonic point of view.",
     currentState:
-      "The standalone website and public music catalog are live, with long-form releases and multiple stylistic directions already represented.",
+      "Active creative operating activity streaming via DistroKid across Spotify, Apple Music, and major digital platforms, with recurring royalties received.",
     founderRole:
-      "Music direction, concept development, release identity, visual world-building, catalog curation, and creative collaboration.",
+      "Artist, composer, producer, sound design, visual world-building, release strategy, and creative direction.",
     nextMilestone:
-      "Keep expanding the catalog while selectively pursuing placements, licensing, production work, and creative partnerships.",
+      "Continue catalog expansion while selectively pursuing licensing placements, sync agreements, and production collaborations.",
     opportunity:
-      "Production collaboration, music licensing, placements, visual work, and creative partnerships.",
+      "Production collaboration, sync licensing, media placements, visual scoring, and creative partnerships.",
     externalUrl: "https://djhotwax.josephjilovec.com/",
     externalLabel: "Visit DJ Hotwax",
     art: "/project-art/hotwax.svg",
     heroArt: "/project-hero/hotwax-hero.svg",
     accent: "#ff7849",
     accentSoft: "rgba(255,120,73,.15)",
-    tags: ["creative", "active", "music", "licensing"]
+    tags: ["creative", "operating", "music", "distrokid", "licensing"]
   },
   {
     slug: "vanta-helix",
@@ -147,28 +147,28 @@ export const ventures: Venture[] = [
     eyebrow: "Genetics brand + JJ Stash editorial",
     category: "Commerce",
     stage: "Active brand",
-    status: "Seed bank + publication",
+    status: "Previously operated business",
     summary:
-      "A cannabis genetics and seed-bank brand paired with JJ Stash, the editorial layer covering genetics, breeding history, cultivation practices, and plant culture.",
+      "A founder-founded cannabis genetics and seed brand with real operating business history, paired with JJ Stash, the publication covering cultivar histories and cultivation practices.",
     problem:
       "Genetics markets are crowded with inconsistent documentation, fragmented cultivar histories, and brands that often separate product discovery from useful educational context.",
     thesis:
       "A focused seed brand can become more valuable when the genetics catalog is paired with credible strain history, breeding context, and an editorial voice that treats plant culture seriously.",
     currentState:
-      "CannaCore Seeds has a public seed-bank presence, while the JJ Stash repository documents the publication/newsletter concept focused on cultivars, auto-flowering genetics, breeding history, and cultivation insights.",
+      "Founder-owned venture where real commercial activity and transactions occurred; public brand and genetics catalog documented alongside JJ Stash editorial archives.",
     founderRole:
-      "Brand direction, genetics curation, breeding perspective, catalog strategy, editorial positioning, and culture-focused content development.",
+      "Founder and owner. Genetics curation, catalog direction, brand architecture, and editorial development.",
     nextMilestone:
-      "Tighten the connection between the seed-bank experience and JJ Stash so product discovery, genetics documentation, and editorial content reinforce one another.",
+      "Preserve catalog assets, brand archives, and genetics documentation as founder-owned IP; no active commercial transactions.",
     opportunity:
-      "Breeders, genetics collaborators, editorial contributors, collectors, and compliant industry partners.",
+      "Genetics documentation, historical strain archives, and culture-focused editorial assets.",
     externalUrl: "https://cannacoreseeds.com/",
     externalLabel: "Visit CannaCore Seeds",
     art: "/project-art/cannacore.svg",
     heroArt: "/project-hero/cannacore-hero.svg",
     accent: "#75d58a",
     accentSoft: "rgba(117,213,138,.14)",
-    tags: ["commerce", "active", "genetics", "editorial", "culture"]
+    tags: ["commerce", "genetics", "cannabis", "previously-operated"]
   },
   {
     slug: "snarklogic",
@@ -234,28 +234,28 @@ export const ventures: Venture[] = [
     eyebrow: "Menswear / wardrobe systems",
     category: "Commerce",
     stage: "Commerce build",
-    status: "Menswear commerce platform",
+    status: "Previously operated business",
     summary:
-      "A focused menswear brand built around Athletic Fit, made-to-order tailoring, a permanent neutral wardrobe, and fewer pieces designed to work together.",
+      "A menswear, tailored wardrobe, and premium resale business previously operated by the founder with a physical retail storefront, customer transactions, and wardrobe systems.",
     problem:
       "Men's wardrobes often become collections of disconnected purchases with inconsistent fit, too many near-duplicate options, and little guidance on how pieces combine across work, travel, and everyday life.",
     thesis:
       "A disciplined wardrobe system can reduce choice without reducing usefulness: one recognizable house fit, a permanent tailoring palette, a small set of shirts and accessories, and footwear designed around repeatable combinations rather than endless assortment.",
     currentState:
-      "The multi-page Next.js commerce platform is live in development with dedicated departments for suits, shirts, trousers, shoes, accessories, fit guidance, and made-to-order measurement capture. Supplier fulfillment and live payment operations remain future launch work.",
+      "Previously operated physical storefront and menswear resale operation with verified point-of-sale customer transactions; retail location no longer actively operating.",
     founderRole:
-      "Brand architecture, Athletic Fit positioning, wardrobe-system design, merchandising strategy, made-to-order experience, footwear direction, product taxonomy, and commerce platform development.",
+      "Founder and owner. Retail operations, Athletic Fit positioning, wardrobe-system design, inventory acquisition, merchandising, and customer styling.",
     nextMilestone:
-      "Finalize proprietary product imagery and supplier specifications, validate the Athletic Fit measurement model, connect payment and fulfillment infrastructure, and complete an end-to-end test order.",
+      "Retain brand assets, trademarks, and wardrobe framework for future licensing or digital reactivation; no ongoing retail storefront.",
     opportunity:
-      "Menswear manufacturers, made-to-order tailoring partners, footwear suppliers, apparel sourcing specialists, e-commerce operators, and brand collaborators.",
+      "Menswear brand assets, wardrobe taxonomy, and historical styling frameworks.",
     externalUrl: "https://jentlemens.josephjilovec.com/",
     externalLabel: "Explore Jentlemens",
     art: "/project-art/jentlemens.svg",
     heroArt: "/project-hero/jentlemens-hero.svg",
     accent: "#a8875a",
     accentSoft: "rgba(168,135,90,.15)",
-    tags: ["commerce", "menswear", "fashion", "made-to-order", "wardrobe-system", "athletic-fit"]
+    tags: ["commerce", "menswear", "fashion", "resale", "previously-operated"]
   },
   {
     slug: "toenail-fungus-survivor-foundation",
