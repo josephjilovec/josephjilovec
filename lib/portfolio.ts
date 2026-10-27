@@ -151,31 +151,31 @@ const payerDelta: PortfolioVenture = {
 const givewiseInsights: PortfolioVenture = {
   slug: "givewise-insights",
   name: "GiveWise Insights",
-  eyebrow: "AI & technology advisory",
+  eyebrow: "AI & automation for Phoenix-area business owners",
   category: "Technology",
-  stage: "AI Readiness Plans",
+  stage: "AI Advice & Scoped Automation",
   status: "Available Service",
   summary:
-    "An independent AI and technology advisory for operations and IT leaders at growing companies, with a free opportunity review and the $1,500 Works-With-What-You-Have AI Plan.",
+    "Independent AI advice and scoped administrative automation for owner-run Phoenix-area businesses, starting with healthcare practices and professional services. Calls are $75 for 30 minutes or $250 for 60 minutes; builds and upkeep are separately quoted.",
   problem:
-    "Companies with 20 to 500 people often have access to AI tools but lack an AI team to decide which projects are worth doing, what their data needs, and what people must approve before anything goes live.",
+    "Business owners can see repetitive office work and too many software choices but lack time to determine which AI changes are useful, what information they require, and which decisions must stay with people.",
   thesis:
-    "Start with one operating team and one or two candidate workflows. Compare likely benefit with preparation, tool costs, review effort, and risk before committing to software or implementation.",
+    "Begin with one owned administrative workflow. Compare the expected benefit with preparation, tool costs, review effort, and risk, then use a written scope for any build or ongoing support.",
   currentState:
-    "The public advisory site presents a free 30-minute opportunity review, the one-time $1,500 AI readiness plan, a clearly labeled fictional sample, and the supplied Stripe checkout. The plan covers a working session, workflow and systems review, written priorities, data preparation, approval rules, and a test and handoff plan. Implementation is separately scoped; no client savings are claimed.",
+    "The public offer ladder lists $75 calls, $250 working sessions, $1,500–$5,000 scoped builds, and $500–$1,500 monthly upkeep. Session length and payment are confirmed separately, and projects need a written quote. The optional $1,500 Works-With-What-You-Have AI Plan retains its distinct advisory checkout. Software and telecom cost review is secondary; no savings percentage, market-rate validation, client outcome, or HIPAA certification is claimed.",
   founderRole:
-    "Lead advisor. Offer design, workflow review, AI project prioritization, readiness planning, human approval boundaries, and advisory delivery.",
+    "Lead advisor. Workflow qualification, AI project prioritization, scoped administrative automation, evaluation, human approval boundaries, and client handoff.",
   nextMilestone:
-    "Deliver bounded readiness plans with written scope and clear acceptance criteria, then document permissioned client feedback and measured outcomes from any later implementation.",
+    "Validate the owner-led Phoenix-area customer focus through paid, bounded engagements, record actual delivery effort and acceptance, and establish suitable data-handling and support arrangements before expansion.",
   opportunity:
-    "Operations leaders, IT leaders, and business owners at companies with 20 to 500 people that do not yet have an AI team. Based in Mesa, Arizona, with remote advisory nationwide.",
+    "Owners of Phoenix-area healthcare practices and professional services firms with a recurring administrative task, a responsible process owner, and a measurable first test. Initial practice examples avoid patient information.",
   externalUrl: "https://givewiseinsights.josephjilovec.com/",
   externalLabel: "Visit GiveWise Insights",
   art: "/project-art/givewise.svg",
   heroArt: "/project-hero/givewise-hero.svg",
   accent: "#3157ff",
   accentSoft: "rgba(49,87,255,.16)",
-  tags: ["technology", "ai", "consulting", "readiness", "advisory"]
+  tags: ["technology", "ai", "consulting", "automation", "advisory"]
 };
 
 const adVibeCentral: PortfolioVenture = {
