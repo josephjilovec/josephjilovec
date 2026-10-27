@@ -121,31 +121,31 @@ const businessStatusBySlug: Record<string, BusinessStatus> = {
 const payerDelta: PortfolioVenture = {
   slug: "payer-delta",
   name: "Payer Delta Arizona",
-  eyebrow: "Healthcare RCM / Arizona Payer Intelligence & Appeals",
+  eyebrow: "Healthcare RCM / Contingency Denial Recovery & Intelligence",
   category: "Technology",
-  stage: "Live Appeal & Monitoring Engine",
+  stage: "Live Recovery & Monitoring Engine",
   status: "Available Service",
   summary:
-    "A recurring research, monitoring, and operational intelligence briefing for Arizona medical practices and revenue-cycle operators, paired with an automated denial appeal generation engine.",
+    "An independent denial recovery and revenue integrity service for Arizona specialty medical practices, recovering stalled claims on a pure 22% contingency fee paired with continuous payer policy surveillance.",
   problem:
-    "Arizona medical practices and billing teams struggle to keep up with fragmented payer policy updates, hospital pricing shifts, and administrative denial backlogs that delay cash flow and tie up billing staff.",
+    "Arizona specialty practices and surgery centers lose 8%–12% of earned revenue to commercial and Medicare denials because billing staff lack the hours to fight complex medical necessity disputes before statutory filing deadlines lapse.",
   thesis:
-    "An external monitoring guardrail and deterministic appeal assembly engine can deliver Arizona RCM teams immediate payer-change intelligence and audit-ready appeal packets without requiring internal IT integration.",
+    "An external, contingency-aligned recovery engine paired with pre-claim payer surveillance allows practices to turn unworked write-offs into collected cash with zero software cost and zero EHR logins required.",
   currentState:
-    "The public Payer Delta Arizona platform is live at payerdelta.josephjilovec.com, detailing the four-stage execution pipeline—Denial Matching, Policy Extraction, Chart Assembly, and Appeal Generation. Engine v3.1.0 operates deterministic 835 balance checks, statutory framing under 42 CFR § 447.10, and HIPAA BAA compliance.",
+    "The public Payer Delta Arizona platform is live at payerdelta.josephjilovec.com, offering the complimentary 48-hour S2 Statutory Denial Inventory Snapshot, 22% commercial contingency recovery, and preventative revenue integrity monitoring.",
   founderRole:
-    "Venture architecture, Arizona payer monitoring rules, statutory framing, deterministic claim balance logic, appeal packet design, and client outreach.",
+    "Venture architecture, clinical policy and LCD crosswalk rules, statutory appeal packet framing, and client recovery operations.",
   nextMilestone:
-    "Deliver recurring intelligence briefings and appeal packets to initial Arizona specialty clinic cohorts.",
+    "Expand initial S2 Denial Snapshot audits across Arizona specialty surgical cohorts and convert recoveries into ongoing revenue integrity partnerships.",
   opportunity:
-    "Arizona medical practices, revenue-cycle operations leaders, and specialty billing teams seeking denial recovery and payer change intelligence.",
+    "Arizona medical practices, surgery centers, and specialty billing companies seeking risk-free denial recovery and proactive payer change monitoring.",
   externalUrl: "https://payerdelta.josephjilovec.com",
   externalLabel: "Visit Payer Delta Arizona",
   art: "/project-art/givewise.svg",
   heroArt: "/project-hero/givewise-hero.svg",
   accent: "#3fa7a3",
   accentSoft: "rgba(63,167,163,.15)",
-  tags: ["healthcare", "rcm", "denial-management", "appeals", "arizona", "intelligence"]
+  tags: ["healthcare", "rcm", "denial-management", "appeals", "arizona", "intelligence", "contingency"]
 };
 
 const givewiseInsights: PortfolioVenture = {
