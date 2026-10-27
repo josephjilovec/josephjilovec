@@ -123,22 +123,22 @@ const payerDelta: PortfolioVenture = {
   name: "Payer Delta Arizona",
   eyebrow: "Healthcare RCM / Contingency Denial Recovery & Intelligence",
   category: "Technology",
-  stage: "Live Recovery & Monitoring Engine",
+  stage: "Denial Recovery & Revenue Integrity Service",
   status: "Available Service",
   summary:
-    "An independent denial recovery and revenue integrity service for Arizona specialty medical practices, recovering stalled claims on a pure 22% contingency fee paired with continuous payer policy surveillance.",
+    "An independent denial recovery service for Arizona specialty practices, with a 22% commercial recovery fee on confirmed collections and separately scoped RCM support, payer intelligence, and cash forecasting.",
   problem:
-    "Arizona specialty practices and surgery centers lose 8%–12% of earned revenue to commercial and Medicare denials because billing staff lack the hours to fight complex medical necessity disputes before statutory filing deadlines lapse.",
+    "Arizona specialty practices and surgery centers can lack the time to investigate unworked denials, assemble supporting records, and respond before the payer's appeal deadline.",
   thesis:
-    "An external, contingency-aligned recovery engine paired with pre-claim payer surveillance allows practices to turn unworked write-offs into collected cash with zero software cost and zero EHR logins required.",
+    "A focused recovery service can help existing billing teams review denials, prepare ready-to-sign appeal packets after supporting-record checks, and connect follow-up with ongoing revenue integrity work.",
   currentState:
-    "The public Payer Delta Arizona platform is live at payerdelta.josephjilovec.com, offering the complimentary 48-hour S2 Statutory Denial Inventory Snapshot, 22% commercial contingency recovery, and preventative revenue integrity monitoring.",
+    "The Payer Delta Arizona website presents a Free Denial Snapshot, a 1-page review with a target 48-hour turnaround after accepted scope and usable inputs, commercial recovery services, and ongoing RCM, payer intelligence, and cash forecasting.",
   founderRole:
-    "Venture architecture, clinical policy and LCD crosswalk rules, statutory appeal packet framing, and client recovery operations.",
+    "Service design, payer-policy research workflows, appeal-packet preparation, and revenue operations.",
   nextMilestone:
-    "Expand initial S2 Denial Snapshot audits across Arizona specialty surgical cohorts and convert recoveries into ongoing revenue integrity partnerships.",
+    "Introduce Free Denial Snapshots to Arizona specialty practices, establish engagement scope and data-handling requirements, and develop ongoing revenue integrity partnerships.",
   opportunity:
-    "Arizona medical practices, surgery centers, and specialty billing companies seeking risk-free denial recovery and proactive payer change monitoring.",
+    "Arizona medical practices, surgery centers, and specialty billing companies seeking focused denial recovery, proactive payer intelligence, RCM support, and cash visibility.",
   externalUrl: "https://payerdelta.josephjilovec.com",
   externalLabel: "Visit Payer Delta Arizona",
   art: "/project-art/givewise.svg",
