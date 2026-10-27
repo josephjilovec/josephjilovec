@@ -40,8 +40,10 @@ export default async function VenturePage({ params }: { params: Promise<{ slug: 
         .project-hero-art .venture-project-photo-tone{position:absolute;inset:0;z-index:1;pointer-events:none;background:transparent}
         .project-hero-art .project-art-caption{z-index:2}
         .project-hero-art{box-shadow:0 34px 90px rgba(0,0,0,.32),0 0 58px var(--venture-soft)}
-        .business-status-pill{display:inline-flex;align-items:center;gap:7px;padding:5px 12px;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.03em;line-height:1.2}
-        .status-indicator-dot{width:7px;height:7px;border-radius:50%}
+        .business-status-pill{display:inline-flex;align-items:center;gap:7px;padding:6px 14px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.03em;line-height:1.2}
+        .status-indicator-dot{width:8px;height:8px;border-radius:50%}
+        .project-summary{font-size:clamp(20px, 1.45vw, 24px) !important;line-height:1.65 !important;color:#dce6ef !important;max-width:760px !important}
+        .project-file-grid p{font-size:16px !important;line-height:1.75 !important;color:#c5d2dc !important}
         .status-operating-business{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.38);color:#4ade80}
         .status-operating-business .status-indicator-dot{background:#22c55e;box-shadow:0 0 8px rgba(34,197,94,.7)}
         .status-available-service{background:rgba(14,165,233,.12);border:1px solid rgba(14,165,233,.38);color:#38bdf8}

@@ -212,17 +212,17 @@ export default function VenturesPage() {
           display: inline-flex;
           align-items: center;
           gap: 7px;
-          padding: 5px 12px;
+          padding: 6px 14px;
           border-radius: 999px;
-          font-size: 12px;
+          font-size: 13px;
           font-weight: 700;
           letter-spacing: .03em;
           line-height: 1.2;
         }
 
         .portfolio-page-dark .status-indicator-dot {
-          width: 7px;
-          height: 7px;
+          width: 8px;
+          height: 8px;
           border-radius: 50%;
         }
 
@@ -276,28 +276,33 @@ export default function VenturesPage() {
         }
 
         .portfolio-page-dark .card-sector-tag {
-          font-size: 11px;
+          font-size: 12px;
           font-weight: 700;
           letter-spacing: .06em;
           text-transform: uppercase;
-          color: #7b8b97;
-          padding: 3px 9px;
-          background: rgba(255,255,255,.05);
+          color: #8fa1af;
+          padding: 4px 10px;
+          background: rgba(255,255,255,.06);
           border-radius: 6px;
         }
 
         .portfolio-page-dark .venture-card h3 {
-          margin: 4px 0 10px;
-          font-size: clamp(20px, 1.5vw, 25px);
-          line-height: 1.2;
-          letter-spacing: -.02em;
+          margin: 8px 0 12px;
+          font-size: clamp(28px, 2.2vw, 34px);
+          line-height: 1.22;
+          letter-spacing: -.03em;
+          font-weight: 700;
         }
 
         .portfolio-page-dark .venture-card p {
-          color: #a1b0bc !important;
-          font-size: 14px;
-          line-height: 1.62;
-          margin-bottom: 20px;
+          color: #dbe4ec !important;
+          font-size: clamp(20px, 1.45vw, 23px) !important;
+          line-height: 1.62 !important;
+          margin-bottom: 24px;
+          display: -webkit-box;
+          -webkit-line-clamp: 5;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
 
         .portfolio-page-dark .card-links {
@@ -305,6 +310,17 @@ export default function VenturesPage() {
           gap: 12px;
           margin-top: auto;
           flex-wrap: wrap;
+        }
+
+        .portfolio-page-dark .card-links .button {
+          font-size: 15px !important;
+          font-weight: 600 !important;
+          padding: 11px 22px !important;
+          min-height: 44px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 999px;
         }
 
         @media (max-width: 768px) {

@@ -301,7 +301,7 @@ img { display: block; }
 .card-meta { min-height: 34px; display: flex; flex-wrap: wrap; gap: 7px 12px; color: #76838c; font-size: 8px; line-height: 1.45; text-transform: uppercase; letter-spacing: .11em; }
 .card-meta span:first-child { color: var(--venture-accent); }
 .venture-card h3 { margin: 17px 0 10px; font-size: 36px; letter-spacing: -.045em; }
-.venture-card p { flex: 1; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 3; color: #98a4ac; font-size: 13px; line-height: 1.65; }
+.venture-card p { flex: 1; display: -webkit-box; overflow: hidden; -webkit-box-orient: vertical; -webkit-line-clamp: 5; color: #dbe4ec; font-size: clamp(19px, 1.4vw, 22px); line-height: 1.62; }
 .card-links { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 28px; }
 
 .project-hero { max-width: var(--max); margin: 0 auto; padding: 70px 28px 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; min-height: 720px; }
