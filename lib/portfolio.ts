@@ -150,32 +150,32 @@ const payerDelta: PortfolioVenture = {
 
 const givewiseInsights: PortfolioVenture = {
   slug: "givewise-insights",
-  name: "Givewise Insights",
-  eyebrow: "AI transformation & technology advisory",
+  name: "GiveWise Insights",
+  eyebrow: "AI & technology advisory",
   category: "Technology",
-  stage: "Market-Ready Advisory",
+  stage: "AI Readiness Plans",
   status: "Available Service",
   summary:
-    "A founder-led AI transformation and technology advisory helping organizations make clearer decisions about AI strategy, agentic workflows, data readiness, governance, automation, and modernization.",
+    "An independent AI and technology advisory for operations and IT leaders at growing companies, with a free opportunity review and the $1,500 Works-With-What-You-Have AI Plan.",
   problem:
-    "Organizations increasingly have access to powerful AI tools but still struggle to decide where AI belongs, which workflows should change, whether their data is ready, how autonomy should be governed, and which initiatives deserve to scale.",
+    "Companies with 20 to 500 people often have access to AI tools but lack an AI team to decide which projects are worth doing, what their data needs, and what people must approve before anything goes live.",
   thesis:
-    "Independent, decision-first advisory can help leaders connect AI investment to real operating problems by evaluating workflow, data, controls, people, cost, and implementation sequence before technology choices become commitments.",
+    "Start with one operating team and one or two candidate workflows. Compare likely benefit with preparation, tool costs, review effort, and risk before committing to software or implementation.",
   currentState:
-    "The public consulting website is live with a defined AI transformation positioning, interactive capability explorer, AI-readiness diagnostic, market-signal interface, contact pathway, and Vercel deployment. Client outcomes are not presented as established proof unless independently supported.",
+    "The public advisory site presents a free 30-minute opportunity review, the one-time $1,500 AI readiness plan, a clearly labeled fictional sample, and the supplied Stripe checkout. The plan covers a working session, workflow and systems review, written priorities, data preparation, approval rules, and a test and handoff plan. Implementation is separately scoped; no client savings are claimed.",
   founderRole:
-    "Lead advisor. Consulting brand strategy, AI transformation framework, technology-advisory positioning, decision architecture, workflow and governance models, interactive diagnostic design, and digital platform development.",
+    "Lead advisor. Offer design, workflow review, AI project prioritization, readiness planning, human approval boundaries, and advisory delivery.",
   nextMilestone:
-    "Convert the public advisory model into a small number of clearly scoped consulting engagements and document the resulting decision process, deliverables, and measurable operating outcomes.",
+    "Deliver bounded readiness plans with written scope and clear acceptance criteria, then document permissioned client feedback and measured outcomes from any later implementation.",
   opportunity:
-    "Organizations evaluating AI strategy, automation, agentic workflows, data readiness, governance, technology modernization, and implementation priorities.",
+    "Operations leaders, IT leaders, and business owners at companies with 20 to 500 people that do not yet have an AI team. Based in Mesa, Arizona, with remote advisory nationwide.",
   externalUrl: "https://givewiseinsights.josephjilovec.com/",
-  externalLabel: "Visit Givewise Insights",
+  externalLabel: "Visit GiveWise Insights",
   art: "/project-art/givewise.svg",
   heroArt: "/project-hero/givewise-hero.svg",
   accent: "#3157ff",
   accentSoft: "rgba(49,87,255,.16)",
-  tags: ["technology", "ai", "consulting", "transformation", "advisory"]
+  tags: ["technology", "ai", "consulting", "readiness", "advisory"]
 };
 
 const adVibeCentral: PortfolioVenture = {
